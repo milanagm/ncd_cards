@@ -11,6 +11,7 @@ import html
 import json
 import sys
 import warnings
+import zipfile
 from collections import Counter
 from pathlib import Path
 from urllib.parse import quote
@@ -89,6 +90,28 @@ def card_problems(card, submissions):
     return sorted({store.resolve_ref(ref, submissions)[0] for ref in card["evidence"]})
 
 
+def last_failure(card, submissions):
+    """UTC time of the newest failed submission in the card's evidence. When a later run adds a newer
+    failure, the add-on takes it as "the mistake happened again" and makes the card due today."""
+    times = [datetime.datetime.fromisoformat(sub["date"]).astimezone(datetime.timezone.utc).isoformat()
+             for ref in card["evidence"] for sub in store.resolve_ref(ref, submissions)[1]
+             if sub.get("verdict", {}).get("status") not in (None, "PASS")]
+    return max(times, default=None)
+
+
+def package_addon():
+    """Zip anki_addon/ncd_sync into an .ankiaddon; fixed timestamps keep the file stable between builds."""
+    source = config.ROOT / "anki_addon" / "ncd_sync"
+    target = config.DIST / "ncd_sync.ankiaddon"
+    with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED) as zf:
+        for path in sorted(source.iterdir()):
+            if path.suffix in (".py", ".json", ".md"):
+                info = zipfile.ZipInfo(path.name, date_time=(2026, 1, 1, 0, 0, 0))
+                info.compress_type = zipfile.ZIP_DEFLATED
+                zf.writestr(info, path.read_bytes())
+    return target
+
+
 def ledger_summary(ledger, submissions):
     summary = []
     for cat in ledger["categories"]:
@@ -144,6 +167,7 @@ def build(subs_root):
             "front_html": render.to_html(card["front"]),
             "back_html": render.to_html(card["back"]),
             "history_html": history_html(card, submissions, notes),
+            "last_evidence": last_failure(card, submissions),
         }
         rendered.append(entry)
         deck.add_note(genanki.Note(
@@ -160,19 +184,27 @@ def build(subs_root):
                        for s in p["submissions"])
     export = {
         "version": 1,
-        "deck": config.DECK_NAME,
+        "deck": {"id": config.DECK_ID, "name": config.DECK_NAME},
+        "note_type": {
+            "id": config.MODEL_ID,
+            "name": config.MODEL_NAME,
+            "fields": FIELDS,
+            "field_sources": dict(zip(FIELDS, ["front_html", "back_html", "type_label", "history_html", "id"])),
+            "templates": [{"name": "Karte", "qfmt": FRONT_TEMPLATE, "afmt": BACK_TEMPLATE}],
+            "css": style.css(),
+        },
         "source": submissions["source"],
         "stats": {"submissions": sum(statuses.values()), "statuses": dict(statuses.most_common())},
         "ledger": ledger_summary(ledger, submissions),
-        "css": style.css(),
         "cards": rendered,
     }
     store.save_json(config.DIST / "cards.json", export)
     (config.DIST / "preview.html").write_text(preview(rendered, export), encoding="utf-8")
+    package_addon()
 
     by_type = Counter(c["type"] for c in rendered)
     print(f"built {len(rendered)} cards (" + ", ".join(f"{t} {n}" for t, n in sorted(by_type.items()))
-          + f") → dist/ncd_cards.apkg, dist/cards.json, dist/preview.html")
+          + ") → dist/ncd_cards.apkg, dist/cards.json, dist/preview.html, dist/ncd_sync.ankiaddon")
 
 
 def preview(rendered, export):
@@ -187,7 +219,7 @@ def preview(rendered, export):
     return f"""<!doctype html>
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NeetCode Insights · Vorschau</title>
-<style>{export["css"]}
+<style>{export["note_type"]["css"]}
 body {{ margin: 0; background: #eaeef2; }}
 body.dark {{ background: #010409; }}
 header {{ font: 14px -apple-system, Segoe UI, sans-serif; padding: 12px 16px; color: #59636e; }}

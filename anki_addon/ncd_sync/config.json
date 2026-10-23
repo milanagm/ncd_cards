@@ -1,0 +1,8 @@
+{
+ "cards_url": "https://raw.githubusercontent.com/milanagm/ncd_cards/main/dist/cards.json",
+ "deck_url": "https://raw.githubusercontent.com/milanagm/ncd_cards/main/dist/ncd_cards.apkg",
+ "interval_hours": 6,
+ "min_minutes_between_runs": 30,
+ "reschedule_recurring": true,
+ "sync_after_update": true
+}

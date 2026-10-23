@@ -21,12 +21,25 @@ ncd_subs ──▶ extract ──▶ verify ──▶ Analyse (Claude) ──▶
 4. **Karten**: eine Markdown-Datei pro Karte in `cards/`, mit Verweisen auf Ledger und Submissions.
 5. **build**: rendert Markdown, Syntax-Highlighting und SVG-Visualisierungen zu einem Anki-Deck und `cards.json`.
 
-## In Anki importieren
+## In Anki: automatisch per Add-on
 
-1. [`dist/ncd_cards.apkg`](https://github.com/milanagm/ncd_cards/raw/main/dist/ncd_cards.apkg) herunterladen.
-2. In Anki am Desktop: *Datei → Importieren* (oder Doppelklick auf die Datei). Danach synchronisieren,
-   dann landet das Deck *NeetCode Insights* über AnkiWeb auch am Handy.
-3. Neue Versionen genauso importieren: Bestehende Karten werden aktualisiert, der Lernfortschritt bleibt.
+1. [`dist/ncd_sync.ankiaddon`](https://github.com/milanagm/ncd_cards/raw/main/dist/ncd_sync.ankiaddon) herunterladen
+   und doppelklicken, oder in Anki am Desktop *Extras → Erweiterungen → Aus Datei installieren …*. Anki neu starten.
+2. Ab jetzt holt das Add-on neue und geänderte Karten selbst: nach jedem Sync (also direkt nach dem Start),
+   alle 6 Stunden und auf Knopfdruck über *Extras → NeetCode Insights aktualisieren*. Beim allerersten Lauf
+   importiert es das Deck *NeetCode Insights* selbst.
+3. Nach Änderungen synchronisiert es sofort mit AnkiWeb, damit die Karten aufs Handy kommen. Dafür muss Anki
+   am Desktop bei AnkiWeb angemeldet sein.
+
+Was das Add-on sonst tut:
+
+- Wiederholst du einen Fehler, wird die passende Karte **heute fällig**, sofern du sie schon gelernt hast.
+- Karten, die du in Anki änderst, bleiben so, bis sich die Karte im Repo ändert. Gelöschte Karten kommen nicht wieder.
+- Jedes Update ist ein einzelner Schritt, den *Rückgängig* (Strg+Z) zurücknimmt.
+
+Ohne Add-on geht es auch von Hand: [`dist/ncd_cards.apkg`](https://github.com/milanagm/ncd_cards/raw/main/dist/ncd_cards.apkg)
+herunterladen und in Anki öffnen (*Datei → Importieren*). Ein erneuter Import aktualisiert die Karten, der
+Lernfortschritt bleibt.
 
 Jede Karte endet mit **Dein Verlauf**: die Submissions, in denen der Fehler steckt, mit Status und Link.
 
@@ -56,4 +69,6 @@ Der Ablauf für die täglichen Läufe und die Kartenregeln stehen in [`CLAUDE.md
 | `data/ledger.json` | Fehlerkategorien mit Belegen |
 | `data/state.json` | welche Submissions schon analysiert sind |
 | `cards/` | Karten als Markdown |
-| `dist/` | Anki-Deck, `cards.json` und `preview.html` mit allen Karten (generiert) |
+| `dist/` | Anki-Deck, Add-on, `cards.json` und `preview.html` mit allen Karten (generiert) |
+| `anki_addon/ncd_sync/` | Quellcode des Anki-Add-ons |
+| `tests/` | Tests des Add-ons gegen echte Anki-Collections (`requirements-dev.txt`) |

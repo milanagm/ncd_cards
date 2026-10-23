@@ -51,6 +51,14 @@ Standardpfad, sonst `--subs PFAD`.
   `pipeline/viz.py`).
 - Python-Blöcke müssen parsen; absichtlich kaputte Syntax als ```` ```python-nocheck ````.
 
+## Anki-Add-on
+
+`anki_addon/ncd_sync/` holt `dist/cards.json` von GitHub in Milanas Anki. Für jede Karte steht dort
+`last_evidence`, der Zeitpunkt des neuesten fehlgeschlagenen Belegs. Wird er neuer, macht das Add-on die Karte
+heute fällig. Deshalb bei einem wiederkehrenden Fehler den neuen Fehlversuch in `evidence` der bestehenden
+Karte ergänzen. Nach Änderungen am Add-on: `pip install -r requirements-dev.txt`, `python -m pytest tests`;
+`pipeline.build` packt `dist/ncd_sync.ankiaddon`.
+
 ## Nicht ändern
 
 - Karten-IDs (= Dateinamen): Die Anki-GUID hängt daran, umbenennen verwaist den Lernfortschritt.
