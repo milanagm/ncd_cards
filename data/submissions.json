@@ -1,0 +1,2980 @@
+{
+ "source": {
+  "repo": "milanagm/ncd_subs",
+  "head": "aae3480a018c1ca943f10a5f704c0b66002607cb",
+  "head_date": "2026-10-23T10:27:19+01:00"
+ },
+ "problems": {
+  "anagram-groups": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-0.py",
+     "sha1": "4b54f542a45990904d291320e3e0058195e8dc85",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-1.py",
+     "sha1": "4da181eda40deb87557c5183f71f66cc1c2fb642",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-2.py",
+     "sha1": "26d76da6c6f56c3d99e058220b5c19d600490704",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-3.py",
+     "sha1": "484f3844f9e28e48ec14bb0ca4a03920118b83e2",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-4.py",
+     "sha1": "2cb08d275f63dce40ac6663429a2453ca28e33cd",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-5.py",
+     "sha1": "d02134cce844dd0d884a42845b0ad7e8263f3a68",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-6.py",
+     "sha1": "f16dd3631fae11665b6d7856eb2993af998275ee",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 7,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-7.py",
+     "sha1": "23c8e31df7f06debda9791c0ecc313bcdc559d00",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 8,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-8.py",
+     "sha1": "4a666507d5f308fc194002a11351c25212a420f6",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 9,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-9.py",
+     "sha1": "006f8a5cd7ce054e2429f6e126b55aebf98be39a",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 10,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-10.py",
+     "sha1": "5e5c804f3dc48c38553c5d87d5b5080bcf744b5f",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 11,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-11.py",
+     "sha1": "a36c6bd0d3b731463d50eb420cdb41d8b4a90e2d",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 14,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-14.py",
+     "sha1": "b9a2e6dc1e65b0708d17f3b575b1e5e6a8f66a53",
+     "commit": "a35583c6362a0363aa7b7bf40fc37553c8ab5350",
+     "date": "2026-10-16T13:46:14+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 47,
+      "input": "[['act', 'pots', 'tops', 'cat', 'stop', 'hat']]",
+      "error": "TypeError: Type List cannot be instantiated; use list() instead",
+      "line": 3,
+      "code": "grouper = defaultdict(List(str))",
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 15,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-15.py",
+     "sha1": "8de5b52c7379221a69761716dc9fd8f05ab87fe6",
+     "commit": "5e27149340f1c54864189b4a0c69afad48e56674",
+     "date": "2026-10-16T13:46:37+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 47,
+      "input": "[['act', 'pots', 'tops', 'cat', 'stop', 'hat']]",
+      "error": "TypeError: Type List cannot be instantiated; use list() instead",
+      "line": 3,
+      "code": "grouper = defaultdict(List(List()))",
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 16,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-16.py",
+     "sha1": "2e3658a74d8c2345f34bf7259fddfd685e4204e4",
+     "commit": "790629934e821f19b97a83ae6609e5b9a93b906a",
+     "date": "2026-10-16T13:47:50+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 47,
+      "input": "[['act', 'pots', 'tops', 'cat', 'stop', 'hat']]",
+      "error": "TypeError: Type List cannot be instantiated; use list() instead",
+      "line": 3,
+      "code": "grouper = defaultdict(List(list()))",
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 17,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-17.py",
+     "sha1": "4f8e1eb84c9bbab2e5414d2aea960e57456f9edd",
+     "commit": "57222d4eae4f2e5712fd96f848aa56e932631438",
+     "date": "2026-10-16T13:48:04+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 47,
+      "input": "[['act', 'pots', 'tops', 'cat', 'stop', 'hat']]",
+      "error": "TypeError: first argument must be callable or None",
+      "line": 3,
+      "code": "grouper = defaultdict(list(list()))",
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 18,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-18.py",
+     "sha1": "8c8644487f19dcd6f9e4b6bbfe5c34c348ef2c3e",
+     "commit": "efea48f0b1e809784dbe08a5357421677ac1be4d",
+     "date": "2026-10-16T13:48:10+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 47,
+      "input": "[['act', 'pots', 'tops', 'cat', 'stop', 'hat']]",
+      "error": "TypeError: first argument must be callable or None",
+      "line": 3,
+      "code": "grouper = defaultdict(list())",
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 19,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-19.py",
+     "sha1": "410dc27006209289a886b52d9d24bcc398d5ea84",
+     "commit": "2c2bfd4cce6cda351026180cf6c3e62de6a150f1",
+     "date": "2026-10-16T13:54:53+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 47,
+      "input": "[['act', 'pots', 'tops', 'cat', 'stop', 'hat']]",
+      "expected": "[['act', 'cat'], ['pots', 'tops', 'stop'], ['hat']]",
+      "got": "[['act', 'cat', 'hat'], ['pots', 'tops', 'stop']]",
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 20,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-20.py",
+     "sha1": "16d3fa8f44f71e25248bfa09e0a2a8c687d1fb73",
+     "commit": "a96d4f59d4d2182813c0b8b1ade83ecfef9085e7",
+     "date": "2026-10-16T13:55:16+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 47,
+      "input": "[['act', 'pots', 'tops', 'cat', 'stop', 'hat']]",
+      "expected": "[['act', 'cat'], ['pots', 'tops', 'stop'], ['hat']]",
+      "got": "[['act', 'cat', 'hat'], ['pots', 'tops', 'stop']]",
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 21,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-21.py",
+     "sha1": "e61536ffd4ba60a5b791047d9e85a6e6908f425c",
+     "commit": "d87da8fd1ba0a1433d44759ec56e70db7fb95b8b",
+     "date": "2026-10-16T13:58:10+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 22,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-22.py",
+     "sha1": "5542f85fc26bb0428d7f5a52013e749680c2902c",
+     "commit": "76015f6bd7953604930161f3ad5ad3906692516b",
+     "date": "2026-10-16T14:06:08+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 23,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-23.py",
+     "sha1": "dcb776b79a6013d6e88cb8fea6a57df68a5b52e3",
+     "commit": "9d8c9a7256eaeb184fbda9664c3cb456cadb088d",
+     "date": "2026-10-16T16:54:09+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 47,
+      "input": "[['act', 'pots', 'tops', 'cat', 'stop', 'hat']]",
+      "expected": "[['act', 'cat'], ['pots', 'tops', 'stop'], ['hat']]",
+      "got": "dict_values([['act', 'cat'], ['pots', 'tops', 'stop'], ['hat']])",
+      "note": "returns dict_values instead of list",
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 24,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-24.py",
+     "sha1": "1539178bd10628b0a6fe834c1babe9d637f08970",
+     "commit": "6313dcd7516c72c76f60ca0432e28058d7fa0049",
+     "date": "2026-10-16T16:54:42+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "cb2aeedb47a3"
+     }
+    }
+   ]
+  },
+  "duplicate-integer": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-0.py",
+     "sha1": "3f37221978b4763f05642fe284caf6b8579297b0",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "04f0c8ddd912"
+     }
+    },
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-1.py",
+     "sha1": "c597e36b3d138a22b38031ce20cd9a40f0a6aec8",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 3, 3]]",
+      "error": "AttributeError: 'list' object has no attribute 'add'",
+      "line": 7,
+      "code": "appearance.add(i)",
+      "spec": "04f0c8ddd912"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-2.py",
+     "sha1": "9632196827a7210b4370e0a96a083c026504f7f1",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 3, 3]]",
+      "error": "NameError: name 'true' is not defined",
+      "line": 9,
+      "code": "return true",
+      "spec": "04f0c8ddd912"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-3.py",
+     "sha1": "fe102b9705285f6bd6f2edbd4679b77d8cf50fc1",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "04f0c8ddd912"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-4.py",
+     "sha1": "3f5a6ca2a8e995cafcbe2065f50cea84e4e1f369",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "04f0c8ddd912"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-5.py",
+     "sha1": "b11e82e664780851c9a209f6198535210c917581",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "04f0c8ddd912"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-6.py",
+     "sha1": "c8d3d73157f0dd7e98adfe08a66703eb7a5c15da",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "04f0c8ddd912"
+     }
+    },
+    {
+     "n": 7,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-7.py",
+     "sha1": "46db5b4d9d8affd2ebb9f4803588a4c5a47d5f3a",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 4,
+      "total": 46,
+      "input": "[[3, 1, 3]]",
+      "expected": "True",
+      "got": "False",
+      "spec": "04f0c8ddd912"
+     }
+    },
+    {
+     "n": 8,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-8.py",
+     "sha1": "1a2fcba8830dd6f865c4d9b4db8a9f2203a9d7e5",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "04f0c8ddd912"
+     }
+    },
+    {
+     "n": 9,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-9.py",
+     "sha1": "912161b07003d72fa9a1e8200cb329b2e0794b3a",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "04f0c8ddd912"
+     }
+    },
+    {
+     "n": 10,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-10.py",
+     "sha1": "b630c0a19b1b79ec9a607f1d75b074308f9f455c",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "04f0c8ddd912"
+     }
+    },
+    {
+     "n": 11,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-11.py",
+     "sha1": "59de81c5c90041aa1faa8d589417790444dab457",
+     "commit": "942d4bb445e7db4333716785008824a52f0226f8",
+     "date": "2026-10-14T22:38:05+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "04f0c8ddd912"
+     }
+    },
+    {
+     "n": 12,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-12.py",
+     "sha1": "576f9222ad1a6cabd8048ce0356e098b3bf4220f",
+     "commit": "4e9fe06c02a31d05c1bdbf5ff02bee5effdf984e",
+     "date": "2026-10-14T22:40:07+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "04f0c8ddd912"
+     }
+    },
+    {
+     "n": 13,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-13.py",
+     "sha1": "3a7e3ff0030c2a6d4455c9fad8288cf18af1fa2c",
+     "commit": "fb85cb012bb3f72e5fbb0dbe7aa7fbafcde61f38",
+     "date": "2026-10-21T23:49:36+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 3, 3]]",
+      "expected": "True",
+      "got": "False",
+      "spec": "04f0c8ddd912"
+     }
+    },
+    {
+     "n": 14,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-14.py",
+     "sha1": "44678218ac2e4d9fa1e7c4d2cac48f9e0cccbb1c",
+     "commit": "504f0f0f3052b4f270bbec21d5bf2b1614cc2821",
+     "date": "2026-10-21T23:51:13+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 1,
+      "total": 46,
+      "input": "[[1, 2, 3, 4]]",
+      "expected": "False",
+      "got": "True",
+      "spec": "04f0c8ddd912"
+     }
+    },
+    {
+     "n": 15,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-15.py",
+     "sha1": "23aec64bb5d8a378c980b8af79b3df5bbf69ef15",
+     "commit": "1955d7776b2206e0930c34a6f3e4c578352aaffd",
+     "date": "2026-10-21T23:51:21+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "04f0c8ddd912"
+     }
+    }
+   ]
+  },
+  "is-anagram": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-anagram/submission-0.py",
+     "sha1": "9e7aa6b92698bc5a3e12005da1dc4bf4394dd989",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 1,
+      "total": 46,
+      "input": "['jar', 'jam']",
+      "expected": "False",
+      "got": "True",
+      "spec": "8a768fae95e7"
+     }
+    },
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-anagram/submission-1.py",
+     "sha1": "33b3aa3c5e8c3686de05eb71f66feedb9921dedd",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "8a768fae95e7"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-anagram/submission-2.py",
+     "sha1": "9e14ebf3572c19794834f167d8664121128434d8",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "8a768fae95e7"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-anagram/submission-3.py",
+     "sha1": "94058e6eeda7c4ed66664a77920adff1bcf92ca1",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "8a768fae95e7"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-anagram/submission-4.py",
+     "sha1": "94058e6eeda7c4ed66664a77920adff1bcf92ca1",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "8a768fae95e7"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-anagram/submission-5.py",
+     "sha1": "c129cd0ac4963257f18af481666bfbf1d9ebaee9",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "8a768fae95e7"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-anagram/submission-6.py",
+     "sha1": "f3c46a86fd77530d007b358163a10a18ac327b53",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "8a768fae95e7"
+     }
+    },
+    {
+     "n": 7,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-anagram/submission-7.py",
+     "sha1": "38b74f94f090cb328cf7b8e26942dfb06ad31f5a",
+     "commit": "838e172b939431f547c5dc8d72b3c8231cdb1dc3",
+     "date": "2026-10-15T09:18:55+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "8a768fae95e7"
+     }
+    }
+   ]
+  },
+  "is-palindrome": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-0.py",
+     "sha1": "f2bddee047b20edf9fbfcc1795cb66fd5cace343",
+     "commit": "f8299d3a216e2a63da9c2f36c9e96ee0027a79a3",
+     "date": "2026-10-20T09:02:25+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 53,
+      "input": "['Was it a car or a cat I saw?']",
+      "expected": "True",
+      "got": "False",
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-1.py",
+     "sha1": "fa053c400fd63829227e0f9e92e5376bd0441702",
+     "commit": "8ad8d058821cf5265b79d778dca4b5d691167920",
+     "date": "2026-10-20T09:09:19+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 53,
+      "input": "['Was it a car or a cat I saw?']",
+      "expected": "True",
+      "got": "False",
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-2.py",
+     "sha1": "78bb3889837cdf3d57a5168de7bb1758c91401bc",
+     "commit": "fbc7c01ca87263ea173b5d373a02ad432231e0b9",
+     "date": "2026-10-20T09:10:58+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 53,
+      "input": "['Was it a car or a cat I saw?']",
+      "expected": "True",
+      "got": "False",
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-3.py",
+     "sha1": "448366b84a40fc04933d8e7339b1bccb3936a557",
+     "commit": "7b4f2d62ee9ae1086de4b138e31f6e2229371e83",
+     "date": "2026-10-20T09:17:21+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 53,
+      "input": "['Was it a car or a cat I saw?']",
+      "expected": "True",
+      "got": "False",
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-4.py",
+     "sha1": "2c21a0ee330083dbfc2bbbb1ac2ac8a9bc7fbd3c",
+     "commit": "4d7dabd17b75ef3f88417a117cfd966c3e54d1b7",
+     "date": "2026-10-20T09:17:56+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 53,
+      "input": "['Was it a car or a cat I saw?']",
+      "error": "NameError: name 'lower' is not defined",
+      "line": 8,
+      "code": "s = lower(s)",
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-5.py",
+     "sha1": "1853197dde344806995a87a626e59f04b6d297eb",
+     "commit": "f13f682c5c6ac19d4942a37577187ae513ec97ba",
+     "date": "2026-10-20T09:20:43+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 53,
+      "input": "['Was it a car or a cat I saw?']",
+      "error": "TypeError: str.lower() takes no arguments (1 given)",
+      "line": 8,
+      "code": "s = s.lower(s)",
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-6.py",
+     "sha1": "9e2aaf0186a47c401db03519faac3d483bb7700a",
+     "commit": "205f7ffa5fe49718db91e0ab6ab86e819b0f0075",
+     "date": "2026-10-20T09:20:54+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 53,
+      "input": "['Was it a car or a cat I saw?']",
+      "expected": "True",
+      "got": "False",
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 8,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-8.py",
+     "sha1": "b1308fe6a03403ec6db7122bd20c011d95025c1f",
+     "commit": "cac9da2f19dc70cc5cb31d05461ba55fcc9c65f9",
+     "date": "2026-10-20T09:21:56+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 2,
+      "total": 53,
+      "input": "[' ']",
+      "error": "IndexError: string index out of range",
+      "line": 11,
+      "code": "while not s[pointer_left].isalnum():",
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 10,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-10.py",
+     "sha1": "c2072c0704a1b2ac474894d23c8e1be4bab5545a",
+     "commit": "c265e9b25af19bcd2a32c93c0998abe369e22e05",
+     "date": "2026-10-20T09:24:40+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 53,
+      "input": "['Was it a car or a cat I saw?']",
+      "expected": "True",
+      "got": "False",
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 11,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-11.py",
+     "sha1": "40000eaaa9c70efb3caf47f6f9c59b079b4ad59e",
+     "commit": "efa66181e6e2ff9e523c06a2c9e634cdc000ad81",
+     "date": "2026-10-20T09:29:26+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 2,
+      "total": 53,
+      "input": "[' ']",
+      "error": "IndexError: string index out of range",
+      "line": 16,
+      "code": "word_left.append(s[pointer_left])",
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 12,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-12.py",
+     "sha1": "6f232c794c0d46f2a77387bb981944d60f9f123f",
+     "commit": "937cd3b54b82dd5e415b0e31f0216605fa609196",
+     "date": "2026-10-20T09:29:43+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 53,
+      "total": 53,
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 13,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-13.py",
+     "sha1": "25dc9ca94f124f6324f870452aab5fc4d9e7d998",
+     "commit": "081cf39248eea6eda1b0f0254381b310048be596",
+     "date": "2026-10-20T09:35:24+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 53,
+      "total": 53,
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 14,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-14.py",
+     "sha1": "d2257d2f8e2926d54ea7b9415b4b6584a0248dcd",
+     "commit": "e30f80f583a9b9ab5b2fc53badd59d4f89db73dd",
+     "date": "2026-10-20T21:09:46+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 53,
+      "total": 53,
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 15,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-15.py",
+     "sha1": "48efcae9053468c8d03ab45ce21af674acfa9d5a",
+     "commit": "cb3736fa49eed793d71c4892654bd05c09451461",
+     "date": "2026-10-22T10:19:39+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 53,
+      "input": "['Was it a car or a cat I saw?']",
+      "expected": "True",
+      "got": "False",
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 16,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-16.py",
+     "sha1": "918a68712a42164bc6249b0dbe9af6b32fc93c68",
+     "commit": "d1bc04d6c3b6fa195c0495439e65d0f95700e7e4",
+     "date": "2026-10-22T10:22:37+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 53,
+      "input": "['Was it a car or a cat I saw?']",
+      "expected": "True",
+      "got": "False",
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 17,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-17.py",
+     "sha1": "294418512d0729188dfcf01306ceda0db918db4a",
+     "commit": "765b3a18fb508336901518867e100eeea1e7c6fc",
+     "date": "2026-10-22T10:24:08+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 53,
+      "input": "['Was it a car or a cat I saw?']",
+      "expected": "True",
+      "got": "False",
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 20,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-20.py",
+     "sha1": "ba2085e09b59b5031c7a36425e85c4ee92dee445",
+     "commit": "95f9bfcd3d6008c09beeeb2a342b39ed1bda3f25",
+     "date": "2026-10-22T10:26:35+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 53,
+      "input": "['Was it a car or a cat I saw?']",
+      "expected": "True",
+      "got": "False",
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 21,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-21.py",
+     "sha1": "2f24782754b614642c6a020550b33101741902ce",
+     "commit": "5994c4bb45fb1addaa9f28d3ac3f8461ac19e729",
+     "date": "2026-10-22T10:27:17+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 53,
+      "total": 53,
+      "spec": "eb5c7a42a8d7"
+     }
+    }
+   ]
+  },
+  "longest-consecutive-sequence": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-0.py",
+     "sha1": "23c4e9c6f5c9d240914d557c294a5b665cdc3cf0",
+     "commit": "b546934818622d3292373ba04fe6b9104f26c435",
+     "date": "2026-10-19T10:05:04+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "TIMEOUT",
+      "passed": 0,
+      "total": 49,
+      "input": "[[2, 20, 4, 10, 3, 4, 5]]",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-1.py",
+     "sha1": "949db9dc19b349db2efb6200a7756a43fe1a3e41",
+     "commit": "47fa215b7a8780a2aa72ab75035a17a1348b17a4",
+     "date": "2026-10-19T10:06:58+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 49,
+      "input": "[[2, 20, 4, 10, 3, 4, 5]]",
+      "expected": "4",
+      "got": "[2, 3, 4, 5]",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-2.py",
+     "sha1": "c065844832edecc032378cf0f0ba621cd9f12be4",
+     "commit": "5cf1393edb8d532af116f9616c24087752cc314b",
+     "date": "2026-10-19T10:08:16+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 49,
+      "input": "[[2, 20, 4, 10, 3, 4, 5]]",
+      "expected": "4",
+      "got": "1",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-3.py",
+     "sha1": "7efd5aeecdfed626307e74b705acd9fc71aba08d",
+     "commit": "d98b1c9ceac3307275eed193176f445207864fc4",
+     "date": "2026-10-19T10:09:46+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 2,
+      "total": 49,
+      "input": "[[]]",
+      "error": "ValueError: max() iterable argument is empty",
+      "line": 19,
+      "code": "return max(all_seq_lengths)",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-4.py",
+     "sha1": "d30923c24f018c4afaafd827ecf314c18530f1d1",
+     "commit": "5cf60f7a1d92ab2c9bbb387c5d53e40d527d2b65",
+     "date": "2026-10-19T10:10:19+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 49,
+      "total": 49,
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-5.py",
+     "sha1": "efde6259b80ab5facf0505b5e6f249f79837942f",
+     "commit": "ee3c610d485cf3ebf9d1727e3f8a4c87ffa44927",
+     "date": "2026-10-19T10:14:12+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 49,
+      "total": 49,
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-6.py",
+     "sha1": "e67420e3867f7a89c23fff27c2d2173b163a4b49",
+     "commit": "987f41e9dc9496ae7ee7d1b8362ed6d62f0c1e94",
+     "date": "2026-10-19T10:16:30+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 49,
+      "input": "[[2, 20, 4, 10, 3, 4, 5]]",
+      "error": "NameError: name 'sub_seq' is not defined",
+      "line": 9,
+      "code": "sub_seq.append(i)",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 7,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-7.py",
+     "sha1": "e32f58d47c92ea3d90de664d6590bba74d2611d5",
+     "commit": "9c1ab58fe807ee524207a5819a5ed72573ddcec9",
+     "date": "2026-10-19T10:17:52+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 49,
+      "input": "[[2, 20, 4, 10, 3, 4, 5]]",
+      "expected": "4",
+      "got": "3",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 8,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-8.py",
+     "sha1": "e55653231d61abab68f3b8217cde4ac6a37cb4d4",
+     "commit": "cd5ff9d5917ba948bfff3621982fb39acb6f39e1",
+     "date": "2026-10-19T10:18:04+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 49,
+      "input": "[[2, 20, 4, 10, 3, 4, 5]]",
+      "expected": "4",
+      "got": "3",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 9,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-9.py",
+     "sha1": "1011f3f9544f7e20ed14d925248e268ea2fb0721",
+     "commit": "4c2f8a493db084ef503a2d15eebfcf780d3966ae",
+     "date": "2026-10-19T10:19:02+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 49,
+      "input": "[[2, 20, 4, 10, 3, 4, 5]]",
+      "expected": "4",
+      "got": "3",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 10,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-10.py",
+     "sha1": "7fca7b5df0f3efbd922798cc5a119b30a60d6a75",
+     "commit": "2e4a88894a2e035ef2f3a072ca253cef7b16f9bd",
+     "date": "2026-10-19T10:19:12+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 12,
+      "total": 49,
+      "input": "[[-7, -6, 1, -4, -9, 0, 8, -6, 4, 9, -9, -8, 5, -2, 9]]",
+      "expected": "4",
+      "got": "3",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 11,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-11.py",
+     "sha1": "3ce6226527f79c2c9265031e3bbb61222ac82bb6",
+     "commit": "d5254431dd87797635537b916c2e1fa0dc58bba9",
+     "date": "2026-10-19T10:19:26+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 49,
+      "total": 49,
+      "spec": "2cb70e38aadf"
+     }
+    }
+   ]
+  },
+  "products-of-array-discluding-self": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/products-of-array-discluding-self/submission-0.py",
+     "sha1": "9895bc0f57c42d8aad347be09f2ca8ca8dc671d3",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "9a4351e47c46"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/products-of-array-discluding-self/submission-2.py",
+     "sha1": "8381b59fa2873364ba8fde5d5a79874293824ea9",
+     "commit": "16a1ee3dc258fca2af8411a03022c1788dadfc7e",
+     "date": "2026-10-17T09:25:25+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 4, 6]]",
+      "expected": "[48, 24, 12, 8]",
+      "got": "[]",
+      "spec": "9a4351e47c46"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/products-of-array-discluding-self/submission-3.py",
+     "sha1": "cdbe2f668a1dd33fbcdde97eb1a73c50e2765afd",
+     "commit": "5b76b2a8e65b4a389d35a87e96a6e4a010406a22",
+     "date": "2026-10-17T09:29:05+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 4, 6]]",
+      "expected": "[48, 24, 12, 8]",
+      "got": "[]",
+      "spec": "9a4351e47c46"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/products-of-array-discluding-self/submission-4.py",
+     "sha1": "5358eb9bca41d1c585015a84b544369233214158",
+     "commit": "824013479697549ec31adfc1a6f04792f97123b4",
+     "date": "2026-10-17T09:30:03+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 4, 6]]",
+      "expected": "[48, 24, 12, 8]",
+      "got": "[1, 1, 1, 1]",
+      "spec": "9a4351e47c46"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/products-of-array-discluding-self/submission-5.py",
+     "sha1": "b9b2f6d1440349992b4a8ca9bdad8705b0d4a84a",
+     "commit": "bd8ba2cbf6953862f695e3471c3318f777cc55f7",
+     "date": "2026-10-17T09:31:41+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "9a4351e47c46"
+     }
+    }
+   ]
+  },
+  "string-encode-and-decode": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/string-encode-and-decode/submission-0.py",
+     "sha1": "b7f4cb64f2f3e9a7b3876f7da3fbb41173f72451",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 5,
+      "total": 49,
+      "input": "[['a#b', '12#']]",
+      "expected": "['a#b', '12#']",
+      "got": "['a', 'b', '12', '']",
+      "spec": "0b9e1e9ba5b8"
+     }
+    },
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/string-encode-and-decode/submission-1.py",
+     "sha1": "a549ce6a8092b1d75a1e4fb621843dbecf6c7a3e",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 49,
+      "total": 49,
+      "spec": "0b9e1e9ba5b8"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/string-encode-and-decode/submission-2.py",
+     "sha1": "425ed8df0acbbec385ef8e7a427c825ea4eb99d9",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 49,
+      "total": 49,
+      "spec": "0b9e1e9ba5b8"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/string-encode-and-decode/submission-3.py",
+     "sha1": "202fd535f3c2f43c982d983e41bb8f61aee19ba7",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 6,
+      "total": 49,
+      "input": "[['xxxxxxxxxxxx', 'y']]",
+      "error": "ValueError: invalid literal for int() with base 10: 'x'",
+      "line": 18,
+      "code": "l_w = int(s[i])",
+      "spec": "0b9e1e9ba5b8"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/string-encode-and-decode/submission-4.py",
+     "sha1": "828475de6eda92a03d6b3d70a78495e1fdf99d01",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 6,
+      "total": 49,
+      "input": "[['xxxxxxxxxxxx', 'y']]",
+      "error": "ValueError: invalid literal for int() with base 10: 'x'",
+      "line": 20,
+      "code": "l_w += int(s[i])",
+      "spec": "0b9e1e9ba5b8"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/string-encode-and-decode/submission-5.py",
+     "sha1": "c6ea6c85c1d322389ea9fbdad1ef9e4a50770a01",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 49,
+      "total": 49,
+      "spec": "0b9e1e9ba5b8"
+     }
+    },
+    {
+     "n": 10,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/string-encode-and-decode/submission-10.py",
+     "sha1": "b41bd8243d89d93a7c87215929e1c83c3a613b22",
+     "commit": "8df4541a134f80d55897ea2aeb0c305bbed14239",
+     "date": "2026-10-16T21:49:31+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 49,
+      "input": "[['neet', 'code', 'love', 'you']]",
+      "error": "ValueError: invalid literal for int() with base 10: 't4'",
+      "line": 27,
+      "code": "while c < int(l) - 1:",
+      "spec": "0b9e1e9ba5b8"
+     }
+    },
+    {
+     "n": 11,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/string-encode-and-decode/submission-11.py",
+     "sha1": "963431cb6e095bdc397ef1204cc4328585abb50c",
+     "commit": "46d6620ec87f923acf65d0ffeb65b9d6bf8b51c6",
+     "date": "2026-10-16T21:52:26+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 49,
+      "input": "[['neet', 'code', 'love', 'you']]",
+      "error": "ValueError: invalid literal for int() with base 10: 't4'",
+      "line": 27,
+      "code": "while c < int(l) - 1:",
+      "spec": "0b9e1e9ba5b8"
+     }
+    },
+    {
+     "n": 12,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/string-encode-and-decode/submission-12.py",
+     "sha1": "8a2946ff2d5a6b89492c3b4637189c3d90b4cedb",
+     "commit": "4c9a27a744efaf4d78116658ff9db7e71b92f285",
+     "date": "2026-10-16T21:52:35+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 49,
+      "total": 49,
+      "spec": "0b9e1e9ba5b8"
+     }
+    },
+    {
+     "n": 13,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/string-encode-and-decode/submission-13.py",
+     "sha1": "c2aa6eaf1f09db7553d404da4037d847ffcd7cee",
+     "commit": "193be4a91ac6dfba9c9312961e4e6bb2fd246b9e",
+     "date": "2026-10-17T09:01:07+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 49,
+      "input": "[['neet', 'code', 'love', 'you']]",
+      "error": "ValueError: invalid literal for int() with base 10: 'et4'",
+      "line": 24,
+      "code": "while j < int(l):",
+      "spec": "0b9e1e9ba5b8"
+     }
+    },
+    {
+     "n": 14,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/string-encode-and-decode/submission-14.py",
+     "sha1": "a2e75cc05c8ae502ab5718ae5e7acae4471e2d6b",
+     "commit": "adf3b2645d573a5722897a7ea5e7f6fff48e0384",
+     "date": "2026-10-17T09:03:42+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 49,
+      "total": 49,
+      "spec": "0b9e1e9ba5b8"
+     }
+    }
+   ]
+  },
+  "three-integer-sum": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-1.py",
+     "sha1": "b91476b0bfde6db2e8312d08a79856c74eab9ff9",
+     "commit": "4240756c6fc06ffe371631393806b492be25b6d2",
+     "date": "2026-10-22T10:45:44+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 50,
+      "input": "[[-1, 0, 1, 2, -1, -4]]",
+      "error": "NameError: name 'target' is not defined",
+      "line": 10,
+      "code": "diff = target - c_sum",
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-2.py",
+     "sha1": "c869fdd9b3695af89c2691c4c8ed4a81ac2e560b",
+     "commit": "60949bbefe9b7da28b4c5418c51770e5f0204568",
+     "date": "2026-10-22T10:46:11+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 50,
+      "input": "[[-1, 0, 1, 2, -1, -4]]",
+      "error": "AttributeError: 'list' object has no attribute 'add'",
+      "line": 18,
+      "code": "answer.add(i, p_l, p_r)",
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-3.py",
+     "sha1": "ec638bc1e256c6ef53f398fa1c3906d76d532af5",
+     "commit": "ca9aa23a33a14a6bde90d6f4a14e19ef52933fd2",
+     "date": "2026-10-22T10:46:46+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 50,
+      "input": "[[-1, 0, 1, 2, -1, -4]]",
+      "error": "TypeError: list.append() takes exactly one argument (3 given)",
+      "line": 18,
+      "code": "answer.append(i, p_l, p_r)",
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-4.py",
+     "sha1": "3c8276bafa0d1cc13a5bedcd4284598a259f5019",
+     "commit": "563630bdd6f90c47de51b987519463a0317cdc2f",
+     "date": "2026-10-22T10:47:16+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 50,
+      "input": "[[-1, 0, 1, 2, -1, -4]]",
+      "error": "TypeError: unhashable type: 'list'",
+      "line": 20,
+      "code": "return set(answer)",
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-5.py",
+     "sha1": "741d816f8dc491673ef9a2dbea4a70257a33a35f",
+     "commit": "538cc18a0296a1a30c345a1974f81ba26e1f7c30",
+     "date": "2026-10-22T10:47:29+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 50,
+      "input": "[[-1, 0, 1, 2, -1, -4]]",
+      "error": "AttributeError: 'list' object has no attribute 'set'",
+      "line": 20,
+      "code": "return answer.set()",
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-6.py",
+     "sha1": "3c8276bafa0d1cc13a5bedcd4284598a259f5019",
+     "commit": "0b8a1c8a8abd4ecf49c3dca26f6028e5908c5bae",
+     "date": "2026-10-22T10:47:44+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 50,
+      "input": "[[-1, 0, 1, 2, -1, -4]]",
+      "error": "TypeError: unhashable type: 'list'",
+      "line": 20,
+      "code": "return set(answer)",
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 7,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-7.py",
+     "sha1": "302362d192f0c46b168f8f01eafd309454765b61",
+     "commit": "d86700e9e81363f37061a04c39762721c40ddea1",
+     "date": "2026-10-22T10:49:52+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 50,
+      "input": "[[-1, 0, 1, 2, -1, -4]]",
+      "error": "TypeError: cannot unpack non-iterable int object",
+      "line": 6,
+      "code": "for i, v in nums_s:",
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 8,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-8.py",
+     "sha1": "e05b19a0f02a5215d8b8b2c31024ec49ddd636da",
+     "commit": "eb2ede000f3c4bd23141d9d9135f861b2bf78da7",
+     "date": "2026-10-22T10:50:03+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 50,
+      "input": "[[-1, 0, 1, 2, -1, -4]]",
+      "expected": "[[-1, -1, 2], [-1, 0, 1]]",
+      "got": "[]",
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 9,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-9.py",
+     "sha1": "e12da37a0866e3eb8e6c3bceb005c43d437a16ba",
+     "commit": "36184ab4627e91697e90dc49955508845624f97e",
+     "date": "2026-10-22T10:51:41+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 50,
+      "input": "[[-1, 0, 1, 2, -1, -4]]",
+      "expected": "[[-1, -1, 2], [-1, 0, 1]]",
+      "got": "[]",
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 10,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-10.py",
+     "sha1": "e12da37a0866e3eb8e6c3bceb005c43d437a16ba",
+     "commit": "eb867b8aee4cdae593d57648164c2cb3016e3bba",
+     "date": "2026-10-22T10:52:17+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 50,
+      "input": "[[-1, 0, 1, 2, -1, -4]]",
+      "expected": "[[-1, -1, 2], [-1, 0, 1]]",
+      "got": "[]",
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 11,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-11.py",
+     "sha1": "4766712e1e1000ed03edd97e2762d78e036136b7",
+     "commit": "a9c3fe5780ba447947cb1a3877584f1eb9084256",
+     "date": "2026-10-22T10:53:03+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "TIMEOUT",
+      "passed": 0,
+      "total": 50,
+      "input": "[[-1, 0, 1, 2, -1, -4]]",
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 12,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-12.py",
+     "sha1": "3b24ca8b8657a8037ff2cd08b0a0cdb3e2e26708",
+     "commit": "34d52b64c4d701c9fbb06bb83808496701871a03",
+     "date": "2026-10-22T10:53:29+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "TIMEOUT",
+      "passed": 0,
+      "total": 50,
+      "input": "[[-1, 0, 1, 2, -1, -4]]",
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 13,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-13.py",
+     "sha1": "6b3bc3ece435a0fe5fc3c0bbcf97570bbbe3582b",
+     "commit": "8ad1fa3f197f91d4e4cbfd418b4af6f129dfbcd1",
+     "date": "2026-10-22T10:54:36+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "TIMEOUT",
+      "passed": 0,
+      "total": 50,
+      "input": "[[-1, 0, 1, 2, -1, -4]]",
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 16,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-16.py",
+     "sha1": "e0da60a1462f88a01bd2eb7db26e69839b300e0e",
+     "commit": "a61bf1fad153200daed6226116ba8e84cf35d426",
+     "date": "2026-10-22T11:03:23+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 50,
+      "total": 50,
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 17,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-17.py",
+     "sha1": "1f019d7d4774a82c44758fb6b036477c4e4a7d4a",
+     "commit": "b1aac039e5df8b71a734f31eee4ba96f7c23bf4e",
+     "date": "2026-10-22T11:03:49+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 50,
+      "input": "[[0, 0, 0]]",
+      "expected": "[[0, 0, 0]]",
+      "got": "[]",
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 18,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-18.py",
+     "sha1": "6a50c0b6f034737a3751a09900e4dc328089d4c2",
+     "commit": "2466a5f602bd1808b3a63b86e45f5cb623c58f4d",
+     "date": "2026-10-22T11:03:57+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 50,
+      "total": 50,
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 19,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-19.py",
+     "sha1": "31432fad524e69636789fa493d5cccb2476283ab",
+     "commit": "65dff6b09621f7f57a146c552eb1544b01e43901",
+     "date": "2026-10-23T10:15:09+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 50,
+      "total": 50,
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 20,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-20.py",
+     "sha1": "9c408edd29d41ca1494ba523bd29214e520b8a02",
+     "commit": "492e3de781d99d3a4083ead36e41ed84fb6594df",
+     "date": "2026-10-23T10:16:44+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "TIMEOUT",
+      "passed": 4,
+      "total": 50,
+      "input": "[[-2, 0, 1, 1, 2]]",
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 21,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-21.py",
+     "sha1": "cd430bc06635505cb51b776cb402fa19f636be3e",
+     "commit": "cfddd4160d0d36fb690a14a7a0324dbd4fc483ce",
+     "date": "2026-10-23T10:18:35+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 50,
+      "total": 50,
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 22,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-22.py",
+     "sha1": "50596508a2d8ca99f8c070983141dc1c05f7515e",
+     "commit": "450b51ad49e4ca0b3f0e1ed911028d0660f00a0f",
+     "date": "2026-10-23T10:19:38+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 7,
+      "total": 50,
+      "input": "[[7, 7, -3, -1, 0, 1]]",
+      "expected": "[[-1, 0, 1]]",
+      "got": "[]",
+      "spec": "e438b3cb470c"
+     }
+    },
+    {
+     "n": 23,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/three-integer-sum/submission-23.py",
+     "sha1": "1ea2468e9c64b9edc6ffe1e2f0e8bdb3002b15d6",
+     "commit": "7e01da4868e71652994458e9c67e78b6ae419ed0",
+     "date": "2026-10-23T10:20:11+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 50,
+      "total": 50,
+      "spec": "e438b3cb470c"
+     }
+    }
+   ]
+  },
+  "top-k-elements-in-list": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-0.py",
+     "sha1": "dab5ab22fc16359043a39289410d8d5e8a6112c8",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-1.py",
+     "sha1": "bb987273e5e40f7dd4b3feb34660d54c6d26e208",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-2.py",
+     "sha1": "d5855c088702e82c53da7331debdc5900dfdcd85",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-4.py",
+     "sha1": "eef2e6a872ee697a6dd997224d7e3a5e9dbff083",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-5.py",
+     "sha1": "7875cf324dcb70a703f2924c0c95034d07d683b3",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-6.py",
+     "sha1": "0e7a07f79dcc166d51d52e3095c673bc3a94d70f",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 7,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-7.py",
+     "sha1": "92934813d959d10b88038af30db311a30d98629a",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 9,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-9.py",
+     "sha1": "a54bbc2e2218d98f6df6bb0cd3d2a285fb458b65",
+     "commit": "ace96c10fc73c2903e9ecdd98fc88de2068f2726",
+     "date": "2026-10-16T17:09:32+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 2, 3, 3, 3], 2]",
+      "error": "NameError: name 'conter' is not defined",
+      "line": 7,
+      "code": "s_counter = sorted(conter.items(), key = lambda x: x[1], reverse= True )",
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 10,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-10.py",
+     "sha1": "505d78692ad110b6807200c421afe17138df863f",
+     "commit": "a7f5e0a86a3aa490b95c447c31110e4d60144d00",
+     "date": "2026-10-16T17:09:43+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 2, 3, 3, 3], 2]",
+      "error": "TypeError: 'int' object is not iterable",
+      "line": 10,
+      "code": "for i in enumerate(k):",
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 11,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-11.py",
+     "sha1": "c87d876a6ba2cafec4d89d3ea3f80daf743dc7ac",
+     "commit": "3835ad2edfc9e1f1776e799d054e9a2806767fad",
+     "date": "2026-10-16T17:11:28+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 2, 3, 3, 3], 2]",
+      "error": "ValueError: 0 is not in list",
+      "line": 11,
+      "code": "answer.append(s_counter.index(i))",
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 12,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-12.py",
+     "sha1": "1eca71b5972697ab1f7bff78a104899805a20d91",
+     "commit": "9a9e97dbb6bbc1bd279c2ba037de2af06682f3a2",
+     "date": "2026-10-16T17:12:03+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 2, 3, 3, 3], 2]",
+      "expected": "[3, 2]",
+      "got": "[(3, 3), (2, 2)]",
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 13,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-13.py",
+     "sha1": "5a150e9de31270ad1a8bf846602c9879c853fdec",
+     "commit": "eb1bb88763e25e56d011f5acaf9e1c38a01f601d",
+     "date": "2026-10-16T17:12:17+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "17f3700d8f24"
+     }
+    }
+   ]
+  },
+  "two-integer-sum": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-0.py",
+     "sha1": "ccdedf3ab95d3a2d111afae315c5626bed2c6a9d",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-1.py",
+     "sha1": "0200c40bdb89863875bc037a2d32f66f244cfa25",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 48,
+      "input": "[[5, 5], 10]",
+      "expected": "[0, 1]",
+      "got": "None",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-2.py",
+     "sha1": "5f0581f050a0c480839dd49673d315d64462b9f4",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 48,
+      "input": "[[5, 5], 10]",
+      "expected": "[0, 1]",
+      "got": "None",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-3.py",
+     "sha1": "5f0581f050a0c480839dd49673d315d64462b9f4",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 48,
+      "input": "[[5, 5], 10]",
+      "expected": "[0, 1]",
+      "got": "None",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-4.py",
+     "sha1": "5f0581f050a0c480839dd49673d315d64462b9f4",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 48,
+      "input": "[[5, 5], 10]",
+      "expected": "[0, 1]",
+      "got": "None",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-5.py",
+     "sha1": "040ddbe4d4bdce31bbacabbd6ca78b5a81daf938",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 48,
+      "input": "[[5, 5], 10]",
+      "expected": "[0, 1]",
+      "got": "[1, 0]",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-6.py",
+     "sha1": "040ddbe4d4bdce31bbacabbd6ca78b5a81daf938",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 48,
+      "input": "[[5, 5], 10]",
+      "expected": "[0, 1]",
+      "got": "[1, 0]",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 7,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-7.py",
+     "sha1": "1a4a1aaa1dc47a623ffc0e4727bde74a027d6b5b",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 48,
+      "input": "[[3, 4, 5, 6], 7]",
+      "expected": "[0, 1]",
+      "got": "[1, 0]",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 8,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-8.py",
+     "sha1": "040ddbe4d4bdce31bbacabbd6ca78b5a81daf938",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 48,
+      "input": "[[5, 5], 10]",
+      "expected": "[0, 1]",
+      "got": "[1, 0]",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 9,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-9.py",
+     "sha1": "1aaae85d96bcd0381e72a9ab770cdd979e522ed4",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 10,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-10.py",
+     "sha1": "860d33e11b3c06e7acf13cc94669e474dd3b69ae",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "LOAD_ERROR",
+      "error": "TypeError: Type List cannot be instantiated; use list() instead",
+      "line": 2,
+      "code": "def twoSum (self, nums:List(int), target: int) -> List[int]:",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 11,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-11.py",
+     "sha1": "cd548c1b6cb82a633d2e91950e5a42849a407b69",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "LOAD_ERROR",
+      "error": "TypeError: Type List cannot be instantiated; use list() instead",
+      "line": 2,
+      "code": "def twoSum (self, nums:List(int), target: int) -> List[int]:",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 13,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-13.py",
+     "sha1": "cd548c1b6cb82a633d2e91950e5a42849a407b69",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "LOAD_ERROR",
+      "error": "TypeError: Type List cannot be instantiated; use list() instead",
+      "line": 2,
+      "code": "def twoSum (self, nums:List(int), target: int) -> List[int]:",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 14,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-14.py",
+     "sha1": "5ce281b89fd4b8967790a9f64d100743d606b64d",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "LOAD_ERROR",
+      "error": "TypeError: Type List cannot be instantiated; use list() instead",
+      "line": 2,
+      "code": "def twoSum (self, nums:List(int), target: int) -> List(int):",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 15,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-15.py",
+     "sha1": "6c8f00110a86e85abc9db8c4691c12bec7cf3824",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 48,
+      "input": "[[5, 5], 10]",
+      "expected": "[0, 1]",
+      "got": "[0, 0]",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 16,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-16.py",
+     "sha1": "ee1114df1a9c019849f556f1410ccf3ab8d38879",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 48,
+      "input": "[[5, 5], 10]",
+      "expected": "[0, 1]",
+      "got": "[1, 0]",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 19,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-19.py",
+     "sha1": "e468dd7b96c7a22f56711e0b82ffbee52959b2f3",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[[3, 4, 5, 6], 7]",
+      "error": "NameError: name 'cmplmentIndxa' is not defined",
+      "line": 8,
+      "code": "return [i, cmplmentIndxa]",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 20,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-20.py",
+     "sha1": "9d892ad34494cbba23a6ae9ee7a0146139e23764",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 48,
+      "input": "[[5, 5], 10]",
+      "expected": "[0, 1]",
+      "got": "[1, 0]",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 21,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-21.py",
+     "sha1": "cc785bd7c585ea0a5497d8e57f08482137068dd5",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[[3, 4, 5, 6], 7]",
+      "error": "TypeError: 'builtin_function_or_method' object is not subscriptable",
+      "line": 8,
+      "code": "return sorted[i, cmplmentIndx]",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 22,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-22.py",
+     "sha1": "c282d71935da3826f3098bef4fe840791b17d649",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 23,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-23.py",
+     "sha1": "1ba828a6c3440c4895e94746f79a4abb317c197d",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 48,
+      "input": "[[5, 5], 10]",
+      "expected": "[0, 1]",
+      "got": "[1, 0]",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 24,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-24.py",
+     "sha1": "797729230043a0ce9bb2c42122f83300531c0002",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 25,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-25.py",
+     "sha1": "48c6516ef65926b24a09d63934cffe1896adda57",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 48,
+      "input": "[[5, 5], 10]",
+      "expected": "[0, 1]",
+      "got": "[1, 0]",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 26,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-26.py",
+     "sha1": "502861adc0e00460a88958fb4777fd22023c6c70",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 27,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-27.py",
+     "sha1": "f3bd935c547ebd670072212789a1cfeaa58cb448",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 28,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-28.py",
+     "sha1": "0cb14818249f2c6d12a958db84adce3461b03a72",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 48,
+      "input": "[[5, 5], 10]",
+      "expected": "[0, 1]",
+      "got": "[0, 0]",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 29,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-29.py",
+     "sha1": "f58c85a62b25f2332248409cc4ee326967550541",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 48,
+      "input": "[[5, 5], 10]",
+      "expected": "[0, 1]",
+      "got": "None",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 30,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-30.py",
+     "sha1": "a9d5867f26cae2d4a9d2370cf996103bb3855c7a",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 48,
+      "input": "[[5, 5], 10]",
+      "expected": "[0, 1]",
+      "got": "[1, 0]",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 31,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-31.py",
+     "sha1": "fa63c458e704c6a1894766b51e747cc37b467f29",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 32,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-32.py",
+     "sha1": "66bc12d7c41dc613ae40fa43422f42a9852c5564",
+     "commit": "d5b8efd9e1d6d45184748a72ffbac39d286dfaeb",
+     "date": "2026-10-14T22:34:28+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 33,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-33.py",
+     "sha1": "5781c8e2ec654766cbde576aa397cd5f40d6c8ab",
+     "commit": "b345f5158504cdc540eb57841686f0a33b8be308",
+     "date": "2026-10-16T13:04:26+01:00",
+     "bulk_sync": true,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 48,
+      "input": "[[5, 5], 10]",
+      "expected": "[0, 1]",
+      "got": "[1, 0]",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 34,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-34.py",
+     "sha1": "05d7fd67e1d3f8f6c7aead79e801d8152f8e4ed9",
+     "commit": "e1a1ff3cad13ac3a484dcfb0de4cccc11616b9de",
+     "date": "2026-10-15T09:28:26+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 35,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-35.py",
+     "sha1": "bada2c0d8fd411d48cfae5512e9e9a68d41de0d2",
+     "commit": "2259fdf1dc033a1b4cf11090da9203ffd06ab62a",
+     "date": "2026-10-16T08:01:49+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "58253ee4a544"
+     }
+    }
+   ]
+  },
+  "two-integer-sum-ii": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum-ii/submission-0.py",
+     "sha1": "ab33ae4523ef59fbd4e324b4a8acdba68dc6251b",
+     "commit": "af14cc3e561a31e11db95e709dcc09a328109b4a",
+     "date": "2026-10-20T09:44:11+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 47,
+      "input": "[[1, 2, 3, 4], 3]",
+      "error": "AttributeError: 'list' object has no attribute 'get_index'",
+      "line": 7,
+      "code": "return [numbers.get_index(diff)+1, i+1 ]",
+      "spec": "51138135d015"
+     }
+    },
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum-ii/submission-1.py",
+     "sha1": "5871eef465a33ad6554d2519898b57ffc8fa0450",
+     "commit": "82081de3d511d0918a08712cc96604ecbc6e2be7",
+     "date": "2026-10-20T09:44:24+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 47,
+      "input": "[[1, 2, 3, 4], 3]",
+      "error": "AttributeError: 'list' object has no attribute 'get_index'",
+      "line": 7,
+      "code": "return [int(numbers.get_index(diff))+1, i+1 ]",
+      "spec": "51138135d015"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum-ii/submission-2.py",
+     "sha1": "7827cf85fc97728c9ea50e90a309c2587c79e223",
+     "commit": "660324b8337e9ce5cfd9e1a13a2d42bfe4cf070e",
+     "date": "2026-10-20T09:47:01+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "51138135d015"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum-ii/submission-3.py",
+     "sha1": "0996259c9e68215773ccfeaf06f8ed9883d1f151",
+     "commit": "c74d85f8d3f790d5acd20f956d47a273e04d881d",
+     "date": "2026-10-22T10:34:36+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "51138135d015"
+     }
+    }
+   ]
+  },
+  "valid-sudoku": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/valid-sudoku/submission-0.py",
+     "sha1": "7751e24bf332c87d36203394c941d9745f33367a",
+     "commit": "3e253fc9f31afdc186e1c95369ac742531300ac4",
+     "date": "2026-10-18T09:57:22+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 47,
+      "input": "[[['5', '3', '.', '.', '7', '.', '.', '.', '.'], ['6', '.', '.', '1', '9', '5', '.', '.', '.'], ['.', '9', '8', '.', '.', '.', '.', '6', '.'], ['8', '.', '.', '…",
+      "error": "AttributeError: 'dict' object has no attribute 'add'",
+      "line": 13,
+      "code": "seen.add(i) # ich glaube falsche syntax",
+      "spec": "fbf431d21bc6"
+     }
+    },
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/valid-sudoku/submission-1.py",
+     "sha1": "d36c7c7c8b390337f2cc50df87eb22a4d8da9783",
+     "commit": "0aa1aa3e323c7bc245fa444f15cf6ab9c0892f38",
+     "date": "2026-10-18T09:57:33+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 47,
+      "input": "[[['5', '3', '.', '.', '7', '.', '.', '.', '.'], ['6', '.', '.', '1', '9', '5', '.', '.', '.'], ['.', '9', '8', '.', '.', '.', '.', '6', '.'], ['8', '.', '.', '…",
+      "error": "AttributeError: 'tuple' object has no attribute 'add'",
+      "line": 13,
+      "code": "seen.add(i)",
+      "spec": "fbf431d21bc6"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/valid-sudoku/submission-2.py",
+     "sha1": "a2fb9bdd1237b1e9086e265e85f483289fd90dd9",
+     "commit": "619af62385fad6fefd1b23ea8eef5b63e0cf32c5",
+     "date": "2026-10-18T10:02:08+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 47,
+      "input": "[[['5', '3', '.', '.', '7', '.', '.', '.', '.'], ['6', '.', '.', '1', '9', '5', '.', '.', '.'], ['.', '9', '8', '.', '.', '.', '.', '6', '.'], ['8', '.', '.', '…",
+      "error": "AttributeError: 'tuple' object has no attribute 'add'",
+      "line": 13,
+      "code": "seen.add(i)",
+      "spec": "fbf431d21bc6"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/valid-sudoku/submission-3.py",
+     "sha1": "edbbff3797192eb6515fc453bb2115129ae477f5",
+     "commit": "ea4a4557930e778c8703b784e7208ca2b1be6e90",
+     "date": "2026-10-18T10:03:44+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 47,
+      "input": "[[['5', '3', '.', '.', '7', '.', '.', '.', '.'], ['6', '.', '.', '1', '9', '5', '.', '.', '.'], ['.', '9', '8', '.', '.', '.', '.', '6', '.'], ['8', '.', '.', '…",
+      "expected": "True",
+      "got": "False",
+      "spec": "fbf431d21bc6"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/valid-sudoku/submission-4.py",
+     "sha1": "d5535e7501238a6fc0e6a4ea6a88c127f05415a6",
+     "commit": "8e1f1761a9bb5dce766e7d6edd67d189c7cb2de5",
+     "date": "2026-10-18T10:04:38+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 47,
+      "input": "[[['5', '3', '.', '.', '7', '.', '.', '.', '.'], ['6', '.', '.', '1', '9', '5', '.', '.', '.'], ['.', '9', '8', '.', '.', '.', '.', '6', '.'], ['8', '.', '.', '…",
+      "error": "AttributeError: 'tuple' object has no attribute 'add'",
+      "line": 24,
+      "code": "seen.add(i)",
+      "spec": "fbf431d21bc6"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/valid-sudoku/submission-5.py",
+     "sha1": "6b087bf033884bbaf829a88c075d54f79d7e5e48",
+     "commit": "10b7b406e619477e31dba0cee0eb38be17d9ad43",
+     "date": "2026-10-18T10:04:46+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 47,
+      "input": "[[['5', '3', '.', '.', '7', '.', '.', '.', '.'], ['6', '.', '.', '1', '9', '5', '.', '.', '.'], ['.', '9', '8', '.', '.', '.', '.', '6', '.'], ['8', '.', '.', '…",
+      "expected": "True",
+      "got": "None",
+      "spec": "fbf431d21bc6"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/valid-sudoku/submission-6.py",
+     "sha1": "ce517bce32ee2ba274ed6e1b295fa6aa1e4c31af",
+     "commit": "8554bb0dba38db3941db64f7206babc4ecc1946d",
+     "date": "2026-10-18T10:05:39+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 47,
+      "input": "[[['5', '3', '.', '.', '7', '.', '.', '.', '.'], ['6', '.', '.', '1', '9', '5', '.', '.', '.'], ['.', '9', '8', '.', '.', '.', '.', '6', '.'], ['8', '.', '.', '…",
+      "expected": "True",
+      "got": "None",
+      "spec": "fbf431d21bc6"
+     }
+    },
+    {
+     "n": 7,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/valid-sudoku/submission-7.py",
+     "sha1": "d0d3b1fa73854e68740c13f817a72b292050d29b",
+     "commit": "172a9a3874ad6db17aa2eeb3b4e2f1881e5e591a",
+     "date": "2026-10-18T10:05:57+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 3,
+      "total": 47,
+      "input": "[[['1', '.', '.', '.', '.', '.', '.', '.', '.'], ['.', '1', '.', '.', '.', '.', '.', '.', '.'], ['.', '.', '.', '.', '.', '.', '.', '.', '.'], ['.', '.', '.', '…",
+      "expected": "False",
+      "got": "True",
+      "spec": "fbf431d21bc6"
+     }
+    },
+    {
+     "n": 9,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/valid-sudoku/submission-9.py",
+     "sha1": "f2d67903f15c861c4d2d75336943563a857c09ac",
+     "commit": "f49329fc94921b01ff6e09f1cb61179aa12af2a0",
+     "date": "2026-10-18T10:28:18+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "fbf431d21bc6"
+     }
+    },
+    {
+     "n": 10,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/valid-sudoku/submission-10.py",
+     "sha1": "8cbc6a0f0383d7d8afdc43c249c289cdf8e34a6c",
+     "commit": "d1c3e366effbc35b5f017b2394fe4937db5212eb",
+     "date": "2026-10-18T10:28:46+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "fbf431d21bc6"
+     }
+    }
+   ]
+  }
+ }
+}
