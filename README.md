@@ -21,6 +21,15 @@ ncd_subs ──▶ extract ──▶ verify ──▶ Analyse (Claude) ──▶
 4. **Karten**: eine Markdown-Datei pro Karte in `cards/`, mit Verweisen auf Ledger und Submissions.
 5. **build**: rendert Markdown, Syntax-Highlighting und SVG-Visualisierungen zu einem Anki-Deck und `cards.json`.
 
+## In Anki importieren
+
+1. [`dist/ncd_cards.apkg`](https://github.com/milanagm/ncd_cards/raw/main/dist/ncd_cards.apkg) herunterladen.
+2. In Anki am Desktop: *Datei → Importieren* (oder Doppelklick auf die Datei). Danach synchronisieren,
+   dann landet das Deck *NeetCode Insights* über AnkiWeb auch am Handy.
+3. Neue Versionen genauso importieren: Bestehende Karten werden aktualisiert, der Lernfortschritt bleibt.
+
+Jede Karte endet mit **Dein Verlauf**: die Submissions, in denen der Fehler steckt, mit Status und Link.
+
 ## Befehle
 
 ```bash
@@ -29,7 +38,13 @@ git clone https://github.com/milanagm/ncd_subs ../ncd_subs
 
 .venv/bin/python -m pipeline.extract        # Index aktualisieren, neue Submissions anzeigen
 .venv/bin/python -m pipeline.verify.run     # neue Submissions beurteilen
+.venv/bin/python -m pipeline.digest         # Verlauf der neuen Submissions mit Status und Diffs
+.venv/bin/python -m pipeline.validate       # Ledger und Karten gegen die echten Dateien prüfen
+.venv/bin/python -m pipeline.build          # dist/ bauen (validiert vorher)
+.venv/bin/python -m pipeline.digest --mark  # Submissions als analysiert markieren
 ```
+
+Der Ablauf für die täglichen Läufe und die Kartenregeln stehen in [`CLAUDE.md`](CLAUDE.md).
 
 ## Aufbau
 
@@ -41,4 +56,4 @@ git clone https://github.com/milanagm/ncd_subs ../ncd_subs
 | `data/ledger.json` | Fehlerkategorien mit Belegen |
 | `data/state.json` | welche Submissions schon analysiert sind |
 | `cards/` | Karten als Markdown |
-| `dist/` | Anki-Deck und `cards.json` (generiert) |
+| `dist/` | Anki-Deck, `cards.json` und `preview.html` mit allen Karten (generiert) |

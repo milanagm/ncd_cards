@@ -1,0 +1,222 @@
+{
+ "categories": [
+  {
+   "id": "index-vs-value",
+   "title": "Index und Wert verwechselt",
+   "rule": "Vor jeder Verwendung klären: Position oder Element? `for i, v in enumerate(xs)` hält beides auseinander.",
+   "occurrences": [
+    {"ref": "three-integer-sum#1-6", "snippet": "for i in nums_s:", "note": "durchläuft Werte und benutzt sie danach als Index (`nums_s[i]`)"},
+    {"ref": "three-integer-sum#7", "snippet": "for i, v in nums_s:", "note": "Index und Wert ohne `enumerate` → TypeError: cannot unpack non-iterable int"},
+    {"ref": "three-integer-sum#4-8", "snippet": "answer.append([i, p_l, p_r])", "note": "Indizes statt Werte ins Ergebnis"},
+    {"ref": "two-integer-sum#11-15", "snippet": "i != (target - v)", "note": "vergleicht einen Index mit einem Wert → `[0, 0]` bei `[5, 5]`"},
+    {"ref": "two-integer-sum#28-29", "snippet": "for i in nums:", "note": "`i` ist ein Wert; `nums.index(i)` liefert bei Duplikaten immer die erste Position"},
+    {"ref": "longest-consecutive-sequence#2", "snippet": "all_seq_lengths[max(all_seq_lengths)]", "note": "`max()` liefert schon den Wert, `[...]` benutzt ihn als Index"},
+    {"ref": "top-k-elements-in-list#9-11", "snippet": "s_counter.index(i)", "note": "sucht die Position eines Zählers statt `s_counter[i]` zu lesen"},
+    {"ref": "top-k-elements-in-list#12", "snippet": "answer.append(s_counter[i])", "note": "Elemente von `items()` sind (Wert, Anzahl)-Tupel → `s_counter[i][0]`"},
+    {"ref": "products-of-array-discluding-self#2-4", "snippet": "for i in reli:", "note": "durchläuft Werte (alle 1) und benutzt sie als Index"},
+    {"ref": "valid-sudoku#2-5", "snippet": "if row[i] in seen: return False seen.add(i)", "note": "Spaltenindex `i` statt Zellwert `row[i]` ins Set"}
+   ]
+  },
+  {
+   "id": "pointer-movement",
+   "title": "Two Pointers: Richtung, Bedingung, Grenzen",
+   "rule": "Von außen nach innen: `while l < r`, `l += 1`, `r -= 1`. Jede innere Skip-Schleife braucht ebenfalls `l < r`.",
+   "occurrences": [
+    {"ref": "is-palindrome#0", "snippet": "while pointer_left != pointer_right:", "note": "bei gerader Länge kreuzen sich die Pointer, ohne je gleich zu sein"},
+    {"ref": "is-palindrome#15-16", "snippet": "p_r += 1", "note": "rechter Pointer läuft nach außen; in #15 stehen die Updates außerdem außerhalb der Schleife"},
+    {"ref": "three-integer-sum#12-13", "snippet": "p_r += 1", "note": "rechter Pointer läuft nach außen → TIMEOUT"},
+    {"ref": "is-palindrome#8", "snippet": "while not s[pointer_left].isalnum():", "note": "Skip-Schleife ohne Grenze → IndexError bei `\".,\"`"},
+    {"ref": "is-palindrome#11", "snippet": "while pointer_left < len(s) and pointer_right > -1 and not s[pointer_left].isalnum():", "note": "Grenze an `len(s)` statt an `pointer_right` → IndexError"}
+   ]
+  },
+  {
+   "id": "loop-progress",
+   "title": "Endlosschleife: kein Fortschritt",
+   "rule": "Jeder Pfad durch den Schleifenkörper muss die Abbruchbedingung näher bringen. Vorsicht bei `continue` und bei Zweigen ohne Update.",
+   "occurrences": [
+    {"ref": "three-integer-sum#11", "snippet": "answer.append([nums_s[i], nums_s[p_l], nums_s[p_r]]) return answer", "note": "nach einem Treffer bewegt sich kein Pointer → TIMEOUT"},
+    {"ref": "three-integer-sum#20", "snippet": "if v > 0: continue", "note": "`continue` ohne Pointer-Update → TIMEOUT; #21 mit `break`"},
+    {"ref": "longest-consecutive-sequence#0", "snippet": "while (i+1) - i == 1:", "note": "Bedingung ist immer wahr → TIMEOUT"}
+   ]
+  },
+  {
+   "id": "call-vs-subscript",
+   "title": "Klammern & Callables: () vs. []",
+   "rule": "`()` ruft auf, `[]` indiziert oder parametrisiert Typen: `List[int]`, `sorted(xs)`, `defaultdict(list)` (Fabrik übergeben, nicht aufrufen).",
+   "occurrences": [
+    {"ref": "two-integer-sum#10-14", "snippet": "nums:List(int)", "note": "Type-Hint mit `()` → LOAD_ERROR: Type List cannot be instantiated"},
+    {"ref": "two-integer-sum#21", "snippet": "sorted[i, cmplmentIndx]", "note": "Funktion mit `[]` aufgerufen → not subscriptable"},
+    {"ref": "anagram-groups#14-16", "snippet": "defaultdict(List(", "note": "`typing.List` aufgerufen → TypeError"},
+    {"ref": "anagram-groups#17-18", "snippet": "defaultdict(list(", "note": "fertige Liste statt Fabrik übergeben → first argument must be callable"}
+   ]
+  },
+  {
+   "id": "method-api",
+   "title": "Methoden & Builtins geraten",
+   "rule": "Bei Unsicherheit `dir(x)` oder `help(x)`. Strings: `s.lower()`; Listen: `xs.append(v)` mit genau einem Argument, `xs.index(v)`; Wiederholung: `range(k)`.",
+   "occurrences": [
+    {"ref": "is-palindrome#4", "snippet": "s = lower(s)", "note": "`lower` ist eine Methode, kein Builtin → NameError"},
+    {"ref": "is-palindrome#5", "snippet": "s.lower(s)", "note": "Methode bekommt `s` schon als `self` → TypeError"},
+    {"ref": "three-integer-sum#3", "snippet": "answer.append(i, p_l, p_r)", "note": "`append` nimmt genau ein Argument"},
+    {"ref": "three-integer-sum#5", "snippet": "answer.set()", "note": "Listen haben keine Methode `set`"},
+    {"ref": "two-integer-sum-ii#0-1", "snippet": "numbers.get_index(diff)", "note": "Methode heißt `index`"},
+    {"ref": "top-k-elements-in-list#9-10", "snippet": "for i in enumerate(k):", "note": "`enumerate` braucht ein Iterable; für k Wiederholungen `range(k)`"},
+    {"ref": "duplicate-integer#1-2", "snippet": "return true", "note": "`True`/`False` werden großgeschrieben → NameError"}
+   ]
+  },
+  {
+   "id": "container-choice",
+   "title": "Falscher Container",
+   "rule": "Leeres Set nur mit `set()`: `{}` ist ein Dict, `()` ein Tupel. Für „schon gesehen?“ Set oder Dict, keine Liste.",
+   "occurrences": [
+    {"ref": "valid-sudoku#0", "snippet": "seen = {}", "note": "leeres Dict → AttributeError: 'dict' object has no attribute 'add'"},
+    {"ref": "valid-sudoku#1-4", "snippet": "seen = ()", "note": "leeres Tupel → AttributeError: 'tuple' object has no attribute 'add'"},
+    {"ref": "duplicate-integer#1", "snippet": "appearance.add(i)", "note": "Liste mit Set-Methode benutzt"},
+    {"ref": "three-integer-sum#2", "snippet": "answer.add(i, p_l, p_r)", "note": "Liste mit Set-Methode benutzt"}
+   ]
+  },
+  {
+   "id": "hashability",
+   "title": "Unhashable: Liste als Set-Element oder Dict-Key",
+   "rule": "Set-Elemente und Dict-Keys müssen unveränderlich sein: Tupel oder String statt Liste (`tuple(sorted(w))`, `\"\".join(sorted(w))`).",
+   "occurrences": [
+    {"ref": "three-integer-sum#4", "snippet": "return set(answer)", "note": "Set aus Listen → TypeError: unhashable type: 'list'"},
+    {"ref": "three-integer-sum#6", "snippet": "return set(answer)", "note": "gleicher Fehler zwei Versuche später"},
+    {"ref": "anagram-groups#14-18", "snippet": "s_i = sorted(i) grouper[s_i].append(i)", "note": "latent: `sorted()` liefert eine Liste; Zeile 3 crashte vorher"}
+   ]
+  },
+  {
+   "id": "list-lookup-complexity",
+   "title": "`in liste` und `liste.index()` sind O(n)",
+   "rule": "Mitgliedschaftstest in einer Schleife → Set oder Dict (O(1)), sonst O(n²). `index()` liefert außerdem nur das erste Vorkommen.",
+   "occurrences": [
+    {"ref": "two-integer-sum#1-8", "snippet": "if match in nums", "note": "O(n)-Suche pro Element"},
+    {"ref": "two-integer-sum#10-16", "snippet": "(target - v) in nums", "note": "O(n)-Suche pro Element"},
+    {"ref": "two-integer-sum#19-22", "snippet": "if complement in nums:", "note": "O(n)-Suche pro Element"},
+    {"ref": "two-integer-sum#23-24", "snippet": "if diff in nums:", "note": "O(n)-Suche pro Element"},
+    {"ref": "two-integer-sum#25-29", "snippet": "if p in nums", "note": "O(n)-Suche pro Element"},
+    {"ref": "two-integer-sum#30-31", "snippet": "if p_v in nums", "note": "O(n)-Suche pro Element"},
+    {"ref": "two-integer-sum#33-34", "snippet": "if diff in nums and i != nums.index(diff):", "note": "O(n)-Suche plus O(n)-`index()`"},
+    {"ref": "duplicate-integer#1-3", "snippet": "if i not in appearance:", "note": "Liste als „gesehen“-Speicher"},
+    {"ref": "duplicate-integer#4", "snippet": "if i in numbers:", "note": "Liste als „gesehen“-Speicher"},
+    {"ref": "duplicate-integer#8", "snippet": "contains = []", "note": "Liste als „gesehen“-Speicher"},
+    {"ref": "duplicate-integer#11", "snippet": "seen = []", "note": "Liste als „gesehen“-Speicher"}
+   ]
+  },
+  {
+   "id": "wrong-variable",
+   "title": "Falsche Variable: Copy-Paste, Shadowing, Tippfehler",
+   "rule": "Nach Copy-Paste jede Variable prüfen. Input-Parameter nie überschreiben. Nach dem Sortieren nur noch die sortierte Liste benutzen, am einfachsten `nums.sort()` in place.",
+   "occurrences": [
+    {"ref": "is-anagram#0", "snippet": "dict_count_t = {} for letter in s:", "note": "zweite Zählschleife läuft über `s` statt `t`"},
+    {"ref": "three-integer-sum#1", "snippet": "diff = target - c_sum", "note": "`target` aus Two Sum übernommen → NameError"},
+    {"ref": "three-integer-sum#17", "snippet": "p_l = 1 + 1", "note": "`1` statt `i`"},
+    {"ref": "three-integer-sum#22", "snippet": "if i > 0 and nums[i] == nums[i - 1]:", "note": "Duplikat-Check auf der unsortierten Liste"},
+    {"ref": "duplicate-integer#13", "snippet": "nums = set()", "note": "überschreibt den Input → Schleife über ein leeres Set"},
+    {"ref": "duplicate-integer#14", "snippet": "seen = set() for i in nums: if i in nums:", "note": "prüft `nums` statt `seen` → immer True"},
+    {"ref": "products-of-array-discluding-self#2-4", "snippet": "prev *= reli[i]", "note": "multipliziert mit dem Präfix statt mit `nums[i]` (ebenso `past *= lire[i]`)"},
+    {"ref": "longest-consecutive-sequence#6", "snippet": "sub_seq.append(i)", "note": "Variable beim Umbau entfernt, Verwendung übersehen → NameError"},
+    {"ref": "top-k-elements-in-list#9", "snippet": "conter.items()", "note": "Tippfehler → NameError"},
+    {"ref": "two-integer-sum#19", "snippet": "cmplmentIndxa", "note": "Tippfehler → NameError"},
+    {"ref": "anagram-groups#19-20", "snippet": "s_i += \"j\"", "note": "String-Literal statt Variable → alle Keys gleich lang aus `j`"}
+   ]
+  },
+  {
+   "id": "duplicates-order",
+   "title": "Duplikate & Reihenfolge der Rückgabe",
+   "rule": "Testfälle mit Duplikaten (`[5, 5]`) und Vorgaben zur Reihenfolge zuerst durchdenken. „Erst prüfen, dann einfügen“ löst bei Two Sum beides.",
+   "occurrences": [
+    {"ref": "two-integer-sum#1-4", "snippet": "match != value", "note": "schließt gleiche Werte statt gleicher Positionen aus → `[5, 5]` liefert None"},
+    {"ref": "two-integer-sum#5-6", "snippet": "return [i, nums.index(match)]", "note": "`[1, 0]`: kleinerer Index muss zuerst kommen"},
+    {"ref": "two-integer-sum#7", "snippet": "return [nums.index(match), i]", "note": "`[1, 0]` schon beim ersten Testfall"},
+    {"ref": "two-integer-sum#8", "snippet": "return [i, nums.index(match)]", "note": "`[1, 0]`"},
+    {"ref": "two-integer-sum#16", "snippet": "return [i, nums.index(target - v)]", "note": "`[1, 0]`"},
+    {"ref": "two-integer-sum#20", "snippet": "return [i, cmplmentIndx]", "note": "`[1, 0]`"},
+    {"ref": "two-integer-sum#23", "snippet": "return [i, diff_i]", "note": "`[1, 0]`"},
+    {"ref": "two-integer-sum#25", "snippet": "return [i, nums.index(p)]", "note": "`[1, 0]`"},
+    {"ref": "two-integer-sum#30", "snippet": "return [i, nums.index(p_v)]", "note": "`[1, 0]`"},
+    {"ref": "two-integer-sum#33", "snippet": "return [i, nums.index(diff) ]", "note": "`[1, 0]`"}
+   ]
+  },
+  {
+   "id": "off-by-one",
+   "title": "Off-by-one & Zähler-Initialisierung",
+   "rule": "`while c < n` bzw. `range(n)` läuft genau n-mal. Eine Sequenz hat ab ihrem Startelement die Länge 1, nicht 0.",
+   "occurrences": [
+    {"ref": "string-encode-and-decode#10-11", "snippet": "while c < int(l) - 1:", "note": "liest ein Zeichen zu wenig"},
+    {"ref": "longest-consecutive-sequence#7-9", "snippet": "sub_seq_len = 0", "note": "Startelement nicht mitgezählt"},
+    {"ref": "longest-consecutive-sequence#10", "snippet": "sub_seq_len = 0", "note": "Start mit 1, Reset aber auf 0 → nur die erste Sequenz stimmt"},
+    {"ref": "string-encode-and-decode#13", "snippet": "j = i while j < int(l):", "note": "absoluter Index `j` gegen eine Länge verglichen"}
+   ]
+  },
+  {
+   "id": "edge-cases",
+   "title": "Randfälle & Rückgabewerte",
+   "rule": "Leere Eingabe, ein Element und Duplikate durchspielen. Jeder Pfad braucht ein `return`, sonst kommt `None` zurück.",
+   "occurrences": [
+    {"ref": "longest-consecutive-sequence#3", "snippet": "return max(all_seq_lengths)", "note": "`max([])` → ValueError; #4 mit `default=0`"},
+    {"ref": "valid-sudoku#5-6", "note": "Funktion endet ohne `return True` → `None`"}
+   ]
+  },
+  {
+   "id": "skip-irrelevant",
+   "title": "Irrelevantes nicht übersprungen",
+   "rule": "Erst klären, was zählt: nur alphanumerische Zeichen? Groß/Klein egal? Leere Zellen `.` ignorieren?",
+   "occurrences": [
+    {"ref": "is-palindrome#3-6", "snippet": "while s[pointer_left] == \".\":", "note": "überspringt nur Punkte statt aller nicht-alphanumerischen Zeichen"},
+    {"ref": "is-palindrome#15-20", "snippet": "if s[p_l] != s[p_r]:", "note": "vergleicht case-sensitiv"},
+    {"ref": "valid-sudoku#3", "snippet": "for i in row: if i in seen:", "note": "leere Zellen `.` als Duplikate gezählt → gültiges Board abgelehnt"}
+   ]
+  },
+  {
+   "id": "length-prefix-parsing",
+   "title": "Encoding: Trennzeichen vs. Längenpräfix",
+   "rule": "Trennzeichen können im Inhalt vorkommen: Länge voranstellen (`len#str`) und genau so viele Zeichen lesen. Mehrstellige Längen bis zum `#` lesen.",
+   "occurrences": [
+    {"ref": "string-encode-and-decode#0", "snippet": "if letter != \"#\":", "note": "reines Trennzeichen-Format → `[\"a#b\"]` zerfällt"},
+    {"ref": "string-encode-and-decode#3", "snippet": "l_w = int(s[i])", "note": "liest nur eine Ziffer → Längen ab 10 kaputt"},
+    {"ref": "string-encode-and-decode#4", "snippet": "l_w += int(s[i])", "note": "summiert Ziffern: „12“ wird 3"}
+   ]
+  },
+  {
+   "id": "for-loop-variable",
+   "title": "Schleifenvariable einer for-Schleife ändern",
+   "rule": "`for j in range(n)` setzt `j` in jeder Runde neu. `j += 1` im Körper ist wirkungslos; wer selbst zählen will, nimmt `while`.",
+   "occurrences": [
+    {"ref": "string-encode-and-decode#3-4", "snippet": "word += s[i] i += 1 j += 1", "note": "`j += 1` hat keine Wirkung"}
+   ]
+  },
+  {
+   "id": "constraint-ignored",
+   "title": "Constraint übersehen",
+   "rule": "Constraints zuerst lesen: „O(1) Extraspeicher“ oder „sortiert“ sind Hinweise auf das erwartete Pattern.",
+   "occurrences": [
+    {"ref": "two-integer-sum-ii#0-2", "snippet": "seen = set()", "note": "verlangt ist O(1) Extraspeicher; #3 mit Two Pointers"}
+   ]
+  }
+ ],
+ "self_notes": [
+  {"ref": "longest-consecutive-sequence#0", "text": "set erzeugt beliebige Reihenfolge!", "topic": "Sets sind ungeordnet"},
+  {"ref": "longest-consecutive-sequence#0", "text": "sorted gibt immer eine Liste zurück!", "topic": "`sorted()` liefert eine Liste"},
+  {"ref": "products-of-array-discluding-self#2", "text": "wie macht man ein array einer best laenge?", "topic": "Liste fester Länge"},
+  {"ref": "products-of-array-discluding-self#2", "text": "wie iteriere ich eine schleife von hinten", "topic": "Rückwärts iterieren"},
+  {"ref": "string-encode-and-decode#11", "text": "typisches leichtsinnsfehler", "topic": "Off-by-one bei `<`"},
+  {"ref": "valid-sudoku#0", "text": "ich glaube falsche syntax", "topic": "Leeres Set"},
+  {"ref": "valid-sudoku#10", "text": "das habe ich tbh nicht gecheckt", "topic": "3×3-Boxen iterieren"},
+  {"ref": "is-anagram#3", "text": "idee: alphabetisch sortieren und vergleichen", "topic": "Sortier-Ansatz für Anagramme"}
+ ],
+ "patterns": [
+  {"problem": "two-integer-sum", "pattern": "Hashmap: Komplement nachschlagen", "solved": "two-integer-sum#35", "note": "29 von 33 Versuchen mit `in nums`/`index()`, also O(n²); die Hashmap stand schon in #0"},
+  {"problem": "two-integer-sum-ii", "pattern": "Two Pointers auf sortiertem Array", "solved": "two-integer-sum-ii#3"},
+  {"problem": "three-integer-sum", "pattern": "Sortieren, i fixieren, Two Pointers, Duplikate überspringen", "solved": "three-integer-sum#23", "note": "Duplikate per `not in answer` (O(k) pro Treffer) statt durch Überspringen gleicher Werte"},
+  {"problem": "is-palindrome", "pattern": "Two Pointers mit Überspringen", "solved": "is-palindrome#21"},
+  {"problem": "longest-consecutive-sequence", "pattern": "Set, nur an Sequenzanfängen zählen", "solved": "longest-consecutive-sequence#11"},
+  {"problem": "products-of-array-discluding-self", "pattern": "Präfix- und Suffixprodukte", "solved": "products-of-array-discluding-self#5"},
+  {"problem": "top-k-elements-in-list", "pattern": "Zählen, dann Bucket Sort (O(n))", "solved": "top-k-elements-in-list#13", "note": "bisher immer Sortieren nach Häufigkeit (O(n log n))"},
+  {"problem": "anagram-groups", "pattern": "Hashmap mit kanonischem Key", "solved": "anagram-groups#24"},
+  {"problem": "valid-sudoku", "pattern": "Ein Set pro Zeile, Spalte und Box", "solved": "valid-sudoku#10"},
+  {"problem": "string-encode-and-decode", "pattern": "Längenpräfix", "solved": "string-encode-and-decode#14"},
+  {"problem": "duplicate-integer", "pattern": "Set als Gedächtnis", "solved": "duplicate-integer#15"},
+  {"problem": "is-anagram", "pattern": "Zeichen zählen oder sortieren", "solved": "is-anagram#7"}
+ ]
+}
