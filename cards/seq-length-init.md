@@ -2,7 +2,7 @@
 id: seq-length-init
 type: bug
 mistakes: [off-by-one]
-evidence: [longest-consecutive-sequence#7-9, longest-consecutive-sequence#10, longest-consecutive-sequence#11]
+evidence: [longest-consecutive-sequence#7-9, longest-consecutive-sequence#10, longest-consecutive-sequence#11, longest-repeating-substring-with-replacement#2-5]
 tags: [longest-consecutive]
 ---
 ## Front
@@ -33,4 +33,4 @@ for n in num_set:
         best = max(best, length)
 ```
 
-Das hat bei dir vier Versuche gekostet (#7–10).
+Das hat bei dir vier Versuche gekostet (#7–10). Am 26.10. wieder, bei Longest Repeating Character Replacement: `sub_len = 0` für ein Fenster, das schon sein Startzeichen enthält (#2–5); #6 startet mit 1.

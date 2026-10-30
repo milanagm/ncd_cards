@@ -2,7 +2,7 @@
 id: two-pointer-rule
 type: concept
 mistakes: [pointer-movement]
-evidence: [is-palindrome#0, is-palindrome#15-16, three-integer-sum#12-13]
+evidence: [is-palindrome#0, is-palindrome#15-16, three-integer-sum#12-13, buy-and-sell-crypto#2]
 tags: [two-pointers]
 ---
 ## Front
@@ -27,4 +27,4 @@ highlight: [1, 2]
 caption: "nach 2 Schritten: l = 2, r = 1, gekreuzt, aber nie gleich"
 ```
 
-Am 22.10. hast du zweimal am selben Vormittag `p_r += 1` geschrieben, erst bei Palindrome und eine halbe Stunde später bei 3Sum.
+Am 22.10. hast du zweimal am selben Vormittag `p_r += 1` geschrieben, erst bei Palindrome und eine halbe Stunde später bei 3Sum. Am 25.10. bei Buy and Sell wieder: `p_l -=1` und `p_r +=1`, beide nach außen → IndexError.

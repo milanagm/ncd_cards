@@ -32,16 +32,16 @@
  },
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "aae3480a018c1ca943f10a5f704c0b66002607cb",
-  "head_date": "2026-10-23T10:27:19+01:00"
+  "head": "e5484de5e9f8dd1b55f62155c085a17c65f40800",
+  "head_date": "2026-10-30T13:06:20+00:00"
  },
  "stats": {
-  "submissions": 173,
+  "submissions": 223,
   "statuses": {
-   "PASS": 74,
-   "WRONG_ANSWER": 54,
-   "RUNTIME_ERROR": 36,
-   "TIMEOUT": 5,
+   "PASS": 81,
+   "WRONG_ANSWER": 77,
+   "RUNTIME_ERROR": 51,
+   "TIMEOUT": 10,
    "LOAD_ERROR": 4
   }
  },
@@ -50,38 +50,46 @@
    "id": "index-vs-value",
    "title": "Index und Wert verwechselt",
    "rule": "Vor jeder Verwendung klären: Position oder Element? `for i, v in enumerate(xs)` hält beides auseinander.",
-   "submissions": 26,
+   "submissions": 34,
    "problems": [
+    "buy-and-sell-crypto",
     "longest-consecutive-sequence",
+    "longest-substring-without-duplicates",
     "products-of-array-discluding-self",
     "three-integer-sum",
     "top-k-elements-in-list",
     "two-integer-sum",
     "valid-sudoku"
    ],
-   "last_seen": "2026-10-22"
+   "last_seen": "2026-10-27"
   },
   {
    "id": "pointer-movement",
    "title": "Two Pointers: Richtung, Bedingung, Grenzen",
    "rule": "Von außen nach innen: `while l < r`, `l += 1`, `r -= 1`. Jede innere Skip-Schleife braucht ebenfalls `l < r`.",
-   "submissions": 7,
+   "submissions": 11,
    "problems": [
+    "binary-search",
+    "buy-and-sell-crypto",
     "is-palindrome",
+    "longest-substring-without-duplicates",
     "three-integer-sum"
    ],
-   "last_seen": "2026-10-22"
+   "last_seen": "2026-10-28"
   },
   {
    "id": "loop-progress",
    "title": "Endlosschleife: kein Fortschritt",
    "rule": "Jeder Pfad durch den Schleifenkörper muss die Abbruchbedingung näher bringen. Vorsicht bei `continue` und bei Zweigen ohne Update.",
-   "submissions": 3,
+   "submissions": 8,
    "problems": [
+    "buy-and-sell-crypto",
     "longest-consecutive-sequence",
+    "longest-repeating-substring-with-replacement",
+    "longest-substring-without-duplicates",
     "three-integer-sum"
    ],
-   "last_seen": "2026-10-23"
+   "last_seen": "2026-10-27"
   },
   {
    "id": "call-vs-subscript",
@@ -98,15 +106,16 @@
    "id": "method-api",
    "title": "Methoden & Builtins geraten",
    "rule": "Bei Unsicherheit `dir(x)` oder `help(x)`. Strings: `s.lower()`; Listen: `xs.append(v)` mit genau einem Argument, `xs.index(v)`; Wiederholung: `range(k)`.",
-   "submissions": 10,
+   "submissions": 11,
    "problems": [
     "duplicate-integer",
     "is-palindrome",
+    "max-water-container",
     "three-integer-sum",
     "top-k-elements-in-list",
     "two-integer-sum-ii"
    ],
-   "last_seen": "2026-10-22"
+   "last_seen": "2026-10-24"
   },
   {
    "id": "container-choice",
@@ -124,12 +133,13 @@
    "id": "hashability",
    "title": "Unhashable: Liste als Set-Element oder Dict-Key",
    "rule": "Set-Elemente und Dict-Keys müssen unveränderlich sein: Tupel oder String statt Liste (`tuple(sorted(w))`, `\"\".join(sorted(w))`).",
-   "submissions": 7,
+   "submissions": 10,
    "problems": [
     "anagram-groups",
+    "longest-substring-without-duplicates",
     "three-integer-sum"
    ],
-   "last_seen": "2026-10-22"
+   "last_seen": "2026-10-27"
   },
   {
    "id": "list-lookup-complexity",
@@ -146,18 +156,21 @@
    "id": "wrong-variable",
    "title": "Falsche Variable: Copy-Paste, Shadowing, Tippfehler",
    "rule": "Nach Copy-Paste jede Variable prüfen. Input-Parameter nie überschreiben. Nach dem Sortieren nur noch die sortierte Liste benutzen, am einfachsten `nums.sort()` in place.",
-   "submissions": 14,
+   "submissions": 25,
    "problems": [
     "anagram-groups",
+    "binary-search",
     "duplicate-integer",
     "is-anagram",
     "longest-consecutive-sequence",
+    "longest-substring-without-duplicates",
+    "max-water-container",
     "products-of-array-discluding-self",
     "three-integer-sum",
     "top-k-elements-in-list",
     "two-integer-sum"
    ],
-   "last_seen": "2026-10-23"
+   "last_seen": "2026-10-28"
   },
   {
    "id": "duplicates-order",
@@ -173,23 +186,25 @@
    "id": "off-by-one",
    "title": "Off-by-one & Zähler-Initialisierung",
    "rule": "`while c < n` bzw. `range(n)` läuft genau n-mal. Eine Sequenz hat ab ihrem Startelement die Länge 1, nicht 0.",
-   "submissions": 7,
+   "submissions": 10,
    "problems": [
     "longest-consecutive-sequence",
+    "longest-repeating-substring-with-replacement",
     "string-encode-and-decode"
    ],
-   "last_seen": "2026-10-19"
+   "last_seen": "2026-10-26"
   },
   {
    "id": "edge-cases",
    "title": "Randfälle & Rückgabewerte",
    "rule": "Leere Eingabe, ein Element und Duplikate durchspielen. Jeder Pfad braucht ein `return`, sonst kommt `None` zurück.",
-   "submissions": 3,
+   "submissions": 7,
    "problems": [
+    "binary-search",
     "longest-consecutive-sequence",
     "valid-sudoku"
    ],
-   "last_seen": "2026-10-19"
+   "last_seen": "2026-10-28"
   },
   {
    "id": "skip-irrelevant",
@@ -231,6 +246,72 @@
     "two-integer-sum-ii"
    ],
    "last_seen": "2026-10-20"
+  },
+  {
+   "id": "init-scope",
+   "title": "Initialisierung fehlt oder steht am falschen Ort",
+   "rule": "Was über alle Runden gilt (Ergebnis, Set, Pointer), steht vor der Schleife; was pro Runde neu beginnt, in ihr. Eine `while`-Schleife braucht ihren Laufindex vorher gesetzt.",
+   "submissions": 5,
+   "problems": [
+    "longest-repeating-substring-with-replacement",
+    "longest-substring-without-duplicates",
+    "max-water-container"
+   ],
+   "last_seen": "2026-10-27"
+  },
+  {
+   "id": "last-window",
+   "title": "Letztes Fenster nicht gewertet",
+   "rule": "Das Maximum nach jeder Erweiterung aktualisieren, nicht nur wenn das Fenster bricht. Sonst geht das Fenster verloren, das bis zum Ende reicht.",
+   "submissions": 6,
+   "problems": [
+    "longest-repeating-substring-with-replacement",
+    "longest-substring-without-duplicates"
+   ],
+   "last_seen": "2026-10-26"
+  },
+  {
+   "id": "window-shrink",
+   "title": "Sliding Window: links schrumpfen und Zustand nachziehen",
+   "rule": "Bei einem Duplikat nicht alles verwerfen: `l` nur bis hinter das alte Vorkommen schieben, dann das neue Zeichen aufnehmen und die Länge aus den Pointern berechnen (`r - l + 1`).",
+   "submissions": 8,
+   "problems": [
+    "longest-substring-without-duplicates"
+   ],
+   "last_seen": "2026-10-27"
+  },
+  {
+   "id": "problem-model",
+   "title": "Aufgabe falsch modelliert",
+   "rule": "Vor dem Code die Zielgröße als Formel aufschreiben und am Beispiel nachrechnen: Wasser = Breite × kleinere Höhe, Gewinn = späterer minus früherer Preis, Fenster gültig, wenn Länge − häufigstes Zeichen ≤ k.",
+   "submissions": 8,
+   "problems": [
+    "buy-and-sell-crypto",
+    "longest-repeating-substring-with-replacement",
+    "max-water-container"
+   ],
+   "last_seen": "2026-10-26"
+  },
+  {
+   "id": "binary-search-mid",
+   "title": "Binary Search: Mitte und Grenzen",
+   "rule": "In jeder Runde `mid = (l + r) // 2` neu aus den Grenzen berechnen, danach eine Grenze verschieben (`l = mid + 1` oder `r = mid - 1`), nie `mid` selbst um 1.",
+   "submissions": 11,
+   "problems": [
+    "binary-search",
+    "search-2d-matrix"
+   ],
+   "last_seen": "2026-10-28"
+  },
+  {
+   "id": "float-division",
+   "title": "`/` liefert immer float",
+   "rule": "`/` ergibt immer `float`, auch bei `4 / 2`. Für Indizes `//`: `mid = (l + r) // 2`.",
+   "submissions": 4,
+   "problems": [
+    "search-2d-matrix"
+   ],
+   "last_seen": "2026-10-28"
   }
  ],
  "cards": [
@@ -264,6 +345,39 @@
    "back_html": "<p>Ein <strong>kanonischer Key</strong>, der für alle Anagramme gleich ist:</p>\n<ul>\n<li><code>\"\".join(sorted(word))</code> → <code>\"aet\"</code>, O(k log k)</li>\n<li>oder ein Tupel mit 26 Buchstaben-Zählern, O(k)</li>\n</ul>\n<p><code>sorted()</code> liefert immer eine <strong>Liste</strong> (dein eigener Kommentar: „sorted gibt immer eine Liste zurück!“), und Listen sind als Key nicht erlaubt.</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">groups</span> <span class=\"o\">=</span> <span class=\"n\">defaultdict</span><span class=\"p\">(</span><span class=\"nb\">list</span><span class=\"p\">)</span>\n<span class=\"k\">for</span> <span class=\"n\">w</span> <span class=\"ow\">in</span> <span class=\"n\">strs</span><span class=\"p\">:</span>\n    <span class=\"n\">groups</span><span class=\"p\">[</span><span class=\"s2\">\"\"</span><span class=\"o\">.</span><span class=\"n\">join</span><span class=\"p\">(</span><span class=\"nb\">sorted</span><span class=\"p\">(</span><span class=\"n\">w</span><span class=\"p\">))]</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span class=\"n\">w</span><span class=\"p\">)</span>\n<span class=\"k\">return</span> <span class=\"nb\">list</span><span class=\"p\">(</span><span class=\"n\">groups</span><span class=\"o\">.</span><span class=\"n\">values</span><span class=\"p\">())</span>\n</code></pre></div>",
    "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/anagram-groups/submission-19.py\">anagram-groups #19–20</a><span class=\"badge fail\">2× falsch</span> 16.10. · String-Literal statt Variable → alle Keys gleich lang aus <code>j</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/anagram-groups/submission-21.py\">anagram-groups #21–22</a><span class=\"badge pass\">2× ok</span> 16.10.</li></ul>",
    "last_evidence": "2026-10-16T12:55:16+00:00"
+  },
+  {
+   "id": "binary-search-template",
+   "guid": "OFtRmIIf_1",
+   "type": "concept",
+   "type_label": "Konzept",
+   "mistakes": [
+    "binary-search-mid"
+   ],
+   "problems": [
+    "binary-search",
+    "search-2d-matrix"
+   ],
+   "evidence": [
+    "binary-search#0-1",
+    "binary-search#2-6",
+    "search-2d-matrix#1-2",
+    "search-2d-matrix#2-3",
+    "search-2d-matrix#4"
+   ],
+   "tags": [
+    "binary-search",
+    "ncd::fehler::binary-search-mid",
+    "ncd::problem::binary-search",
+    "ncd::problem::search-2d-matrix",
+    "ncd::typ::concept"
+   ],
+   "front_md": "Binary Search auf einem sortierten Array: Wie berechnest du `mid`, und was änderst du nach dem Vergleich, `mid` oder die Grenzen?",
+   "back_md": "```python\nl, r = 0, len(nums) - 1\nwhile l <= r:\n    mid = (l + r) // 2\n    if nums[mid] == target:\n        return mid\n    if nums[mid] < target:\n        l = mid + 1\n    else:\n        r = mid - 1\nreturn -1\n```\n\n`mid` wird in **jeder Runde neu** aus `l` und `r` berechnet. Verschoben werden nur die **Grenzen**, so halbiert sich der Suchbereich: O(log n).\n\n```viz\nkind: array\nvalues: [-1, 0, 2, 4, 6, 8]\npointers: {l: 3, mid: 4, r: 5}\nhighlight: [3, 4, 5]\ncaption: \"target 8: nach Runde 1 (mid = 2, nums[2] = 2 < 8) ist l = 3; jetzt mid = (3 + 5) // 2 = 4\"\n```\n\nDeine Versuche am 28.10.:\n\n- Binary Search #0–6: `mitte -= 1` bzw. `i -= 1` läuft in Einerschritten, also O(n). #6 besteht so, ist aber keine Binary Search.\n- Search 2D Matrix #1–2: `mid -= 1` statt `r_row = mid - 1`\n- #2–3: `(l_row - r_row) / 2` ist negativ, #4: `(r_row - l_row) / 2` vergisst das `l_row +`",
+   "front_html": "<p>Binary Search auf einem sortierten Array: Wie berechnest du <code>mid</code>, und was änderst du nach dem Vergleich, <code>mid</code> oder die Grenzen?</p>",
+   "back_html": "<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">l</span><span class=\"p\">,</span> <span class=\"n\">r</span> <span class=\"o\">=</span> <span class=\"mi\">0</span><span class=\"p\">,</span> <span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">nums</span><span class=\"p\">)</span> <span class=\"o\">-</span> <span class=\"mi\">1</span>\n<span class=\"k\">while</span> <span class=\"n\">l</span> <span class=\"o\">&lt;=</span> <span class=\"n\">r</span><span class=\"p\">:</span>\n    <span class=\"n\">mid</span> <span class=\"o\">=</span> <span class=\"p\">(</span><span class=\"n\">l</span> <span class=\"o\">+</span> <span class=\"n\">r</span><span class=\"p\">)</span> <span class=\"o\">//</span> <span class=\"mi\">2</span>\n    <span class=\"k\">if</span> <span class=\"n\">nums</span><span class=\"p\">[</span><span class=\"n\">mid</span><span class=\"p\">]</span> <span class=\"o\">==</span> <span class=\"n\">target</span><span class=\"p\">:</span>\n        <span class=\"k\">return</span> <span class=\"n\">mid</span>\n    <span class=\"k\">if</span> <span class=\"n\">nums</span><span class=\"p\">[</span><span class=\"n\">mid</span><span class=\"p\">]</span> <span class=\"o\">&lt;</span> <span class=\"n\">target</span><span class=\"p\">:</span>\n        <span class=\"n\">l</span> <span class=\"o\">=</span> <span class=\"n\">mid</span> <span class=\"o\">+</span> <span class=\"mi\">1</span>\n    <span class=\"k\">else</span><span class=\"p\">:</span>\n        <span class=\"n\">r</span> <span class=\"o\">=</span> <span class=\"n\">mid</span> <span class=\"o\">-</span> <span class=\"mi\">1</span>\n<span class=\"k\">return</span> <span class=\"o\">-</span><span class=\"mi\">1</span>\n</code></pre></div>\n\n<p><code>mid</code> wird in <strong>jeder Runde neu</strong> aus <code>l</code> und <code>r</code> berechnet. Verschoben werden nur die <strong>Grenzen</strong>, so halbiert sich der Suchbereich: O(log n).</p>\n<div class=\"viz\"><svg width=\"300\" height=\"96\" viewBox=\"0 0 300 96\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"target 8: nach Runde 1 (mid = 2, nums[2] = 2 &lt; 8) ist l = 3; jetzt mid = (3 + 5) // 2 = 4\"><rect x=\"12\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"35.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">-1</text><text x=\"35.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><rect x=\"58\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"81.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><text x=\"81.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">1</text><rect x=\"104\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"127.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><text x=\"127.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><rect x=\"150\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"173.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">4</text><text x=\"173.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">3</text><rect x=\"196\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"219.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">6</text><text x=\"219.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">4</text><rect x=\"242\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"265.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">8</text><text x=\"265.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">5</text><text x=\"173.0\" y=\"84\" class=\"ptr p0\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ l</text><text x=\"219.0\" y=\"84\" class=\"ptr p1\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ mid</text><text x=\"265.0\" y=\"84\" class=\"ptr p1\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ r</text></svg><div class=\"cap\">target 8: nach Runde 1 (mid = 2, nums[2] = 2 &lt; 8) ist l = 3; jetzt mid = (3 + 5) // 2 = 4</div></div>\n\n<p>Deine Versuche am 28.10.:</p>\n<ul>\n<li>Binary Search #0–6: <code>mitte -= 1</code> bzw. <code>i -= 1</code> läuft in Einerschritten, also O(n). #6 besteht so, ist aber keine Binary Search.</li>\n<li>Search 2D Matrix #1–2: <code>mid -= 1</code> statt <code>r_row = mid - 1</code></li>\n<li>\n<h1>2–3: <code>(l_row - r_row) / 2</code> ist negativ, #4: <code>(r_row - l_row) / 2</code> vergisst das <code>l_row +</code></h1>\n</li>\n</ul>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/binary-search/submission-0.py\">binary-search #0–1</a><span class=\"badge crash\">2× Crash</span> 28.10. · Mitte in Einerschritten verschoben → lineare Suche</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/binary-search/submission-2.py\">binary-search #2–6</a><span class=\"badge fail\">4× falsch</span><span class=\"badge pass\">ok</span> 28.10. · läuft in Einerschritten statt zu halbieren, also O(n); #6 besteht so, verlangt ist O(log n)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/search-2d-matrix/submission-1.py\">search-2d-matrix #1–2</a><span class=\"badge crash\">2× Crash</span> 28.10. · verschiebt <code>mid</code> statt einer Grenze, und <code>mid</code> kommt jede Runde neu aus <code>len(matrix)</code> → Endlosschleife (latent hinter dem float-Fehler); #3 setzt <code>r_row</code>/<code>l_row</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/search-2d-matrix/submission-2.py\">search-2d-matrix #2–3</a><span class=\"badge crash\">2× Crash</span> 28.10. · Differenz falsch herum → negativ</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/search-2d-matrix/submission-4.py\">search-2d-matrix #4</a><span class=\"badge crash\">Crash</span> 28.10. · halber Abstand ohne <code>l_row +</code>: die Mitte hängt nicht von <code>l_row</code> ab</li></ul>",
+   "last_evidence": "2026-10-28T10:34:37+00:00"
   },
   {
    "id": "bug-3sum-match-no-move",
@@ -352,6 +466,35 @@
    "back_html": "<p>Die zweite Schleife läuft über <code>s</code> statt <code>t</code>. Beide Dicts zählen dieselben Buchstaben und sind immer gleich, ein klassischer <strong>Copy-Paste-Fehler</strong>.</p>\n<p>Vorbeugen: doppelten Code in eine Funktion auslagern (<code>count(word)</code>, hast du in #2 gemacht) oder gleich <code>Counter(s) == Counter(t)</code>.</p>",
    "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/is-anagram/submission-0.py\">is-anagram #0</a><span class=\"badge fail\">falsch</span> · zweite Zählschleife läuft über <code>s</code> statt <code>t</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/is-anagram/submission-2.py\">is-anagram #2</a><span class=\"badge pass\">ok</span></li></ul>",
    "last_evidence": "2026-10-16T12:04:26+00:00"
+  },
+  {
+   "id": "bug-binary-search-single",
+   "guid": "o.*}oj9549",
+   "type": "bug",
+   "type_label": "Finde den Bug",
+   "mistakes": [
+    "edge-cases"
+   ],
+   "problems": [
+    "binary-search"
+   ],
+   "evidence": [
+    "binary-search#2-5",
+    "binary-search#6"
+   ],
+   "tags": [
+    "binary-search",
+    "edge-cases",
+    "ncd::fehler::edge-cases",
+    "ncd::problem::binary-search",
+    "ncd::typ::bug"
+   ],
+   "front_md": "Binary Search: Erwartet `-1` für `nums = [5]`, `target = -5`. Was kommt zurück?\n\n```python\ndef search(self, nums, target):\n    if len(nums)< 2:\n        return 0\n    i = int(len(nums)/ 2)\n    ...\n```",
+   "back_md": "`0`. Der Sonderfall für ein Element gibt **ungeprüft** Index 0 zurück, auch wenn `target` gar nicht drin ist.\n\nFix in #6: `if nums[0] == target: return 0`, sonst weiter bis `return -1`. Mit einer echten Binary Search (`while l <= r`) braucht es den Sonderfall gar nicht, ein Element ist dann einfach `l == r`.\n\nVier Versuche (#2–5) liefen an diesem Testfall vorbei, während du an den Schleifen gearbeitet hast.",
+   "front_html": "<p>Binary Search: Erwartet <code>-1</code> für <code>nums = [5]</code>, <code>target = -5</code>. Was kommt zurück?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">def</span><span class=\"w\"> </span><span class=\"nf\">search</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">,</span> <span class=\"n\">nums</span><span class=\"p\">,</span> <span class=\"n\">target</span><span class=\"p\">):</span>\n    <span class=\"k\">if</span> <span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">nums</span><span class=\"p\">)</span><span class=\"o\">&lt;</span> <span class=\"mi\">2</span><span class=\"p\">:</span>\n        <span class=\"k\">return</span> <span class=\"mi\">0</span>\n    <span class=\"n\">i</span> <span class=\"o\">=</span> <span class=\"nb\">int</span><span class=\"p\">(</span><span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">nums</span><span class=\"p\">)</span><span class=\"o\">/</span> <span class=\"mi\">2</span><span class=\"p\">)</span>\n    <span class=\"o\">...</span>\n</code></pre></div>",
+   "back_html": "<p><code>0</code>. Der Sonderfall für ein Element gibt <strong>ungeprüft</strong> Index 0 zurück, auch wenn <code>target</code> gar nicht drin ist.</p>\n<p>Fix in #6: <code>if nums[0] == target: return 0</code>, sonst weiter bis <code>return -1</code>. Mit einer echten Binary Search (<code>while l &lt;= r</code>) braucht es den Sonderfall gar nicht, ein Element ist dann einfach <code>l == r</code>.</p>\n<p>Vier Versuche (#2–5) liefen an diesem Testfall vorbei, während du an den Schleifen gearbeitet hast.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/binary-search/submission-2.py\">binary-search #2–5</a><span class=\"badge fail\">4× falsch</span> 28.10. · Ein-Element-Liste gibt immer 0 zurück, ohne <code>nums[0] == target</code> zu prüfen → <code>[5], -5</code> liefert 0 statt -1</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/binary-search/submission-6.py\">binary-search #6</a><span class=\"badge pass\">ok</span> 28.10.</li></ul>",
+   "last_evidence": "2026-10-28T09:57:57+00:00"
   },
   {
    "id": "bug-continue-no-progress",
@@ -557,6 +700,94 @@
    "last_evidence": "2026-10-16T12:04:26+00:00"
   },
   {
+   "id": "bug-width-overwrites-pointer",
+   "guid": "n6!9N6x;B-",
+   "type": "bug",
+   "type_label": "Finde den Bug",
+   "mistakes": [
+    "wrong-variable"
+   ],
+   "problems": [
+    "max-water-container"
+   ],
+   "evidence": [
+    "max-water-container#6",
+    "max-water-container#7",
+    "max-water-container#8"
+   ],
+   "tags": [
+    "ncd::fehler::wrong-variable",
+    "ncd::problem::max-water-container",
+    "ncd::typ::bug",
+    "shadowing",
+    "two-pointers"
+   ],
+   "front_md": "Container With Most Water, `heights = [1, 7, 2, 5, 4, 7, 3, 6]`: Erwartet 36, zurück kommt 7. Warum?\n\n```python\nl = 0\nr = len(heights)-1\ncurrent_max = 0\nwhile l < r:\n    h = min(heights[l], heights[r])\n    l = r - l\n    current_max = max(current_max, h * l)\n    if heights[l] < heights[r]:\n        l += 1\n    else:\n        r -= 1\n```",
+   "back_md": "`l = r - l` speichert die **Breite** in `l` und überschreibt damit den linken Pointer. Runde 1: `h = 1`, `l = 7`, Fläche 7. Danach steht `l` hinter `r`, die Schleife endet.\n\nFix in #8: eigener Name `w = r - l`. Regel: ein Name, eine Bedeutung. `l`/`r` sind bei Two Pointers für die Pointer reserviert.\n\nIm Versuch davor hießen die Pointer noch `i` und `p_l`, aber der Vergleich benutzte schon `l` und `r` → UnboundLocalError.",
+   "front_html": "<p>Container With Most Water, <code>heights = [1, 7, 2, 5, 4, 7, 3, 6]</code>: Erwartet 36, zurück kommt 7. Warum?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">l</span> <span class=\"o\">=</span> <span class=\"mi\">0</span>\n<span class=\"n\">r</span> <span class=\"o\">=</span> <span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">heights</span><span class=\"p\">)</span><span class=\"o\">-</span><span class=\"mi\">1</span>\n<span class=\"n\">current_max</span> <span class=\"o\">=</span> <span class=\"mi\">0</span>\n<span class=\"k\">while</span> <span class=\"n\">l</span> <span class=\"o\">&lt;</span> <span class=\"n\">r</span><span class=\"p\">:</span>\n    <span class=\"n\">h</span> <span class=\"o\">=</span> <span class=\"nb\">min</span><span class=\"p\">(</span><span class=\"n\">heights</span><span class=\"p\">[</span><span class=\"n\">l</span><span class=\"p\">],</span> <span class=\"n\">heights</span><span class=\"p\">[</span><span class=\"n\">r</span><span class=\"p\">])</span>\n    <span class=\"n\">l</span> <span class=\"o\">=</span> <span class=\"n\">r</span> <span class=\"o\">-</span> <span class=\"n\">l</span>\n    <span class=\"n\">current_max</span> <span class=\"o\">=</span> <span class=\"nb\">max</span><span class=\"p\">(</span><span class=\"n\">current_max</span><span class=\"p\">,</span> <span class=\"n\">h</span> <span class=\"o\">*</span> <span class=\"n\">l</span><span class=\"p\">)</span>\n    <span class=\"k\">if</span> <span class=\"n\">heights</span><span class=\"p\">[</span><span class=\"n\">l</span><span class=\"p\">]</span> <span class=\"o\">&lt;</span> <span class=\"n\">heights</span><span class=\"p\">[</span><span class=\"n\">r</span><span class=\"p\">]:</span>\n        <span class=\"n\">l</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n    <span class=\"k\">else</span><span class=\"p\">:</span>\n        <span class=\"n\">r</span> <span class=\"o\">-=</span> <span class=\"mi\">1</span>\n</code></pre></div>",
+   "back_html": "<p><code>l = r - l</code> speichert die <strong>Breite</strong> in <code>l</code> und überschreibt damit den linken Pointer. Runde 1: <code>h = 1</code>, <code>l = 7</code>, Fläche 7. Danach steht <code>l</code> hinter <code>r</code>, die Schleife endet.</p>\n<p>Fix in #8: eigener Name <code>w = r - l</code>. Regel: ein Name, eine Bedeutung. <code>l</code>/<code>r</code> sind bei Two Pointers für die Pointer reserviert.</p>\n<p>Im Versuch davor hießen die Pointer noch <code>i</code> und <code>p_l</code>, aber der Vergleich benutzte schon <code>l</code> und <code>r</code> → UnboundLocalError.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-6.py\">max-water-container #6</a><span class=\"badge crash\">Crash</span> 24.10. · Pointer heißen noch <code>i</code>/<code>p_l</code>, der Vergleich benutzt schon <code>l</code>/<code>r</code> → UnboundLocalError für <code>r</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-7.py\">max-water-container #7</a><span class=\"badge fail\">falsch</span> 24.10. · die Breite überschreibt den linken Pointer <code>l</code>; #8 nennt sie <code>w</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-8.py\">max-water-container #8</a><span class=\"badge pass\">ok</span> 24.10.</li></ul>",
+   "last_evidence": "2026-10-24T21:37:57+00:00"
+  },
+  {
+   "id": "buy-sell-running-min",
+   "guid": "G3p#S;*9ox",
+   "type": "pattern",
+   "type_label": "Pattern",
+   "mistakes": [
+    "problem-model",
+    "pointer-movement"
+   ],
+   "problems": [
+    "buy-and-sell-crypto"
+   ],
+   "evidence": [
+    "buy-and-sell-crypto#0-2",
+    "buy-and-sell-crypto#3"
+   ],
+   "tags": [
+    "ncd::fehler::pointer-movement",
+    "ncd::fehler::problem-model",
+    "ncd::problem::buy-and-sell-crypto",
+    "ncd::typ::pattern",
+    "sliding-window"
+   ],
+   "front_md": "Best Time to Buy and Sell: Warum passen Two Pointers von außen nach innen hier nicht? Wie geht es in einem Durchlauf?",
+   "back_md": "Gekauft wird **vor** dem Verkauf. Von außen nach innen gibt es keine Regel, welcher Pointer sich bewegen darf, ohne das beste Paar zu verpassen.\n\nStattdessen von links nach rechts: das **bisherige Minimum** merken und an jedem Tag den Verkauf dagegen rechnen.\n\n```python\nbuy = 0\nprofit = 0\nfor sell in range(1, len(prices)):\n    profit = max(profit, prices[sell] - prices[buy])\n    if prices[sell] < prices[buy]:\n        buy = sell\nreturn profit\n```\n\nSo hast du es in #3 gelöst. Davor: `prices[p_l] -= 1` änderte die Preise statt der Pointer → Timeout (#0–1), dann liefen beide Pointer nach außen → IndexError (#2).",
+   "front_html": "<p>Best Time to Buy and Sell: Warum passen Two Pointers von außen nach innen hier nicht? Wie geht es in einem Durchlauf?</p>",
+   "back_html": "<p>Gekauft wird <strong>vor</strong> dem Verkauf. Von außen nach innen gibt es keine Regel, welcher Pointer sich bewegen darf, ohne das beste Paar zu verpassen.</p>\n<p>Stattdessen von links nach rechts: das <strong>bisherige Minimum</strong> merken und an jedem Tag den Verkauf dagegen rechnen.</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">buy</span> <span class=\"o\">=</span> <span class=\"mi\">0</span>\n<span class=\"n\">profit</span> <span class=\"o\">=</span> <span class=\"mi\">0</span>\n<span class=\"k\">for</span> <span class=\"n\">sell</span> <span class=\"ow\">in</span> <span class=\"nb\">range</span><span class=\"p\">(</span><span class=\"mi\">1</span><span class=\"p\">,</span> <span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">prices</span><span class=\"p\">)):</span>\n    <span class=\"n\">profit</span> <span class=\"o\">=</span> <span class=\"nb\">max</span><span class=\"p\">(</span><span class=\"n\">profit</span><span class=\"p\">,</span> <span class=\"n\">prices</span><span class=\"p\">[</span><span class=\"n\">sell</span><span class=\"p\">]</span> <span class=\"o\">-</span> <span class=\"n\">prices</span><span class=\"p\">[</span><span class=\"n\">buy</span><span class=\"p\">])</span>\n    <span class=\"k\">if</span> <span class=\"n\">prices</span><span class=\"p\">[</span><span class=\"n\">sell</span><span class=\"p\">]</span> <span class=\"o\">&lt;</span> <span class=\"n\">prices</span><span class=\"p\">[</span><span class=\"n\">buy</span><span class=\"p\">]:</span>\n        <span class=\"n\">buy</span> <span class=\"o\">=</span> <span class=\"n\">sell</span>\n<span class=\"k\">return</span> <span class=\"n\">profit</span>\n</code></pre></div>\n\n<p>So hast du es in #3 gelöst. Davor: <code>prices[p_l] -= 1</code> änderte die Preise statt der Pointer → Timeout (#0–1), dann liefen beide Pointer nach außen → IndexError (#2).</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-0.py\">buy-and-sell-crypto #0–2</a><span class=\"badge timeout\">2× Timeout</span><span class=\"badge crash\">Crash</span> 25.10. · Two Pointers von außen nach innen; der Kauf muss aber vor dem Verkauf liegen. #3: rechter Pointer läuft vorwärts, der linke springt auf jedes neue Tief</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-3.py\">buy-and-sell-crypto #3</a><span class=\"badge pass\">ok</span> 25.10.</li></ul>",
+   "last_evidence": "2026-10-25T16:23:28+00:00"
+  },
+  {
+   "id": "continue-at-end",
+   "guid": "hxRytJQzz$",
+   "type": "gotcha",
+   "type_label": "Python-Gotcha",
+   "mistakes": [
+    "loop-progress"
+   ],
+   "problems": [
+    "longest-substring-without-duplicates"
+   ],
+   "evidence": [
+    "longest-substring-without-duplicates#8"
+   ],
+   "tags": [
+    "loops",
+    "ncd::fehler::loop-progress",
+    "ncd::problem::longest-substring-without-duplicates",
+    "ncd::typ::gotcha",
+    "python"
+   ],
+   "front_md": "Muss am Ende eines `while`-Körpers ein `continue` stehen?\n\n```python\nwhile p == e:\n    len_sub += 1\n    p += 1\n    continue\n```",
+   "back_md": "Nein. Am Ende des Körpers springt die Schleife ohnehin zurück zur Bedingung. `continue` dort ist wirkungslos.\n\nSinnvoll ist `continue` nur **mitten** im Körper, um den Rest zu überspringen. Genau dort ist es gefährlich: Steht das Pointer-Update dahinter, wird es übersprungen → Endlosschleife (3Sum #20).\n\nDeine Frage im Code: „muss mans am ende der while schleife immer haben?“",
+   "front_html": "<p>Muss am Ende eines <code>while</code>-Körpers ein <code>continue</code> stehen?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">while</span> <span class=\"n\">p</span> <span class=\"o\">==</span> <span class=\"n\">e</span><span class=\"p\">:</span>\n    <span class=\"n\">len_sub</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n    <span class=\"n\">p</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n    <span class=\"k\">continue</span>\n</code></pre></div>",
+   "back_html": "<p>Nein. Am Ende des Körpers springt die Schleife ohnehin zurück zur Bedingung. <code>continue</code> dort ist wirkungslos.</p>\n<p>Sinnvoll ist <code>continue</code> nur <strong>mitten</strong> im Körper, um den Rest zu überspringen. Genau dort ist es gefährlich: Steht das Pointer-Update dahinter, wird es übersprungen → Endlosschleife (3Sum #20).</p>\n<p>Deine Frage im Code: „muss mans am ende der while schleife immer haben?“</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-8.py\">longest-substring-without-duplicates #8</a><span class=\"badge crash\">Crash</span> 27.10. · <code>for e in s</code> liefert Zeichen, <code>e + 1</code> → TypeError. Eigener Kommentar: „iterieren über elements oder index?“</li></ul>",
+   "last_evidence": "2026-10-27T11:33:40+00:00"
+  },
+  {
    "id": "defaultdict-factory",
    "guid": "d52W)Kpmro",
    "type": "gotcha",
@@ -647,6 +878,38 @@
    "last_evidence": "2026-10-16T12:04:26+00:00"
   },
   {
+   "id": "float-division-index",
+   "guid": "sFbB:Obu7k",
+   "type": "gotcha",
+   "type_label": "Python-Gotcha",
+   "mistakes": [
+    "float-division",
+    "binary-search-mid"
+   ],
+   "problems": [
+    "search-2d-matrix"
+   ],
+   "evidence": [
+    "search-2d-matrix#1",
+    "search-2d-matrix#2-3",
+    "search-2d-matrix#4"
+   ],
+   "tags": [
+    "binary-search",
+    "ncd::fehler::binary-search-mid",
+    "ncd::fehler::float-division",
+    "ncd::problem::search-2d-matrix",
+    "ncd::typ::gotcha",
+    "python"
+   ],
+   "front_md": "`matrix` hat 4 Zeilen. Was ist `mid`, und was passiert in der zweiten Zeile?\n\n```python\nmid = len(matrix) / 2\nif target == matrix[mid][0]:\n    ...\n```",
+   "back_md": "`mid` ist `2.0`, ein **float**. `/` liefert in Python 3 immer float, auch wenn die Division aufgeht. Als Index → `TypeError: list indices must be integers or slices, not float`.\n\nFix: Ganzzahldivision `//`, also `mid = (l + r) // 2`.\n\nBei Search a 2D Matrix sind alle vier Versuche (#1–4) an genau dieser Zeile gescheitert. Eine halbe Stunde vorher hattest du bei Binary Search noch `int(len(nums)/ 2)` geschrieben, `//` macht das in einem Schritt.",
+   "front_html": "<p><code>matrix</code> hat 4 Zeilen. Was ist <code>mid</code>, und was passiert in der zweiten Zeile?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">mid</span> <span class=\"o\">=</span> <span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">matrix</span><span class=\"p\">)</span> <span class=\"o\">/</span> <span class=\"mi\">2</span>\n<span class=\"k\">if</span> <span class=\"n\">target</span> <span class=\"o\">==</span> <span class=\"n\">matrix</span><span class=\"p\">[</span><span class=\"n\">mid</span><span class=\"p\">][</span><span class=\"mi\">0</span><span class=\"p\">]:</span>\n    <span class=\"o\">...</span>\n</code></pre></div>",
+   "back_html": "<p><code>mid</code> ist <code>2.0</code>, ein <strong>float</strong>. <code>/</code> liefert in Python 3 immer float, auch wenn die Division aufgeht. Als Index → <code>TypeError: list indices must be integers or slices, not float</code>.</p>\n<p>Fix: Ganzzahldivision <code>//</code>, also <code>mid = (l + r) // 2</code>.</p>\n<p>Bei Search a 2D Matrix sind alle vier Versuche (#1–4) an genau dieser Zeile gescheitert. Eine halbe Stunde vorher hattest du bei Binary Search noch <code>int(len(nums)/ 2)</code> geschrieben, <code>//</code> macht das in einem Schritt.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/search-2d-matrix/submission-1.py\">search-2d-matrix #1</a><span class=\"badge crash\">Crash</span> 28.10. · <code>len(matrix) / 2</code> ist ein float</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/search-2d-matrix/submission-2.py\">search-2d-matrix #2–3</a><span class=\"badge crash\">2× Crash</span> 28.10. · Differenz falsch herum → negativ</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/search-2d-matrix/submission-4.py\">search-2d-matrix #4</a><span class=\"badge crash\">Crash</span> 28.10. · halber Abstand ohne <code>l_row +</code>: die Mitte hängt nicht von <code>l_row</code> ab</li></ul>",
+   "last_evidence": "2026-10-28T10:34:37+00:00"
+  },
+  {
    "id": "for-loop-variable",
    "guid": "kH{XL0z0a#",
    "type": "gotcha",
@@ -675,6 +938,40 @@
    "last_evidence": "2026-10-16T12:04:26+00:00"
   },
   {
+   "id": "init-scope",
+   "guid": "r2iLm./QKV",
+   "type": "concept",
+   "type_label": "Konzept",
+   "mistakes": [
+    "init-scope"
+   ],
+   "problems": [
+    "longest-repeating-substring-with-replacement",
+    "longest-substring-without-duplicates",
+    "max-water-container"
+   ],
+   "evidence": [
+    "longest-repeating-substring-with-replacement#0",
+    "max-water-container#5",
+    "max-water-container#1-2",
+    "longest-substring-without-duplicates#12"
+   ],
+   "tags": [
+    "loops",
+    "ncd::fehler::init-scope",
+    "ncd::problem::longest-repeating-substring-with-replacement",
+    "ncd::problem::longest-substring-without-duplicates",
+    "ncd::problem::max-water-container",
+    "ncd::typ::concept"
+   ],
+   "front_md": "Woran entscheidest du, ob eine Initialisierung **vor** oder **in** die Schleife gehört? Und was braucht eine `while`-Schleife, das eine `for`-Schleife nicht braucht?",
+   "back_md": "- Gilt der Wert über alle Runden (Ergebnis, `seen`-Set eines Sliding Window)? → **vor** die Schleife\n- Beginnt er in jeder Runde neu (innerer Pointer bei Brute Force)? → **in** die Schleife\n- `while` setzt nichts selbst: der Laufindex muss vorher stehen. `for` setzt seine Variable in jeder Runde neu.\n\nDeine Fälle:\n\n- `while i < len(s):` ohne `i = 0` (Longest Repeating #0) und beim Umbau von `for` auf `while` bei Container With Most Water (#5) → NameError\n- `p_l = len(heights) - 1` vor der `for`-Schleife: ab dem zweiten `i` läuft die innere Schleife nie wieder (#1–2)\n- `seen = set()` und `sub_len = 0` **in** der Schleife: das Fenster ist nie länger als 1 (Longest Substring #12)\n\nDeine Frage dazu: „wird bei for i dann zurückgesetzt bei i + 1 ?“ Nur die Schleifenvariable selbst. Alles andere behält seinen Wert, bis du es neu setzt.",
+   "front_html": "<p>Woran entscheidest du, ob eine Initialisierung <strong>vor</strong> oder <strong>in</strong> die Schleife gehört? Und was braucht eine <code>while</code>-Schleife, das eine <code>for</code>-Schleife nicht braucht?</p>",
+   "back_html": "<ul>\n<li>Gilt der Wert über alle Runden (Ergebnis, <code>seen</code>-Set eines Sliding Window)? → <strong>vor</strong> die Schleife</li>\n<li>Beginnt er in jeder Runde neu (innerer Pointer bei Brute Force)? → <strong>in</strong> die Schleife</li>\n<li><code>while</code> setzt nichts selbst: der Laufindex muss vorher stehen. <code>for</code> setzt seine Variable in jeder Runde neu.</li>\n</ul>\n<p>Deine Fälle:</p>\n<ul>\n<li><code>while i &lt; len(s):</code> ohne <code>i = 0</code> (Longest Repeating #0) und beim Umbau von <code>for</code> auf <code>while</code> bei Container With Most Water (#5) → NameError</li>\n<li><code>p_l = len(heights) - 1</code> vor der <code>for</code>-Schleife: ab dem zweiten <code>i</code> läuft die innere Schleife nie wieder (#1–2)</li>\n<li><code>seen = set()</code> und <code>sub_len = 0</code> <strong>in</strong> der Schleife: das Fenster ist nie länger als 1 (Longest Substring #12)</li>\n</ul>\n<p>Deine Frage dazu: „wird bei for i dann zurückgesetzt bei i + 1 ?“ Nur die Schleifenvariable selbst. Alles andere behält seinen Wert, bis du es neu setzt.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-repeating-substring-with-replacement/submission-0.py\">longest-repeating-substring-with-replacement #0</a><span class=\"badge crash\">Crash</span> 26.10. · <code>i</code> nie gesetzt → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-5.py\">max-water-container #5</a><span class=\"badge crash\">Crash</span> 24.10. · Umbau von <code>for i in range(...)</code> zu <code>while</code>, <code>i = 0</code> fehlt → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-1.py\">max-water-container #1–2</a><span class=\"badge crash\">Crash</span><span class=\"badge fail\">falsch</span> 24.10. · <code>p_l</code> wird nur einmal gesetzt; ab dem zweiten <code>i</code> läuft die innere Schleife nie wieder. #3 setzt ihn pro <code>i</code> neu</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-12.py\">longest-substring-without-duplicates #12</a><span class=\"badge fail\">falsch</span> 27.10. · Set und Länge werden in jeder Runde neu angelegt → nie mehr als 1; #13 zieht sie vor die Schleife</li></ul>",
+   "last_evidence": "2026-10-27T11:42:31+00:00"
+  },
+  {
    "id": "iterate-index-value",
    "guid": "AK;5NlBBvv",
    "type": "concept",
@@ -683,6 +980,7 @@
     "index-vs-value"
    ],
    "problems": [
+    "longest-substring-without-duplicates",
     "products-of-array-discluding-self",
     "three-integer-sum",
     "valid-sudoku"
@@ -691,11 +989,13 @@
     "three-integer-sum#1-6",
     "three-integer-sum#7",
     "products-of-array-discluding-self#2-4",
-    "valid-sudoku#2-5"
+    "valid-sudoku#2-5",
+    "longest-substring-without-duplicates#8"
    ],
    "tags": [
     "loops",
     "ncd::fehler::index-vs-value",
+    "ncd::problem::longest-substring-without-duplicates",
     "ncd::problem::products-of-array-discluding-self",
     "ncd::problem::three-integer-sum",
     "ncd::problem::valid-sudoku",
@@ -703,11 +1003,41 @@
     "python"
    ],
    "front_md": "Du brauchst in der Schleife Index **und** Wert. Was liefern die ersten drei Schleifen, und warum crasht die vierte?\n\n```python\nfor x in nums: ...\nfor i in range(len(nums)): ...\nfor i, x in enumerate(nums): ...\nfor i, x in nums: ...\n```",
-   "back_md": "1. nur Werte\n2. nur Indizes\n3. Paare aus Index und Wert ✔\n4. Python versucht jeden **Wert** in zwei Teile zu entpacken → `TypeError: cannot unpack non-iterable int object`\n\nDein häufigster Fehler überhaupt (6 von 12 Problemen): `for i in nums_s:` und danach `nums_s[i]`. Dort ist `i` ein Wert, kein Index. Konvention gegen die Verwechslung: `i`, `j` nur für Indizes, Werte heißen `v`, `x` oder `num`.",
+   "back_md": "1. nur Werte\n2. nur Indizes\n3. Paare aus Index und Wert ✔\n4. Python versucht jeden **Wert** in zwei Teile zu entpacken → `TypeError: cannot unpack non-iterable int object`\n\nEiner deiner häufigsten Fehler (8 von 18 Problemen): `for i in nums_s:` und danach `nums_s[i]`. Am 27.10. andersherum: `for e in s:` und dann `p = e + 1`, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: `for x in s` liefert Elemente. Dort ist `i` ein Wert, kein Index. Konvention gegen die Verwechslung: `i`, `j` nur für Indizes, Werte heißen `v`, `x` oder `num`.",
    "front_html": "<p>Du brauchst in der Schleife Index <strong>und</strong> Wert. Was liefern die ersten drei Schleifen, und warum crasht die vierte?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">for</span> <span class=\"n\">x</span> <span class=\"ow\">in</span> <span class=\"n\">nums</span><span class=\"p\">:</span> <span class=\"o\">...</span>\n<span class=\"k\">for</span> <span class=\"n\">i</span> <span class=\"ow\">in</span> <span class=\"nb\">range</span><span class=\"p\">(</span><span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">nums</span><span class=\"p\">)):</span> <span class=\"o\">...</span>\n<span class=\"k\">for</span> <span class=\"n\">i</span><span class=\"p\">,</span> <span class=\"n\">x</span> <span class=\"ow\">in</span> <span class=\"nb\">enumerate</span><span class=\"p\">(</span><span class=\"n\">nums</span><span class=\"p\">):</span> <span class=\"o\">...</span>\n<span class=\"k\">for</span> <span class=\"n\">i</span><span class=\"p\">,</span> <span class=\"n\">x</span> <span class=\"ow\">in</span> <span class=\"n\">nums</span><span class=\"p\">:</span> <span class=\"o\">...</span>\n</code></pre></div>",
-   "back_html": "<ol>\n<li>nur Werte</li>\n<li>nur Indizes</li>\n<li>Paare aus Index und Wert ✔</li>\n<li>Python versucht jeden <strong>Wert</strong> in zwei Teile zu entpacken → <code>TypeError: cannot unpack non-iterable int object</code></li>\n</ol>\n<p>Dein häufigster Fehler überhaupt (6 von 12 Problemen): <code>for i in nums_s:</code> und danach <code>nums_s[i]</code>. Dort ist <code>i</code> ein Wert, kein Index. Konvention gegen die Verwechslung: <code>i</code>, <code>j</code> nur für Indizes, Werte heißen <code>v</code>, <code>x</code> oder <code>num</code>.</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-1.py\">three-integer-sum #1–6</a><span class=\"badge crash\">6× Crash</span> 22.10. · durchläuft Werte und benutzt sie danach als Index (<code>nums_s[i]</code>)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-7.py\">three-integer-sum #7</a><span class=\"badge crash\">Crash</span> 22.10. · Index und Wert ohne <code>enumerate</code> → TypeError: cannot unpack non-iterable int</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/products-of-array-discluding-self/submission-2.py\">products-of-array-discluding-self #2–4</a><span class=\"badge fail\">3× falsch</span> 17.10. · durchläuft Werte (alle 1) und benutzt sie als Index</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/valid-sudoku/submission-2.py\">valid-sudoku #2–5</a><span class=\"badge crash\">2× Crash</span><span class=\"badge fail\">2× falsch</span> 18.10. · Spaltenindex <code>i</code> statt Zellwert <code>row[i]</code> ins Set</li></ul>",
-   "last_evidence": "2026-10-22T09:49:52+00:00"
+   "back_html": "<ol>\n<li>nur Werte</li>\n<li>nur Indizes</li>\n<li>Paare aus Index und Wert ✔</li>\n<li>Python versucht jeden <strong>Wert</strong> in zwei Teile zu entpacken → <code>TypeError: cannot unpack non-iterable int object</code></li>\n</ol>\n<p>Einer deiner häufigsten Fehler (8 von 18 Problemen): <code>for i in nums_s:</code> und danach <code>nums_s[i]</code>. Am 27.10. andersherum: <code>for e in s:</code> und dann <code>p = e + 1</code>, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: <code>for x in s</code> liefert Elemente. Dort ist <code>i</code> ein Wert, kein Index. Konvention gegen die Verwechslung: <code>i</code>, <code>j</code> nur für Indizes, Werte heißen <code>v</code>, <code>x</code> oder <code>num</code>.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-1.py\">three-integer-sum #1–6</a><span class=\"badge crash\">6× Crash</span> 22.10. · durchläuft Werte und benutzt sie danach als Index (<code>nums_s[i]</code>)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-7.py\">three-integer-sum #7</a><span class=\"badge crash\">Crash</span> 22.10. · Index und Wert ohne <code>enumerate</code> → TypeError: cannot unpack non-iterable int</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/products-of-array-discluding-self/submission-2.py\">products-of-array-discluding-self #2–4</a><span class=\"badge fail\">3× falsch</span> 17.10. · durchläuft Werte (alle 1) und benutzt sie als Index</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/valid-sudoku/submission-2.py\">valid-sudoku #2–5</a><span class=\"badge crash\">2× Crash</span><span class=\"badge fail\">2× falsch</span> 18.10. · Spaltenindex <code>i</code> statt Zellwert <code>row[i]</code> ins Set</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-8.py\">longest-substring-without-duplicates #8</a><span class=\"badge crash\">Crash</span> 27.10. · <code>for e in s</code> liefert Zeichen, <code>e + 1</code> → TypeError. Eigener Kommentar: „iterieren über elements oder index?“</li></ul>",
+   "last_evidence": "2026-10-27T11:33:40+00:00"
+  },
+  {
+   "id": "last-window-max",
+   "guid": "u:)l_z`%Q#",
+   "type": "concept",
+   "type_label": "Konzept",
+   "mistakes": [
+    "last-window"
+   ],
+   "problems": [
+    "longest-repeating-substring-with-replacement",
+    "longest-substring-without-duplicates"
+   ],
+   "evidence": [
+    "longest-substring-without-duplicates#0-2",
+    "longest-repeating-substring-with-replacement#3-6"
+   ],
+   "tags": [
+    "ncd::fehler::last-window",
+    "ncd::problem::longest-repeating-substring-with-replacement",
+    "ncd::problem::longest-substring-without-duplicates",
+    "ncd::typ::concept",
+    "sliding-window"
+   ],
+   "front_md": "Sliding Window: Du aktualisierst `max_len` nur dann, wenn das Fenster bricht (Duplikat gefunden, Ersetzungen aufgebraucht). Welche Eingaben gehen schief?",
+   "back_md": "Alle, bei denen das beste Fenster **bis zum Ende** reicht: Dort bricht nichts mehr, also wird es nie gewertet. Bei `\"abc\"` kommt 0 heraus.\n\nRegel: `max_len` nach **jeder** Erweiterung aktualisieren, nicht im Abbruchzweig.\n\nBei dir zweimal am 26.10.:\n\n- Longest Substring #0–2: `max_len` nur im `else`; #3 ergänzt die Zeile nach der Schleife\n- Longest Repeating Character Replacement #3–6: gewertet nur bei `k_sub == 0`; bei `\"XYYX\"`, k = 2 reicht das Fenster der Länge 4 bis ans Ende und geht verloren",
+   "front_html": "<p>Sliding Window: Du aktualisierst <code>max_len</code> nur dann, wenn das Fenster bricht (Duplikat gefunden, Ersetzungen aufgebraucht). Welche Eingaben gehen schief?</p>",
+   "back_html": "<p>Alle, bei denen das beste Fenster <strong>bis zum Ende</strong> reicht: Dort bricht nichts mehr, also wird es nie gewertet. Bei <code>\"abc\"</code> kommt 0 heraus.</p>\n<p>Regel: <code>max_len</code> nach <strong>jeder</strong> Erweiterung aktualisieren, nicht im Abbruchzweig.</p>\n<p>Bei dir zweimal am 26.10.:</p>\n<ul>\n<li>Longest Substring #0–2: <code>max_len</code> nur im <code>else</code>; #3 ergänzt die Zeile nach der Schleife</li>\n<li>Longest Repeating Character Replacement #3–6: gewertet nur bei <code>k_sub == 0</code>; bei <code>\"XYYX\"</code>, k = 2 reicht das Fenster der Länge 4 bis ans Ende und geht verloren</li>\n</ul>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-0.py\">longest-substring-without-duplicates #0–2</a><span class=\"badge fail\">3× falsch</span> 26.10. · Maximum nur im <code>else</code>-Zweig; ohne Duplikat am Ende zählt das letzte Fenster nie. #3 ergänzt die Zeile nach der Schleife</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-repeating-substring-with-replacement/submission-3.py\">longest-repeating-substring-with-replacement #3–6</a><span class=\"badge fail\">3× falsch</span> 26.10. · gewertet wird nur, wenn die Ersetzungen ausgehen; reicht das Fenster bis zum Stringende (<code>XYYX</code>, k = 2: Länge 4), geht es verloren</li></ul>",
+   "last_evidence": "2026-10-26T11:49:37+00:00"
   },
   {
    "id": "list-index-first",
@@ -799,29 +1129,38 @@
     "pointer-movement"
    ],
    "problems": [
+    "buy-and-sell-crypto",
     "longest-consecutive-sequence",
+    "longest-repeating-substring-with-replacement",
+    "longest-substring-without-duplicates",
     "three-integer-sum"
    ],
    "evidence": [
     "three-integer-sum#11",
     "three-integer-sum#12-13",
     "three-integer-sum#20",
-    "longest-consecutive-sequence#0"
+    "longest-consecutive-sequence#0",
+    "buy-and-sell-crypto#0-1",
+    "longest-repeating-substring-with-replacement#2",
+    "longest-substring-without-duplicates#10-11"
    ],
    "tags": [
     "loops",
     "ncd::fehler::loop-progress",
     "ncd::fehler::pointer-movement",
+    "ncd::problem::buy-and-sell-crypto",
     "ncd::problem::longest-consecutive-sequence",
+    "ncd::problem::longest-repeating-substring-with-replacement",
+    "ncd::problem::longest-substring-without-duplicates",
     "ncd::problem::three-integer-sum",
     "ncd::typ::concept"
    ],
    "front_md": "Woran erkennst du **vor** dem Abschicken, dass eine `while`-Schleife terminiert?",
-   "back_md": "Jeder Pfad durch den Schleifenkörper muss die Abbruchbedingung **näher bringen**, z. B. den Abstand `r - l` verkleinern. Prüfe jeden Zweig einzeln:\n\n- Zweig ohne Update? → Endlosschleife (3Sum: nach einem Treffer kein `l += 1` / `r -= 1`)\n- Update in die falsche Richtung? → Endlosschleife (`p_r += 1`)\n- `continue` vor dem Update? → Endlosschleife (`if v > 0: continue`)\n- Bedingung hängt gar nicht von den Daten ab? → `while (i+1) - i == 1` ist immer wahr\n\nAlle 5 deiner Timeouts waren genau das.",
+   "back_md": "Jeder Pfad durch den Schleifenkörper muss die Abbruchbedingung **näher bringen**, z. B. den Abstand `r - l` verkleinern. Prüfe jeden Zweig einzeln:\n\n- Zweig ohne Update? → Endlosschleife (3Sum: nach einem Treffer kein `l += 1` / `r -= 1`)\n- Update in die falsche Richtung? → Endlosschleife (`p_r += 1`)\n- `continue` vor dem Update? → Endlosschleife (`if v > 0: continue`)\n- Bedingung hängt gar nicht von den Daten ab? → `while (i+1) - i == 1` ist immer wahr\n- Wert statt Pointer geändert? → `prices[p_l] -= 1` lässt `p_l` stehen (Buy and Sell)\n- Update nur in einer inneren Schleife? → läuft die nicht, hängt die äußere (`while p < len(s)`, Longest Substring)\n\nAlle 10 deiner Timeouts waren genau das, zuletzt am 27.10.",
    "front_html": "<p>Woran erkennst du <strong>vor</strong> dem Abschicken, dass eine <code>while</code>-Schleife terminiert?</p>",
-   "back_html": "<p>Jeder Pfad durch den Schleifenkörper muss die Abbruchbedingung <strong>näher bringen</strong>, z. B. den Abstand <code>r - l</code> verkleinern. Prüfe jeden Zweig einzeln:</p>\n<ul>\n<li>Zweig ohne Update? → Endlosschleife (3Sum: nach einem Treffer kein <code>l += 1</code> / <code>r -= 1</code>)</li>\n<li>Update in die falsche Richtung? → Endlosschleife (<code>p_r += 1</code>)</li>\n<li><code>continue</code> vor dem Update? → Endlosschleife (<code>if v &gt; 0: continue</code>)</li>\n<li>Bedingung hängt gar nicht von den Daten ab? → <code>while (i+1) - i == 1</code> ist immer wahr</li>\n</ul>\n<p>Alle 5 deiner Timeouts waren genau das.</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-11.py\">three-integer-sum #11</a><span class=\"badge timeout\">Timeout</span> 22.10. · nach einem Treffer bewegt sich kein Pointer → TIMEOUT</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-12.py\">three-integer-sum #12–13</a><span class=\"badge timeout\">2× Timeout</span> 22.10. · rechter Pointer läuft nach außen → TIMEOUT</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-20.py\">three-integer-sum #20</a><span class=\"badge timeout\">Timeout</span> 23.10. · <code>continue</code> ohne Pointer-Update → TIMEOUT; #21 mit <code>break</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-consecutive-sequence/submission-0.py\">longest-consecutive-sequence #0</a><span class=\"badge timeout\">Timeout</span> 19.10. · Bedingung ist immer wahr → TIMEOUT</li></ul>",
-   "last_evidence": "2026-10-23T09:16:44+00:00"
+   "back_html": "<p>Jeder Pfad durch den Schleifenkörper muss die Abbruchbedingung <strong>näher bringen</strong>, z. B. den Abstand <code>r - l</code> verkleinern. Prüfe jeden Zweig einzeln:</p>\n<ul>\n<li>Zweig ohne Update? → Endlosschleife (3Sum: nach einem Treffer kein <code>l += 1</code> / <code>r -= 1</code>)</li>\n<li>Update in die falsche Richtung? → Endlosschleife (<code>p_r += 1</code>)</li>\n<li><code>continue</code> vor dem Update? → Endlosschleife (<code>if v &gt; 0: continue</code>)</li>\n<li>Bedingung hängt gar nicht von den Daten ab? → <code>while (i+1) - i == 1</code> ist immer wahr</li>\n<li>Wert statt Pointer geändert? → <code>prices[p_l] -= 1</code> lässt <code>p_l</code> stehen (Buy and Sell)</li>\n<li>Update nur in einer inneren Schleife? → läuft die nicht, hängt die äußere (<code>while p &lt; len(s)</code>, Longest Substring)</li>\n</ul>\n<p>Alle 10 deiner Timeouts waren genau das, zuletzt am 27.10.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-11.py\">three-integer-sum #11</a><span class=\"badge timeout\">Timeout</span> 22.10. · nach einem Treffer bewegt sich kein Pointer → TIMEOUT</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-12.py\">three-integer-sum #12–13</a><span class=\"badge timeout\">2× Timeout</span> 22.10. · rechter Pointer läuft nach außen → TIMEOUT</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-20.py\">three-integer-sum #20</a><span class=\"badge timeout\">Timeout</span> 23.10. · <code>continue</code> ohne Pointer-Update → TIMEOUT; #21 mit <code>break</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-consecutive-sequence/submission-0.py\">longest-consecutive-sequence #0</a><span class=\"badge timeout\">Timeout</span> 19.10. · Bedingung ist immer wahr → TIMEOUT</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-0.py\">buy-and-sell-crypto #0–1</a><span class=\"badge timeout\">2× Timeout</span> 25.10. · Körper ändert nur Werte in <code>prices</code>, nie <code>p_l</code>/<code>p_r</code> → TIMEOUT</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-repeating-substring-with-replacement/submission-2.py\">longest-repeating-substring-with-replacement #2</a><span class=\"badge timeout\">Timeout</span> 26.10. · Zweig <code>k_sub == 0</code> ändert weder <code>j</code> noch <code>i</code> → TIMEOUT; #3 ergänzt <code>i += 1</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-10.py\">longest-substring-without-duplicates #10–11</a><span class=\"badge timeout\">2× Timeout</span> 27.10. · <code>p</code> wächst nur in der inneren Schleife; läuft die nicht, hängt die äußere → TIMEOUT</li></ul>",
+   "last_evidence": "2026-10-27T11:37:32+00:00"
   },
   {
    "id": "max-empty-default",
@@ -851,6 +1190,35 @@
    "back_html": "<p><code>ValueError: max() iterable argument is empty</code>.</p>\n<p>Ohne <code>if</code>: <code>max(lengths, default=0)</code>, genauso bei <code>min</code>. Bei Longest Consecutive ist die leere Eingabe ein erlaubter Testfall (<code>0 &lt;= nums.length</code>).</p>",
    "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-consecutive-sequence/submission-3.py\">longest-consecutive-sequence #3</a><span class=\"badge crash\">Crash</span> 19.10. · <code>max([])</code> → ValueError; #4 mit <code>default=0</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-consecutive-sequence/submission-4.py\">longest-consecutive-sequence #4</a><span class=\"badge pass\">ok</span> 19.10.</li></ul>",
    "last_evidence": "2026-10-19T09:09:46+00:00"
+  },
+  {
+   "id": "max-water-pattern",
+   "guid": "wPMTS{;-F&",
+   "type": "pattern",
+   "type_label": "Pattern",
+   "mistakes": [
+    "problem-model"
+   ],
+   "problems": [
+    "max-water-container"
+   ],
+   "evidence": [
+    "max-water-container#0",
+    "max-water-container#4",
+    "max-water-container#8"
+   ],
+   "tags": [
+    "ncd::fehler::problem-model",
+    "ncd::problem::max-water-container",
+    "ncd::typ::pattern",
+    "two-pointers"
+   ],
+   "front_md": "Container With Most Water in O(n): Wie berechnest du die Fläche zwischen `l` und `r`, und welchen Pointer bewegst du danach?",
+   "back_md": "Fläche = **Breite × kleinere Höhe**: `(r - l) * min(h[l], h[r])`.\n\n```python\nl, r = 0, len(heights) - 1\nbest = 0\nwhile l < r:\n    best = max(best, (r - l) * min(heights[l], heights[r]))\n    if heights[l] < heights[r]:\n        l += 1\n    else:\n        r -= 1\nreturn best\n```\n\nBewegt wird die **kleinere** Seite. Die kleinere Höhe begrenzt die Fläche; die größere nach innen zu ziehen macht die Breite kleiner, ohne dass die Höhe steigen kann.\n\nDein erster Entwurf (#0) rechnete Höhe × Höhe. #4 bestand mit allen Paaren, also O(n²), #8 mit Two Pointers.",
+   "front_html": "<p>Container With Most Water in O(n): Wie berechnest du die Fläche zwischen <code>l</code> und <code>r</code>, und welchen Pointer bewegst du danach?</p>",
+   "back_html": "<p>Fläche = <strong>Breite × kleinere Höhe</strong>: <code>(r - l) * min(h[l], h[r])</code>.</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">l</span><span class=\"p\">,</span> <span class=\"n\">r</span> <span class=\"o\">=</span> <span class=\"mi\">0</span><span class=\"p\">,</span> <span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">heights</span><span class=\"p\">)</span> <span class=\"o\">-</span> <span class=\"mi\">1</span>\n<span class=\"n\">best</span> <span class=\"o\">=</span> <span class=\"mi\">0</span>\n<span class=\"k\">while</span> <span class=\"n\">l</span> <span class=\"o\">&lt;</span> <span class=\"n\">r</span><span class=\"p\">:</span>\n    <span class=\"n\">best</span> <span class=\"o\">=</span> <span class=\"nb\">max</span><span class=\"p\">(</span><span class=\"n\">best</span><span class=\"p\">,</span> <span class=\"p\">(</span><span class=\"n\">r</span> <span class=\"o\">-</span> <span class=\"n\">l</span><span class=\"p\">)</span> <span class=\"o\">*</span> <span class=\"nb\">min</span><span class=\"p\">(</span><span class=\"n\">heights</span><span class=\"p\">[</span><span class=\"n\">l</span><span class=\"p\">],</span> <span class=\"n\">heights</span><span class=\"p\">[</span><span class=\"n\">r</span><span class=\"p\">]))</span>\n    <span class=\"k\">if</span> <span class=\"n\">heights</span><span class=\"p\">[</span><span class=\"n\">l</span><span class=\"p\">]</span> <span class=\"o\">&lt;</span> <span class=\"n\">heights</span><span class=\"p\">[</span><span class=\"n\">r</span><span class=\"p\">]:</span>\n        <span class=\"n\">l</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n    <span class=\"k\">else</span><span class=\"p\">:</span>\n        <span class=\"n\">r</span> <span class=\"o\">-=</span> <span class=\"mi\">1</span>\n<span class=\"k\">return</span> <span class=\"n\">best</span>\n</code></pre></div>\n\n<p>Bewegt wird die <strong>kleinere</strong> Seite. Die kleinere Höhe begrenzt die Fläche; die größere nach innen zu ziehen macht die Breite kleiner, ohne dass die Höhe steigen kann.</p>\n<p>Dein erster Entwurf (#0) rechnete Höhe × Höhe. #4 bestand mit allen Paaren, also O(n²), #8 mit Two Pointers.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-0.py\">max-water-container #0</a><span class=\"badge fail\">falsch</span> 24.10. · Höhe × Höhe statt Breite × kleinere Höhe; Kommentar: „das ist die idee“</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-4.py\">max-water-container #4</a><span class=\"badge pass\">ok</span> 24.10.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-8.py\">max-water-container #8</a><span class=\"badge pass\">ok</span> 24.10.</li></ul>",
+   "last_evidence": "2026-10-24T21:07:22+00:00"
   },
   {
    "id": "membership-complexity",
@@ -1038,25 +1406,89 @@
     "off-by-one"
    ],
    "problems": [
-    "longest-consecutive-sequence"
+    "longest-consecutive-sequence",
+    "longest-repeating-substring-with-replacement"
    ],
    "evidence": [
     "longest-consecutive-sequence#7-9",
     "longest-consecutive-sequence#10",
-    "longest-consecutive-sequence#11"
+    "longest-consecutive-sequence#11",
+    "longest-repeating-substring-with-replacement#2-5"
    ],
    "tags": [
     "longest-consecutive",
     "ncd::fehler::off-by-one",
     "ncd::problem::longest-consecutive-sequence",
+    "ncd::problem::longest-repeating-substring-with-replacement",
     "ncd::typ::bug"
    ],
    "front_md": "Longest Consecutive: Bei manchen Eingaben ist das Ergebnis um 1 zu klein. Wo?\n\n```python\nlength = 1\nfor n in num_set:\n    if n - 1 not in num_set:\n        while n + 1 in num_set:\n            length += 1\n            n += 1\n        lengths.append(length)\n        length = 0\n```",
-   "back_md": "Der Reset setzt `length = 0`, aber jede Sequenz enthält ihr **Startelement**, die Länge beginnt also bei 1. Nur die zuerst gefundene Sequenz stimmt. Ob das in Tests auffällt, hängt von der Reihenfolge im Set ab.\n\nRobuster: den Zähler **dort** setzen, wo die Sequenz beginnt.\n\n```python\nfor n in num_set:\n    if n - 1 not in num_set:\n        length = 1\n        while n + length in num_set:\n            length += 1\n        best = max(best, length)\n```\n\nDas hat bei dir vier Versuche gekostet (#7–10).",
+   "back_md": "Der Reset setzt `length = 0`, aber jede Sequenz enthält ihr **Startelement**, die Länge beginnt also bei 1. Nur die zuerst gefundene Sequenz stimmt. Ob das in Tests auffällt, hängt von der Reihenfolge im Set ab.\n\nRobuster: den Zähler **dort** setzen, wo die Sequenz beginnt.\n\n```python\nfor n in num_set:\n    if n - 1 not in num_set:\n        length = 1\n        while n + length in num_set:\n            length += 1\n        best = max(best, length)\n```\n\nDas hat bei dir vier Versuche gekostet (#7–10). Am 26.10. wieder, bei Longest Repeating Character Replacement: `sub_len = 0` für ein Fenster, das schon sein Startzeichen enthält (#2–5); #6 startet mit 1.",
    "front_html": "<p>Longest Consecutive: Bei manchen Eingaben ist das Ergebnis um 1 zu klein. Wo?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">length</span> <span class=\"o\">=</span> <span class=\"mi\">1</span>\n<span class=\"k\">for</span> <span class=\"n\">n</span> <span class=\"ow\">in</span> <span class=\"n\">num_set</span><span class=\"p\">:</span>\n    <span class=\"k\">if</span> <span class=\"n\">n</span> <span class=\"o\">-</span> <span class=\"mi\">1</span> <span class=\"ow\">not</span> <span class=\"ow\">in</span> <span class=\"n\">num_set</span><span class=\"p\">:</span>\n        <span class=\"k\">while</span> <span class=\"n\">n</span> <span class=\"o\">+</span> <span class=\"mi\">1</span> <span class=\"ow\">in</span> <span class=\"n\">num_set</span><span class=\"p\">:</span>\n            <span class=\"n\">length</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n            <span class=\"n\">n</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n        <span class=\"n\">lengths</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span class=\"n\">length</span><span class=\"p\">)</span>\n        <span class=\"n\">length</span> <span class=\"o\">=</span> <span class=\"mi\">0</span>\n</code></pre></div>",
-   "back_html": "<p>Der Reset setzt <code>length = 0</code>, aber jede Sequenz enthält ihr <strong>Startelement</strong>, die Länge beginnt also bei 1. Nur die zuerst gefundene Sequenz stimmt. Ob das in Tests auffällt, hängt von der Reihenfolge im Set ab.</p>\n<p>Robuster: den Zähler <strong>dort</strong> setzen, wo die Sequenz beginnt.</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">for</span> <span class=\"n\">n</span> <span class=\"ow\">in</span> <span class=\"n\">num_set</span><span class=\"p\">:</span>\n    <span class=\"k\">if</span> <span class=\"n\">n</span> <span class=\"o\">-</span> <span class=\"mi\">1</span> <span class=\"ow\">not</span> <span class=\"ow\">in</span> <span class=\"n\">num_set</span><span class=\"p\">:</span>\n        <span class=\"n\">length</span> <span class=\"o\">=</span> <span class=\"mi\">1</span>\n        <span class=\"k\">while</span> <span class=\"n\">n</span> <span class=\"o\">+</span> <span class=\"n\">length</span> <span class=\"ow\">in</span> <span class=\"n\">num_set</span><span class=\"p\">:</span>\n            <span class=\"n\">length</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n        <span class=\"n\">best</span> <span class=\"o\">=</span> <span class=\"nb\">max</span><span class=\"p\">(</span><span class=\"n\">best</span><span class=\"p\">,</span> <span class=\"n\">length</span><span class=\"p\">)</span>\n</code></pre></div>\n\n<p>Das hat bei dir vier Versuche gekostet (#7–10).</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-consecutive-sequence/submission-7.py\">longest-consecutive-sequence #7–9</a><span class=\"badge fail\">3× falsch</span> 19.10. · Startelement nicht mitgezählt</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-consecutive-sequence/submission-10.py\">longest-consecutive-sequence #10</a><span class=\"badge fail\">falsch</span> 19.10. · Start mit 1, Reset aber auf 0 → nur die erste Sequenz stimmt</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-consecutive-sequence/submission-11.py\">longest-consecutive-sequence #11</a><span class=\"badge pass\">ok</span> 19.10.</li></ul>",
-   "last_evidence": "2026-10-19T09:19:12+00:00"
+   "back_html": "<p>Der Reset setzt <code>length = 0</code>, aber jede Sequenz enthält ihr <strong>Startelement</strong>, die Länge beginnt also bei 1. Nur die zuerst gefundene Sequenz stimmt. Ob das in Tests auffällt, hängt von der Reihenfolge im Set ab.</p>\n<p>Robuster: den Zähler <strong>dort</strong> setzen, wo die Sequenz beginnt.</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">for</span> <span class=\"n\">n</span> <span class=\"ow\">in</span> <span class=\"n\">num_set</span><span class=\"p\">:</span>\n    <span class=\"k\">if</span> <span class=\"n\">n</span> <span class=\"o\">-</span> <span class=\"mi\">1</span> <span class=\"ow\">not</span> <span class=\"ow\">in</span> <span class=\"n\">num_set</span><span class=\"p\">:</span>\n        <span class=\"n\">length</span> <span class=\"o\">=</span> <span class=\"mi\">1</span>\n        <span class=\"k\">while</span> <span class=\"n\">n</span> <span class=\"o\">+</span> <span class=\"n\">length</span> <span class=\"ow\">in</span> <span class=\"n\">num_set</span><span class=\"p\">:</span>\n            <span class=\"n\">length</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n        <span class=\"n\">best</span> <span class=\"o\">=</span> <span class=\"nb\">max</span><span class=\"p\">(</span><span class=\"n\">best</span><span class=\"p\">,</span> <span class=\"n\">length</span><span class=\"p\">)</span>\n</code></pre></div>\n\n<p>Das hat bei dir vier Versuche gekostet (#7–10). Am 26.10. wieder, bei Longest Repeating Character Replacement: <code>sub_len = 0</code> für ein Fenster, das schon sein Startzeichen enthält (#2–5); #6 startet mit 1.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-consecutive-sequence/submission-7.py\">longest-consecutive-sequence #7–9</a><span class=\"badge fail\">3× falsch</span> 19.10. · Startelement nicht mitgezählt</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-consecutive-sequence/submission-10.py\">longest-consecutive-sequence #10</a><span class=\"badge fail\">falsch</span> 19.10. · Start mit 1, Reset aber auf 0 → nur die erste Sequenz stimmt</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-consecutive-sequence/submission-11.py\">longest-consecutive-sequence #11</a><span class=\"badge pass\">ok</span> 19.10.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-repeating-substring-with-replacement/submission-2.py\">longest-repeating-substring-with-replacement #2–5</a><span class=\"badge timeout\">Timeout</span><span class=\"badge fail\">2× falsch</span> 26.10. · Startzeichen nicht mitgezählt; #6 startet mit 1</li></ul>",
+   "last_evidence": "2026-10-26T11:47:39+00:00"
+  },
+  {
+   "id": "slice-from-index",
+   "guid": "N,~^db{;=M",
+   "type": "gotcha",
+   "type_label": "Python-Gotcha",
+   "mistakes": [
+    "window-shrink"
+   ],
+   "problems": [
+    "longest-substring-without-duplicates"
+   ],
+   "evidence": [
+    "longest-substring-without-duplicates#7"
+   ],
+   "tags": [
+    "ncd::fehler::window-shrink",
+    "ncd::problem::longest-substring-without-duplicates",
+    "ncd::typ::gotcha",
+    "python",
+    "slicing"
+   ],
+   "front_md": "`sub = [\"d\", \"v\"]`, das nächste Zeichen ist `\"d\"`. Was ergibt `sub[sub.index(\"d\") + 1:] + [\"d\"]`?",
+   "back_md": "`[\"v\", \"d\"]`.\n\n- `sub.index(\"d\")` → 0, die Position des alten `d`\n- `sub[1:]` → alles **ab** Index 1 bis zum Ende: `[\"v\"]`\n- `+ [\"d\"]` hängt das neue Zeichen an\n\nSlice-Schreibweise: `xs[start:stop]`, `start` inklusive, `stop` exklusiv; fehlt eine Grenze, gilt Anfang bzw. Ende. Ergebnis ist eine **neue** Liste.\n\nDamit hast du Longest Substring am 26.10. gelöst (#7), mit der Notiz „lerne wie man sliced! schreibweise merken!“",
+   "front_html": "<p><code>sub = [\"d\", \"v\"]</code>, das nächste Zeichen ist <code>\"d\"</code>. Was ergibt <code>sub[sub.index(\"d\") + 1:] + [\"d\"]</code>?</p>",
+   "back_html": "<p><code>[\"v\", \"d\"]</code>.</p>\n<ul>\n<li><code>sub.index(\"d\")</code> → 0, die Position des alten <code>d</code></li>\n<li><code>sub[1:]</code> → alles <strong>ab</strong> Index 1 bis zum Ende: <code>[\"v\"]</code></li>\n<li><code>+ [\"d\"]</code> hängt das neue Zeichen an</li>\n</ul>\n<p>Slice-Schreibweise: <code>xs[start:stop]</code>, <code>start</code> inklusive, <code>stop</code> exklusiv; fehlt eine Grenze, gilt Anfang bzw. Ende. Ergebnis ist eine <strong>neue</strong> Liste.</p>\n<p>Damit hast du Longest Substring am 26.10. gelöst (#7), mit der Notiz „lerne wie man sliced! schreibweise merken!“</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-7.py\">longest-substring-without-duplicates #7</a><span class=\"badge pass\">ok</span> 26.10.</li></ul>",
+   "last_evidence": null
+  },
+  {
+   "id": "sliding-window-shrink",
+   "guid": "zJD.IwTzN?",
+   "type": "trace",
+   "type_label": "Trace",
+   "mistakes": [
+    "window-shrink"
+   ],
+   "problems": [
+    "longest-substring-without-duplicates"
+   ],
+   "evidence": [
+    "longest-substring-without-duplicates#0-1",
+    "longest-substring-without-duplicates#2-4",
+    "longest-substring-without-duplicates#18",
+    "longest-substring-without-duplicates#19",
+    "longest-substring-without-duplicates#20",
+    "longest-substring-without-duplicates#21"
+   ],
+   "tags": [
+    "ncd::fehler::window-shrink",
+    "ncd::problem::longest-substring-without-duplicates",
+    "ncd::typ::trace",
+    "sliding-window",
+    "strings"
+   ],
+   "front_md": "Longest Substring Without Repeating Characters, `s = \"dvdf\"`. Das Fenster ist `\"dv\"`, jetzt kommt bei `r = 2` das zweite `d`. Wohin springt `l`, und was passiert mit Set und Länge?\n\n```viz\nkind: array\nvalues: [d, v, d, f]\npointers: {l: 0, r: 2}\nhighlight: [0, 1]\ncaption: \"Fenster \\\"dv\\\", s[2] = d ist schon drin\"\n```",
+   "back_md": "`l` rückt nur so weit, bis das alte `d` draußen ist, also auf 1. Das `v` bleibt im Fenster.\n\n```viz\nkind: array\nvalues: [d, v, d, f]\npointers: {l: 1, r: 2}\nhighlight: [1, 2]\ncaption: \"Fenster \\\"vd\\\", danach \\\"vdf\\\" mit Länge 3\"\n```\n\n```python\nwhile s[r] in seen:\n    seen.remove(s[l])\n    l += 1\nseen.add(s[r])\nbest = max(best, r - l + 1)\n```\n\nDrei Schritte, in dieser Reihenfolge: schrumpfen, **dann** das neue Zeichen aufnehmen, Länge aus den Pointern berechnen. Deine Zwischenstände am 27.10.: neues Zeichen nicht ins Set (#18), `seen.add(v)` in der while-Schleife → KeyError (#19), Länge nicht neu berechnet (#20). Am Vortag hattest du das Fenster ganz verworfen (`sub = [i]`, #2–4) und bei `\"dvdf\"` 2 statt 3 bekommen.",
+   "front_html": "<p>Longest Substring Without Repeating Characters, <code>s = \"dvdf\"</code>. Das Fenster ist <code>\"dv\"</code>, jetzt kommt bei <code>r = 2</code> das zweite <code>d</code>. Wohin springt <code>l</code>, und was passiert mit Set und Länge?</p>\n<div class=\"viz\"><svg width=\"208\" height=\"96\" viewBox=\"0 0 208 96\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Fenster &quot;dv&quot;, s[2] = d ist schon drin\"><rect x=\"12\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"35.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">d</text><text x=\"35.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><rect x=\"58\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"81.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">v</text><text x=\"81.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">1</text><rect x=\"104\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"127.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">d</text><text x=\"127.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><rect x=\"150\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"173.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">f</text><text x=\"173.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">3</text><text x=\"35.0\" y=\"84\" class=\"ptr p0\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ l</text><text x=\"127.0\" y=\"84\" class=\"ptr p1\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ r</text></svg><div class=\"cap\">Fenster &quot;dv&quot;, s[2] = d ist schon drin</div></div>",
+   "back_html": "<p><code>l</code> rückt nur so weit, bis das alte <code>d</code> draußen ist, also auf 1. Das <code>v</code> bleibt im Fenster.</p>\n<div class=\"viz\"><svg width=\"208\" height=\"96\" viewBox=\"0 0 208 96\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Fenster &quot;vd&quot;, danach &quot;vdf&quot; mit Länge 3\"><rect x=\"12\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"35.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">d</text><text x=\"35.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><rect x=\"58\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"81.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">v</text><text x=\"81.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">1</text><rect x=\"104\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"127.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">d</text><text x=\"127.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><rect x=\"150\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"173.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">f</text><text x=\"173.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">3</text><text x=\"81.0\" y=\"84\" class=\"ptr p0\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ l</text><text x=\"127.0\" y=\"84\" class=\"ptr p1\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ r</text></svg><div class=\"cap\">Fenster &quot;vd&quot;, danach &quot;vdf&quot; mit Länge 3</div></div>\n\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">while</span> <span class=\"n\">s</span><span class=\"p\">[</span><span class=\"n\">r</span><span class=\"p\">]</span> <span class=\"ow\">in</span> <span class=\"n\">seen</span><span class=\"p\">:</span>\n    <span class=\"n\">seen</span><span class=\"o\">.</span><span class=\"n\">remove</span><span class=\"p\">(</span><span class=\"n\">s</span><span class=\"p\">[</span><span class=\"n\">l</span><span class=\"p\">])</span>\n    <span class=\"n\">l</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n<span class=\"n\">seen</span><span class=\"o\">.</span><span class=\"n\">add</span><span class=\"p\">(</span><span class=\"n\">s</span><span class=\"p\">[</span><span class=\"n\">r</span><span class=\"p\">])</span>\n<span class=\"n\">best</span> <span class=\"o\">=</span> <span class=\"nb\">max</span><span class=\"p\">(</span><span class=\"n\">best</span><span class=\"p\">,</span> <span class=\"n\">r</span> <span class=\"o\">-</span> <span class=\"n\">l</span> <span class=\"o\">+</span> <span class=\"mi\">1</span><span class=\"p\">)</span>\n</code></pre></div>\n\n<p>Drei Schritte, in dieser Reihenfolge: schrumpfen, <strong>dann</strong> das neue Zeichen aufnehmen, Länge aus den Pointern berechnen. Deine Zwischenstände am 27.10.: neues Zeichen nicht ins Set (#18), <code>seen.add(v)</code> in der while-Schleife → KeyError (#19), Länge nicht neu berechnet (#20). Am Vortag hattest du das Fenster ganz verworfen (<code>sub = [i]</code>, #2–4) und bei <code>\"dvdf\"</code> 2 statt 3 bekommen.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-0.py\">longest-substring-without-duplicates #0–1</a><span class=\"badge fail\">2× falsch</span> 26.10. · verwirft das ganze Fenster</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-2.py\">longest-substring-without-duplicates #2–4</a><span class=\"badge fail\">3× falsch</span> 26.10. · behält nur das neue Zeichen; bei <code>dvdf</code> geht das <code>v</code> verloren (got 2 statt 3). #7 schneidet mit <code>sub[sub.index(i) + 1:]</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-18.py\">longest-substring-without-duplicates #18</a><span class=\"badge fail\">falsch</span> 27.10. · nach dem Schrumpfen kommt das neue Zeichen nicht ins Set, <code>sub_len</code> bleibt alt</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-19.py\">longest-substring-without-duplicates #19</a><span class=\"badge crash\">Crash</span> 27.10. · <code>seen.add(v)</code> in der while-Schleife: <code>v</code> ist sofort wieder drin, das nächste <code>remove</code> → KeyError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-20.py\">longest-substring-without-duplicates #20</a><span class=\"badge fail\">falsch</span> 27.10. · <code>sub_len</code> nach dem Schrumpfen nicht neu berechnet; #21: <code>sub_len = i - remove_pointer +1</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-21.py\">longest-substring-without-duplicates #21</a><span class=\"badge pass\">ok</span> 27.10.</li></ul>",
+   "last_evidence": "2026-10-27T11:49:38+00:00"
   },
   {
    "id": "str-lower-method",
@@ -1201,27 +1633,30 @@
     "pointer-movement"
    ],
    "problems": [
+    "buy-and-sell-crypto",
     "is-palindrome",
     "three-integer-sum"
    ],
    "evidence": [
     "is-palindrome#0",
     "is-palindrome#15-16",
-    "three-integer-sum#12-13"
+    "three-integer-sum#12-13",
+    "buy-and-sell-crypto#2"
    ],
    "tags": [
     "ncd::fehler::pointer-movement",
+    "ncd::problem::buy-and-sell-crypto",
     "ncd::problem::is-palindrome",
     "ncd::problem::three-integer-sum",
     "ncd::typ::concept",
     "two-pointers"
    ],
    "front_md": "Two Pointers von außen nach innen: Wie lauten Schleifenbedingung und Updates? Und warum nicht `while l != r`?",
-   "back_md": "```python\nl, r = 0, len(s) - 1\nwhile l < r:\n    ...\n    l += 1\n    r -= 1\n```\n\n`l` läuft nach rechts, `r` nach links. Bei **gerader** Länge springen sie aneinander vorbei, ohne je gleich zu sein. `!=` wird dann nie falsch, und die Schleife läuft über die Grenzen hinaus.\n\n```viz\nkind: array\nvalues: [a, b, b, a]\npointers: {l: 2, r: 1}\nhighlight: [1, 2]\ncaption: \"nach 2 Schritten: l = 2, r = 1, gekreuzt, aber nie gleich\"\n```\n\nAm 22.10. hast du zweimal am selben Vormittag `p_r += 1` geschrieben, erst bei Palindrome und eine halbe Stunde später bei 3Sum.",
+   "back_md": "```python\nl, r = 0, len(s) - 1\nwhile l < r:\n    ...\n    l += 1\n    r -= 1\n```\n\n`l` läuft nach rechts, `r` nach links. Bei **gerader** Länge springen sie aneinander vorbei, ohne je gleich zu sein. `!=` wird dann nie falsch, und die Schleife läuft über die Grenzen hinaus.\n\n```viz\nkind: array\nvalues: [a, b, b, a]\npointers: {l: 2, r: 1}\nhighlight: [1, 2]\ncaption: \"nach 2 Schritten: l = 2, r = 1, gekreuzt, aber nie gleich\"\n```\n\nAm 22.10. hast du zweimal am selben Vormittag `p_r += 1` geschrieben, erst bei Palindrome und eine halbe Stunde später bei 3Sum. Am 25.10. bei Buy and Sell wieder: `p_l -=1` und `p_r +=1`, beide nach außen → IndexError.",
    "front_html": "<p>Two Pointers von außen nach innen: Wie lauten Schleifenbedingung und Updates? Und warum nicht <code>while l != r</code>?</p>",
-   "back_html": "<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">l</span><span class=\"p\">,</span> <span class=\"n\">r</span> <span class=\"o\">=</span> <span class=\"mi\">0</span><span class=\"p\">,</span> <span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">s</span><span class=\"p\">)</span> <span class=\"o\">-</span> <span class=\"mi\">1</span>\n<span class=\"k\">while</span> <span class=\"n\">l</span> <span class=\"o\">&lt;</span> <span class=\"n\">r</span><span class=\"p\">:</span>\n    <span class=\"o\">...</span>\n    <span class=\"n\">l</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n    <span class=\"n\">r</span> <span class=\"o\">-=</span> <span class=\"mi\">1</span>\n</code></pre></div>\n\n<p><code>l</code> läuft nach rechts, <code>r</code> nach links. Bei <strong>gerader</strong> Länge springen sie aneinander vorbei, ohne je gleich zu sein. <code>!=</code> wird dann nie falsch, und die Schleife läuft über die Grenzen hinaus.</p>\n<div class=\"viz\"><svg width=\"208\" height=\"96\" viewBox=\"0 0 208 96\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nach 2 Schritten: l = 2, r = 1, gekreuzt, aber nie gleich\"><rect x=\"12\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"35.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">a</text><text x=\"35.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><rect x=\"58\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"81.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">b</text><text x=\"81.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">1</text><rect x=\"104\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"127.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">b</text><text x=\"127.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><rect x=\"150\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"173.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">a</text><text x=\"173.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">3</text><text x=\"127.0\" y=\"84\" class=\"ptr p0\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ l</text><text x=\"81.0\" y=\"84\" class=\"ptr p1\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ r</text></svg><div class=\"cap\">nach 2 Schritten: l = 2, r = 1, gekreuzt, aber nie gleich</div></div>\n\n<p>Am 22.10. hast du zweimal am selben Vormittag <code>p_r += 1</code> geschrieben, erst bei Palindrome und eine halbe Stunde später bei 3Sum.</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/is-palindrome/submission-0.py\">is-palindrome #0</a><span class=\"badge fail\">falsch</span> 20.10. · bei gerader Länge kreuzen sich die Pointer, ohne je gleich zu sein</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/is-palindrome/submission-15.py\">is-palindrome #15–16</a><span class=\"badge fail\">2× falsch</span> 22.10. · rechter Pointer läuft nach außen; in #15 stehen die Updates außerdem außerhalb der Schleife</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-12.py\">three-integer-sum #12–13</a><span class=\"badge timeout\">2× Timeout</span> 22.10. · rechter Pointer läuft nach außen → TIMEOUT</li></ul>",
-   "last_evidence": "2026-10-22T09:54:36+00:00"
+   "back_html": "<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">l</span><span class=\"p\">,</span> <span class=\"n\">r</span> <span class=\"o\">=</span> <span class=\"mi\">0</span><span class=\"p\">,</span> <span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">s</span><span class=\"p\">)</span> <span class=\"o\">-</span> <span class=\"mi\">1</span>\n<span class=\"k\">while</span> <span class=\"n\">l</span> <span class=\"o\">&lt;</span> <span class=\"n\">r</span><span class=\"p\">:</span>\n    <span class=\"o\">...</span>\n    <span class=\"n\">l</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n    <span class=\"n\">r</span> <span class=\"o\">-=</span> <span class=\"mi\">1</span>\n</code></pre></div>\n\n<p><code>l</code> läuft nach rechts, <code>r</code> nach links. Bei <strong>gerader</strong> Länge springen sie aneinander vorbei, ohne je gleich zu sein. <code>!=</code> wird dann nie falsch, und die Schleife läuft über die Grenzen hinaus.</p>\n<div class=\"viz\"><svg width=\"208\" height=\"96\" viewBox=\"0 0 208 96\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nach 2 Schritten: l = 2, r = 1, gekreuzt, aber nie gleich\"><rect x=\"12\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"35.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">a</text><text x=\"35.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><rect x=\"58\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"81.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">b</text><text x=\"81.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">1</text><rect x=\"104\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"127.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">b</text><text x=\"127.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><rect x=\"150\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"173.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">a</text><text x=\"173.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">3</text><text x=\"127.0\" y=\"84\" class=\"ptr p0\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ l</text><text x=\"81.0\" y=\"84\" class=\"ptr p1\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ r</text></svg><div class=\"cap\">nach 2 Schritten: l = 2, r = 1, gekreuzt, aber nie gleich</div></div>\n\n<p>Am 22.10. hast du zweimal am selben Vormittag <code>p_r += 1</code> geschrieben, erst bei Palindrome und eine halbe Stunde später bei 3Sum. Am 25.10. bei Buy and Sell wieder: <code>p_l -=1</code> und <code>p_r +=1</code>, beide nach außen → IndexError.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/is-palindrome/submission-0.py\">is-palindrome #0</a><span class=\"badge fail\">falsch</span> 20.10. · bei gerader Länge kreuzen sich die Pointer, ohne je gleich zu sein</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/is-palindrome/submission-15.py\">is-palindrome #15–16</a><span class=\"badge fail\">2× falsch</span> 22.10. · rechter Pointer läuft nach außen; in #15 stehen die Updates außerdem außerhalb der Schleife</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-12.py\">three-integer-sum #12–13</a><span class=\"badge timeout\">2× Timeout</span> 22.10. · rechter Pointer läuft nach außen → TIMEOUT</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-2.py\">buy-and-sell-crypto #2</a><span class=\"badge crash\">Crash</span> 25.10. · linker Pointer läuft nach links, rechter nach rechts → IndexError</li></ul>",
+   "last_evidence": "2026-10-25T16:23:28+00:00"
   },
   {
    "id": "two-sum-sorted-two-pointers",

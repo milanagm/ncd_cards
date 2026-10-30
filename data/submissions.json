@@ -1,8 +1,8 @@
 {
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "aae3480a018c1ca943f10a5f704c0b66002607cb",
-  "head_date": "2026-10-23T10:27:19+01:00"
+  "head": "e5484de5e9f8dd1b55f62155c085a17c65f40800",
+  "head_date": "2026-10-30T13:06:20+00:00"
  },
  "problems": {
   "anagram-groups": {
@@ -381,6 +381,207 @@
       "passed": 47,
       "total": 47,
       "spec": "cb2aeedb47a3"
+     }
+    }
+   ]
+  },
+  "binary-search": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/binary-search/submission-0.py",
+     "sha1": "73b9f60231a0c2363a17de3320e025e213fb87fc",
+     "commit": "3036f2e394b3f579d2813531523b293ae85b505b",
+     "date": "2026-10-28T09:51:22+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 51,
+      "input": "[[-1, 0, 2, 4, 6, 8], 4]",
+      "error": "NameError: name 'i' is not defined",
+      "line": 10,
+      "code": "return i",
+      "spec": "69d74c000d59"
+     }
+    },
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/binary-search/submission-1.py",
+     "sha1": "85f0f871a4febe9514f5b8e2dbb4bbecacfa67de",
+     "commit": "7cee99cb1750dd742d28480cbc54bc55df3247cd",
+     "date": "2026-10-28T09:51:38+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 51,
+      "input": "[[-1, 0, 2, 4, 6, 8], 4]",
+      "error": "NameError: name 'i' is not defined",
+      "line": 10,
+      "code": "return i",
+      "spec": "69d74c000d59"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/binary-search/submission-2.py",
+     "sha1": "8df94909837c94e930f57ede1799fbd757aae8b9",
+     "commit": "79a31cc5a90768bb6f35685240af3eed986ff1b7",
+     "date": "2026-10-28T09:52:23+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 3,
+      "total": 51,
+      "input": "[[5], -5]",
+      "expected": "-1",
+      "got": "0",
+      "spec": "69d74c000d59"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/binary-search/submission-3.py",
+     "sha1": "4cdae1ee4022981429f66261cab7396e8e0100d2",
+     "commit": "64d52b392b125cad5737a8c2b3a64333492a8ad6",
+     "date": "2026-10-28T09:53:29+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 3,
+      "total": 51,
+      "input": "[[5], -5]",
+      "expected": "-1",
+      "got": "0",
+      "spec": "69d74c000d59"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/binary-search/submission-4.py",
+     "sha1": "a7571da89ff2c2ad7b95a02f15ea8138cd2dff8c",
+     "commit": "8c871318bd2210cbe46246c138217f5ed357433b",
+     "date": "2026-10-28T09:57:19+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 3,
+      "total": 51,
+      "input": "[[5], -5]",
+      "expected": "-1",
+      "got": "0",
+      "spec": "69d74c000d59"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/binary-search/submission-5.py",
+     "sha1": "32dc73915a9cc570db3ef9dee62afcdc49638a8a",
+     "commit": "5cdc4383ea64e4bcb9faf3bf9eba0b65cfa6ffb2",
+     "date": "2026-10-28T09:57:57+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 3,
+      "total": 51,
+      "input": "[[5], -5]",
+      "expected": "-1",
+      "got": "0",
+      "spec": "69d74c000d59"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/binary-search/submission-6.py",
+     "sha1": "d09748d416d92139e33e3b77cbc0b729c347533b",
+     "commit": "7fc905f7c2f4b78d9e2b9a9612a8ab41b4d61315",
+     "date": "2026-10-28T09:58:46+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 51,
+      "total": 51,
+      "spec": "69d74c000d59"
+     }
+    }
+   ]
+  },
+  "buy-and-sell-crypto": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/buy-and-sell-crypto/submission-0.py",
+     "sha1": "d2826f9a20c6985727a71b50eac3fc3a4cf3e629",
+     "commit": "ccf7c724f204e7a209bda8087c13a447aff21850",
+     "date": "2026-10-25T16:21:20+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "TIMEOUT",
+      "passed": 0,
+      "total": 48,
+      "input": "[[10, 1, 5, 6, 7, 1]]",
+      "spec": "1d35d1104a7a"
+     }
+    },
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/buy-and-sell-crypto/submission-1.py",
+     "sha1": "30c4d74eb7c83706583ea69b1eba73d7ad55889c",
+     "commit": "a14f9d68569ad4197b8edff245bad4a501dfaf0a",
+     "date": "2026-10-25T16:21:58+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "TIMEOUT",
+      "passed": 0,
+      "total": 48,
+      "input": "[[10, 1, 5, 6, 7, 1]]",
+      "spec": "1d35d1104a7a"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/buy-and-sell-crypto/submission-2.py",
+     "sha1": "0fba1231980acca7975671531fc4fe88c0c85888",
+     "commit": "e59c40a8dc5c5eabb62ddd47c33026758e048829",
+     "date": "2026-10-25T16:23:28+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[[10, 1, 5, 6, 7, 1]]",
+      "error": "IndexError: list index out of range",
+      "line": 8,
+      "code": "profit = max(profit, prices[p_r] - prices[p_l])",
+      "spec": "1d35d1104a7a"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/buy-and-sell-crypto/submission-3.py",
+     "sha1": "f7741dcecce232c9340ce73a7f8f9a645bc0c0dd",
+     "commit": "5d21f004977d8e62c5167ad0b7b161e613763531",
+     "date": "2026-10-25T16:27:13+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "1d35d1104a7a"
      }
     }
    ]
@@ -765,6 +966,21 @@
      "sha1": "38b74f94f090cb328cf7b8e26942dfb06ad31f5a",
      "commit": "838e172b939431f547c5dc8d72b3c8231cdb1dc3",
      "date": "2026-10-15T09:18:55+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "8a768fae95e7"
+     }
+    },
+    {
+     "n": 8,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-anagram/submission-8.py",
+     "sha1": "7818a696e15e1e0d0284effa7d1af968488ca660",
+     "commit": "e5484de5e9f8dd1b55f62155c085a17c65f40800",
+     "date": "2026-10-30T13:06:20+00:00",
      "bulk_sync": false,
      "verdict": {
       "status": "PASS",
@@ -1308,6 +1524,623 @@
     }
    ]
   },
+  "longest-repeating-substring-with-replacement": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-repeating-substring-with-replacement/submission-0.py",
+     "sha1": "07bdc7df4266168e8211f11f7faf05f88b4447b5",
+     "commit": "140ed843723f8fa75097ee6068a17b4cae9e50cf",
+     "date": "2026-10-26T11:40:43+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 49,
+      "input": "['XYYX', 2]",
+      "error": "NameError: name 'i' is not defined",
+      "line": 6,
+      "code": "while i < len(s):",
+      "spec": "14b78ddf78e2"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-repeating-substring-with-replacement/submission-2.py",
+     "sha1": "5b5538d56909b4d17ab439ec7c0e3603ba37b866",
+     "commit": "47ddd878fe87331026db515258740d20740f4145",
+     "date": "2026-10-26T11:46:41+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "TIMEOUT",
+      "passed": 0,
+      "total": 49,
+      "input": "['XYYX', 2]",
+      "spec": "14b78ddf78e2"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-repeating-substring-with-replacement/submission-3.py",
+     "sha1": "e1537ed604c65b49341c7929b5c283ce3b4b0b9d",
+     "commit": "c682692239852be3eadf1c12cff783bfb8e71910",
+     "date": "2026-10-26T11:47:19+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 49,
+      "input": "['XYYX', 2]",
+      "expected": "4",
+      "got": "1",
+      "spec": "14b78ddf78e2"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-repeating-substring-with-replacement/submission-5.py",
+     "sha1": "3a98cdf5693e7d6adfb686c56a0f1616619ec21a",
+     "commit": "4c3e06dae8ce14b12fcbce434db1cc1080ce066d",
+     "date": "2026-10-26T11:47:39+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 49,
+      "input": "['XYYX', 2]",
+      "expected": "4",
+      "got": "1",
+      "spec": "14b78ddf78e2"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-repeating-substring-with-replacement/submission-6.py",
+     "sha1": "59cddbdaad1eb58b97c543da333f93f180973bc0",
+     "commit": "f4642b07b65b3134e0923ffc0880d846acb445ba",
+     "date": "2026-10-26T11:49:37+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 49,
+      "input": "['XYYX', 2]",
+      "expected": "4",
+      "got": "2",
+      "spec": "14b78ddf78e2"
+     }
+    }
+   ]
+  },
+  "longest-substring-without-duplicates": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-0.py",
+     "sha1": "dd12bf04935651a6ed78cb13b9a82b7088414656",
+     "commit": "f6bc728a168187aaff31d53b04305e173a6b86ad",
+     "date": "2026-10-26T11:08:38+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "expected": "3",
+      "got": "1",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-1.py",
+     "sha1": "6c3af08da00d5f88eff349dcc82a456638e5a24c",
+     "commit": "aaa15ade0899c6ea8b1ae87cd632f4d76a904d53",
+     "date": "2026-10-26T11:11:40+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "expected": "3",
+      "got": "0",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-2.py",
+     "sha1": "dd7fb6b3dd753c0b479a55344d31cf94f8bcef42",
+     "commit": "730d263a31aa5c539db4ca8ce4e7aa8a88367162",
+     "date": "2026-10-26T11:12:47+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "expected": "3",
+      "got": "0",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-3.py",
+     "sha1": "dd5f73c9db6615526b921cc5e4421ceae4cb4268",
+     "commit": "9f4a2885fdf8f4fc2c6f7afa0c6102fd8d8ae167",
+     "date": "2026-10-26T11:14:11+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "expected": "3",
+      "got": "7",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-4.py",
+     "sha1": "34d04dda34c514ae2e29e0269eca8852c4c47780",
+     "commit": "df5bf5da2f1be720e0d6995eb3c137bb83865611",
+     "date": "2026-10-26T11:15:58+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 6,
+      "total": 51,
+      "input": "['dvdf']",
+      "expected": "3",
+      "got": "2",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 7,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-7.py",
+     "sha1": "cd384a14d3a0f99c6b33ad013df3054d0fc6484f",
+     "commit": "8fc66190719692ef44661627bbc82f3a959798e2",
+     "date": "2026-10-26T11:21:42+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 51,
+      "total": 51,
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 8,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-8.py",
+     "sha1": "b06580a5c0deeede42d37ca8b93b89129b97f1b5",
+     "commit": "9f9fcd4bb6b019efc131abb778248db4049e9bf7",
+     "date": "2026-10-27T11:33:40+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "error": "TypeError: can only concatenate str (not \"int\") to str",
+      "line": 6,
+      "code": "p = e + 1",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 9,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-9.py",
+     "sha1": "dce7507eb42ab928e4b0528fd690254754382464",
+     "commit": "1f99784f6aa32a6b0b7d0e77755b50cdc40ce953",
+     "date": "2026-10-27T11:35:28+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "error": "IndexError: string index out of range",
+      "line": 8,
+      "code": "while s[p] == v:",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 10,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-10.py",
+     "sha1": "b2285de02f50708a01053cfb5a5b824c106bb9a3",
+     "commit": "05ba8c5cc12aa761106340b4dd031916002c1eee",
+     "date": "2026-10-27T11:36:52+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "TIMEOUT",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 11,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-11.py",
+     "sha1": "4b161e35efdba1ea1fd4e7d30cea09424ca05c8e",
+     "commit": "b37fee5f5e7649082bdbe1ab391ad1cf043ac031",
+     "date": "2026-10-27T11:37:32+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "TIMEOUT",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 12,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-12.py",
+     "sha1": "4056ff6c443363c89208632b3a99d07513c338d9",
+     "commit": "87d3c69dc1dad25fdd65ac1a02026340982900cd",
+     "date": "2026-10-27T11:42:31+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "expected": "3",
+      "got": "1",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 13,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-13.py",
+     "sha1": "c548d222ba1e007249dfeb67137c0a158c60bff7",
+     "commit": "6a6819dafd4819ca998bf3bda644d36cceaf77f7",
+     "date": "2026-10-27T11:44:21+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "expected": "3",
+      "got": "7",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 14,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-14.py",
+     "sha1": "76a35a4b45c34f6346763e8cc48e9e7e7a12757a",
+     "commit": "7210a6dfc8d8e48e3c5ab85ca182835d2b408265",
+     "date": "2026-10-27T11:44:43+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "expected": "3",
+      "got": "7",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 15,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-15.py",
+     "sha1": "e28b4755a18ee80b243fc8003126026b7fc960c9",
+     "commit": "c1184dd38b2a7d1b65ee91e38de6a4b89e5ea4b9",
+     "date": "2026-10-27T11:46:20+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "expected": "3",
+      "got": "7",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 16,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-16.py",
+     "sha1": "a46500a275ead203d9cf471aabdd040a4774bd06",
+     "commit": "1dd512688398a086a959b6d840a9dc22e01555b7",
+     "date": "2026-10-27T11:46:50+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "expected": "3",
+      "got": "7",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 17,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-17.py",
+     "sha1": "2ec2704e43e8c6d6e219bd2d82d472ea438804c0",
+     "commit": "7fddc62dcc5fdd47a495f8375f27a395acf60f76",
+     "date": "2026-10-27T11:47:23+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "error": "TypeError: unhashable type: 'list'",
+      "line": 16,
+      "code": "seen.remove([remove_pointer])",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 18,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-18.py",
+     "sha1": "458f97c5a093dca0f860a4d11d905204006aa351",
+     "commit": "f78e6b10a93e196ac78fda6937afb91811cd2776",
+     "date": "2026-10-27T11:47:34+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "expected": "3",
+      "got": "4",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 19,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-19.py",
+     "sha1": "b152164525e3bc397aaf807a7a09e63822ecf13a",
+     "commit": "926831d31d46b63c0323d5bf406944474c65bf2e",
+     "date": "2026-10-27T11:48:38+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "error": "KeyError: 'x'",
+      "line": 16,
+      "code": "seen.remove(s[remove_pointer])",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 20,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-20.py",
+     "sha1": "9c09532da589a02fdce7fa4feda67d19c27b0bef",
+     "commit": "60e0ae24fbb76ff31e8e12b06c15d467b514243e",
+     "date": "2026-10-27T11:49:38+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 5,
+      "total": 51,
+      "input": "['pwwkew']",
+      "expected": "3",
+      "got": "4",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 21,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-21.py",
+     "sha1": "773152e22e4b8716c6c1b5ebf97cc327fab9461e",
+     "commit": "136e0668bb0bf3eb4cadd6725d18c2df40c75ce4",
+     "date": "2026-10-27T11:50:42+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 51,
+      "total": 51,
+      "spec": "3965a837da09"
+     }
+    }
+   ]
+  },
+  "max-water-container": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/max-water-container/submission-0.py",
+     "sha1": "8c691d73078d0127156b30ab80fc914f38204bd3",
+     "commit": "1b3f5466bffe0c86469b3c2eadc3ac3004cd79ad",
+     "date": "2026-10-24T22:07:22+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 48,
+      "input": "[[1, 7, 2, 5, 4, 7, 3, 6]]",
+      "expected": "36",
+      "got": "1",
+      "spec": "8e5b4eabc3ee"
+     }
+    },
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/max-water-container/submission-1.py",
+     "sha1": "1fe9031c001590678107d83bdeecef48dbf76f9e",
+     "commit": "18df78555bd2be621b13ac8e90fe7101fd1ae0d0",
+     "date": "2026-10-24T22:18:35+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[[1, 7, 2, 5, 4, 7, 3, 6]]",
+      "error": "TypeError: 'list' object cannot be interpreted as an integer",
+      "line": 8,
+      "code": "for i in range(heights):",
+      "spec": "8e5b4eabc3ee"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/max-water-container/submission-2.py",
+     "sha1": "4d9b6e8c94d9ac512b45cae016299f6d95eff093",
+     "commit": "90d599a82dbe3f84a1988af4e9d8db8b26673805",
+     "date": "2026-10-24T22:20:14+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 48,
+      "input": "[[1, 7, 2, 5, 4, 7, 3, 6]]",
+      "expected": "36",
+      "got": "1",
+      "spec": "8e5b4eabc3ee"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/max-water-container/submission-3.py",
+     "sha1": "78f1802ec1d2fce22e1058f9c3bb628580591479",
+     "commit": "c01ff4ffe0378dbf84ca5080e78c5f956430e9bd",
+     "date": "2026-10-24T22:20:47+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 48,
+      "input": "[[1, 7, 2, 5, 4, 7, 3, 6]]",
+      "expected": "36",
+      "got": "3",
+      "spec": "8e5b4eabc3ee"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/max-water-container/submission-4.py",
+     "sha1": "88a96afb30b36cb71ae97facaf6be2f65aebac76",
+     "commit": "5df57db631041b3074dd1d6d4b4f5e06d7bbfc38",
+     "date": "2026-10-24T22:21:17+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "8e5b4eabc3ee"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/max-water-container/submission-5.py",
+     "sha1": "fb3c7e63ff3d5cc0cb4eaa2b567a52b0fdd2e4e8",
+     "commit": "cb70fd362fd9876d41c3f41fc00fed0d0fc7a99d",
+     "date": "2026-10-24T22:36:42+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[[1, 7, 2, 5, 4, 7, 3, 6]]",
+      "error": "NameError: name 'i' is not defined",
+      "line": 7,
+      "code": "while i < p_l:",
+      "spec": "8e5b4eabc3ee"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/max-water-container/submission-6.py",
+     "sha1": "7179bd5b2207c1ef2db206ac92229e6f656658e9",
+     "commit": "a1e4554828f81d810880c0589d6085bc7e914d2f",
+     "date": "2026-10-24T22:37:21+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[[1, 7, 2, 5, 4, 7, 3, 6]]",
+      "error": "UnboundLocalError: cannot access local variable 'r' where it is not associated with a value",
+      "line": 11,
+      "code": "if heights[l] < heights[r]:",
+      "spec": "8e5b4eabc3ee"
+     }
+    },
+    {
+     "n": 7,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/max-water-container/submission-7.py",
+     "sha1": "844aa1a1138cccf9c0ab6546a8ba86f31369541a",
+     "commit": "001d8b42cf1f6a50851c3e72a2b04185f8eee823",
+     "date": "2026-10-24T22:37:57+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 48,
+      "input": "[[1, 7, 2, 5, 4, 7, 3, 6]]",
+      "expected": "36",
+      "got": "7",
+      "spec": "8e5b4eabc3ee"
+     }
+    },
+    {
+     "n": 8,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/max-water-container/submission-8.py",
+     "sha1": "4c17b869e13ab34cf87918bf7973b3ce35ab427a",
+     "commit": "1bead9110c20cd506258d816b66a9f3739de9b3e",
+     "date": "2026-10-24T22:39:06+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "8e5b4eabc3ee"
+     }
+    }
+   ]
+  },
   "products-of-array-discluding-self": {
    "topic": "Data Structures & Algorithms",
    "submissions": [
@@ -1393,6 +2226,87 @@
       "passed": 46,
       "total": 46,
       "spec": "9a4351e47c46"
+     }
+    }
+   ]
+  },
+  "search-2d-matrix": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/search-2d-matrix/submission-1.py",
+     "sha1": "9dfeb4b30a27b5d67f22e4239b329b68fad39eb2",
+     "commit": "f1a2646d8eebcb40ab61dfcbeb2a50c44c1169bd",
+     "date": "2026-10-28T10:28:18+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 53,
+      "input": "[[[1, 2, 4, 8], [10, 11, 12, 13], [14, 20, 30, 40]], 10]",
+      "error": "TypeError: list indices must be integers or slices, not float",
+      "line": 8,
+      "code": "if target == matrix[mid][0]:",
+      "spec": "389c8aa6c4d0"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/search-2d-matrix/submission-2.py",
+     "sha1": "0ac3e01115c6ee5b11b0fa7fcd4c0c7f8783662e",
+     "commit": "f83e840a896e05f79578d87ddb5308e43bb9a7a8",
+     "date": "2026-10-28T10:29:22+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 53,
+      "input": "[[[1, 2, 4, 8], [10, 11, 12, 13], [14, 20, 30, 40]], 10]",
+      "error": "TypeError: list indices must be integers or slices, not float",
+      "line": 8,
+      "code": "if target == matrix[mid][0]:",
+      "spec": "389c8aa6c4d0"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/search-2d-matrix/submission-3.py",
+     "sha1": "6c52e16b09497453ae20beb46a1659e9a6870297",
+     "commit": "849398aaa520052f51611f9850960e051f9ac2fa",
+     "date": "2026-10-28T10:33:34+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 53,
+      "input": "[[[1, 2, 4, 8], [10, 11, 12, 13], [14, 20, 30, 40]], 10]",
+      "error": "TypeError: list indices must be integers or slices, not float",
+      "line": 8,
+      "code": "if target == matrix[mid][0]:",
+      "spec": "389c8aa6c4d0"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/search-2d-matrix/submission-4.py",
+     "sha1": "30bdd2a98b1fa282c4a4895bf76dc4b88465505f",
+     "commit": "987928d50de36d072b37ef2075b5f8a68323ad1e",
+     "date": "2026-10-28T10:34:37+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 53,
+      "input": "[[[1, 2, 4, 8], [10, 11, 12, 13], [14, 20, 30, 40]], 10]",
+      "error": "TypeError: list indices must be integers or slices, not float",
+      "line": 8,
+      "code": "if target == matrix[mid][0]:",
+      "spec": "389c8aa6c4d0"
      }
     }
    ]
