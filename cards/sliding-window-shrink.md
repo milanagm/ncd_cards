@@ -35,4 +35,4 @@ seen.add(s[r])
 best = max(best, r - l + 1)
 ```
 
-Drei Schritte, in dieser Reihenfolge: schrumpfen, **dann** das neue Zeichen aufnehmen, Länge aus den Pointern berechnen. Deine Zwischenstände am 27.10.: neues Zeichen nicht ins Set (#18), `seen.add(v)` in der while-Schleife → KeyError (#19), Länge nicht neu berechnet (#20). Am Vortag hattest du das Fenster ganz verworfen (`sub = [i]`, #2–4) und bei `"dvdf"` 2 statt 3 bekommen.
+Drei Schritte, in dieser Reihenfolge: schrumpfen, **dann** das neue Zeichen aufnehmen, Länge aus den Pointern berechnen. Deine Zwischenstände am 27.10.: neues Zeichen nicht ins Set (#18), `seen.add(v)` in der while-Schleife → KeyError (#19), Länge nicht neu berechnet (#20). Am Vortag hattest du beim Duplikat nur das neue Zeichen behalten (`sub = [i]`, #2–4). Damit geht bei `"dvdf"` das `v` verloren, #4 lieferte 2 statt 3.

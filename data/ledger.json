@@ -241,7 +241,7 @@
    "rule": "Bei einem Duplikat nicht alles verwerfen: `l` nur bis hinter das alte Vorkommen schieben, dann das neue Zeichen aufnehmen und die Länge aus den Pointern berechnen (`r - l + 1`).",
    "occurrences": [
     {"ref": "longest-substring-without-duplicates#0-1", "snippet": "max_len = max(max_len, len(sub)) sub = []", "note": "verwirft das ganze Fenster"},
-    {"ref": "longest-substring-without-duplicates#2-4", "snippet": "sub = [i]", "note": "behält nur das neue Zeichen; bei `dvdf` geht das `v` verloren (got 2 statt 3). #7 schneidet mit `sub[sub.index(i) + 1:]`"},
+    {"ref": "longest-substring-without-duplicates#2-4", "snippet": "sub = [i]", "note": "behält nur das neue Zeichen; bei `dvdf` geht das `v` verloren (#4: 2 statt 3, #2 und #3 scheitern zusätzlich an anderem). #7 schneidet mit `sub[sub.index(i) + 1:]`"},
     {"ref": "longest-substring-without-duplicates#18", "snippet": "while v in seen: seen.remove(s[remove_pointer]) remove_pointer += 1", "note": "nach dem Schrumpfen kommt das neue Zeichen nicht ins Set, `sub_len` bleibt alt"},
     {"ref": "longest-substring-without-duplicates#19", "snippet": "remove_pointer += 1 seen.add(v)", "note": "`seen.add(v)` in der while-Schleife: `v` ist sofort wieder drin, das nächste `remove` → KeyError"},
     {"ref": "longest-substring-without-duplicates#20", "snippet": "seen.add(v) max_len = max(max_len, sub_len)", "note": "`sub_len` nach dem Schrumpfen nicht neu berechnet; #21: `sub_len = i - remove_pointer +1`"}
