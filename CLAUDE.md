@@ -45,6 +45,8 @@ Standardpfad, sonst `--subs PFAD`.
   Fix und die Regel dahinter.
 - `evidence` zeigt auf die Submissions, in denen der Fehler steckt. Zahlen im Kartentext („17 von 33“) gegen
   `data/submissions.json` nachzählen.
+- Konkrete Ergebnisse im Kartentext („liefert 2 statt 3“) nur, wenn sie für **jede** genannte Submission
+  stimmen: aus dem Verdict in `data/submissions.json` übernommen oder durch Ausführen der Submission geprüft.
 - Einmalige Tippfehler kommen nur ins Ledger. Eine Karte gibt es, sobald ein Fehler wiederkehrt oder ein
   Konzept dahintersteckt.
 - Wo Positionen oder Bewegung wichtig sind, ein ```` ```viz ````-Block (`array`, `grid`, `rows`, siehe
