@@ -1,8 +1,8 @@
 {
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "e5484de5e9f8dd1b55f62155c085a17c65f40800",
-  "head_date": "2026-10-30T13:06:20+00:00"
+  "head": "57c3f5413aa89fd8633813aef9c29e69a072ddbf",
+  "head_date": "2026-10-31T23:21:43+00:00"
  },
  "problems": {
   "anagram-groups": {
@@ -844,6 +844,207 @@
       "passed": 46,
       "total": 46,
       "spec": "04f0c8ddd912"
+     }
+    }
+   ]
+  },
+  "eating-bananas": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/eating-bananas/submission-0.py",
+     "sha1": "2fd2d515960e3b04cdf681aeb6c189dc945c7bdd",
+     "commit": "19bb1d727ea78a52f17f590aaffdcb96d7ffce53",
+     "date": "2026-10-31T17:00:27+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 50,
+      "input": "[[1, 4, 3, 2], 9]",
+      "error": "IndexError: list index out of range",
+      "line": 11,
+      "code": "needed_t += piles[i] // k",
+      "spec": "744148653168"
+     }
+    },
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/eating-bananas/submission-1.py",
+     "sha1": "27ff4689302c8a4c7f2f2fac72ba417daedf9a26",
+     "commit": "98c1b399d5ea5705dfcc5e7419af8c13b0b06a74",
+     "date": "2026-10-31T17:05:46+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 1,
+      "total": 50,
+      "input": "[[25, 10, 23, 4], 4]",
+      "expected": "25",
+      "got": "13",
+      "spec": "744148653168"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/eating-bananas/submission-2.py",
+     "sha1": "d343d35c01cc02cefc5dea86a32640ce96713398",
+     "commit": "5f28380e6236be01a1d410043cbd4d45cb40d952",
+     "date": "2026-10-31T17:06:43+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 1,
+      "total": 50,
+      "input": "[[25, 10, 23, 4], 4]",
+      "expected": "25",
+      "got": "13",
+      "spec": "744148653168"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/eating-bananas/submission-3.py",
+     "sha1": "0beafd61df6c97cc048d420f8d971b1947dc5dc4",
+     "commit": "52181a74196a9b18b7345bb23ad62949f37da87d",
+     "date": "2026-10-31T17:07:44+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 50,
+      "input": "[[1, 4, 3, 2], 9]",
+      "expected": "2",
+      "got": "4",
+      "spec": "744148653168"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/eating-bananas/submission-4.py",
+     "sha1": "3c77d768338aa6743ab8913189c0fa53de3b0c8e",
+     "commit": "75f8a52c1b24df6b64b03e804859689cca769cf0",
+     "date": "2026-10-31T17:08:25+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 50,
+      "input": "[[1, 4, 3, 2], 9]",
+      "expected": "2",
+      "got": "4",
+      "spec": "744148653168"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/eating-bananas/submission-5.py",
+     "sha1": "62c540b783f2c34f1cc899fc6fe3c0d4bc826835",
+     "commit": "71bf535dbe863712a6b102805917636fdf58e941",
+     "date": "2026-10-31T17:11:14+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 50,
+      "input": "[[1, 4, 3, 2], 9]",
+      "expected": "2",
+      "got": "4",
+      "spec": "744148653168"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/eating-bananas/submission-6.py",
+     "sha1": "2775863d53fdd402caa7803efb5bd227cca2e1f0",
+     "commit": "c92e42b15e728282ae1616e74813fc32ac332cf4",
+     "date": "2026-10-31T17:11:30+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 50,
+      "input": "[[1, 4, 3, 2], 9]",
+      "expected": "2",
+      "got": "4",
+      "spec": "744148653168"
+     }
+    },
+    {
+     "n": 7,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/eating-bananas/submission-7.py",
+     "sha1": "1e4ff56b00ad24e61a9524fd017afcf2862ed791",
+     "commit": "35af4ca446404d2ed406632918d9a26c3c586dec",
+     "date": "2026-10-31T17:13:50+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 50,
+      "input": "[[1, 4, 3, 2], 9]",
+      "expected": "2",
+      "got": "1",
+      "spec": "744148653168"
+     }
+    },
+    {
+     "n": 8,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/eating-bananas/submission-8.py",
+     "sha1": "14afd965c43821c2fc53384e153fc6b46bb45a20",
+     "commit": "d8a421ba80496bf1e61e51b37293274ee03cd688",
+     "date": "2026-10-31T17:14:55+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 50,
+      "input": "[[1, 4, 3, 2], 9]",
+      "expected": "2",
+      "got": "4",
+      "spec": "744148653168"
+     }
+    },
+    {
+     "n": 9,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/eating-bananas/submission-9.py",
+     "sha1": "7f3a6a786deb2dd76ef163a6fa247dad1ba5f071",
+     "commit": "d1a101968e0032ce527d74282e38a6ed7fb05777",
+     "date": "2026-10-31T17:15:05+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 50,
+      "input": "[[1, 4, 3, 2], 9]",
+      "expected": "2",
+      "got": "4",
+      "spec": "744148653168"
+     }
+    },
+    {
+     "n": 10,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/eating-bananas/submission-10.py",
+     "sha1": "7922c20875ebceda02db1d4bad2686bb7cead954",
+     "commit": "c9eec9446e6e17ee16384fd77235f86b5e45fcc2",
+     "date": "2026-10-31T17:15:16+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 50,
+      "total": 50,
+      "spec": "744148653168"
      }
     }
    ]
@@ -2230,6 +2431,287 @@
     }
    ]
   },
+  "reverse-a-linked-list": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/reverse-a-linked-list/submission-0.py",
+     "sha1": "6f4ffbacc44d6e947d51cd6590f759ceb44893be",
+     "commit": "b1da69b35e0706d4bd0a11595bd7973e393de9b0",
+     "date": "2026-10-31T17:32:55+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[0, 1, 2, 3]]",
+      "error": "AttributeError: 'ListNode' object has no attribute 'value'",
+      "line": 14,
+      "code": "initial.append(head.value)",
+      "spec": "e1cc8b7ce41b"
+     }
+    },
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/reverse-a-linked-list/submission-1.py",
+     "sha1": "93115dcf802e8efb0a4066a51f80d6458cc294bc",
+     "commit": "09192007f2f7731f258e72bcdad488941149f389",
+     "date": "2026-10-31T17:33:10+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[0, 1, 2, 3]]",
+      "error": "AttributeError: 'ListNode' object has no attribute 'value'",
+      "line": 14,
+      "code": "initial.append(head.value)",
+      "spec": "e1cc8b7ce41b"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/reverse-a-linked-list/submission-2.py",
+     "sha1": "c8868c5f0b655c442de13bd79550e9a902ec7444",
+     "commit": "7eaf0504e6e7ae422aa46bc682ad2ad7b6ef502d",
+     "date": "2026-10-31T17:33:17+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 46,
+      "input": "[[0, 1, 2, 3]]",
+      "expected": "[3, 2, 1, 0]",
+      "got": "<list_reverseiterator object at 0x7f5cd713a6e0>",
+      "note": "returns list_reverseiterator instead of ListNode",
+      "spec": "e1cc8b7ce41b"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/reverse-a-linked-list/submission-3.py",
+     "sha1": "3ddac1c4ee8e29c8332582573a5d13cda1249c93",
+     "commit": "f6ba930a391c319f61b0d8a7bdc3b089860d03e1",
+     "date": "2026-10-31T17:37:48+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[0, 1, 2, 3]]",
+      "error": "NameError: name 'p' is not defined",
+      "line": 20,
+      "code": "while p > 0:",
+      "spec": "e1cc8b7ce41b"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/reverse-a-linked-list/submission-4.py",
+     "sha1": "9f2ab16a572b60e6916a7d9a1cdbad1688b82ff5",
+     "commit": "e754c2c68582c822ae18cab8a199feb1a3949f45",
+     "date": "2026-10-31T17:37:58+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 46,
+      "input": "[[0, 1, 2, 3]]",
+      "expected": "[3, 2, 1, 0]",
+      "got": "1",
+      "note": "returns int instead of ListNode",
+      "spec": "e1cc8b7ce41b"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/reverse-a-linked-list/submission-5.py",
+     "sha1": "5794c94ebddbcd48516fc0592c226f49ac06d542",
+     "commit": "58a192584d3bc87a920b929b538d908ffd5edc06",
+     "date": "2026-10-31T17:38:03+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[0, 1, 2, 3]]",
+      "error": "AttributeError: 'int' object has no attribute 'next' and no __dict__ for setting new attributes",
+      "line": 21,
+      "code": "head.next = p_next",
+      "spec": "e1cc8b7ce41b"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/reverse-a-linked-list/submission-6.py",
+     "sha1": "4919ac54431324db24c16ee579e5f64aff847475",
+     "commit": "4e455ce186265fe4e514dd7963fd332a287207bd",
+     "date": "2026-10-31T17:40:13+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[0, 1, 2, 3]]",
+      "error": "AttributeError: 'int' object has no attribute 'next' and no __dict__ for setting new attributes",
+      "line": 21,
+      "code": "head.next = initial[p_next]",
+      "spec": "e1cc8b7ce41b"
+     }
+    },
+    {
+     "n": 7,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/reverse-a-linked-list/submission-7.py",
+     "sha1": "c691fb422c1b9659549b3ae70ac0244adf0ac3dd",
+     "commit": "99d99a85f005c703edec6aad9fd31966750433cc",
+     "date": "2026-10-31T17:40:53+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[0, 1, 2, 3]]",
+      "error": "AttributeError: 'ListNode' object has no attribute 'value'",
+      "line": 13,
+      "code": "while head.value != None:",
+      "spec": "e1cc8b7ce41b"
+     }
+    },
+    {
+     "n": 8,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/reverse-a-linked-list/submission-8.py",
+     "sha1": "b843a4d20061e08d543d65ab2c71bfafe4179588",
+     "commit": "0f5eb0d4ee7ea6d09cb94e6c7a22d2053836e0ae",
+     "date": "2026-10-31T17:41:03+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[0, 1, 2, 3]]",
+      "error": "AttributeError: 'NoneType' object has no attribute 'val'",
+      "line": 13,
+      "code": "while head.val != None:",
+      "spec": "e1cc8b7ce41b"
+     }
+    },
+    {
+     "n": 9,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/reverse-a-linked-list/submission-9.py",
+     "sha1": "d2078f73a621af42d3be137ac54861807957bb93",
+     "commit": "4cfe2e2c4889158a1a0b5aafab5395635a464e1c",
+     "date": "2026-10-31T17:41:39+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[0, 1, 2, 3]]",
+      "error": "AttributeError: 'NoneType' object has no attribute 'val'",
+      "line": 13,
+      "code": "while head.val != None:",
+      "spec": "e1cc8b7ce41b"
+     }
+    },
+    {
+     "n": 10,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/reverse-a-linked-list/submission-10.py",
+     "sha1": "4c2a06168f0ddddfac936c6c3822f09d00c85729",
+     "commit": "9dcfaa36f89aea3c3e4739877f8a2bc43ad6e73d",
+     "date": "2026-10-31T17:44:54+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 46,
+      "input": "[[0, 1, 2, 3]]",
+      "expected": "[3, 2, 1, 0]",
+      "got": "[3, 1, 0]",
+      "spec": "e1cc8b7ce41b"
+     }
+    },
+    {
+     "n": 11,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/reverse-a-linked-list/submission-11.py",
+     "sha1": "7a854cbbbb39ab2bd161be5f08b775ce0e7673d0",
+     "commit": "dce38d3092f5b7933689c748621e6569b95ad679",
+     "date": "2026-10-31T17:46:32+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 1,
+      "total": 46,
+      "input": "[[]]",
+      "expected": "[]",
+      "got": "[]",
+      "note": "returns list instead of ListNode",
+      "spec": "e1cc8b7ce41b"
+     }
+    },
+    {
+     "n": 12,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/reverse-a-linked-list/submission-12.py",
+     "sha1": "e73f2d52dc37e31716373b98a5a9b64d0e2e0f30",
+     "commit": "c46cb8b6d4f63f8d61ae8aa77dfa061d108c2b2a",
+     "date": "2026-10-31T17:46:47+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "e1cc8b7ce41b"
+     }
+    },
+    {
+     "n": 13,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/reverse-a-linked-list/submission-13.py",
+     "sha1": "5e5302794420fbdf386772a998d3637f77a9bed4",
+     "commit": "0bd5b01d12d41bddc84f36ce34a20e4d65f4f0d1",
+     "date": "2026-10-31T19:33:09+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[0, 1, 2, 3]]",
+      "error": "NameError: name 'curr' is not defined",
+      "line": 11,
+      "code": "while curr != None:",
+      "spec": "e1cc8b7ce41b"
+     }
+    },
+    {
+     "n": 14,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/reverse-a-linked-list/submission-14.py",
+     "sha1": "9cbc9768d36fa9eaa03a7386e1c2dad6e790372b",
+     "commit": "a6e27f9785b56b1a33b474a0453be5f6b25dd171",
+     "date": "2026-10-31T19:33:17+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "e1cc8b7ce41b"
+     }
+    }
+   ]
+  },
   "search-2d-matrix": {
    "topic": "Data Structures & Algorithms",
    "submissions": [
@@ -2306,6 +2788,131 @@
       "error": "TypeError: list indices must be integers or slices, not float",
       "line": 8,
       "code": "if target == matrix[mid][0]:",
+      "spec": "389c8aa6c4d0"
+     }
+    },
+    {
+     "n": 11,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/search-2d-matrix/submission-11.py",
+     "sha1": "a7b442e11ca97a32f9334908495f2b7fa0e70203",
+     "commit": "2967df55df2aa6ab694d1091ff1962f6ec13c934",
+     "date": "2026-10-31T16:30:18+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 1,
+      "total": 53,
+      "input": "[[[1, 2, 4, 8], [10, 11, 12, 13], [14, 20, 30, 40]], 15]",
+      "error": "IndexError: list index out of range",
+      "line": 11,
+      "code": "elif target > matrix[row][0] and target < matrix[row][len(matrix[0])] :",
+      "spec": "389c8aa6c4d0"
+     }
+    },
+    {
+     "n": 12,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/search-2d-matrix/submission-12.py",
+     "sha1": "259fb11e6243c958401c668ffc95b0018547c46b",
+     "commit": "0fe4d30076cd0907b6d1ddb441a35a439772d497",
+     "date": "2026-10-31T16:30:50+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 1,
+      "total": 53,
+      "input": "[[[1, 2, 4, 8], [10, 11, 12, 13], [14, 20, 30, 40]], 15]",
+      "error": "IndexError: list index out of range",
+      "line": 19,
+      "code": "if target == matrix[row][col]:",
+      "spec": "389c8aa6c4d0"
+     }
+    },
+    {
+     "n": 13,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/search-2d-matrix/submission-13.py",
+     "sha1": "e4c56d3638f6bd059c00dadce1d9cd166838ba22",
+     "commit": "269b597b4a2d2831ab357adedd4010f3185ccfa2",
+     "date": "2026-10-31T16:32:16+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 1,
+      "total": 53,
+      "input": "[[[1, 2, 4, 8], [10, 11, 12, 13], [14, 20, 30, 40]], 15]",
+      "expected": "False",
+      "got": "None",
+      "spec": "389c8aa6c4d0"
+     }
+    },
+    {
+     "n": 14,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/search-2d-matrix/submission-14.py",
+     "sha1": "3590a0cc82ed8935a8b8ae483ee91eeeec4df6d5",
+     "commit": "b2c38690befd0c09da4b55057f36d7d8e1330981",
+     "date": "2026-10-31T16:33:22+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 1,
+      "total": 53,
+      "input": "[[[1, 2, 4, 8], [10, 11, 12, 13], [14, 20, 30, 40]], 15]",
+      "expected": "False",
+      "got": "None",
+      "spec": "389c8aa6c4d0"
+     }
+    },
+    {
+     "n": 15,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/search-2d-matrix/submission-15.py",
+     "sha1": "58945f6c6ab6475bd6a7e50e171cc7b28943eb6a",
+     "commit": "46e2f9424e1c28c314e65f79b6a4931723fb9cc4",
+     "date": "2026-10-31T16:33:54+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 53,
+      "input": "[[[1, 2, 4, 8], [10, 11, 12, 13], [14, 20, 30, 40]], 10]",
+      "expected": "True",
+      "got": "None",
+      "spec": "389c8aa6c4d0"
+     }
+    },
+    {
+     "n": 16,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/search-2d-matrix/submission-16.py",
+     "sha1": "79bde56e0a4423a37f17862b33a9d7f5c54d08e6",
+     "commit": "876f40f5a63e409546f2595bd670e4236a493bf4",
+     "date": "2026-10-31T16:35:14+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 53,
+      "input": "[[[1, 2, 4, 8], [10, 11, 12, 13], [14, 20, 30, 40]], 10]",
+      "expected": "True",
+      "got": "False",
+      "spec": "389c8aa6c4d0"
+     }
+    },
+    {
+     "n": 17,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/search-2d-matrix/submission-17.py",
+     "sha1": "49e66aa17119ae97860231ce8bc549ef59fd832b",
+     "commit": "00c381c877f95be5a5caba958194a2248cff27d5",
+     "date": "2026-10-31T16:36:21+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 53,
+      "total": 53,
       "spec": "389c8aa6c4d0"
      }
     }
@@ -3886,6 +4493,133 @@
       "passed": 47,
       "total": 47,
       "spec": "fbf431d21bc6"
+     }
+    }
+   ]
+  },
+  "validate-parentheses": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/validate-parentheses/submission-0.py",
+     "sha1": "81474108b844fc5dadf79c240dba36eb3fa290c9",
+     "commit": "d9bb34447d03ab91afaa5f2066cc124b7dffc5dd",
+     "date": "2026-10-31T22:37:59+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 4,
+      "total": 53,
+      "input": "[')']",
+      "error": "IndexError: list index out of range",
+      "line": 12,
+      "code": "if open_plain[-1] == \"(\":",
+      "spec": "d0d094a67b07"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/validate-parentheses/submission-2.py",
+     "sha1": "f12284948ade01aed846e78e8757c58b2aac4280",
+     "commit": "a8c499c061f4a5fb3087acd736bd57abdd8c18ab",
+     "date": "2026-10-31T22:39:33+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 4,
+      "total": 53,
+      "input": "[')']",
+      "error": "IndexError: list index out of range",
+      "line": 12,
+      "code": "if open_plain[-1] == \"(\":",
+      "spec": "d0d094a67b07"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/validate-parentheses/submission-3.py",
+     "sha1": "f5d5e3797504e300c28c8e925b734e2f74fd8421",
+     "commit": "8f84db1595834be66bb2376182bb3637c2abad84",
+     "date": "2026-10-31T22:50:14+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 53,
+      "input": "['[(])']",
+      "expected": "False",
+      "got": "True",
+      "spec": "d0d094a67b07"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/validate-parentheses/submission-4.py",
+     "sha1": "37c1de8cab97020be3454c63393b9da117423fe4",
+     "commit": "589abf34ae5d323f2b12af1e899506b70b639f95",
+     "date": "2026-10-31T22:50:23+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 2,
+      "total": 53,
+      "input": "['[(])']",
+      "expected": "False",
+      "got": "True",
+      "spec": "d0d094a67b07"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/validate-parentheses/submission-5.py",
+     "sha1": "140cfc43010796052aefc106dcda7d69e158a97b",
+     "commit": "4e4b0efd4f9e33c4f2b1259fa18d923eca253230",
+     "date": "2026-10-31T22:55:30+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 3,
+      "total": 53,
+      "input": "['(']",
+      "expected": "False",
+      "got": "True",
+      "spec": "d0d094a67b07"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/validate-parentheses/submission-6.py",
+     "sha1": "c68a3200a7f5396667f9dfd5a24c053b24b40c31",
+     "commit": "cc77879b925951cf6c05333562cc4eef7c8ba290",
+     "date": "2026-10-31T22:55:42+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 53,
+      "total": 53,
+      "spec": "d0d094a67b07"
+     }
+    },
+    {
+     "n": 9,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/validate-parentheses/submission-9.py",
+     "sha1": "32ecb963589bc8a658beff8735df4709df875aaa",
+     "commit": "57c3f5413aa89fd8633813aef9c29e69a072ddbf",
+     "date": "2026-10-31T23:21:43+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 53,
+      "total": 53,
+      "spec": "d0d094a67b07"
      }
     }
    ]

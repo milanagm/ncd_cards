@@ -13,9 +13,14 @@ import traceback
 
 # What NeetCode's Python runner has in scope without imports.
 PREAMBLE = ("from typing import *\nfrom collections import *\n"
-            "import collections, heapq, math, itertools, functools, bisect\n")
+            "import collections, heapq, math, itertools, functools, bisect\n"
+            "class ListNode:\n"
+            "    def __init__(self, val=0, next=None):\n"
+            "        self.val = val\n"
+            "        self.next = next\n")
 TIME_LIMIT_S = 2.0
 MEMORY_LIMIT = 1 << 30
+MAX_NODES = 100_000  # longer than any test list: the returned list has a cycle
 
 
 class Timeout(Exception):
@@ -39,6 +44,26 @@ def short(value, limit=160):
     return text if len(text) <= limit else text[:limit] + "…"
 
 
+def to_nodes(node_class, values):
+    head = None
+    for v in reversed(values):
+        head = node_class(v, head)
+    return head
+
+
+def from_nodes(head):
+    """Linked list back to a Python list; raises ValueError for anything that is not a node chain."""
+    values = []
+    while head is not None:
+        if not hasattr(head, "val") or not hasattr(head, "next"):
+            raise ValueError(f"returns {type(head).__name__} instead of ListNode")
+        if len(values) >= MAX_NODES:
+            raise ValueError("returned list has a cycle")
+        values.append(head.val)
+        head = head.next
+    return values
+
+
 def normalize(compare, value):
     if compare == "groups":
         return sorted(sorted(group) for group in value)
@@ -60,6 +85,8 @@ def run(path, spec):
     for i, case in enumerate(cases):
         failed = {"passed": i, "total": len(cases), "input": short(case["args"])}
         args = copy.deepcopy(case["args"])
+        if compare == "linked_list":
+            args[0] = to_nodes(namespace["ListNode"], args[0])
         signal.setitimer(signal.ITIMER_REAL, TIME_LIMIT_S)
         try:
             instance = solution()
@@ -77,6 +104,12 @@ def run(path, spec):
             signal.setitimer(signal.ITIMER_REAL, 0)
 
         expected = case["expected"]
+        if compare == "linked_list":
+            try:
+                got = from_nodes(got)
+            except ValueError as e:
+                return {"status": "WRONG_ANSWER", **failed, "expected": short(expected), "got": short(got),
+                        "note": str(e)}
         if got is not None and not isinstance(got, (list, bool, int)):
             return {"status": "WRONG_ANSWER", **failed, "expected": short(expected), "got": short(got),
                     "note": f"returns {type(got).__name__} instead of {type(expected).__name__}"}

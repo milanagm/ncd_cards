@@ -2,7 +2,7 @@
 id: missing-return
 type: gotcha
 mistakes: [edge-cases]
-evidence: [valid-sudoku#5-6]
+evidence: [valid-sudoku#5-6, search-2d-matrix#13-15]
 tags: [python]
 ---
 ## Front
@@ -10,5 +10,7 @@ Was gibt eine Python-Funktion zurück, die ohne `return` am Ende ankommt? Und wa
 
 ## Back
 `None`. Der Judge erwartet `True` für ein gültiges Board, und `None` ist nicht `True`. Das Ergebnis ist also falsch, obwohl alle Prüfungen korrekt durchlaufen.
+
+Bei Search 2D Matrix (#13–15) genauso: Die Suche lief durch, ohne zu treffen, nach der Schleife fehlte `return False`, zurück kam `None`.
 
 Check vor dem Abschicken: Endet **jeder** Pfad mit einem `return` des richtigen Typs?

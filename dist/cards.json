@@ -32,15 +32,15 @@
  },
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "e5484de5e9f8dd1b55f62155c085a17c65f40800",
-  "head_date": "2026-10-30T13:06:20+00:00"
+  "head": "57c3f5413aa89fd8633813aef9c29e69a072ddbf",
+  "head_date": "2026-10-31T23:21:43+00:00"
  },
  "stats": {
-  "submissions": 223,
+  "submissions": 263,
   "statuses": {
-   "PASS": 81,
-   "WRONG_ANSWER": 77,
-   "RUNTIME_ERROR": 51,
+   "WRONG_ANSWER": 97,
+   "PASS": 87,
+   "RUNTIME_ERROR": 65,
    "TIMEOUT": 10,
    "LOAD_ERROR": 4
   }
@@ -50,9 +50,10 @@
    "id": "index-vs-value",
    "title": "Index und Wert verwechselt",
    "rule": "Vor jeder Verwendung klären: Position oder Element? `for i, v in enumerate(xs)` hält beides auseinander.",
-   "submissions": 34,
+   "submissions": 35,
    "problems": [
     "buy-and-sell-crypto",
+    "eating-bananas",
     "longest-consecutive-sequence",
     "longest-substring-without-duplicates",
     "products-of-array-discluding-self",
@@ -61,7 +62,7 @@
     "two-integer-sum",
     "valid-sudoku"
    ],
-   "last_seen": "2026-10-27"
+   "last_seen": "2026-10-31"
   },
   {
    "id": "pointer-movement",
@@ -106,16 +107,17 @@
    "id": "method-api",
    "title": "Methoden & Builtins geraten",
    "rule": "Bei Unsicherheit `dir(x)` oder `help(x)`. Strings: `s.lower()`; Listen: `xs.append(v)` mit genau einem Argument, `xs.index(v)`; Wiederholung: `range(k)`.",
-   "submissions": 11,
+   "submissions": 14,
    "problems": [
     "duplicate-integer",
     "is-palindrome",
     "max-water-container",
+    "reverse-a-linked-list",
     "three-integer-sum",
     "top-k-elements-in-list",
     "two-integer-sum-ii"
    ],
-   "last_seen": "2026-10-24"
+   "last_seen": "2026-10-31"
   },
   {
    "id": "container-choice",
@@ -156,7 +158,7 @@
    "id": "wrong-variable",
    "title": "Falsche Variable: Copy-Paste, Shadowing, Tippfehler",
    "rule": "Nach Copy-Paste jede Variable prüfen. Input-Parameter nie überschreiben. Nach dem Sortieren nur noch die sortierte Liste benutzen, am einfachsten `nums.sort()` in place.",
-   "submissions": 25,
+   "submissions": 27,
    "problems": [
     "anagram-groups",
     "binary-search",
@@ -166,11 +168,12 @@
     "longest-substring-without-duplicates",
     "max-water-container",
     "products-of-array-discluding-self",
+    "reverse-a-linked-list",
     "three-integer-sum",
     "top-k-elements-in-list",
     "two-integer-sum"
    ],
-   "last_seen": "2026-10-28"
+   "last_seen": "2026-10-31"
   },
   {
    "id": "duplicates-order",
@@ -186,25 +189,29 @@
    "id": "off-by-one",
    "title": "Off-by-one & Zähler-Initialisierung",
    "rule": "`while c < n` bzw. `range(n)` läuft genau n-mal. Eine Sequenz hat ab ihrem Startelement die Länge 1, nicht 0.",
-   "submissions": 10,
+   "submissions": 12,
    "problems": [
     "longest-consecutive-sequence",
     "longest-repeating-substring-with-replacement",
+    "reverse-a-linked-list",
+    "search-2d-matrix",
     "string-encode-and-decode"
    ],
-   "last_seen": "2026-10-26"
+   "last_seen": "2026-10-31"
   },
   {
    "id": "edge-cases",
    "title": "Randfälle & Rückgabewerte",
    "rule": "Leere Eingabe, ein Element und Duplikate durchspielen. Jeder Pfad braucht ein `return`, sonst kommt `None` zurück.",
-   "submissions": 7,
+   "submissions": 13,
    "problems": [
     "binary-search",
     "longest-consecutive-sequence",
-    "valid-sudoku"
+    "search-2d-matrix",
+    "valid-sudoku",
+    "validate-parentheses"
    ],
-   "last_seen": "2026-10-28"
+   "last_seen": "2026-10-31"
   },
   {
    "id": "skip-irrelevant",
@@ -251,13 +258,14 @@
    "id": "init-scope",
    "title": "Initialisierung fehlt oder steht am falschen Ort",
    "rule": "Was über alle Runden gilt (Ergebnis, Set, Pointer), steht vor der Schleife; was pro Runde neu beginnt, in ihr. Eine `while`-Schleife braucht ihren Laufindex vorher gesetzt.",
-   "submissions": 5,
+   "submissions": 7,
    "problems": [
+    "eating-bananas",
     "longest-repeating-substring-with-replacement",
     "longest-substring-without-duplicates",
     "max-water-container"
    ],
-   "last_seen": "2026-10-27"
+   "last_seen": "2026-10-31"
   },
   {
    "id": "last-window",
@@ -284,24 +292,26 @@
    "id": "problem-model",
    "title": "Aufgabe falsch modelliert",
    "rule": "Vor dem Code die Zielgröße als Formel aufschreiben und am Beispiel nachrechnen: Wasser = Breite × kleinere Höhe, Gewinn = späterer minus früherer Preis, Fenster gültig, wenn Länge − häufigstes Zeichen ≤ k.",
-   "submissions": 8,
+   "submissions": 10,
    "problems": [
     "buy-and-sell-crypto",
     "longest-repeating-substring-with-replacement",
-    "max-water-container"
+    "max-water-container",
+    "validate-parentheses"
    ],
-   "last_seen": "2026-10-26"
+   "last_seen": "2026-10-31"
   },
   {
    "id": "binary-search-mid",
    "title": "Binary Search: Mitte und Grenzen",
    "rule": "In jeder Runde `mid = (l + r) // 2` neu aus den Grenzen berechnen, danach eine Grenze verschieben (`l = mid + 1` oder `r = mid - 1`), nie `mid` selbst um 1.",
-   "submissions": 11,
+   "submissions": 24,
    "problems": [
     "binary-search",
+    "eating-bananas",
     "search-2d-matrix"
    ],
-   "last_seen": "2026-10-28"
+   "last_seen": "2026-10-31"
   },
   {
    "id": "float-division",
@@ -312,6 +322,36 @@
     "search-2d-matrix"
    ],
    "last_seen": "2026-10-28"
+  },
+  {
+   "id": "ceil-division",
+   "title": "Aufrunden mit Ganzzahlen",
+   "rule": "`a // k` rundet ab. Aufrunden: `(a + k - 1) // k` mit Klammern um den Zähler, oder `math.ceil(a / k)`. `//` bindet stärker als `+`.",
+   "submissions": 6,
+   "problems": [
+    "eating-bananas"
+   ],
+   "last_seen": "2026-10-31"
+  },
+  {
+   "id": "linked-list-nodes",
+   "title": "Linked List: Knoten, Wert und `None`",
+   "rule": "`node.val` ist der Wert, `node.next` der nächste Knoten oder `None`. Einen neuen Knoten gibt es nur mit `ListNode(v)`; das Ende ist `None`, nicht `[]`.",
+   "submissions": 7,
+   "problems": [
+    "reverse-a-linked-list"
+   ],
+   "last_seen": "2026-10-31"
+  },
+  {
+   "id": "return-type",
+   "title": "Rückgabetyp passt nicht zur Signatur",
+   "rule": "Die Signatur sagt, was zurückkommt: `-> Optional[ListNode]` heißt Knoten oder `None`. Keine Python-Liste, kein Iterator wie `reversed(...)`.",
+   "submissions": 12,
+   "problems": [
+    "reverse-a-linked-list"
+   ],
+   "last_seen": "2026-10-31"
   }
  ],
  "cards": [
@@ -347,6 +387,37 @@
    "last_evidence": "2026-10-16T12:55:16+00:00"
   },
   {
+   "id": "binary-search-answer",
+   "guid": "D:Ty@2^WaI",
+   "type": "pattern",
+   "type_label": "Pattern",
+   "mistakes": [
+    "binary-search-mid"
+   ],
+   "problems": [
+    "eating-bananas"
+   ],
+   "evidence": [
+    "eating-bananas#0-3",
+    "eating-bananas#7",
+    "eating-bananas#8",
+    "eating-bananas#9",
+    "eating-bananas#10"
+   ],
+   "tags": [
+    "binary-search",
+    "ncd::fehler::binary-search-mid",
+    "ncd::problem::eating-bananas",
+    "ncd::typ::pattern"
+   ],
+   "front_md": "Koko Eating Bananas: Binary Search über das Tempo `k`. Ein `k` reicht. Was merkst du dir, welche Grenze verschiebst du, und was gibst du am Ende zurück?",
+   "back_md": "Das gültige `k` merken und **links weitersuchen**, ob ein kleineres auch reicht:\n\n```python\nlo, hi = 1, max(piles)\nbest = hi\nwhile lo <= hi:\n    k = (lo + hi) // 2\n    if sum((p + k - 1) // k for p in piles) <= h:\n        best = k\n        hi = k - 1\n    else:\n        lo = k + 1\nreturn best\n```\n\nGesucht ist nicht irgendein Wert, sondern der **kleinste gültige**. Deshalb kein `return` beim ersten Treffer, und am Ende nicht das `k` der letzten Runde: das kann ungültig sein.\n\nDeine Versuche: `return k` beim ersten Treffer (#0–3, dein Kommentar in #4: „das gibt nicht den minimalen zurück“), `return k` nach der Schleife (#7: 1 statt 2), `legit_k` nie bzw. mit `max_try` statt `k` gesetzt (#8–9: 4 statt 2). #10 mit `legit_k = k` ✔",
+   "front_html": "<p>Koko Eating Bananas: Binary Search über das Tempo <code>k</code>. Ein <code>k</code> reicht. Was merkst du dir, welche Grenze verschiebst du, und was gibst du am Ende zurück?</p>",
+   "back_html": "<p>Das gültige <code>k</code> merken und <strong>links weitersuchen</strong>, ob ein kleineres auch reicht:</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">lo</span><span class=\"p\">,</span> <span class=\"n\">hi</span> <span class=\"o\">=</span> <span class=\"mi\">1</span><span class=\"p\">,</span> <span class=\"nb\">max</span><span class=\"p\">(</span><span class=\"n\">piles</span><span class=\"p\">)</span>\n<span class=\"n\">best</span> <span class=\"o\">=</span> <span class=\"n\">hi</span>\n<span class=\"k\">while</span> <span class=\"n\">lo</span> <span class=\"o\">&lt;=</span> <span class=\"n\">hi</span><span class=\"p\">:</span>\n    <span class=\"n\">k</span> <span class=\"o\">=</span> <span class=\"p\">(</span><span class=\"n\">lo</span> <span class=\"o\">+</span> <span class=\"n\">hi</span><span class=\"p\">)</span> <span class=\"o\">//</span> <span class=\"mi\">2</span>\n    <span class=\"k\">if</span> <span class=\"nb\">sum</span><span class=\"p\">((</span><span class=\"n\">p</span> <span class=\"o\">+</span> <span class=\"n\">k</span> <span class=\"o\">-</span> <span class=\"mi\">1</span><span class=\"p\">)</span> <span class=\"o\">//</span> <span class=\"n\">k</span> <span class=\"k\">for</span> <span class=\"n\">p</span> <span class=\"ow\">in</span> <span class=\"n\">piles</span><span class=\"p\">)</span> <span class=\"o\">&lt;=</span> <span class=\"n\">h</span><span class=\"p\">:</span>\n        <span class=\"n\">best</span> <span class=\"o\">=</span> <span class=\"n\">k</span>\n        <span class=\"n\">hi</span> <span class=\"o\">=</span> <span class=\"n\">k</span> <span class=\"o\">-</span> <span class=\"mi\">1</span>\n    <span class=\"k\">else</span><span class=\"p\">:</span>\n        <span class=\"n\">lo</span> <span class=\"o\">=</span> <span class=\"n\">k</span> <span class=\"o\">+</span> <span class=\"mi\">1</span>\n<span class=\"k\">return</span> <span class=\"n\">best</span>\n</code></pre></div>\n\n<p>Gesucht ist nicht irgendein Wert, sondern der <strong>kleinste gültige</strong>. Deshalb kein <code>return</code> beim ersten Treffer, und am Ende nicht das <code>k</code> der letzten Runde: das kann ungültig sein.</p>\n<p>Deine Versuche: <code>return k</code> beim ersten Treffer (#0–3, dein Kommentar in #4: „das gibt nicht den minimalen zurück“), <code>return k</code> nach der Schleife (#7: 1 statt 2), <code>legit_k</code> nie bzw. mit <code>max_try</code> statt <code>k</code> gesetzt (#8–9: 4 statt 2). #10 mit <code>legit_k = k</code> ✔</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-0.py\">eating-bananas #0–3</a><span class=\"badge crash\">Crash</span><span class=\"badge fail\">3× falsch</span> 31.10. · gibt das erste passende <code>k</code> zurück statt weiter links nach einem kleineren zu suchen; #4 kommentiert „das gibt nicht den minimalen zurück“</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-7.py\">eating-bananas #7</a><span class=\"badge fail\">falsch</span> 31.10. · gibt das <code>k</code> der letzten Runde zurück, das zu klein war (1 statt 2)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-8.py\">eating-bananas #8</a><span class=\"badge fail\">falsch</span> 31.10. · <code>legit_k</code> wird nie aktualisiert → immer <code>max(piles)</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-9.py\">eating-bananas #9</a><span class=\"badge fail\">falsch</span> 31.10. · merkt sich die alte obere Grenze statt des gültigen <code>k</code>; #10: <code>legit_k = k</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-10.py\">eating-bananas #10</a><span class=\"badge pass\">ok</span> 31.10.</li></ul>",
+   "last_evidence": "2026-10-31T17:15:05+00:00"
+  },
+  {
    "id": "binary-search-template",
    "guid": "OFtRmIIf_1",
    "type": "concept",
@@ -363,7 +434,10 @@
     "binary-search#2-6",
     "search-2d-matrix#1-2",
     "search-2d-matrix#2-3",
-    "search-2d-matrix#4"
+    "search-2d-matrix#4",
+    "search-2d-matrix#11-12",
+    "search-2d-matrix#13-16",
+    "search-2d-matrix#17"
    ],
    "tags": [
     "binary-search",
@@ -373,11 +447,11 @@
     "ncd::typ::concept"
    ],
    "front_md": "Binary Search auf einem sortierten Array: Wie berechnest du `mid`, und was änderst du nach dem Vergleich, `mid` oder die Grenzen?",
-   "back_md": "```python\nl, r = 0, len(nums) - 1\nwhile l <= r:\n    mid = (l + r) // 2\n    if nums[mid] == target:\n        return mid\n    if nums[mid] < target:\n        l = mid + 1\n    else:\n        r = mid - 1\nreturn -1\n```\n\n`mid` wird in **jeder Runde neu** aus `l` und `r` berechnet. Verschoben werden nur die **Grenzen**, so halbiert sich der Suchbereich: O(log n).\n\n```viz\nkind: array\nvalues: [-1, 0, 2, 4, 6, 8]\npointers: {l: 3, mid: 4, r: 5}\nhighlight: [3, 4, 5]\ncaption: \"target 8: nach Runde 1 (mid = 2, nums[2] = 2 < 8) ist l = 3; jetzt mid = (3 + 5) // 2 = 4\"\n```\n\nDeine Versuche am 28.10.:\n\n- Binary Search #0–6: `mitte -= 1` bzw. `i -= 1` läuft in Einerschritten, also O(n). #6 besteht so, ist aber keine Binary Search.\n- Search 2D Matrix #1–2: `mid -= 1` statt `r_row = mid - 1`\n- #2–3: `(l_row - r_row) / 2` ist negativ, #4: `(r_row - l_row) / 2` vergisst das `l_row +`",
+   "back_md": "```python\nl, r = 0, len(nums) - 1\nwhile l <= r:\n    mid = (l + r) // 2\n    if nums[mid] == target:\n        return mid\n    if nums[mid] < target:\n        l = mid + 1\n    else:\n        r = mid - 1\nreturn -1\n```\n\n`mid` wird in **jeder Runde neu** aus `l` und `r` berechnet. Verschoben werden nur die **Grenzen**, so halbiert sich der Suchbereich: O(log n).\n\n```viz\nkind: array\nvalues: [-1, 0, 2, 4, 6, 8]\npointers: {l: 3, mid: 4, r: 5}\nhighlight: [3, 4, 5]\ncaption: \"target 8: nach Runde 1 (mid = 2, nums[2] = 2 < 8) ist l = 3; jetzt mid = (3 + 5) // 2 = 4\"\n```\n\nDeine Versuche am 28.10.:\n\n- Binary Search #0–6: `mitte -= 1` bzw. `i -= 1` läuft in Einerschritten, also O(n). #6 besteht so, ist aber keine Binary Search.\n- Search 2D Matrix #1–2: `mid -= 1` statt `r_row = mid - 1`\n- #2–3: `(l_row - r_row) / 2` ist negativ, #4: `(r_row - l_row) / 2` vergisst das `l_row +`\n\nAm 31.10. bei Search 2D Matrix noch einmal: `l_col + (l_col + r_col) // 2` (#11–12), dann `l_col + (l_col - r_col) // 2`, wieder negativ (#13–16), und `r_col = r_col - 1` statt `col - 1` (#11–14). #17 ✔",
    "front_html": "<p>Binary Search auf einem sortierten Array: Wie berechnest du <code>mid</code>, und was änderst du nach dem Vergleich, <code>mid</code> oder die Grenzen?</p>",
-   "back_html": "<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">l</span><span class=\"p\">,</span> <span class=\"n\">r</span> <span class=\"o\">=</span> <span class=\"mi\">0</span><span class=\"p\">,</span> <span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">nums</span><span class=\"p\">)</span> <span class=\"o\">-</span> <span class=\"mi\">1</span>\n<span class=\"k\">while</span> <span class=\"n\">l</span> <span class=\"o\">&lt;=</span> <span class=\"n\">r</span><span class=\"p\">:</span>\n    <span class=\"n\">mid</span> <span class=\"o\">=</span> <span class=\"p\">(</span><span class=\"n\">l</span> <span class=\"o\">+</span> <span class=\"n\">r</span><span class=\"p\">)</span> <span class=\"o\">//</span> <span class=\"mi\">2</span>\n    <span class=\"k\">if</span> <span class=\"n\">nums</span><span class=\"p\">[</span><span class=\"n\">mid</span><span class=\"p\">]</span> <span class=\"o\">==</span> <span class=\"n\">target</span><span class=\"p\">:</span>\n        <span class=\"k\">return</span> <span class=\"n\">mid</span>\n    <span class=\"k\">if</span> <span class=\"n\">nums</span><span class=\"p\">[</span><span class=\"n\">mid</span><span class=\"p\">]</span> <span class=\"o\">&lt;</span> <span class=\"n\">target</span><span class=\"p\">:</span>\n        <span class=\"n\">l</span> <span class=\"o\">=</span> <span class=\"n\">mid</span> <span class=\"o\">+</span> <span class=\"mi\">1</span>\n    <span class=\"k\">else</span><span class=\"p\">:</span>\n        <span class=\"n\">r</span> <span class=\"o\">=</span> <span class=\"n\">mid</span> <span class=\"o\">-</span> <span class=\"mi\">1</span>\n<span class=\"k\">return</span> <span class=\"o\">-</span><span class=\"mi\">1</span>\n</code></pre></div>\n\n<p><code>mid</code> wird in <strong>jeder Runde neu</strong> aus <code>l</code> und <code>r</code> berechnet. Verschoben werden nur die <strong>Grenzen</strong>, so halbiert sich der Suchbereich: O(log n).</p>\n<div class=\"viz\"><svg width=\"300\" height=\"96\" viewBox=\"0 0 300 96\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"target 8: nach Runde 1 (mid = 2, nums[2] = 2 &lt; 8) ist l = 3; jetzt mid = (3 + 5) // 2 = 4\"><rect x=\"12\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"35.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">-1</text><text x=\"35.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><rect x=\"58\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"81.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><text x=\"81.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">1</text><rect x=\"104\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"127.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><text x=\"127.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><rect x=\"150\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"173.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">4</text><text x=\"173.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">3</text><rect x=\"196\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"219.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">6</text><text x=\"219.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">4</text><rect x=\"242\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"265.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">8</text><text x=\"265.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">5</text><text x=\"173.0\" y=\"84\" class=\"ptr p0\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ l</text><text x=\"219.0\" y=\"84\" class=\"ptr p1\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ mid</text><text x=\"265.0\" y=\"84\" class=\"ptr p1\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ r</text></svg><div class=\"cap\">target 8: nach Runde 1 (mid = 2, nums[2] = 2 &lt; 8) ist l = 3; jetzt mid = (3 + 5) // 2 = 4</div></div>\n\n<p>Deine Versuche am 28.10.:</p>\n<ul>\n<li>Binary Search #0–6: <code>mitte -= 1</code> bzw. <code>i -= 1</code> läuft in Einerschritten, also O(n). #6 besteht so, ist aber keine Binary Search.</li>\n<li>Search 2D Matrix #1–2: <code>mid -= 1</code> statt <code>r_row = mid - 1</code></li>\n<li>\n<h1>2–3: <code>(l_row - r_row) / 2</code> ist negativ, #4: <code>(r_row - l_row) / 2</code> vergisst das <code>l_row +</code></h1>\n</li>\n</ul>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/binary-search/submission-0.py\">binary-search #0–1</a><span class=\"badge crash\">2× Crash</span> 28.10. · Mitte in Einerschritten verschoben → lineare Suche</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/binary-search/submission-2.py\">binary-search #2–6</a><span class=\"badge fail\">4× falsch</span><span class=\"badge pass\">ok</span> 28.10. · läuft in Einerschritten statt zu halbieren, also O(n); #6 besteht so, verlangt ist O(log n)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/search-2d-matrix/submission-1.py\">search-2d-matrix #1–2</a><span class=\"badge crash\">2× Crash</span> 28.10. · verschiebt <code>mid</code> statt einer Grenze, und <code>mid</code> kommt jede Runde neu aus <code>len(matrix)</code> → Endlosschleife (latent hinter dem float-Fehler); #3 setzt <code>r_row</code>/<code>l_row</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/search-2d-matrix/submission-2.py\">search-2d-matrix #2–3</a><span class=\"badge crash\">2× Crash</span> 28.10. · Differenz falsch herum → negativ</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/search-2d-matrix/submission-4.py\">search-2d-matrix #4</a><span class=\"badge crash\">Crash</span> 28.10. · halber Abstand ohne <code>l_row +</code>: die Mitte hängt nicht von <code>l_row</code> ab</li></ul>",
-   "last_evidence": "2026-10-28T10:34:37+00:00"
+   "back_html": "<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">l</span><span class=\"p\">,</span> <span class=\"n\">r</span> <span class=\"o\">=</span> <span class=\"mi\">0</span><span class=\"p\">,</span> <span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">nums</span><span class=\"p\">)</span> <span class=\"o\">-</span> <span class=\"mi\">1</span>\n<span class=\"k\">while</span> <span class=\"n\">l</span> <span class=\"o\">&lt;=</span> <span class=\"n\">r</span><span class=\"p\">:</span>\n    <span class=\"n\">mid</span> <span class=\"o\">=</span> <span class=\"p\">(</span><span class=\"n\">l</span> <span class=\"o\">+</span> <span class=\"n\">r</span><span class=\"p\">)</span> <span class=\"o\">//</span> <span class=\"mi\">2</span>\n    <span class=\"k\">if</span> <span class=\"n\">nums</span><span class=\"p\">[</span><span class=\"n\">mid</span><span class=\"p\">]</span> <span class=\"o\">==</span> <span class=\"n\">target</span><span class=\"p\">:</span>\n        <span class=\"k\">return</span> <span class=\"n\">mid</span>\n    <span class=\"k\">if</span> <span class=\"n\">nums</span><span class=\"p\">[</span><span class=\"n\">mid</span><span class=\"p\">]</span> <span class=\"o\">&lt;</span> <span class=\"n\">target</span><span class=\"p\">:</span>\n        <span class=\"n\">l</span> <span class=\"o\">=</span> <span class=\"n\">mid</span> <span class=\"o\">+</span> <span class=\"mi\">1</span>\n    <span class=\"k\">else</span><span class=\"p\">:</span>\n        <span class=\"n\">r</span> <span class=\"o\">=</span> <span class=\"n\">mid</span> <span class=\"o\">-</span> <span class=\"mi\">1</span>\n<span class=\"k\">return</span> <span class=\"o\">-</span><span class=\"mi\">1</span>\n</code></pre></div>\n\n<p><code>mid</code> wird in <strong>jeder Runde neu</strong> aus <code>l</code> und <code>r</code> berechnet. Verschoben werden nur die <strong>Grenzen</strong>, so halbiert sich der Suchbereich: O(log n).</p>\n<div class=\"viz\"><svg width=\"300\" height=\"96\" viewBox=\"0 0 300 96\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"target 8: nach Runde 1 (mid = 2, nums[2] = 2 &lt; 8) ist l = 3; jetzt mid = (3 + 5) // 2 = 4\"><rect x=\"12\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"35.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">-1</text><text x=\"35.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><rect x=\"58\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"81.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><text x=\"81.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">1</text><rect x=\"104\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"127.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><text x=\"127.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><rect x=\"150\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"173.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">4</text><text x=\"173.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">3</text><rect x=\"196\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"219.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">6</text><text x=\"219.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">4</text><rect x=\"242\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"265.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">8</text><text x=\"265.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">5</text><text x=\"173.0\" y=\"84\" class=\"ptr p0\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ l</text><text x=\"219.0\" y=\"84\" class=\"ptr p1\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ mid</text><text x=\"265.0\" y=\"84\" class=\"ptr p1\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ r</text></svg><div class=\"cap\">target 8: nach Runde 1 (mid = 2, nums[2] = 2 &lt; 8) ist l = 3; jetzt mid = (3 + 5) // 2 = 4</div></div>\n\n<p>Deine Versuche am 28.10.:</p>\n<ul>\n<li>Binary Search #0–6: <code>mitte -= 1</code> bzw. <code>i -= 1</code> läuft in Einerschritten, also O(n). #6 besteht so, ist aber keine Binary Search.</li>\n<li>Search 2D Matrix #1–2: <code>mid -= 1</code> statt <code>r_row = mid - 1</code></li>\n<li>\n<h1>2–3: <code>(l_row - r_row) / 2</code> ist negativ, #4: <code>(r_row - l_row) / 2</code> vergisst das <code>l_row +</code></h1>\n</li>\n</ul>\n<p>Am 31.10. bei Search 2D Matrix noch einmal: <code>l_col + (l_col + r_col) // 2</code> (#11–12), dann <code>l_col + (l_col - r_col) // 2</code>, wieder negativ (#13–16), und <code>r_col = r_col - 1</code> statt <code>col - 1</code> (#11–14). #17 ✔</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/binary-search/submission-0.py\">binary-search #0–1</a><span class=\"badge crash\">2× Crash</span> 28.10. · Mitte in Einerschritten verschoben → lineare Suche</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/binary-search/submission-2.py\">binary-search #2–6</a><span class=\"badge fail\">4× falsch</span><span class=\"badge pass\">ok</span> 28.10. · läuft in Einerschritten statt zu halbieren, also O(n); #6 besteht so, verlangt ist O(log n)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/search-2d-matrix/submission-1.py\">search-2d-matrix #1–2</a><span class=\"badge crash\">2× Crash</span> 28.10. · verschiebt <code>mid</code> statt einer Grenze, und <code>mid</code> kommt jede Runde neu aus <code>len(matrix)</code> → Endlosschleife (latent hinter dem float-Fehler); #3 setzt <code>r_row</code>/<code>l_row</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/search-2d-matrix/submission-2.py\">search-2d-matrix #2–3</a><span class=\"badge crash\">2× Crash</span> 28.10. · Differenz falsch herum → negativ</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/search-2d-matrix/submission-4.py\">search-2d-matrix #4</a><span class=\"badge crash\">Crash</span> 28.10. · halber Abstand ohne <code>l_row +</code>: die Mitte hängt nicht von <code>l_row</code> ab</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/search-2d-matrix/submission-11.py\">search-2d-matrix #11–12</a><span class=\"badge crash\">2× Crash</span> 31.10. · <code>(l_col + r_col) // 2</code> zusätzlich zu <code>l_col +</code> → Index zu groß, IndexError in #12</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/search-2d-matrix/submission-13.py\">search-2d-matrix #13–16</a><span class=\"badge fail\">4× falsch</span> 31.10. · Differenz falsch herum → negativer Index, wie am 28.10. (#2–3); #17 korrigiert zu <code>(r_col - l_col)</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/search-2d-matrix/submission-17.py\">search-2d-matrix #17</a><span class=\"badge pass\">ok</span> 31.10.</li></ul>",
+   "last_evidence": "2026-10-31T16:35:14+00:00"
   },
   {
    "id": "bug-3sum-match-no-move",
@@ -613,6 +687,39 @@
    "last_evidence": "2026-10-17T08:30:03+00:00"
   },
   {
+   "id": "bug-renamed-variable",
+   "guid": "PACMEB3EbB",
+   "type": "bug",
+   "type_label": "Finde den Bug",
+   "mistakes": [
+    "wrong-variable"
+   ],
+   "problems": [
+    "binary-search",
+    "reverse-a-linked-list"
+   ],
+   "evidence": [
+    "binary-search#0-1",
+    "reverse-a-linked-list#3",
+    "reverse-a-linked-list#13",
+    "reverse-a-linked-list#14"
+   ],
+   "tags": [
+    "naming",
+    "ncd::fehler::wrong-variable",
+    "ncd::problem::binary-search",
+    "ncd::problem::reverse-a-linked-list",
+    "ncd::typ::bug",
+    "python"
+   ],
+   "front_md": "Wo crasht das, und mit welchem Fehler?\n\n```python\nprev, current = None, head\n\nwhile curr != None:\n    temp = current.next\n    current.next = prev\n    prev = current\n    current = temp\n\nreturn prev\n```",
+   "back_md": "Gleich in der Bedingung: `NameError: name 'curr' is not defined`. Die Variable heißt `current`.\n\nRegel: Nach dem Umbenennen oder Abtippen einer Lösung jeden Namen einmal gegen seine Definition lesen.\n\nDer gleiche Crash bei dir: `return i`, während der Index noch `mitte` hieß (Binary Search #0–1), und `while p > 0` statt `p_next` (Reverse Linked List #3).",
+   "front_html": "<p>Wo crasht das, und mit welchem Fehler?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">prev</span><span class=\"p\">,</span> <span class=\"n\">current</span> <span class=\"o\">=</span> <span class=\"kc\">None</span><span class=\"p\">,</span> <span class=\"n\">head</span>\n\n<span class=\"k\">while</span> <span class=\"n\">curr</span> <span class=\"o\">!=</span> <span class=\"kc\">None</span><span class=\"p\">:</span>\n    <span class=\"n\">temp</span> <span class=\"o\">=</span> <span class=\"n\">current</span><span class=\"o\">.</span><span class=\"n\">next</span>\n    <span class=\"n\">current</span><span class=\"o\">.</span><span class=\"n\">next</span> <span class=\"o\">=</span> <span class=\"n\">prev</span>\n    <span class=\"n\">prev</span> <span class=\"o\">=</span> <span class=\"n\">current</span>\n    <span class=\"n\">current</span> <span class=\"o\">=</span> <span class=\"n\">temp</span>\n\n<span class=\"k\">return</span> <span class=\"n\">prev</span>\n</code></pre></div>",
+   "back_html": "<p>Gleich in der Bedingung: <code>NameError: name 'curr' is not defined</code>. Die Variable heißt <code>current</code>.</p>\n<p>Regel: Nach dem Umbenennen oder Abtippen einer Lösung jeden Namen einmal gegen seine Definition lesen.</p>\n<p>Der gleiche Crash bei dir: <code>return i</code>, während der Index noch <code>mitte</code> hieß (Binary Search #0–1), und <code>while p &gt; 0</code> statt <code>p_next</code> (Reverse Linked List #3).</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/binary-search/submission-0.py\">binary-search #0–1</a><span class=\"badge crash\">2× Crash</span> 28.10. · Index heißt <code>mitte</code>, zurückgegeben wird <code>i</code> → NameError; #2 benennt <code>mitte</code> in <code>i</code> um</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-3.py\">reverse-a-linked-list #3</a><span class=\"badge crash\">Crash</span> 31.10. · Variable heißt <code>p_next</code>, die Bedingung benutzt <code>p</code> → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-13.py\">reverse-a-linked-list #13</a><span class=\"badge crash\">Crash</span> 31.10. · Variable heißt <code>current</code>, die Bedingung benutzt <code>curr</code> → NameError; #14 korrigiert</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-14.py\">reverse-a-linked-list #14</a><span class=\"badge pass\">ok</span> 31.10.</li></ul>",
+   "last_evidence": "2026-10-31T19:33:09+00:00"
+  },
+  {
    "id": "bug-shadowing-input",
    "guid": "NQ.sRR#iC!",
    "type": "bug",
@@ -758,6 +865,36 @@
    "back_html": "<p>Gekauft wird <strong>vor</strong> dem Verkauf. Von außen nach innen gibt es keine Regel, welcher Pointer sich bewegen darf, ohne das beste Paar zu verpassen.</p>\n<p>Stattdessen von links nach rechts: das <strong>bisherige Minimum</strong> merken und an jedem Tag den Verkauf dagegen rechnen.</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">buy</span> <span class=\"o\">=</span> <span class=\"mi\">0</span>\n<span class=\"n\">profit</span> <span class=\"o\">=</span> <span class=\"mi\">0</span>\n<span class=\"k\">for</span> <span class=\"n\">sell</span> <span class=\"ow\">in</span> <span class=\"nb\">range</span><span class=\"p\">(</span><span class=\"mi\">1</span><span class=\"p\">,</span> <span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">prices</span><span class=\"p\">)):</span>\n    <span class=\"n\">profit</span> <span class=\"o\">=</span> <span class=\"nb\">max</span><span class=\"p\">(</span><span class=\"n\">profit</span><span class=\"p\">,</span> <span class=\"n\">prices</span><span class=\"p\">[</span><span class=\"n\">sell</span><span class=\"p\">]</span> <span class=\"o\">-</span> <span class=\"n\">prices</span><span class=\"p\">[</span><span class=\"n\">buy</span><span class=\"p\">])</span>\n    <span class=\"k\">if</span> <span class=\"n\">prices</span><span class=\"p\">[</span><span class=\"n\">sell</span><span class=\"p\">]</span> <span class=\"o\">&lt;</span> <span class=\"n\">prices</span><span class=\"p\">[</span><span class=\"n\">buy</span><span class=\"p\">]:</span>\n        <span class=\"n\">buy</span> <span class=\"o\">=</span> <span class=\"n\">sell</span>\n<span class=\"k\">return</span> <span class=\"n\">profit</span>\n</code></pre></div>\n\n<p>So hast du es in #3 gelöst. Davor: <code>prices[p_l] -= 1</code> änderte die Preise statt der Pointer → Timeout (#0–1), dann liefen beide Pointer nach außen → IndexError (#2).</p>",
    "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-0.py\">buy-and-sell-crypto #0–2</a><span class=\"badge timeout\">2× Timeout</span><span class=\"badge crash\">Crash</span> 25.10. · Two Pointers von außen nach innen; der Kauf muss aber vor dem Verkauf liegen. #3: rechter Pointer läuft vorwärts, der linke springt auf jedes neue Tief</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-3.py\">buy-and-sell-crypto #3</a><span class=\"badge pass\">ok</span> 25.10.</li></ul>",
    "last_evidence": "2026-10-25T16:23:28+00:00"
+  },
+  {
+   "id": "ceil-division",
+   "guid": "OQp~BuOxVg",
+   "type": "gotcha",
+   "type_label": "Python-Gotcha",
+   "mistakes": [
+    "ceil-division"
+   ],
+   "problems": [
+    "eating-bananas"
+   ],
+   "evidence": [
+    "eating-bananas#1-2",
+    "eating-bananas#3-6",
+    "eating-bananas#7"
+   ],
+   "tags": [
+    "binary-search",
+    "ncd::fehler::ceil-division",
+    "ncd::problem::eating-bananas",
+    "ncd::typ::gotcha",
+    "python"
+   ],
+   "front_md": "Koko isst mit Tempo `k` pro Stunde. Wie viele Stunden braucht sie für einen Stapel mit `i` Bananen, als Ganzzahl-Ausdruck? Und was rechnet `i + (k-1) // k`?",
+   "back_md": "`(i + k - 1) // k`, also `i / k` **aufgerundet**. Ebenso `math.ceil(i / k)`.\n\n`i + (k-1) // k` rechnet etwas anderes: `//` bindet stärker als `+`, also `i + ((k-1) // k)`. Weil `k - 1 < k`, ist der zweite Teil immer 0, das Ergebnis ist `i`.\n\nDeine Versuche am 31.10.:\n\n- #1–2: `i // k` rundet ab (Kommentar: „rundet wohl ab“)\n- #3–6: `i + (k-1) // k` („der ganzzahl trick“), bei `[1, 4, 3, 2]`, h = 9 kam deshalb immer 4 statt 2\n- #7: `(i + (k-1)) // k` ✔",
+   "front_html": "<p>Koko isst mit Tempo <code>k</code> pro Stunde. Wie viele Stunden braucht sie für einen Stapel mit <code>i</code> Bananen, als Ganzzahl-Ausdruck? Und was rechnet <code>i + (k-1) // k</code>?</p>",
+   "back_html": "<p><code>(i + k - 1) // k</code>, also <code>i / k</code> <strong>aufgerundet</strong>. Ebenso <code>math.ceil(i / k)</code>.</p>\n<p><code>i + (k-1) // k</code> rechnet etwas anderes: <code>//</code> bindet stärker als <code>+</code>, also <code>i + ((k-1) // k)</code>. Weil <code>k - 1 &lt; k</code>, ist der zweite Teil immer 0, das Ergebnis ist <code>i</code>.</p>\n<p>Deine Versuche am 31.10.:</p>\n<ul>\n<li>\n<h1>1–2: <code>i // k</code> rundet ab (Kommentar: „rundet wohl ab“)</h1>\n</li>\n<li>\n<h1>3–6: <code>i + (k-1) // k</code> („der ganzzahl trick“), bei <code>[1, 4, 3, 2]</code>, h = 9 kam deshalb immer 4 statt 2</h1>\n</li>\n<li>\n<h1>7: <code>(i + (k-1)) // k</code> ✔</h1>\n</li>\n</ul>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-1.py\">eating-bananas #1–2</a><span class=\"badge fail\">2× falsch</span> 31.10. · rundet ab: 25 Bananen bei k = 13 ergibt 1 statt 2 Stunden</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-3.py\">eating-bananas #3–6</a><span class=\"badge fail\">4× falsch</span> 31.10. · ohne Klammern: <code>i + ((k-1) // k)</code> ist <code>i + 0</code> → Stunden = Summe aller Bananen; #7 klammert <code>(i + (k-1)) // k</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-7.py\">eating-bananas #7</a><span class=\"badge fail\">falsch</span> 31.10. · gibt das <code>k</code> der letzten Runde zurück, das zu klein war (1 statt 2)</li></ul>",
+   "last_evidence": "2026-10-31T17:13:50+00:00"
   },
   {
    "id": "continue-at-end",
@@ -946,6 +1083,7 @@
     "init-scope"
    ],
    "problems": [
+    "eating-bananas",
     "longest-repeating-substring-with-replacement",
     "longest-substring-without-duplicates",
     "max-water-container"
@@ -954,22 +1092,24 @@
     "longest-repeating-substring-with-replacement#0",
     "max-water-container#5",
     "max-water-container#1-2",
-    "longest-substring-without-duplicates#12"
+    "longest-substring-without-duplicates#12",
+    "eating-bananas#0-1"
    ],
    "tags": [
     "loops",
     "ncd::fehler::init-scope",
+    "ncd::problem::eating-bananas",
     "ncd::problem::longest-repeating-substring-with-replacement",
     "ncd::problem::longest-substring-without-duplicates",
     "ncd::problem::max-water-container",
     "ncd::typ::concept"
    ],
    "front_md": "Woran entscheidest du, ob eine Initialisierung **vor** oder **in** die Schleife gehört? Und was braucht eine `while`-Schleife, das eine `for`-Schleife nicht braucht?",
-   "back_md": "- Gilt der Wert über alle Runden (Ergebnis, `seen`-Set eines Sliding Window)? → **vor** die Schleife\n- Beginnt er in jeder Runde neu (innerer Pointer bei Brute Force)? → **in** die Schleife\n- `while` setzt nichts selbst: der Laufindex muss vorher stehen. `for` setzt seine Variable in jeder Runde neu.\n\nDeine Fälle:\n\n- `while i < len(s):` ohne `i = 0` (Longest Repeating #0) und beim Umbau von `for` auf `while` bei Container With Most Water (#5) → NameError\n- `p_l = len(heights) - 1` vor der `for`-Schleife: ab dem zweiten `i` läuft die innere Schleife nie wieder (#1–2)\n- `seen = set()` und `sub_len = 0` **in** der Schleife: das Fenster ist nie länger als 1 (Longest Substring #12)\n\nDeine Frage dazu: „wird bei for i dann zurückgesetzt bei i + 1 ?“ Nur die Schleifenvariable selbst. Alles andere behält seinen Wert, bis du es neu setzt.",
+   "back_md": "- Gilt der Wert über alle Runden (Ergebnis, `seen`-Set eines Sliding Window)? → **vor** die Schleife\n- Beginnt er in jeder Runde neu (innerer Pointer bei Brute Force)? → **in** die Schleife\n- `while` setzt nichts selbst: der Laufindex muss vorher stehen. `for` setzt seine Variable in jeder Runde neu.\n\nDeine Fälle:\n\n- `while i < len(s):` ohne `i = 0` (Longest Repeating #0) und beim Umbau von `for` auf `while` bei Container With Most Water (#5) → NameError\n- `p_l = len(heights) - 1` vor der `for`-Schleife: ab dem zweiten `i` läuft die innere Schleife nie wieder (#1–2)\n- `seen = set()` und `sub_len = 0` **in** der Schleife: das Fenster ist nie länger als 1 (Longest Substring #12)\n- `needed_t = 0` **in** der Schleife über die Stapel: gezählt wird nur der letzte (Koko #0–1)\n\nDeine Frage dazu: „wird bei for i dann zurückgesetzt bei i + 1 ?“ Nur die Schleifenvariable selbst. Alles andere behält seinen Wert, bis du es neu setzt.",
    "front_html": "<p>Woran entscheidest du, ob eine Initialisierung <strong>vor</strong> oder <strong>in</strong> die Schleife gehört? Und was braucht eine <code>while</code>-Schleife, das eine <code>for</code>-Schleife nicht braucht?</p>",
-   "back_html": "<ul>\n<li>Gilt der Wert über alle Runden (Ergebnis, <code>seen</code>-Set eines Sliding Window)? → <strong>vor</strong> die Schleife</li>\n<li>Beginnt er in jeder Runde neu (innerer Pointer bei Brute Force)? → <strong>in</strong> die Schleife</li>\n<li><code>while</code> setzt nichts selbst: der Laufindex muss vorher stehen. <code>for</code> setzt seine Variable in jeder Runde neu.</li>\n</ul>\n<p>Deine Fälle:</p>\n<ul>\n<li><code>while i &lt; len(s):</code> ohne <code>i = 0</code> (Longest Repeating #0) und beim Umbau von <code>for</code> auf <code>while</code> bei Container With Most Water (#5) → NameError</li>\n<li><code>p_l = len(heights) - 1</code> vor der <code>for</code>-Schleife: ab dem zweiten <code>i</code> läuft die innere Schleife nie wieder (#1–2)</li>\n<li><code>seen = set()</code> und <code>sub_len = 0</code> <strong>in</strong> der Schleife: das Fenster ist nie länger als 1 (Longest Substring #12)</li>\n</ul>\n<p>Deine Frage dazu: „wird bei for i dann zurückgesetzt bei i + 1 ?“ Nur die Schleifenvariable selbst. Alles andere behält seinen Wert, bis du es neu setzt.</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-repeating-substring-with-replacement/submission-0.py\">longest-repeating-substring-with-replacement #0</a><span class=\"badge crash\">Crash</span> 26.10. · <code>i</code> nie gesetzt → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-5.py\">max-water-container #5</a><span class=\"badge crash\">Crash</span> 24.10. · Umbau von <code>for i in range(...)</code> zu <code>while</code>, <code>i = 0</code> fehlt → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-1.py\">max-water-container #1–2</a><span class=\"badge crash\">Crash</span><span class=\"badge fail\">falsch</span> 24.10. · <code>p_l</code> wird nur einmal gesetzt; ab dem zweiten <code>i</code> läuft die innere Schleife nie wieder. #3 setzt ihn pro <code>i</code> neu</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-12.py\">longest-substring-without-duplicates #12</a><span class=\"badge fail\">falsch</span> 27.10. · Set und Länge werden in jeder Runde neu angelegt → nie mehr als 1; #13 zieht sie vor die Schleife</li></ul>",
-   "last_evidence": "2026-10-27T11:42:31+00:00"
+   "back_html": "<ul>\n<li>Gilt der Wert über alle Runden (Ergebnis, <code>seen</code>-Set eines Sliding Window)? → <strong>vor</strong> die Schleife</li>\n<li>Beginnt er in jeder Runde neu (innerer Pointer bei Brute Force)? → <strong>in</strong> die Schleife</li>\n<li><code>while</code> setzt nichts selbst: der Laufindex muss vorher stehen. <code>for</code> setzt seine Variable in jeder Runde neu.</li>\n</ul>\n<p>Deine Fälle:</p>\n<ul>\n<li><code>while i &lt; len(s):</code> ohne <code>i = 0</code> (Longest Repeating #0) und beim Umbau von <code>for</code> auf <code>while</code> bei Container With Most Water (#5) → NameError</li>\n<li><code>p_l = len(heights) - 1</code> vor der <code>for</code>-Schleife: ab dem zweiten <code>i</code> läuft die innere Schleife nie wieder (#1–2)</li>\n<li><code>seen = set()</code> und <code>sub_len = 0</code> <strong>in</strong> der Schleife: das Fenster ist nie länger als 1 (Longest Substring #12)</li>\n<li><code>needed_t = 0</code> <strong>in</strong> der Schleife über die Stapel: gezählt wird nur der letzte (Koko #0–1)</li>\n</ul>\n<p>Deine Frage dazu: „wird bei for i dann zurückgesetzt bei i + 1 ?“ Nur die Schleifenvariable selbst. Alles andere behält seinen Wert, bis du es neu setzt.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-repeating-substring-with-replacement/submission-0.py\">longest-repeating-substring-with-replacement #0</a><span class=\"badge crash\">Crash</span> 26.10. · <code>i</code> nie gesetzt → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-5.py\">max-water-container #5</a><span class=\"badge crash\">Crash</span> 24.10. · Umbau von <code>for i in range(...)</code> zu <code>while</code>, <code>i = 0</code> fehlt → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-1.py\">max-water-container #1–2</a><span class=\"badge crash\">Crash</span><span class=\"badge fail\">falsch</span> 24.10. · <code>p_l</code> wird nur einmal gesetzt; ab dem zweiten <code>i</code> läuft die innere Schleife nie wieder. #3 setzt ihn pro <code>i</code> neu</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-12.py\">longest-substring-without-duplicates #12</a><span class=\"badge fail\">falsch</span> 27.10. · Set und Länge werden in jeder Runde neu angelegt → nie mehr als 1; #13 zieht sie vor die Schleife</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-0.py\">eating-bananas #0–1</a><span class=\"badge crash\">Crash</span><span class=\"badge fail\">falsch</span> 31.10. · <code>needed_t = 0</code> in der Schleife: am Ende zählt nur der letzte Stapel; #2 zieht es vor die Schleife</li></ul>",
+   "last_evidence": "2026-10-31T17:05:46+00:00"
   },
   {
    "id": "iterate-index-value",
@@ -980,6 +1120,7 @@
     "index-vs-value"
    ],
    "problems": [
+    "eating-bananas",
     "longest-substring-without-duplicates",
     "products-of-array-discluding-self",
     "three-integer-sum",
@@ -990,11 +1131,13 @@
     "three-integer-sum#7",
     "products-of-array-discluding-self#2-4",
     "valid-sudoku#2-5",
-    "longest-substring-without-duplicates#8"
+    "longest-substring-without-duplicates#8",
+    "eating-bananas#0"
    ],
    "tags": [
     "loops",
     "ncd::fehler::index-vs-value",
+    "ncd::problem::eating-bananas",
     "ncd::problem::longest-substring-without-duplicates",
     "ncd::problem::products-of-array-discluding-self",
     "ncd::problem::three-integer-sum",
@@ -1003,11 +1146,11 @@
     "python"
    ],
    "front_md": "Du brauchst in der Schleife Index **und** Wert. Was liefern die ersten drei Schleifen, und warum crasht die vierte?\n\n```python\nfor x in nums: ...\nfor i in range(len(nums)): ...\nfor i, x in enumerate(nums): ...\nfor i, x in nums: ...\n```",
-   "back_md": "1. nur Werte\n2. nur Indizes\n3. Paare aus Index und Wert ✔\n4. Python versucht jeden **Wert** in zwei Teile zu entpacken → `TypeError: cannot unpack non-iterable int object`\n\nEiner deiner häufigsten Fehler (8 von 18 Problemen): `for i in nums_s:` und danach `nums_s[i]`. Am 27.10. andersherum: `for e in s:` und dann `p = e + 1`, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: `for x in s` liefert Elemente. Dort ist `i` ein Wert, kein Index. Konvention gegen die Verwechslung: `i`, `j` nur für Indizes, Werte heißen `v`, `x` oder `num`.",
+   "back_md": "1. nur Werte\n2. nur Indizes\n3. Paare aus Index und Wert ✔\n4. Python versucht jeden **Wert** in zwei Teile zu entpacken → `TypeError: cannot unpack non-iterable int object`\n\nEiner deiner häufigsten Fehler (9 von 21 Problemen): `for i in nums_s:` und danach `nums_s[i]`. Am 27.10. andersherum: `for e in s:` und dann `p = e + 1`, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: `for x in s` liefert Elemente. Am 31.10. bei Koko wieder: `for i in piles:` und dann `piles[i] // k` → IndexError. Dort ist `i` ein Wert, kein Index. Konvention gegen die Verwechslung: `i`, `j` nur für Indizes, Werte heißen `v`, `x` oder `num`.",
    "front_html": "<p>Du brauchst in der Schleife Index <strong>und</strong> Wert. Was liefern die ersten drei Schleifen, und warum crasht die vierte?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">for</span> <span class=\"n\">x</span> <span class=\"ow\">in</span> <span class=\"n\">nums</span><span class=\"p\">:</span> <span class=\"o\">...</span>\n<span class=\"k\">for</span> <span class=\"n\">i</span> <span class=\"ow\">in</span> <span class=\"nb\">range</span><span class=\"p\">(</span><span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">nums</span><span class=\"p\">)):</span> <span class=\"o\">...</span>\n<span class=\"k\">for</span> <span class=\"n\">i</span><span class=\"p\">,</span> <span class=\"n\">x</span> <span class=\"ow\">in</span> <span class=\"nb\">enumerate</span><span class=\"p\">(</span><span class=\"n\">nums</span><span class=\"p\">):</span> <span class=\"o\">...</span>\n<span class=\"k\">for</span> <span class=\"n\">i</span><span class=\"p\">,</span> <span class=\"n\">x</span> <span class=\"ow\">in</span> <span class=\"n\">nums</span><span class=\"p\">:</span> <span class=\"o\">...</span>\n</code></pre></div>",
-   "back_html": "<ol>\n<li>nur Werte</li>\n<li>nur Indizes</li>\n<li>Paare aus Index und Wert ✔</li>\n<li>Python versucht jeden <strong>Wert</strong> in zwei Teile zu entpacken → <code>TypeError: cannot unpack non-iterable int object</code></li>\n</ol>\n<p>Einer deiner häufigsten Fehler (8 von 18 Problemen): <code>for i in nums_s:</code> und danach <code>nums_s[i]</code>. Am 27.10. andersherum: <code>for e in s:</code> und dann <code>p = e + 1</code>, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: <code>for x in s</code> liefert Elemente. Dort ist <code>i</code> ein Wert, kein Index. Konvention gegen die Verwechslung: <code>i</code>, <code>j</code> nur für Indizes, Werte heißen <code>v</code>, <code>x</code> oder <code>num</code>.</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-1.py\">three-integer-sum #1–6</a><span class=\"badge crash\">6× Crash</span> 22.10. · durchläuft Werte und benutzt sie danach als Index (<code>nums_s[i]</code>)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-7.py\">three-integer-sum #7</a><span class=\"badge crash\">Crash</span> 22.10. · Index und Wert ohne <code>enumerate</code> → TypeError: cannot unpack non-iterable int</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/products-of-array-discluding-self/submission-2.py\">products-of-array-discluding-self #2–4</a><span class=\"badge fail\">3× falsch</span> 17.10. · durchläuft Werte (alle 1) und benutzt sie als Index</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/valid-sudoku/submission-2.py\">valid-sudoku #2–5</a><span class=\"badge crash\">2× Crash</span><span class=\"badge fail\">2× falsch</span> 18.10. · Spaltenindex <code>i</code> statt Zellwert <code>row[i]</code> ins Set</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-8.py\">longest-substring-without-duplicates #8</a><span class=\"badge crash\">Crash</span> 27.10. · <code>for e in s</code> liefert Zeichen, <code>e + 1</code> → TypeError. Eigener Kommentar: „iterieren über elements oder index?“</li></ul>",
-   "last_evidence": "2026-10-27T11:33:40+00:00"
+   "back_html": "<ol>\n<li>nur Werte</li>\n<li>nur Indizes</li>\n<li>Paare aus Index und Wert ✔</li>\n<li>Python versucht jeden <strong>Wert</strong> in zwei Teile zu entpacken → <code>TypeError: cannot unpack non-iterable int object</code></li>\n</ol>\n<p>Einer deiner häufigsten Fehler (9 von 21 Problemen): <code>for i in nums_s:</code> und danach <code>nums_s[i]</code>. Am 27.10. andersherum: <code>for e in s:</code> und dann <code>p = e + 1</code>, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: <code>for x in s</code> liefert Elemente. Am 31.10. bei Koko wieder: <code>for i in piles:</code> und dann <code>piles[i] // k</code> → IndexError. Dort ist <code>i</code> ein Wert, kein Index. Konvention gegen die Verwechslung: <code>i</code>, <code>j</code> nur für Indizes, Werte heißen <code>v</code>, <code>x</code> oder <code>num</code>.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-1.py\">three-integer-sum #1–6</a><span class=\"badge crash\">6× Crash</span> 22.10. · durchläuft Werte und benutzt sie danach als Index (<code>nums_s[i]</code>)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-7.py\">three-integer-sum #7</a><span class=\"badge crash\">Crash</span> 22.10. · Index und Wert ohne <code>enumerate</code> → TypeError: cannot unpack non-iterable int</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/products-of-array-discluding-self/submission-2.py\">products-of-array-discluding-self #2–4</a><span class=\"badge fail\">3× falsch</span> 17.10. · durchläuft Werte (alle 1) und benutzt sie als Index</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/valid-sudoku/submission-2.py\">valid-sudoku #2–5</a><span class=\"badge crash\">2× Crash</span><span class=\"badge fail\">2× falsch</span> 18.10. · Spaltenindex <code>i</code> statt Zellwert <code>row[i]</code> ins Set</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-8.py\">longest-substring-without-duplicates #8</a><span class=\"badge crash\">Crash</span> 27.10. · <code>for e in s</code> liefert Zeichen, <code>e + 1</code> → TypeError. Eigener Kommentar: „iterieren über elements oder index?“</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-0.py\">eating-bananas #0</a><span class=\"badge crash\">Crash</span> 31.10. · <code>for i in piles</code> liefert Stapelgrößen, <code>piles[i]</code> benutzt sie als Index → IndexError</li></ul>",
+   "last_evidence": "2026-10-31T17:00:27+00:00"
   },
   {
    "id": "last-window-max",
@@ -1263,23 +1406,26 @@
     "edge-cases"
    ],
    "problems": [
+    "search-2d-matrix",
     "valid-sudoku"
    ],
    "evidence": [
-    "valid-sudoku#5-6"
+    "valid-sudoku#5-6",
+    "search-2d-matrix#13-15"
    ],
    "tags": [
     "ncd::fehler::edge-cases",
+    "ncd::problem::search-2d-matrix",
     "ncd::problem::valid-sudoku",
     "ncd::typ::gotcha",
     "python"
    ],
    "front_md": "Was gibt eine Python-Funktion zurück, die ohne `return` am Ende ankommt? Und warum ist das bei `isValidSudoku` ein Fehler?",
-   "back_md": "`None`. Der Judge erwartet `True` für ein gültiges Board, und `None` ist nicht `True`. Das Ergebnis ist also falsch, obwohl alle Prüfungen korrekt durchlaufen.\n\nCheck vor dem Abschicken: Endet **jeder** Pfad mit einem `return` des richtigen Typs?",
+   "back_md": "`None`. Der Judge erwartet `True` für ein gültiges Board, und `None` ist nicht `True`. Das Ergebnis ist also falsch, obwohl alle Prüfungen korrekt durchlaufen.\n\nBei Search 2D Matrix (#13–15) genauso: Die Suche lief durch, ohne zu treffen, nach der Schleife fehlte `return False`, zurück kam `None`.\n\nCheck vor dem Abschicken: Endet **jeder** Pfad mit einem `return` des richtigen Typs?",
    "front_html": "<p>Was gibt eine Python-Funktion zurück, die ohne <code>return</code> am Ende ankommt? Und warum ist das bei <code>isValidSudoku</code> ein Fehler?</p>",
-   "back_html": "<p><code>None</code>. Der Judge erwartet <code>True</code> für ein gültiges Board, und <code>None</code> ist nicht <code>True</code>. Das Ergebnis ist also falsch, obwohl alle Prüfungen korrekt durchlaufen.</p>\n<p>Check vor dem Abschicken: Endet <strong>jeder</strong> Pfad mit einem <code>return</code> des richtigen Typs?</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/valid-sudoku/submission-5.py\">valid-sudoku #5–6</a><span class=\"badge fail\">2× falsch</span> 18.10. · Funktion endet ohne <code>return True</code> → <code>None</code></li></ul>",
-   "last_evidence": "2026-10-18T09:05:39+00:00"
+   "back_html": "<p><code>None</code>. Der Judge erwartet <code>True</code> für ein gültiges Board, und <code>None</code> ist nicht <code>True</code>. Das Ergebnis ist also falsch, obwohl alle Prüfungen korrekt durchlaufen.</p>\n<p>Bei Search 2D Matrix (#13–15) genauso: Die Suche lief durch, ohne zu treffen, nach der Schleife fehlte <code>return False</code>, zurück kam <code>None</code>.</p>\n<p>Check vor dem Abschicken: Endet <strong>jeder</strong> Pfad mit einem <code>return</code> des richtigen Typs?</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/valid-sudoku/submission-5.py\">valid-sudoku #5–6</a><span class=\"badge fail\">2× falsch</span> 18.10. · Funktion endet ohne <code>return True</code> → <code>None</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/search-2d-matrix/submission-13.py\">search-2d-matrix #13–15</a><span class=\"badge fail\">3× falsch</span> 31.10. · Schleife endet ohne <code>return</code> → <code>None</code>; #16 ergänzt <code>return False</code></li></ul>",
+   "last_evidence": "2026-10-31T16:33:54+00:00"
   },
   {
    "id": "palindrome-two-pointers",
@@ -1398,6 +1544,38 @@
    "last_evidence": "2026-10-16T20:52:26+00:00"
   },
   {
+   "id": "reverse-list-pointers",
+   "guid": "Kg2JR3]$Xg",
+   "type": "trace",
+   "type_label": "Trace",
+   "mistakes": [
+    "linked-list-nodes",
+    "return-type"
+   ],
+   "problems": [
+    "reverse-a-linked-list"
+   ],
+   "evidence": [
+    "reverse-a-linked-list#2",
+    "reverse-a-linked-list#4-5",
+    "reverse-a-linked-list#6-9",
+    "reverse-a-linked-list#14"
+   ],
+   "tags": [
+    "linked-list",
+    "ncd::fehler::linked-list-nodes",
+    "ncd::fehler::return-type",
+    "ncd::problem::reverse-a-linked-list",
+    "ncd::typ::trace"
+   ],
+   "front_md": "Reverse Linked List in place: Welche vier Zuweisungen machst du pro Schritt mit `prev` und `curr`, in welcher Reihenfolge? Was gibst du zurück?\n\n```viz\nkind: array\nvalues: [0, 1, 2, 3]\npointers: {prev: 1, curr: 2}\nhighlight: [0, 1]\ncaption: \"nach 2 Schritten: 1 → 0 → None ist umgedreht, ab 2 noch nicht\"\n```",
+   "back_md": "```python\nprev, curr = None, head\nwhile curr:\n    nxt = curr.next\n    curr.next = prev\n    prev = curr\n    curr = nxt\nreturn prev\n```\n\nErst `curr.next` sichern, sonst ist der Rest der Liste nach dem Umhängen verloren. Am Ende ist `curr` gleich `None`, der neue Kopf ist `prev`.\n\nAm 31.10. hast du zuerst die Werte in eine Python-Liste kopiert und daraus neu gebaut. Dabei: `head.next = p_next` hängt eine Zahl statt eines Knotens an (#4–5), `head.next = initial[p_next]` einen Wert (#6–9), `return reversed(initial)` liefert einen Iterator statt einer Linked List (#2). Neue Knoten gibt es nur mit `ListNode(v)`, der Wert heißt `val`, nicht `value`. Am Abend dann die Lösung oben (#14).",
+   "front_html": "<p>Reverse Linked List in place: Welche vier Zuweisungen machst du pro Schritt mit <code>prev</code> und <code>curr</code>, in welcher Reihenfolge? Was gibst du zurück?</p>\n<div class=\"viz\"><svg width=\"208\" height=\"96\" viewBox=\"0 0 208 96\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"nach 2 Schritten: 1 → 0 → None ist umgedreht, ab 2 noch nicht\"><rect x=\"12\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"35.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><text x=\"35.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><rect x=\"58\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"81.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">1</text><text x=\"81.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">1</text><rect x=\"104\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"127.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><text x=\"127.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><rect x=\"150\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"173.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">3</text><text x=\"173.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">3</text><text x=\"81.0\" y=\"84\" class=\"ptr p0\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ prev</text><text x=\"127.0\" y=\"84\" class=\"ptr p1\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ curr</text></svg><div class=\"cap\">nach 2 Schritten: 1 → 0 → None ist umgedreht, ab 2 noch nicht</div></div>",
+   "back_html": "<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">prev</span><span class=\"p\">,</span> <span class=\"n\">curr</span> <span class=\"o\">=</span> <span class=\"kc\">None</span><span class=\"p\">,</span> <span class=\"n\">head</span>\n<span class=\"k\">while</span> <span class=\"n\">curr</span><span class=\"p\">:</span>\n    <span class=\"n\">nxt</span> <span class=\"o\">=</span> <span class=\"n\">curr</span><span class=\"o\">.</span><span class=\"n\">next</span>\n    <span class=\"n\">curr</span><span class=\"o\">.</span><span class=\"n\">next</span> <span class=\"o\">=</span> <span class=\"n\">prev</span>\n    <span class=\"n\">prev</span> <span class=\"o\">=</span> <span class=\"n\">curr</span>\n    <span class=\"n\">curr</span> <span class=\"o\">=</span> <span class=\"n\">nxt</span>\n<span class=\"k\">return</span> <span class=\"n\">prev</span>\n</code></pre></div>\n\n<p>Erst <code>curr.next</code> sichern, sonst ist der Rest der Liste nach dem Umhängen verloren. Am Ende ist <code>curr</code> gleich <code>None</code>, der neue Kopf ist <code>prev</code>.</p>\n<p>Am 31.10. hast du zuerst die Werte in eine Python-Liste kopiert und daraus neu gebaut. Dabei: <code>head.next = p_next</code> hängt eine Zahl statt eines Knotens an (#4–5), <code>head.next = initial[p_next]</code> einen Wert (#6–9), <code>return reversed(initial)</code> liefert einen Iterator statt einer Linked List (#2). Neue Knoten gibt es nur mit <code>ListNode(v)</code>, der Wert heißt <code>val</code>, nicht <code>value</code>. Am Abend dann die Lösung oben (#14).</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-2.py\">reverse-a-linked-list #2</a><span class=\"badge fail\">falsch</span> 31.10. · <code>reversed()</code> liefert einen Iterator über die Werte, keine Linked List</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-4.py\">reverse-a-linked-list #4–5</a><span class=\"badge fail\">falsch</span><span class=\"badge crash\">Crash</span> 31.10. · Index <code>p_next</code> als nächster Knoten → int statt ListNode</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-6.py\">reverse-a-linked-list #6–9</a><span class=\"badge crash\">4× Crash</span> 31.10. · Wert statt Knoten; #10 baut <code>ListNode(initial[p_next])</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-14.py\">reverse-a-linked-list #14</a><span class=\"badge pass\">ok</span> 31.10.</li></ul>",
+   "last_evidence": "2026-10-31T17:41:39+00:00"
+  },
+  {
    "id": "seq-length-init",
    "guid": "eYd8_9;/4j",
    "type": "bug",
@@ -1489,6 +1667,38 @@
    "back_html": "<p><code>l</code> rückt nur so weit, bis das alte <code>d</code> draußen ist, also auf 1. Das <code>v</code> bleibt im Fenster.</p>\n<div class=\"viz\"><svg width=\"208\" height=\"96\" viewBox=\"0 0 208 96\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Fenster &quot;vd&quot;, danach &quot;vdf&quot; mit Länge 3\"><rect x=\"12\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"35.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">d</text><text x=\"35.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><rect x=\"58\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"81.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">v</text><text x=\"81.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">1</text><rect x=\"104\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"127.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">d</text><text x=\"127.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><rect x=\"150\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"173.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">f</text><text x=\"173.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">3</text><text x=\"81.0\" y=\"84\" class=\"ptr p0\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ l</text><text x=\"127.0\" y=\"84\" class=\"ptr p1\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ r</text></svg><div class=\"cap\">Fenster &quot;vd&quot;, danach &quot;vdf&quot; mit Länge 3</div></div>\n\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">while</span> <span class=\"n\">s</span><span class=\"p\">[</span><span class=\"n\">r</span><span class=\"p\">]</span> <span class=\"ow\">in</span> <span class=\"n\">seen</span><span class=\"p\">:</span>\n    <span class=\"n\">seen</span><span class=\"o\">.</span><span class=\"n\">remove</span><span class=\"p\">(</span><span class=\"n\">s</span><span class=\"p\">[</span><span class=\"n\">l</span><span class=\"p\">])</span>\n    <span class=\"n\">l</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n<span class=\"n\">seen</span><span class=\"o\">.</span><span class=\"n\">add</span><span class=\"p\">(</span><span class=\"n\">s</span><span class=\"p\">[</span><span class=\"n\">r</span><span class=\"p\">])</span>\n<span class=\"n\">best</span> <span class=\"o\">=</span> <span class=\"nb\">max</span><span class=\"p\">(</span><span class=\"n\">best</span><span class=\"p\">,</span> <span class=\"n\">r</span> <span class=\"o\">-</span> <span class=\"n\">l</span> <span class=\"o\">+</span> <span class=\"mi\">1</span><span class=\"p\">)</span>\n</code></pre></div>\n\n<p>Drei Schritte, in dieser Reihenfolge: schrumpfen, <strong>dann</strong> das neue Zeichen aufnehmen, Länge aus den Pointern berechnen. Deine Zwischenstände am 27.10.: neues Zeichen nicht ins Set (#18), <code>seen.add(v)</code> in der while-Schleife → KeyError (#19), Länge nicht neu berechnet (#20). Am Vortag hattest du beim Duplikat nur das neue Zeichen behalten (<code>sub = [i]</code>, #2–4). Damit geht bei <code>\"dvdf\"</code> das <code>v</code> verloren, #4 lieferte 2 statt 3.</p>",
    "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-0.py\">longest-substring-without-duplicates #0–1</a><span class=\"badge fail\">2× falsch</span> 26.10. · verwirft das ganze Fenster</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-2.py\">longest-substring-without-duplicates #2–4</a><span class=\"badge fail\">3× falsch</span> 26.10. · behält nur das neue Zeichen; bei <code>dvdf</code> geht das <code>v</code> verloren (#4: 2 statt 3, #2 und #3 scheitern zusätzlich an anderem). #7 schneidet mit <code>sub[sub.index(i) + 1:]</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-18.py\">longest-substring-without-duplicates #18</a><span class=\"badge fail\">falsch</span> 27.10. · nach dem Schrumpfen kommt das neue Zeichen nicht ins Set, <code>sub_len</code> bleibt alt</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-19.py\">longest-substring-without-duplicates #19</a><span class=\"badge crash\">Crash</span> 27.10. · <code>seen.add(v)</code> in der while-Schleife: <code>v</code> ist sofort wieder drin, das nächste <code>remove</code> → KeyError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-20.py\">longest-substring-without-duplicates #20</a><span class=\"badge fail\">falsch</span> 27.10. · <code>sub_len</code> nach dem Schrumpfen nicht neu berechnet; #21: <code>sub_len = i - remove_pointer +1</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-21.py\">longest-substring-without-duplicates #21</a><span class=\"badge pass\">ok</span> 27.10.</li></ul>",
    "last_evidence": "2026-10-27T11:49:38+00:00"
+  },
+  {
+   "id": "stack-brackets",
+   "guid": "c)cy|TD;Sm",
+   "type": "pattern",
+   "type_label": "Pattern",
+   "mistakes": [
+    "problem-model",
+    "edge-cases"
+   ],
+   "problems": [
+    "validate-parentheses"
+   ],
+   "evidence": [
+    "validate-parentheses#0-2",
+    "validate-parentheses#3-4",
+    "validate-parentheses#5",
+    "validate-parentheses#6"
+   ],
+   "tags": [
+    "ncd::fehler::edge-cases",
+    "ncd::fehler::problem-model",
+    "ncd::problem::validate-parentheses",
+    "ncd::typ::pattern",
+    "stack"
+   ],
+   "front_md": "Valid Parentheses mit **einem** Stack: Was passiert bei einer schließenden Klammer, und was muss am Ende gelten?",
+   "back_md": "```python\npairs = {\")\": \"(\", \"]\": \"[\", \"}\": \"{\"}\nstack = []\nfor c in s:\n    if c in pairs:\n        if not stack or stack.pop() != pairs[c]:\n            return False\n    else:\n        stack.append(c)\nreturn not stack\n```\n\nSchließende Klammer: Der Stack darf nicht leer sein, und oben muss die **passende** öffnende liegen. Am Ende muss der Stack leer sein.\n\nDeine drei Stolpersteine am 31.10.:\n\n- `open_plain[-1]` auf leerem Stack → IndexError bei `\")\"` (#0–2)\n- ein Stack pro Klammertyp: die Reihenfolge zwischen den Typen geht verloren, `\"[(])\"` liefert True (#3–4)\n- `return True` ohne Leer-Check: `\"(\"` liefert True (#5)",
+   "front_html": "<p>Valid Parentheses mit <strong>einem</strong> Stack: Was passiert bei einer schließenden Klammer, und was muss am Ende gelten?</p>",
+   "back_html": "<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">pairs</span> <span class=\"o\">=</span> <span class=\"p\">{</span><span class=\"s2\">\")\"</span><span class=\"p\">:</span> <span class=\"s2\">\"(\"</span><span class=\"p\">,</span> <span class=\"s2\">\"]\"</span><span class=\"p\">:</span> <span class=\"s2\">\"[\"</span><span class=\"p\">,</span> <span class=\"s2\">\"}\"</span><span class=\"p\">:</span> <span class=\"s2\">\"{\"</span><span class=\"p\">}</span>\n<span class=\"n\">stack</span> <span class=\"o\">=</span> <span class=\"p\">[]</span>\n<span class=\"k\">for</span> <span class=\"n\">c</span> <span class=\"ow\">in</span> <span class=\"n\">s</span><span class=\"p\">:</span>\n    <span class=\"k\">if</span> <span class=\"n\">c</span> <span class=\"ow\">in</span> <span class=\"n\">pairs</span><span class=\"p\">:</span>\n        <span class=\"k\">if</span> <span class=\"ow\">not</span> <span class=\"n\">stack</span> <span class=\"ow\">or</span> <span class=\"n\">stack</span><span class=\"o\">.</span><span class=\"n\">pop</span><span class=\"p\">()</span> <span class=\"o\">!=</span> <span class=\"n\">pairs</span><span class=\"p\">[</span><span class=\"n\">c</span><span class=\"p\">]:</span>\n            <span class=\"k\">return</span> <span class=\"kc\">False</span>\n    <span class=\"k\">else</span><span class=\"p\">:</span>\n        <span class=\"n\">stack</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span class=\"n\">c</span><span class=\"p\">)</span>\n<span class=\"k\">return</span> <span class=\"ow\">not</span> <span class=\"n\">stack</span>\n</code></pre></div>\n\n<p>Schließende Klammer: Der Stack darf nicht leer sein, und oben muss die <strong>passende</strong> öffnende liegen. Am Ende muss der Stack leer sein.</p>\n<p>Deine drei Stolpersteine am 31.10.:</p>\n<ul>\n<li><code>open_plain[-1]</code> auf leerem Stack → IndexError bei <code>\")\"</code> (#0–2)</li>\n<li>ein Stack pro Klammertyp: die Reihenfolge zwischen den Typen geht verloren, <code>\"[(])\"</code> liefert True (#3–4)</li>\n<li><code>return True</code> ohne Leer-Check: <code>\"(\"</code> liefert True (#5)</li>\n</ul>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/validate-parentheses/submission-0.py\">validate-parentheses #0–2</a><span class=\"badge crash\">2× Crash</span> 31.10. · <code>open_plain[-1]</code> auf leerem Stack → IndexError bei <code>)</code>; #3 prüft <code>open_plain and ...</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/validate-parentheses/submission-3.py\">validate-parentheses #3–4</a><span class=\"badge fail\">2× falsch</span> 31.10. · ein Stack pro Klammertyp verliert die Reihenfolge zwischen den Typen → <code>[(])</code> liefert True</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/validate-parentheses/submission-5.py\">validate-parentheses #5</a><span class=\"badge fail\">falsch</span> 31.10. · am Ende nicht geprüft, ob der Stack leer ist → <code>(</code> liefert True; #6: <code>return len(stack) == 0</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/validate-parentheses/submission-6.py\">validate-parentheses #6</a><span class=\"badge pass\">ok</span> 31.10.</li></ul>",
+   "last_evidence": "2026-10-31T22:55:30+00:00"
   },
   {
    "id": "str-lower-method",

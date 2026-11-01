@@ -1,7 +1,8 @@
 """One module per NeetCode problem: METHOD, COMPARE, reference(), CASES and random_case(rng).
 
 COMPARE is one of: exact | unordered (list order irrelevant) | groups (order of groups and inside
-groups irrelevant) | codec (decode(encode(x)) must equal x).
+groups irrelevant) | codec (decode(encode(x)) must equal x) | linked_list (the first argument is passed as
+a ListNode chain, the returned chain is compared as a list; write inputs and reference with plain lists).
 Fixed CASES and random cases must stay within the problem's constraints, otherwise correct
 submissions get flagged.
 """

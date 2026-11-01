@@ -18,7 +18,8 @@
     {"ref": "buy-and-sell-crypto#0-1", "snippet": "prices[p_l] -=1", "note": "verschiebt den Wert statt des Pointers: `p_l` und `p_r` bewegen sich nie → TIMEOUT"},
     {"ref": "longest-substring-without-duplicates#8", "snippet": "p = e + 1", "note": "`for e in s` liefert Zeichen, `e + 1` → TypeError. Eigener Kommentar: „iterieren über elements oder index?“"},
     {"ref": "longest-substring-without-duplicates#12-13", "snippet": "if i not in seen:", "note": "prüft den Index statt des Zeichens; #14 korrigiert die Prüfung, aber nicht das `add`"},
-    {"ref": "longest-substring-without-duplicates#12-16", "snippet": "seen.add(i)", "note": "Index statt Zeichen ins Set → kein Duplikat wird erkannt (got 7 bei `zxyzxyz`)"}
+    {"ref": "longest-substring-without-duplicates#12-16", "snippet": "seen.add(i)", "note": "Index statt Zeichen ins Set → kein Duplikat wird erkannt (got 7 bei `zxyzxyz`)"},
+    {"ref": "eating-bananas#0", "snippet": "for i in piles: needed_t = 0 needed_t += piles[i] // k", "note": "`for i in piles` liefert Stapelgrößen, `piles[i]` benutzt sie als Index → IndexError"}
    ]
   },
   {
@@ -73,7 +74,9 @@
     {"ref": "two-integer-sum-ii#0-1", "snippet": "numbers.get_index(diff)", "note": "Methode heißt `index`"},
     {"ref": "top-k-elements-in-list#9-10", "snippet": "for i in enumerate(k):", "note": "`enumerate` braucht ein Iterable; für k Wiederholungen `range(k)`"},
     {"ref": "duplicate-integer#1-2", "snippet": "return true", "note": "`True`/`False` werden großgeschrieben → NameError"},
-    {"ref": "max-water-container#1", "snippet": "for i in range(heights):", "note": "`range` braucht eine Zahl: `range(len(heights))`"}
+    {"ref": "max-water-container#1", "snippet": "for i in range(heights):", "note": "`range` braucht eine Zahl: `range(len(heights))`"},
+    {"ref": "reverse-a-linked-list#0-1", "snippet": "initial.append(head.value)", "note": "das Attribut heißt `val`"},
+    {"ref": "reverse-a-linked-list#7", "snippet": "while head.value != None:", "note": "wieder `value` statt `val`"}
    ]
   },
   {
@@ -137,7 +140,9 @@
     {"ref": "longest-substring-without-duplicates#0-3", "snippet": "sub.append(s)", "note": "hängt den ganzen String an statt des Zeichens; #4 korrigiert"},
     {"ref": "max-water-container#1-3", "snippet": "return h * l", "note": "gibt die Werte der letzten Runde zurück statt des besten Paars; #4 mit `final_h * final_l`"},
     {"ref": "max-water-container#6", "snippet": "if heights[l] < heights[r]:", "note": "Pointer heißen noch `i`/`p_l`, der Vergleich benutzt schon `l`/`r` → UnboundLocalError für `r`"},
-    {"ref": "max-water-container#7", "snippet": "l = r - l", "note": "die Breite überschreibt den linken Pointer `l`; #8 nennt sie `w`"}
+    {"ref": "max-water-container#7", "snippet": "l = r - l", "note": "die Breite überschreibt den linken Pointer `l`; #8 nennt sie `w`"},
+    {"ref": "reverse-a-linked-list#3", "snippet": "while p > 0:", "note": "Variable heißt `p_next`, die Bedingung benutzt `p` → NameError"},
+    {"ref": "reverse-a-linked-list#13", "snippet": "while curr != None:", "note": "Variable heißt `current`, die Bedingung benutzt `curr` → NameError; #14 korrigiert"}
    ]
   },
   {
@@ -166,7 +171,9 @@
     {"ref": "longest-consecutive-sequence#7-9", "snippet": "sub_seq_len = 0", "note": "Startelement nicht mitgezählt"},
     {"ref": "longest-consecutive-sequence#10", "snippet": "sub_seq_len = 0", "note": "Start mit 1, Reset aber auf 0 → nur die erste Sequenz stimmt"},
     {"ref": "string-encode-and-decode#13", "snippet": "j = i while j < int(l):", "note": "absoluter Index `j` gegen eine Länge verglichen"},
-    {"ref": "longest-repeating-substring-with-replacement#2-5", "snippet": "sub_len = 0", "note": "Startzeichen nicht mitgezählt; #6 startet mit 1"}
+    {"ref": "longest-repeating-substring-with-replacement#2-5", "snippet": "sub_len = 0", "note": "Startzeichen nicht mitgezählt; #6 startet mit 1"},
+    {"ref": "search-2d-matrix#11", "snippet": "matrix[row][len(matrix[0])]", "note": "letzter Index ist `len - 1` → IndexError"},
+    {"ref": "reverse-a-linked-list#10", "snippet": "p_next = len(initial) - 2", "note": "`initial` endet vor dem letzten Knoten, der als neuer Kopf dient; `len(initial) - 2` überspringt zusätzlich `initial[-1]` → `[3, 1, 0]`"}
    ]
   },
   {
@@ -176,7 +183,10 @@
    "occurrences": [
     {"ref": "longest-consecutive-sequence#3", "snippet": "return max(all_seq_lengths)", "note": "`max([])` → ValueError; #4 mit `default=0`"},
     {"ref": "valid-sudoku#5-6", "note": "Funktion endet ohne `return True` → `None`"},
-    {"ref": "binary-search#2-5", "snippet": "if len(nums)< 2: return 0", "note": "Ein-Element-Liste gibt immer 0 zurück, ohne `nums[0] == target` zu prüfen → `[5], -5` liefert 0 statt -1"}
+    {"ref": "binary-search#2-5", "snippet": "if len(nums)< 2: return 0", "note": "Ein-Element-Liste gibt immer 0 zurück, ohne `nums[0] == target` zu prüfen → `[5], -5` liefert 0 statt -1"},
+    {"ref": "search-2d-matrix#13-15", "note": "Schleife endet ohne `return` → `None`; #16 ergänzt `return False`"},
+    {"ref": "validate-parentheses#0-2", "snippet": "if open_plain[-1] == \"(\":", "note": "`open_plain[-1]` auf leerem Stack → IndexError bei `)`; #3 prüft `open_plain and ...`"},
+    {"ref": "validate-parentheses#5", "snippet": "return False return True", "note": "am Ende nicht geprüft, ob der Stack leer ist → `(` liefert True; #6: `return len(stack) == 0`"}
    ]
   },
   {
@@ -223,7 +233,8 @@
     {"ref": "longest-repeating-substring-with-replacement#0", "snippet": "while i < len(s):", "note": "`i` nie gesetzt → NameError"},
     {"ref": "max-water-container#5", "snippet": "while i < p_l:", "note": "Umbau von `for i in range(...)` zu `while`, `i = 0` fehlt → NameError"},
     {"ref": "max-water-container#1-2", "snippet": "p_l = len(heights) - 1 for i in range(", "note": "`p_l` wird nur einmal gesetzt; ab dem zweiten `i` läuft die innere Schleife nie wieder. #3 setzt ihn pro `i` neu"},
-    {"ref": "longest-substring-without-duplicates#12", "snippet": "for i, v in enumerate(s): seen = set() sub_len = 0", "note": "Set und Länge werden in jeder Runde neu angelegt → nie mehr als 1; #13 zieht sie vor die Schleife"}
+    {"ref": "longest-substring-without-duplicates#12", "snippet": "for i, v in enumerate(s): seen = set() sub_len = 0", "note": "Set und Länge werden in jeder Runde neu angelegt → nie mehr als 1; #13 zieht sie vor die Schleife"},
+    {"ref": "eating-bananas#0-1", "snippet": "for i in piles: needed_t = 0", "note": "`needed_t = 0` in der Schleife: am Ende zählt nur der letzte Stapel; #2 zieht es vor die Schleife"}
    ]
   },
   {
@@ -255,7 +266,8 @@
     {"ref": "max-water-container#0", "snippet": "return heights[h_i] * heights[l_i]", "note": "Höhe × Höhe statt Breite × kleinere Höhe; Kommentar: „das ist die idee“"},
     {"ref": "buy-and-sell-crypto#0-2", "snippet": "p_r = len(prices) - 1", "note": "Two Pointers von außen nach innen; der Kauf muss aber vor dem Verkauf liegen. #3: rechter Pointer läuft vorwärts, der linke springt auf jedes neue Tief"},
     {"ref": "longest-repeating-substring-with-replacement#2-5", "snippet": "if s[j+1] == s[j]:", "note": "vergleicht mit dem Vorgänger statt mit dem Zielzeichen des Fensters; #6 vergleicht mit `s[i]`"},
-    {"ref": "longest-repeating-substring-with-replacement#6", "snippet": "if s[j+1] == s[i]:", "note": "latent: Zielzeichen ist immer `s[i]`; bei `ABBB`, k = 1 wird das `A` nie ersetzt (3 statt 4). Richtig: Länge − häufigstes Zeichen ≤ k"}
+    {"ref": "longest-repeating-substring-with-replacement#6", "snippet": "if s[j+1] == s[i]:", "note": "latent: Zielzeichen ist immer `s[i]`; bei `ABBB`, k = 1 wird das `A` nie ersetzt (3 statt 4). Richtig: Länge − häufigstes Zeichen ≤ k"},
+    {"ref": "validate-parentheses#3-4", "snippet": "open_fancy.append(\"[\")", "note": "ein Stack pro Klammertyp verliert die Reihenfolge zwischen den Typen → `[(])` liefert True"}
    ]
   },
   {
@@ -267,7 +279,16 @@
     {"ref": "binary-search#2-6", "snippet": "i -= 1", "note": "läuft in Einerschritten statt zu halbieren, also O(n); #6 besteht so, verlangt ist O(log n)"},
     {"ref": "search-2d-matrix#1-2", "snippet": "mid -= 1", "note": "verschiebt `mid` statt einer Grenze, und `mid` kommt jede Runde neu aus `len(matrix)` → Endlosschleife (latent hinter dem float-Fehler); #3 setzt `r_row`/`l_row`"},
     {"ref": "search-2d-matrix#2-3", "snippet": "mid = (l_row - r_row) / 2", "note": "Differenz falsch herum → negativ"},
-    {"ref": "search-2d-matrix#4", "snippet": "mid = (r_row - l_row) / 2", "note": "halber Abstand ohne `l_row +`: die Mitte hängt nicht von `l_row` ab"}
+    {"ref": "search-2d-matrix#4", "snippet": "mid = (r_row - l_row) / 2", "note": "halber Abstand ohne `l_row +`: die Mitte hängt nicht von `l_row` ab"},
+    {"ref": "eating-bananas#0", "snippet": "k = min_try + (max_try - min_try)", "note": "`k = min_try + (max_try - min_try)` ohne `// 2` ist einfach `max_try`"},
+    {"ref": "eating-bananas#0-3", "snippet": "if needed_t <= h: return k", "note": "gibt das erste passende `k` zurück statt weiter links nach einem kleineren zu suchen; #4 kommentiert „das gibt nicht den minimalen zurück“"},
+    {"ref": "eating-bananas#7", "snippet": "min_try = k + 1 return k", "note": "gibt das `k` der letzten Runde zurück, das zu klein war (1 statt 2)"},
+    {"ref": "eating-bananas#8", "snippet": "return legit_k", "note": "`legit_k` wird nie aktualisiert → immer `max(piles)`"},
+    {"ref": "eating-bananas#9", "snippet": "legit_k = max_try max_try = k - 1", "note": "merkt sich die alte obere Grenze statt des gültigen `k`; #10: `legit_k = k`"},
+    {"ref": "search-2d-matrix#11-12", "snippet": "col = l_col + (l_col + r_col) // 2", "note": "`(l_col + r_col) // 2` zusätzlich zu `l_col +` → Index zu groß, IndexError in #12"},
+    {"ref": "search-2d-matrix#13-16", "snippet": "col = l_col + (l_col - r_col) // 2", "note": "Differenz falsch herum → negativer Index, wie am 28.10. (#2–3); #17 korrigiert zu `(r_col - l_col)`"},
+    {"ref": "search-2d-matrix#11-14", "snippet": "r_col = r_col - 1", "note": "Grenze in Einerschritten statt auf `col - 1` → lineare Suche; #15 korrigiert"},
+    {"ref": "search-2d-matrix#12-13", "snippet": "target < matrix[row][len(matrix[0])-1]", "note": "latent: liegt das Ziel innerhalb der Zeile, wird `up_row` trotzdem weitergeschoben; #14 prüft nur noch `target > matrix[row][-1]`"}
    ]
   },
   {
@@ -277,6 +298,35 @@
    "occurrences": [
     {"ref": "search-2d-matrix#1", "snippet": "mid = len(matrix) / 2", "note": "`len(matrix) / 2` ist ein float"},
     {"ref": "search-2d-matrix#1-4", "snippet": "if target == matrix[mid][0]:", "note": "alle vier Versuche crashen hier: `mid` ist ein float → TypeError: list indices must be integers"}
+   ]
+  },
+  {
+   "id": "ceil-division",
+   "title": "Aufrunden mit Ganzzahlen",
+   "rule": "`a // k` rundet ab. Aufrunden: `(a + k - 1) // k` mit Klammern um den Zähler, oder `math.ceil(a / k)`. `//` bindet stärker als `+`.",
+   "occurrences": [
+    {"ref": "eating-bananas#1-2", "snippet": "needed_t += i // k", "note": "rundet ab: 25 Bananen bei k = 13 ergibt 1 statt 2 Stunden"},
+    {"ref": "eating-bananas#3-6", "snippet": "needed_t += i + (k-1) // k", "note": "ohne Klammern: `i + ((k-1) // k)` ist `i + 0` → Stunden = Summe aller Bananen; #7 klammert `(i + (k-1)) // k`"}
+   ]
+  },
+  {
+   "id": "linked-list-nodes",
+   "title": "Linked List: Knoten, Wert und `None`",
+   "rule": "`node.val` ist der Wert, `node.next` der nächste Knoten oder `None`. Einen neuen Knoten gibt es nur mit `ListNode(v)`; das Ende ist `None`, nicht `[]`.",
+   "occurrences": [
+    {"ref": "reverse-a-linked-list#0", "snippet": "while head.next != []:", "note": "das Ende der Liste ist `None`, nicht `[]`"},
+    {"ref": "reverse-a-linked-list#4-5", "snippet": "head.next = p_next", "note": "Index `p_next` als nächster Knoten → int statt ListNode"},
+    {"ref": "reverse-a-linked-list#6-9", "snippet": "head.next = initial[p_next]", "note": "Wert statt Knoten; #10 baut `ListNode(initial[p_next])`"},
+    {"ref": "reverse-a-linked-list#8-9", "snippet": "while head.val != None:", "note": "prüft den Wert statt den Knoten: am Ende ist `head` selbst `None` → AttributeError"}
+   ]
+  },
+  {
+   "id": "return-type",
+   "title": "Rückgabetyp passt nicht zur Signatur",
+   "rule": "Die Signatur sagt, was zurückkommt: `-> Optional[ListNode]` heißt Knoten oder `None`. Keine Python-Liste, kein Iterator wie `reversed(...)`.",
+   "occurrences": [
+    {"ref": "reverse-a-linked-list#2", "snippet": "return reversed(initial)", "note": "`reversed()` liefert einen Iterator über die Werte, keine Linked List"},
+    {"ref": "reverse-a-linked-list#0-11", "snippet": "if head == None: return []", "note": "leere Liste ist `None`, nicht `[]`; scheitert in #11, #12 korrigiert"}
    ]
   }
  ],
@@ -293,7 +343,12 @@
   {"ref": "longest-substring-without-duplicates#8", "text": "war for i in s iterieren über elements oder index?", "topic": "`for x in s` liefert Elemente"},
   {"ref": "longest-substring-without-duplicates#8", "text": "muss mans am ende der while schleife immer haben?", "topic": "`continue` am Ende des Schleifenkörpers"},
   {"ref": "longest-substring-without-duplicates#9", "text": "wird bei for i dann zurückgesetzt bei i + 1 ?", "topic": "Was pro Runde neu gesetzt wird"},
-  {"ref": "longest-substring-without-duplicates#12", "text": "alles vor dem letzten vorkommen weg tun...wie ging das bloss", "topic": "Fenster bis hinter das Duplikat schrumpfen"}
+  {"ref": "longest-substring-without-duplicates#12", "text": "alles vor dem letzten vorkommen weg tun...wie ging das bloss", "topic": "Fenster bis hinter das Duplikat schrumpfen"},
+  {"ref": "eating-bananas#2", "text": "rundet wohl ab", "topic": "`//` rundet ab"},
+  {"ref": "eating-bananas#3", "text": "der ganzzahl trick", "topic": "Aufrunden mit `(a + k - 1) // k`"},
+  {"ref": "eating-bananas#4", "text": "das gibt nicht den minimalen zurück", "topic": "Binary Search auf das kleinste gültige k"},
+  {"ref": "reverse-a-linked-list#3-9", "text": "ist glaube ich falsch", "topic": "`head.val` überschreiben statt Knoten umhängen"},
+  {"ref": "validate-parentheses#9", "text": "trick lernen!", "topic": "Klammerpaare per `replace` entfernen"}
  ],
  "patterns": [
   {"problem": "two-integer-sum", "pattern": "Hashmap: Komplement nachschlagen", "solved": "two-integer-sum#35", "note": "29 von 33 Versuchen mit `in nums`/`index()`, also O(n²); die Hashmap stand schon in #0"},
@@ -311,6 +366,10 @@
   {"problem": "max-water-container", "pattern": "Two Pointers: die kleinere Seite nach innen", "solved": "max-water-container#8", "note": "#4 bestand schon mit O(n²) über alle Paare"},
   {"problem": "buy-and-sell-crypto", "pattern": "Laufendes Minimum (Sliding Window)", "solved": "buy-and-sell-crypto#3"},
   {"problem": "longest-substring-without-duplicates", "pattern": "Sliding Window mit Set", "solved": "longest-substring-without-duplicates#21", "note": "am 26.10. mit Liste und Slicing gelöst (#7), am 27.10. mit Set in 14 Versuchen neu"},
-  {"problem": "binary-search", "pattern": "Binary Search: halbieren mit l, r, mid", "solved": "binary-search#6", "note": "#6 besteht, läuft aber in Einerschritten von der Mitte, also O(n); echtes Halbieren steht noch aus"}
+  {"problem": "binary-search", "pattern": "Binary Search: halbieren mit l, r, mid", "solved": "binary-search#6", "note": "#6 besteht, läuft aber in Einerschritten von der Mitte, also O(n); echtes Halbieren steht noch aus"},
+  {"problem": "eating-bananas", "pattern": "Binary Search auf die Antwort: kleinstes k mit Stunden ≤ h", "solved": "eating-bananas#10"},
+  {"problem": "reverse-a-linked-list", "pattern": "prev/curr umhängen, in place", "solved": "reverse-a-linked-list#14", "note": "#12 mit Hilfsliste, also O(n) Speicher"},
+  {"problem": "search-2d-matrix", "pattern": "Binary Search erst über Zeilen, dann in der Zeile", "solved": "search-2d-matrix#17"},
+  {"problem": "validate-parentheses", "pattern": "Stack: öffnende Klammern pushen, beim Schließen das oberste vergleichen", "solved": "validate-parentheses#6", "note": "#9 mit `replace`-Trick, O(n²)"}
  ]
 }
