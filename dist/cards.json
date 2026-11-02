@@ -32,15 +32,15 @@
  },
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "57c3f5413aa89fd8633813aef9c29e69a072ddbf",
-  "head_date": "2026-10-31T23:21:43+00:00"
+  "head": "8bdedf6c6267bd3738a7274553cf2f74a8f27ff9",
+  "head_date": "2026-11-01T22:17:48+00:00"
  },
  "stats": {
-  "submissions": 263,
+  "submissions": 284,
   "statuses": {
-   "WRONG_ANSWER": 97,
-   "PASS": 87,
-   "RUNTIME_ERROR": 65,
+   "WRONG_ANSWER": 103,
+   "PASS": 93,
+   "RUNTIME_ERROR": 74,
    "TIMEOUT": 10,
    "LOAD_ERROR": 4
   }
@@ -158,22 +158,24 @@
    "id": "wrong-variable",
    "title": "Falsche Variable: Copy-Paste, Shadowing, Tippfehler",
    "rule": "Nach Copy-Paste jede Variable prüfen. Input-Parameter nie überschreiben. Nach dem Sortieren nur noch die sortierte Liste benutzen, am einfachsten `nums.sort()` in place.",
-   "submissions": 27,
+   "submissions": 29,
    "problems": [
     "anagram-groups",
     "binary-search",
+    "daily-temperatures",
     "duplicate-integer",
     "is-anagram",
     "longest-consecutive-sequence",
     "longest-substring-without-duplicates",
     "max-water-container",
+    "minimum-stack",
     "products-of-array-discluding-self",
     "reverse-a-linked-list",
     "three-integer-sum",
     "top-k-elements-in-list",
     "two-integer-sum"
    ],
-   "last_seen": "2026-10-31"
+   "last_seen": "2026-11-01"
   },
   {
    "id": "duplicates-order",
@@ -203,15 +205,16 @@
    "id": "edge-cases",
    "title": "Randfälle & Rückgabewerte",
    "rule": "Leere Eingabe, ein Element und Duplikate durchspielen. Jeder Pfad braucht ein `return`, sonst kommt `None` zurück.",
-   "submissions": 13,
+   "submissions": 14,
    "problems": [
     "binary-search",
     "longest-consecutive-sequence",
+    "minimum-stack",
     "search-2d-matrix",
     "valid-sudoku",
     "validate-parentheses"
    ],
-   "last_seen": "2026-10-31"
+   "last_seen": "2026-11-01"
   },
   {
    "id": "skip-irrelevant",
@@ -292,14 +295,15 @@
    "id": "problem-model",
    "title": "Aufgabe falsch modelliert",
    "rule": "Vor dem Code die Zielgröße als Formel aufschreiben und am Beispiel nachrechnen: Wasser = Breite × kleinere Höhe, Gewinn = späterer minus früherer Preis, Fenster gültig, wenn Länge − häufigstes Zeichen ≤ k.",
-   "submissions": 10,
+   "submissions": 13,
    "problems": [
     "buy-and-sell-crypto",
     "longest-repeating-substring-with-replacement",
     "max-water-container",
+    "minimum-stack",
     "validate-parentheses"
    ],
-   "last_seen": "2026-10-31"
+   "last_seen": "2026-11-01"
   },
   {
    "id": "binary-search-mid",
@@ -347,11 +351,32 @@
    "id": "return-type",
    "title": "Rückgabetyp passt nicht zur Signatur",
    "rule": "Die Signatur sagt, was zurückkommt: `-> Optional[ListNode]` heißt Knoten oder `None`. Keine Python-Liste, kein Iterator wie `reversed(...)`.",
-   "submissions": 12,
+   "submissions": 19,
    "problems": [
+    "evaluate-reverse-polish-notation",
     "reverse-a-linked-list"
    ],
-   "last_seen": "2026-10-31"
+   "last_seen": "2026-11-01"
+  },
+  {
+   "id": "stack-ops",
+   "title": "Stack: lesen, entfernen, Reihenfolge",
+   "rule": "`b = stack.pop()`, dann `a = stack.pop()`: `pop()` liest und entfernt in einem Schritt, das zuerst geholte Element ist der rechte Operand. Nach `del xs[-1]` zeigt `xs[-2]` auf ein anderes Element als vorher.",
+   "submissions": 6,
+   "problems": [
+    "evaluate-reverse-polish-notation"
+   ],
+   "last_seen": "2026-11-01"
+  },
+  {
+   "id": "str-int",
+   "title": "Zahlen als Strings",
+   "rule": "Eingabe-Tokens sind Strings: `'2' + '1'` ist `'21'`, `'2' * '1'` ein TypeError. Beim Lesen einmal `int(t)` und nur Zahlen weiterverarbeiten.",
+   "submissions": 2,
+   "problems": [
+    "evaluate-reverse-polish-notation"
+   ],
+   "last_seen": "2026-11-01"
   }
  ],
  "cards": [
@@ -696,28 +721,34 @@
    ],
    "problems": [
     "binary-search",
+    "daily-temperatures",
+    "minimum-stack",
     "reverse-a-linked-list"
    ],
    "evidence": [
     "binary-search#0-1",
     "reverse-a-linked-list#3",
     "reverse-a-linked-list#13",
-    "reverse-a-linked-list#14"
+    "reverse-a-linked-list#14",
+    "minimum-stack#4",
+    "daily-temperatures#1"
    ],
    "tags": [
     "naming",
     "ncd::fehler::wrong-variable",
     "ncd::problem::binary-search",
+    "ncd::problem::daily-temperatures",
+    "ncd::problem::minimum-stack",
     "ncd::problem::reverse-a-linked-list",
     "ncd::typ::bug",
     "python"
    ],
    "front_md": "Wo crasht das, und mit welchem Fehler?\n\n```python\nprev, current = None, head\n\nwhile curr != None:\n    temp = current.next\n    current.next = prev\n    prev = current\n    current = temp\n\nreturn prev\n```",
-   "back_md": "Gleich in der Bedingung: `NameError: name 'curr' is not defined`. Die Variable heißt `current`.\n\nRegel: Nach dem Umbenennen oder Abtippen einer Lösung jeden Namen einmal gegen seine Definition lesen.\n\nDer gleiche Crash bei dir: `return i`, während der Index noch `mitte` hieß (Binary Search #0–1), und `while p > 0` statt `p_next` (Reverse Linked List #3).",
+   "back_md": "Gleich in der Bedingung: `NameError: name 'curr' is not defined`. Die Variable heißt `current`.\n\nRegel: Nach dem Umbenennen oder Abtippen einer Lösung jeden Namen einmal gegen seine Definition lesen.\n\nDer gleiche Crash bei dir: `return i`, während der Index noch `mitte` hieß (Binary Search #0–1), und `while p > 0` statt `p_next` (Reverse Linked List #3). Am 1.11. noch zweimal: `min(stack)` statt `self.stack` (Min Stack #4) und `v2`, das es nie gab (Daily Temperatures #1).",
    "front_html": "<p>Wo crasht das, und mit welchem Fehler?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">prev</span><span class=\"p\">,</span> <span class=\"n\">current</span> <span class=\"o\">=</span> <span class=\"kc\">None</span><span class=\"p\">,</span> <span class=\"n\">head</span>\n\n<span class=\"k\">while</span> <span class=\"n\">curr</span> <span class=\"o\">!=</span> <span class=\"kc\">None</span><span class=\"p\">:</span>\n    <span class=\"n\">temp</span> <span class=\"o\">=</span> <span class=\"n\">current</span><span class=\"o\">.</span><span class=\"n\">next</span>\n    <span class=\"n\">current</span><span class=\"o\">.</span><span class=\"n\">next</span> <span class=\"o\">=</span> <span class=\"n\">prev</span>\n    <span class=\"n\">prev</span> <span class=\"o\">=</span> <span class=\"n\">current</span>\n    <span class=\"n\">current</span> <span class=\"o\">=</span> <span class=\"n\">temp</span>\n\n<span class=\"k\">return</span> <span class=\"n\">prev</span>\n</code></pre></div>",
-   "back_html": "<p>Gleich in der Bedingung: <code>NameError: name 'curr' is not defined</code>. Die Variable heißt <code>current</code>.</p>\n<p>Regel: Nach dem Umbenennen oder Abtippen einer Lösung jeden Namen einmal gegen seine Definition lesen.</p>\n<p>Der gleiche Crash bei dir: <code>return i</code>, während der Index noch <code>mitte</code> hieß (Binary Search #0–1), und <code>while p &gt; 0</code> statt <code>p_next</code> (Reverse Linked List #3).</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/binary-search/submission-0.py\">binary-search #0–1</a><span class=\"badge crash\">2× Crash</span> 28.10. · Index heißt <code>mitte</code>, zurückgegeben wird <code>i</code> → NameError; #2 benennt <code>mitte</code> in <code>i</code> um</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-3.py\">reverse-a-linked-list #3</a><span class=\"badge crash\">Crash</span> 31.10. · Variable heißt <code>p_next</code>, die Bedingung benutzt <code>p</code> → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-13.py\">reverse-a-linked-list #13</a><span class=\"badge crash\">Crash</span> 31.10. · Variable heißt <code>current</code>, die Bedingung benutzt <code>curr</code> → NameError; #14 korrigiert</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-14.py\">reverse-a-linked-list #14</a><span class=\"badge pass\">ok</span> 31.10.</li></ul>",
-   "last_evidence": "2026-10-31T19:33:09+00:00"
+   "back_html": "<p>Gleich in der Bedingung: <code>NameError: name 'curr' is not defined</code>. Die Variable heißt <code>current</code>.</p>\n<p>Regel: Nach dem Umbenennen oder Abtippen einer Lösung jeden Namen einmal gegen seine Definition lesen.</p>\n<p>Der gleiche Crash bei dir: <code>return i</code>, während der Index noch <code>mitte</code> hieß (Binary Search #0–1), und <code>while p &gt; 0</code> statt <code>p_next</code> (Reverse Linked List #3). Am 1.11. noch zweimal: <code>min(stack)</code> statt <code>self.stack</code> (Min Stack #4) und <code>v2</code>, das es nie gab (Daily Temperatures #1).</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/binary-search/submission-0.py\">binary-search #0–1</a><span class=\"badge crash\">2× Crash</span> 28.10. · Index heißt <code>mitte</code>, zurückgegeben wird <code>i</code> → NameError; #2 benennt <code>mitte</code> in <code>i</code> um</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-3.py\">reverse-a-linked-list #3</a><span class=\"badge crash\">Crash</span> 31.10. · Variable heißt <code>p_next</code>, die Bedingung benutzt <code>p</code> → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-13.py\">reverse-a-linked-list #13</a><span class=\"badge crash\">Crash</span> 31.10. · Variable heißt <code>current</code>, die Bedingung benutzt <code>curr</code> → NameError; #14 korrigiert</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-14.py\">reverse-a-linked-list #14</a><span class=\"badge pass\">ok</span> 31.10.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/minimum-stack/submission-4.py\">minimum-stack #4</a><span class=\"badge crash\">Crash</span> 01.11. · <code>stack</code> statt <code>self.stack</code> → NameError; #5 korrigiert</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/daily-temperatures/submission-1.py\">daily-temperatures #1</a><span class=\"badge crash\">Crash</span> 01.11. · <code>v2</code> wird nie definiert → NameError; #2 schreibt <code>temperatures[j]</code></li></ul>",
+   "last_evidence": "2026-11-01T22:10:29+00:00"
   },
   {
    "id": "bug-shadowing-input",
@@ -925,6 +956,31 @@
    "last_evidence": "2026-10-27T11:33:40+00:00"
   },
   {
+   "id": "daily-temps-monotonic-stack",
+   "guid": "eDDV^7w@T;",
+   "type": "trace",
+   "type_label": "Trace",
+   "mistakes": [],
+   "problems": [
+    "daily-temperatures"
+   ],
+   "evidence": [
+    "daily-temperatures#2",
+    "daily-temperatures#3"
+   ],
+   "tags": [
+    "ncd::problem::daily-temperatures",
+    "ncd::typ::trace",
+    "stack"
+   ],
+   "front_md": "Daily Temperatures mit Stack, `[30, 38, 30, 36, 35, 40, 28]`. Bei `i = 5` (40) liegen die Indizes `1, 3, 4` auf dem Stack. Was passiert jetzt?\n\n```viz\nkind: array\nvalues: [30, 38, 30, 36, 35, 40, 28]\npointers: {i: 5}\nhighlight: [1, 3, 4]\ncaption: \"auf dem Stack: Tage, die noch auf einen wärmeren warten\"\n```",
+   "back_md": "Solange oben ein **kälterer** Tag liegt, wird er herausgenommen und bekommt seine Antwort `i - j`: Index 4 → 1, Index 3 → 2, Index 1 → 4. Dann kommt 5 selbst auf den Stack.\n\n```python\nresult = [0] * len(temperatures)\nwaiting = []\nfor i, v in enumerate(temperatures):\n    while waiting and v > temperatures[waiting[-1]]:\n        j = waiting.pop()\n        result[j] = i - j\n    waiting.append(i)\n```\n\nDie Temperaturen auf dem Stack fallen von unten nach oben (**monotoner Stack**). Jeder Index kommt einmal hinein und einmal heraus: O(n) statt O(n²) wie bei deinem Doppelschleifen-Ansatz (#2).",
+   "front_html": "<p>Daily Temperatures mit Stack, <code>[30, 38, 30, 36, 35, 40, 28]</code>. Bei <code>i = 5</code> (40) liegen die Indizes <code>1, 3, 4</code> auf dem Stack. Was passiert jetzt?</p>\n<div class=\"viz\"><svg width=\"346\" height=\"96\" viewBox=\"0 0 346 96\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"auf dem Stack: Tage, die noch auf einen wärmeren warten\"><rect x=\"12\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"35.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">30</text><text x=\"35.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><rect x=\"58\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"81.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">38</text><text x=\"81.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">1</text><rect x=\"104\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"127.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">30</text><text x=\"127.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><rect x=\"150\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"173.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">36</text><text x=\"173.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">3</text><rect x=\"196\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"219.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">35</text><text x=\"219.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">4</text><rect x=\"242\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"265.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">40</text><text x=\"265.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">5</text><rect x=\"288\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"311.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">28</text><text x=\"311.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">6</text><text x=\"265.0\" y=\"84\" class=\"ptr p2\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ i</text></svg><div class=\"cap\">auf dem Stack: Tage, die noch auf einen wärmeren warten</div></div>",
+   "back_html": "<p>Solange oben ein <strong>kälterer</strong> Tag liegt, wird er herausgenommen und bekommt seine Antwort <code>i - j</code>: Index 4 → 1, Index 3 → 2, Index 1 → 4. Dann kommt 5 selbst auf den Stack.</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">result</span> <span class=\"o\">=</span> <span class=\"p\">[</span><span class=\"mi\">0</span><span class=\"p\">]</span> <span class=\"o\">*</span> <span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">temperatures</span><span class=\"p\">)</span>\n<span class=\"n\">waiting</span> <span class=\"o\">=</span> <span class=\"p\">[]</span>\n<span class=\"k\">for</span> <span class=\"n\">i</span><span class=\"p\">,</span> <span class=\"n\">v</span> <span class=\"ow\">in</span> <span class=\"nb\">enumerate</span><span class=\"p\">(</span><span class=\"n\">temperatures</span><span class=\"p\">):</span>\n    <span class=\"k\">while</span> <span class=\"n\">waiting</span> <span class=\"ow\">and</span> <span class=\"n\">v</span> <span class=\"o\">&gt;</span> <span class=\"n\">temperatures</span><span class=\"p\">[</span><span class=\"n\">waiting</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">]]:</span>\n        <span class=\"n\">j</span> <span class=\"o\">=</span> <span class=\"n\">waiting</span><span class=\"o\">.</span><span class=\"n\">pop</span><span class=\"p\">()</span>\n        <span class=\"n\">result</span><span class=\"p\">[</span><span class=\"n\">j</span><span class=\"p\">]</span> <span class=\"o\">=</span> <span class=\"n\">i</span> <span class=\"o\">-</span> <span class=\"n\">j</span>\n    <span class=\"n\">waiting</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span class=\"n\">i</span><span class=\"p\">)</span>\n</code></pre></div>\n\n<p>Die Temperaturen auf dem Stack fallen von unten nach oben (<strong>monotoner Stack</strong>). Jeder Index kommt einmal hinein und einmal heraus: O(n) statt O(n²) wie bei deinem Doppelschleifen-Ansatz (#2).</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/daily-temperatures/submission-2.py\">daily-temperatures #2</a><span class=\"badge pass\">ok</span> 01.11.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/daily-temperatures/submission-3.py\">daily-temperatures #3</a><span class=\"badge pass\">ok</span> 01.11.</li></ul>",
+   "last_evidence": null
+  },
+  {
    "id": "defaultdict-factory",
    "guid": "d52W)Kpmro",
    "type": "gotcha",
@@ -984,6 +1040,38 @@
    "back_html": "<p>Nur <code>set()</code>.</p>\n<p><code>{}</code> ist ein leeres <strong>Dict</strong>, <code>()</code> ein leeres <strong>Tupel</strong>, <code>[]</code> eine leere <strong>Liste</strong>. Mit Inhalt ist <code>{1, 2}</code> zwar ein Set, aber leere geschweifte Klammern gehören dem Dict.</p>\n<p>Methoden: <code>seen.add(x)</code> beim Set, <code>xs.append(x)</code> bei der Liste. Dict und Tupel haben kein <code>add</code> → <code>AttributeError</code>. Dein Kommentar beim ersten Versuch: „ich glaube falsche syntax“.</p>",
    "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/valid-sudoku/submission-0.py\">valid-sudoku #0</a><span class=\"badge crash\">Crash</span> 18.10. · leeres Dict → AttributeError: 'dict' object has no attribute 'add'</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/valid-sudoku/submission-1.py\">valid-sudoku #1–4</a><span class=\"badge crash\">3× Crash</span><span class=\"badge fail\">falsch</span> 18.10. · leeres Tupel → AttributeError: 'tuple' object has no attribute 'add'</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/duplicate-integer/submission-1.py\">duplicate-integer #1</a><span class=\"badge crash\">Crash</span> · Liste mit Set-Methode benutzt</li></ul>",
    "last_evidence": "2026-10-18T09:04:38+00:00"
+  },
+  {
+   "id": "empty-stack-peek",
+   "guid": "o7[sA(cj*`",
+   "type": "gotcha",
+   "type_label": "Python-Gotcha",
+   "mistakes": [
+    "edge-cases"
+   ],
+   "problems": [
+    "minimum-stack",
+    "validate-parentheses"
+   ],
+   "evidence": [
+    "validate-parentheses#0-2",
+    "minimum-stack#6",
+    "minimum-stack#7"
+   ],
+   "tags": [
+    "edge-cases",
+    "ncd::fehler::edge-cases",
+    "ncd::problem::minimum-stack",
+    "ncd::problem::validate-parentheses",
+    "ncd::typ::gotcha",
+    "stack"
+   ],
+   "front_md": "Was passiert bei `stack[-1]`, wenn `stack` leer ist? Wie schreibst du den Vergleich mit dem obersten Element sicher?",
+   "back_md": "`IndexError: list index out of range`. Ein leerer Stack hat kein oberstes Element.\n\n```python\nif stack and stack[-1] == \"(\":\n    ...\n```\n\n`and` wertet von links aus: Ist `stack` leer, wird `stack[-1]` gar nicht mehr gelesen.\n\nZweimal bei dir: Valid Parentheses #0–2 (`open_plain[-1]` bei `\")\"`), Min Stack #6 (`self.min_stack[-1]` beim allerersten `push`, #7 prüft `if self.min_stack:`).",
+   "front_html": "<p>Was passiert bei <code>stack[-1]</code>, wenn <code>stack</code> leer ist? Wie schreibst du den Vergleich mit dem obersten Element sicher?</p>",
+   "back_html": "<p><code>IndexError: list index out of range</code>. Ein leerer Stack hat kein oberstes Element.</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">if</span> <span class=\"n\">stack</span> <span class=\"ow\">and</span> <span class=\"n\">stack</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">]</span> <span class=\"o\">==</span> <span class=\"s2\">\"(\"</span><span class=\"p\">:</span>\n    <span class=\"o\">...</span>\n</code></pre></div>\n\n<p><code>and</code> wertet von links aus: Ist <code>stack</code> leer, wird <code>stack[-1]</code> gar nicht mehr gelesen.</p>\n<p>Zweimal bei dir: Valid Parentheses #0–2 (<code>open_plain[-1]</code> bei <code>\")\"</code>), Min Stack #6 (<code>self.min_stack[-1]</code> beim allerersten <code>push</code>, #7 prüft <code>if self.min_stack:</code>).</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/validate-parentheses/submission-0.py\">validate-parentheses #0–2</a><span class=\"badge crash\">2× Crash</span> 31.10. · <code>open_plain[-1]</code> auf leerem Stack → IndexError bei <code>)</code>; #3 prüft <code>open_plain and ...</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/minimum-stack/submission-6.py\">minimum-stack #6</a><span class=\"badge crash\">Crash</span> 01.11. · beim ersten <code>push</code> ist <code>min_stack</code> leer → <code>[-1]</code> gibt IndexError; #7 prüft <code>if self.min_stack:</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/minimum-stack/submission-7.py\">minimum-stack #7</a><span class=\"badge pass\">ok</span> 01.11.</li></ul>",
+   "last_evidence": "2026-11-01T10:32:51+00:00"
   },
   {
    "id": "encode-length-prefix",
@@ -1220,22 +1308,25 @@
    "type_label": "Python-Gotcha",
    "mistakes": [],
    "problems": [
+    "daily-temperatures",
     "products-of-array-discluding-self"
    ],
    "evidence": [
-    "products-of-array-discluding-self#2"
+    "products-of-array-discluding-self#2",
+    "daily-temperatures#4"
    ],
    "tags": [
     "list",
+    "ncd::problem::daily-temperatures",
     "ncd::problem::products-of-array-discluding-self",
     "ncd::typ::gotcha",
     "python"
    ],
    "front_md": "Zwei Fragen aus deinem eigenen Code-Kommentar:\n\n1. Wie erzeugst du eine Liste der Länge `n` voller Einsen?\n2. Wie läufst du die Indizes **rückwärts** von `n - 1` bis `0`?",
-   "back_md": "1. `[1] * n`\n2. `for i in range(n - 1, -1, -1):`. Das Ende ist exklusiv, deshalb `-1` als Stopp, damit die `0` noch drankommt. Alternative: `for i in reversed(range(n)):`\n\nVorsicht bei 2D: `[[0] * m] * n` erzeugt n Verweise auf **dieselbe** Zeile. Richtig ist `[[0] * m for _ in range(n)]`.",
+   "back_md": "1. `[1] * n`\n2. `for i in range(n - 1, -1, -1):`. Das Ende ist exklusiv, deshalb `-1` als Stopp, damit die `0` noch drankommt. Alternative: `for i in reversed(range(n)):`\n\nAm 1.11. bei Daily Temperatures hast du `[0] * len(temperatures)` richtig geschrieben und dazu notiert: „anlegen von arrays einer bestimmten länge vergesse ich immer“.\n\nVorsicht bei 2D: `[[0] * m] * n` erzeugt n Verweise auf **dieselbe** Zeile. Richtig ist `[[0] * m for _ in range(n)]`.",
    "front_html": "<p>Zwei Fragen aus deinem eigenen Code-Kommentar:</p>\n<ol>\n<li>Wie erzeugst du eine Liste der Länge <code>n</code> voller Einsen?</li>\n<li>Wie läufst du die Indizes <strong>rückwärts</strong> von <code>n - 1</code> bis <code>0</code>?</li>\n</ol>",
-   "back_html": "<ol>\n<li><code>[1] * n</code></li>\n<li><code>for i in range(n - 1, -1, -1):</code>. Das Ende ist exklusiv, deshalb <code>-1</code> als Stopp, damit die <code>0</code> noch drankommt. Alternative: <code>for i in reversed(range(n)):</code></li>\n</ol>\n<p>Vorsicht bei 2D: <code>[[0] * m] * n</code> erzeugt n Verweise auf <strong>dieselbe</strong> Zeile. Richtig ist <code>[[0] * m for _ in range(n)]</code>.</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/products-of-array-discluding-self/submission-2.py\">products-of-array-discluding-self #2</a><span class=\"badge fail\">falsch</span> 17.10. · <code>erwartet [48, 24, 12, 8], bekommen []</code></li></ul>",
+   "back_html": "<ol>\n<li><code>[1] * n</code></li>\n<li><code>for i in range(n - 1, -1, -1):</code>. Das Ende ist exklusiv, deshalb <code>-1</code> als Stopp, damit die <code>0</code> noch drankommt. Alternative: <code>for i in reversed(range(n)):</code></li>\n</ol>\n<p>Am 1.11. bei Daily Temperatures hast du <code>[0] * len(temperatures)</code> richtig geschrieben und dazu notiert: „anlegen von arrays einer bestimmten länge vergesse ich immer“.</p>\n<p>Vorsicht bei 2D: <code>[[0] * m] * n</code> erzeugt n Verweise auf <strong>dieselbe</strong> Zeile. Richtig ist <code>[[0] * m for _ in range(n)]</code>.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/products-of-array-discluding-self/submission-2.py\">products-of-array-discluding-self #2</a><span class=\"badge fail\">falsch</span> 17.10. · <code>erwartet [48, 24, 12, 8], bekommen []</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/daily-temperatures/submission-4.py\">daily-temperatures #4</a><span class=\"badge pass\">ok</span> 01.11.</li></ul>",
    "last_evidence": "2026-10-17T08:25:25+00:00"
   },
   {
@@ -1398,6 +1489,35 @@
    "last_evidence": "2026-10-16T12:04:26+00:00"
   },
   {
+   "id": "min-stack-pattern",
+   "guid": "M>j(r.eD$!",
+   "type": "pattern",
+   "type_label": "Pattern",
+   "mistakes": [
+    "problem-model"
+   ],
+   "problems": [
+    "minimum-stack"
+   ],
+   "evidence": [
+    "minimum-stack#1-3",
+    "minimum-stack#5",
+    "minimum-stack#7"
+   ],
+   "tags": [
+    "ncd::fehler::problem-model",
+    "ncd::problem::minimum-stack",
+    "ncd::typ::pattern",
+    "stack"
+   ],
+   "front_md": "Min Stack mit `getMin` in O(1): Was speicherst du zusätzlich? Und warum reicht ein Set der gesehenen Werte nicht?",
+   "back_md": "Einen zweiten Stack, der auf jeder Ebene das **Minimum bis dahin** hält:\n\n```python\ndef push(self, val):\n    self.stack.append(val)\n    self.min_stack.append(min(val, self.min_stack[-1]) if self.min_stack else val)\n\ndef pop(self):\n    self.stack.pop()\n    self.min_stack.pop()\n\ndef getMin(self):\n    return self.min_stack[-1]\n```\n\nMit `pop` verschwindet auch das Minimum dieser Ebene, darunter liegt automatisch das alte.\n\nDas Set (#1–3) vergisst nichts: Nach `push 1, 2, 0` und `pop` liefert `min(self.seen)` weiter 0 statt 1. Doppelte Werte zählt es außerdem nur einmal. #5 bestand mit `min(self.stack)`, das ist aber O(n) pro Aufruf.",
+   "front_html": "<p>Min Stack mit <code>getMin</code> in O(1): Was speicherst du zusätzlich? Und warum reicht ein Set der gesehenen Werte nicht?</p>",
+   "back_html": "<p>Einen zweiten Stack, der auf jeder Ebene das <strong>Minimum bis dahin</strong> hält:</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">def</span><span class=\"w\"> </span><span class=\"nf\">push</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">,</span> <span class=\"n\">val</span><span class=\"p\">):</span>\n    <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">stack</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span class=\"n\">val</span><span class=\"p\">)</span>\n    <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">min_stack</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span class=\"nb\">min</span><span class=\"p\">(</span><span class=\"n\">val</span><span class=\"p\">,</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">min_stack</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">])</span> <span class=\"k\">if</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">min_stack</span> <span class=\"k\">else</span> <span class=\"n\">val</span><span class=\"p\">)</span>\n\n<span class=\"k\">def</span><span class=\"w\"> </span><span class=\"nf\">pop</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n    <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">stack</span><span class=\"o\">.</span><span class=\"n\">pop</span><span class=\"p\">()</span>\n    <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">min_stack</span><span class=\"o\">.</span><span class=\"n\">pop</span><span class=\"p\">()</span>\n\n<span class=\"k\">def</span><span class=\"w\"> </span><span class=\"nf\">getMin</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n    <span class=\"k\">return</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">min_stack</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">]</span>\n</code></pre></div>\n\n<p>Mit <code>pop</code> verschwindet auch das Minimum dieser Ebene, darunter liegt automatisch das alte.</p>\n<p>Das Set (#1–3) vergisst nichts: Nach <code>push 1, 2, 0</code> und <code>pop</code> liefert <code>min(self.seen)</code> weiter 0 statt 1. Doppelte Werte zählt es außerdem nur einmal. #5 bestand mit <code>min(self.stack)</code>, das ist aber O(n) pro Aufruf.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/minimum-stack/submission-1.py\">minimum-stack #1–3</a><span class=\"badge fail\">3× falsch</span> 01.11. · ein Set kennt keine Reihenfolge und keine Duplikate, und <code>pop</code> nimmt nichts heraus → nach <code>pop</code> der 0 liefert <code>getMin</code> weiter 0 statt 1</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/minimum-stack/submission-5.py\">minimum-stack #5</a><span class=\"badge pass\">ok</span> 01.11.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/minimum-stack/submission-7.py\">minimum-stack #7</a><span class=\"badge pass\">ok</span> 01.11.</li></ul>",
+   "last_evidence": "2026-11-01T10:23:48+00:00"
+  },
+  {
    "id": "missing-return",
    "guid": "u8YrkpVkdP",
    "type": "gotcha",
@@ -1421,9 +1541,9 @@
     "python"
    ],
    "front_md": "Was gibt eine Python-Funktion zurück, die ohne `return` am Ende ankommt? Und warum ist das bei `isValidSudoku` ein Fehler?",
-   "back_md": "`None`. Der Judge erwartet `True` für ein gültiges Board, und `None` ist nicht `True`. Das Ergebnis ist also falsch, obwohl alle Prüfungen korrekt durchlaufen.\n\nBei Search 2D Matrix (#13–15) genauso: Die Suche lief durch, ohne zu treffen, nach der Schleife fehlte `return False`, zurück kam `None`.\n\nCheck vor dem Abschicken: Endet **jeder** Pfad mit einem `return` des richtigen Typs?",
+   "back_md": "`None`. Der Judge erwartet `True` für ein gültiges Board, und `None` ist nicht `True`. Das Ergebnis ist also falsch, obwohl alle Prüfungen korrekt durchlaufen.\n\nBei Search 2D Matrix (#13–15) genauso: Die Suche lief durch, ohne zu treffen, nach der Schleife fehlte `return False`, zurück kam `None`.\n\nUmgekehrt braucht eine Methode mit `-> None` (Min Stack `pop`) kein `return None` am Ende. Das war deine Frage „muss das hin?“\n\nCheck vor dem Abschicken: Endet **jeder** Pfad mit einem `return` des richtigen Typs?",
    "front_html": "<p>Was gibt eine Python-Funktion zurück, die ohne <code>return</code> am Ende ankommt? Und warum ist das bei <code>isValidSudoku</code> ein Fehler?</p>",
-   "back_html": "<p><code>None</code>. Der Judge erwartet <code>True</code> für ein gültiges Board, und <code>None</code> ist nicht <code>True</code>. Das Ergebnis ist also falsch, obwohl alle Prüfungen korrekt durchlaufen.</p>\n<p>Bei Search 2D Matrix (#13–15) genauso: Die Suche lief durch, ohne zu treffen, nach der Schleife fehlte <code>return False</code>, zurück kam <code>None</code>.</p>\n<p>Check vor dem Abschicken: Endet <strong>jeder</strong> Pfad mit einem <code>return</code> des richtigen Typs?</p>",
+   "back_html": "<p><code>None</code>. Der Judge erwartet <code>True</code> für ein gültiges Board, und <code>None</code> ist nicht <code>True</code>. Das Ergebnis ist also falsch, obwohl alle Prüfungen korrekt durchlaufen.</p>\n<p>Bei Search 2D Matrix (#13–15) genauso: Die Suche lief durch, ohne zu treffen, nach der Schleife fehlte <code>return False</code>, zurück kam <code>None</code>.</p>\n<p>Umgekehrt braucht eine Methode mit <code>-&gt; None</code> (Min Stack <code>pop</code>) kein <code>return None</code> am Ende. Das war deine Frage „muss das hin?“</p>\n<p>Check vor dem Abschicken: Endet <strong>jeder</strong> Pfad mit einem <code>return</code> des richtigen Typs?</p>",
    "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/valid-sudoku/submission-5.py\">valid-sudoku #5–6</a><span class=\"badge fail\">2× falsch</span> 18.10. · Funktion endet ohne <code>return True</code> → <code>None</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/search-2d-matrix/submission-13.py\">search-2d-matrix #13–15</a><span class=\"badge fail\">3× falsch</span> 31.10. · Schleife endet ohne <code>return</code> → <code>None</code>; #16 ergänzt <code>return False</code></li></ul>",
    "last_evidence": "2026-10-31T16:33:54+00:00"
   },
@@ -1542,6 +1662,38 @@
    "back_html": "<p><strong>n − 1</strong> Mal (c = 0 … n − 2), also ein Zeichen zu wenig. <code>&lt;</code> schließt die Grenze schon aus, das <code>- 1</code> zieht ein zweites Mal ab.</p>\n<p>Genau n Mal: <code>while c &lt; n</code> oder <code>for _ in range(n)</code>. Noch einfacher per Slice: <code>word = s[i:i + n]</code>, dann <code>i += n</code>.</p>\n<p>Dein Kommentar dazu: „&lt; sorgt schon für kleiner, typisches leichtsinnsfehler“.</p>",
    "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/string-encode-and-decode/submission-10.py\">string-encode-and-decode #10–11</a><span class=\"badge crash\">2× Crash</span> 16.10. · liest ein Zeichen zu wenig</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/string-encode-and-decode/submission-12.py\">string-encode-and-decode #12</a><span class=\"badge pass\">ok</span> 16.10.</li></ul>",
    "last_evidence": "2026-10-16T20:52:26+00:00"
+  },
+  {
+   "id": "return-type-signature",
+   "guid": "N&@8gltZfn",
+   "type": "concept",
+   "type_label": "Konzept",
+   "mistakes": [
+    "return-type"
+   ],
+   "problems": [
+    "evaluate-reverse-polish-notation",
+    "reverse-a-linked-list"
+   ],
+   "evidence": [
+    "reverse-a-linked-list#2",
+    "reverse-a-linked-list#0-11",
+    "evaluate-reverse-polish-notation#1-6",
+    "evaluate-reverse-polish-notation#9"
+   ],
+   "tags": [
+    "ncd::fehler::return-type",
+    "ncd::problem::evaluate-reverse-polish-notation",
+    "ncd::problem::reverse-a-linked-list",
+    "ncd::typ::concept",
+    "python"
+   ],
+   "front_md": "`def evalRPN(self, tokens) -> int:`. Dein Stack am Ende ist `[5]`. Was gibst du zurück, und was kommt bei `return stack` heraus?",
+   "back_md": "`return stack[-1]` (oder `stack.pop()`), also die Zahl 5. `return stack` liefert die Liste `[5]`, und `[5] != 5`.\n\nDie Signatur sagt, was zurückkommt. Vor dem Abschicken das `return` gegen `-> ...` lesen:\n\n- Evaluate RPN: ganzer Stack zurück (#2, #9: `[5]`)\n- Reverse Linked List, `-> Optional[ListNode]`: `reversed(initial)` ist ein Iterator (#2), `return []` für die leere Liste statt `None` (#11)",
+   "front_html": "<p><code>def evalRPN(self, tokens) -&gt; int:</code>. Dein Stack am Ende ist <code>[5]</code>. Was gibst du zurück, und was kommt bei <code>return stack</code> heraus?</p>",
+   "back_html": "<p><code>return stack[-1]</code> (oder <code>stack.pop()</code>), also die Zahl 5. <code>return stack</code> liefert die Liste <code>[5]</code>, und <code>[5] != 5</code>.</p>\n<p>Die Signatur sagt, was zurückkommt. Vor dem Abschicken das <code>return</code> gegen <code>-&gt; ...</code> lesen:</p>\n<ul>\n<li>Evaluate RPN: ganzer Stack zurück (#2, #9: <code>[5]</code>)</li>\n<li>Reverse Linked List, <code>-&gt; Optional[ListNode]</code>: <code>reversed(initial)</code> ist ein Iterator (#2), <code>return []</code> für die leere Liste statt <code>None</code> (#11)</li>\n</ul>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-2.py\">reverse-a-linked-list #2</a><span class=\"badge fail\">falsch</span> 31.10. · <code>reversed()</code> liefert einen Iterator über die Werte, keine Linked List</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-0.py\">reverse-a-linked-list #0–11</a><span class=\"badge crash\">8× Crash</span><span class=\"badge fail\">4× falsch</span> 31.10. · leere Liste ist <code>None</code>, nicht <code>[]</code>; scheitert in #11, #12 korrigiert</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-1.py\">evaluate-reverse-polish-notation #1–6</a><span class=\"badge crash\">5× Crash</span><span class=\"badge fail\">falsch</span> 01.11. · gibt den ganzen Stack zurück statt der Zahl (#2: <code>['1', '2', 3, '3', 9, '4', -5]</code>)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-9.py\">evaluate-reverse-polish-notation #9</a><span class=\"badge fail\">falsch</span> 01.11. · wieder der ganze Stack: <code>[5]</code> statt 5; #10 <code>return int(result[-1])</code></li></ul>",
+   "last_evidence": "2026-11-01T11:07:20+00:00"
   },
   {
    "id": "reverse-list-pointers",
@@ -1701,6 +1853,35 @@
    "last_evidence": "2026-10-31T22:55:30+00:00"
   },
   {
+   "id": "stack-pop-operands",
+   "guid": "pvH2e2mIIj",
+   "type": "bug",
+   "type_label": "Finde den Bug",
+   "mistakes": [
+    "stack-ops"
+   ],
+   "problems": [
+    "evaluate-reverse-polish-notation"
+   ],
+   "evidence": [
+    "evaluate-reverse-polish-notation#3",
+    "evaluate-reverse-polish-notation#4-7",
+    "evaluate-reverse-polish-notation#8"
+   ],
+   "tags": [
+    "ncd::fehler::stack-ops",
+    "ncd::problem::evaluate-reverse-polish-notation",
+    "ncd::typ::bug",
+    "stack"
+   ],
+   "front_md": "Evaluate RPN, `tokens = [\"1\", \"2\", \"+\", ...]`: Beim `+` steht `result = [\"1\", \"2\"]`. Wo crasht das?\n\n```python\na= int(result[-1])\nb= int(result[-2])\ndel result[-1]\ndel result[-2]\n```",
+   "back_md": "In der letzten Zeile. Nach `del result[-1]` ist nur noch `[\"1\"]` übrig, `result[-2]` gibt es nicht mehr → IndexError. Negative Indizes zählen vom **aktuellen** Ende; jedes Löschen verschiebt sie.\n\nEinfacher mit `pop()`, das liest und entfernt in einem Schritt:\n\n```python\nb = stack.pop()\na = stack.pop()\nstack.append(a - b)\n```\n\nDas zuerst geholte Element ist der **rechte** Operand. Bei dir kostete das am 1.11. fünf Versuche (#3–7); #8 löscht zweimal `[-1]`.",
+   "front_html": "<p>Evaluate RPN, <code>tokens = [\"1\", \"2\", \"+\", ...]</code>: Beim <code>+</code> steht <code>result = [\"1\", \"2\"]</code>. Wo crasht das?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">a</span><span class=\"o\">=</span> <span class=\"nb\">int</span><span class=\"p\">(</span><span class=\"n\">result</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">])</span>\n<span class=\"n\">b</span><span class=\"o\">=</span> <span class=\"nb\">int</span><span class=\"p\">(</span><span class=\"n\">result</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">2</span><span class=\"p\">])</span>\n<span class=\"k\">del</span> <span class=\"n\">result</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">]</span>\n<span class=\"k\">del</span> <span class=\"n\">result</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">2</span><span class=\"p\">]</span>\n</code></pre></div>",
+   "back_html": "<p>In der letzten Zeile. Nach <code>del result[-1]</code> ist nur noch <code>[\"1\"]</code> übrig, <code>result[-2]</code> gibt es nicht mehr → IndexError. Negative Indizes zählen vom <strong>aktuellen</strong> Ende; jedes Löschen verschiebt sie.</p>\n<p>Einfacher mit <code>pop()</code>, das liest und entfernt in einem Schritt:</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">b</span> <span class=\"o\">=</span> <span class=\"n\">stack</span><span class=\"o\">.</span><span class=\"n\">pop</span><span class=\"p\">()</span>\n<span class=\"n\">a</span> <span class=\"o\">=</span> <span class=\"n\">stack</span><span class=\"o\">.</span><span class=\"n\">pop</span><span class=\"p\">()</span>\n<span class=\"n\">stack</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span class=\"n\">a</span> <span class=\"o\">-</span> <span class=\"n\">b</span><span class=\"p\">)</span>\n</code></pre></div>\n\n<p>Das zuerst geholte Element ist der <strong>rechte</strong> Operand. Bei dir kostete das am 1.11. fünf Versuche (#3–7); #8 löscht zweimal <code>[-1]</code>.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-3.py\">evaluate-reverse-polish-notation #3</a><span class=\"badge crash\">Crash</span> 01.11. · <code>result[-2]</code> erst nach <code>del result[-1]</code> gelesen: bei zwei Elementen ist nur noch eins da → IndexError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-4.py\">evaluate-reverse-polish-notation #4–7</a><span class=\"badge crash\">4× Crash</span> 01.11. · nach <code>del result[-1]</code> ist <code>result[-2]</code> schon das übernächste Element → IndexError; #8 löscht zweimal <code>[-1]</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-8.py\">evaluate-reverse-polish-notation #8</a><span class=\"badge fail\">falsch</span> 01.11. · ein einzelnes Token wird nie umgewandelt → <code>['7']</code> liefert <code>'7'</code> statt 7</li></ul>",
+   "last_evidence": "2026-11-01T11:07:10+00:00"
+  },
+  {
    "id": "str-lower-method",
    "guid": "C5S$lW{*IC",
    "type": "gotcha",
@@ -1807,6 +1988,35 @@
    "back_html": "<ol>\n<li><strong>Sortieren</strong></li>\n<li>Für jedes <code>i</code>: gleiche Werte wie beim Vorgänger überspringen, bei <code>nums[i] &gt; 0</code> abbrechen</li>\n<li><strong>Two Pointers</strong> <code>l = i + 1</code>, <code>r = n - 1</code> suchen Paare mit Summe <code>-nums[i]</code></li>\n<li>Bei einem Treffer speichern, <strong>beide</strong> Pointer bewegen und gleiche Werte überspringen</li>\n</ol>\n<div class=\"viz\"><svg width=\"300\" height=\"96\" viewBox=\"0 0 300 96\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"i = 1 fix: -1 + (-1) + 2 = 0 → Treffer\"><rect x=\"12\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"35.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">-4</text><text x=\"35.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><rect x=\"58\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"81.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">-1</text><text x=\"81.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">1</text><rect x=\"104\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"127.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">-1</text><text x=\"127.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><rect x=\"150\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"173.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><text x=\"173.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">3</text><rect x=\"196\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"219.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">1</text><text x=\"219.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">4</text><rect x=\"242\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"265.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><text x=\"265.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">5</text><text x=\"81.0\" y=\"84\" class=\"ptr p2\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ i</text><text x=\"127.0\" y=\"84\" class=\"ptr p0\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ l</text><text x=\"265.0\" y=\"84\" class=\"ptr p1\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ r</text></svg><div class=\"cap\">i = 1 fix: -1 + (-1) + 2 = 0 → Treffer</div></div>\n\n<p>Laufzeit O(n²). Durch das Überspringen braucht es weder ein Set noch <code>not in answer</code>.</p>",
    "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-23.py\">three-integer-sum #23</a><span class=\"badge pass\">ok</span> 23.10.</li></ul>",
    "last_evidence": null
+  },
+  {
+   "id": "tokens-are-strings",
+   "guid": "txrw=lwbMF",
+   "type": "gotcha",
+   "type_label": "Python-Gotcha",
+   "mistakes": [
+    "str-int"
+   ],
+   "problems": [
+    "evaluate-reverse-polish-notation"
+   ],
+   "evidence": [
+    "evaluate-reverse-polish-notation#1",
+    "evaluate-reverse-polish-notation#8"
+   ],
+   "tags": [
+    "ncd::fehler::str-int",
+    "ncd::problem::evaluate-reverse-polish-notation",
+    "ncd::typ::gotcha",
+    "python",
+    "strings"
+   ],
+   "front_md": "`tokens = [\"1\", \"2\", \"+\", \"3\", \"*\"]`. Was ergibt `tokens[1] + tokens[0]`, und was danach `\"3\" * \"21\"`?",
+   "back_md": "`\"21\"`: `+` hängt Strings aneinander. Und `\"3\" * \"21\"` ist ein `TypeError: can't multiply sequence by non-int of type 'str'`. `str * int` wiederholt, `str * str` gibt es nicht.\n\nTokens sind Strings. Beim Lesen einmal `int(t)` und nur Zahlen auf den Stack legen.\n\nGenau so in Evaluate RPN #1. In #8 wurde nur beim Rechnen umgewandelt, deshalb lieferte `[\"7\"]` den String `\"7\"` statt 7.",
+   "front_html": "<p><code>tokens = [\"1\", \"2\", \"+\", \"3\", \"*\"]</code>. Was ergibt <code>tokens[1] + tokens[0]</code>, und was danach <code>\"3\" * \"21\"</code>?</p>",
+   "back_html": "<p><code>\"21\"</code>: <code>+</code> hängt Strings aneinander. Und <code>\"3\" * \"21\"</code> ist ein <code>TypeError: can't multiply sequence by non-int of type 'str'</code>. <code>str * int</code> wiederholt, <code>str * str</code> gibt es nicht.</p>\n<p>Tokens sind Strings. Beim Lesen einmal <code>int(t)</code> und nur Zahlen auf den Stack legen.</p>\n<p>Genau so in Evaluate RPN #1. In #8 wurde nur beim Rechnen umgewandelt, deshalb lieferte <code>[\"7\"]</code> den String <code>\"7\"</code> statt 7.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-1.py\">evaluate-reverse-polish-notation #1</a><span class=\"badge crash\">Crash</span> 01.11. · Tokens nie in Zahlen umgewandelt: <code>'2' + '1'</code> wird <code>'21'</code>, beim <code>*</code> dann TypeError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-8.py\">evaluate-reverse-polish-notation #8</a><span class=\"badge fail\">falsch</span> 01.11. · ein einzelnes Token wird nie umgewandelt → <code>['7']</code> liefert <code>'7'</code> statt 7</li></ul>",
+   "last_evidence": "2026-11-01T11:07:10+00:00"
   },
   {
    "id": "top-k-bucket-sort",

@@ -13,4 +13,6 @@ Was gibt eine Python-Funktion zurück, die ohne `return` am Ende ankommt? Und wa
 
 Bei Search 2D Matrix (#13–15) genauso: Die Suche lief durch, ohne zu treffen, nach der Schleife fehlte `return False`, zurück kam `None`.
 
+Umgekehrt braucht eine Methode mit `-> None` (Min Stack `pop`) kein `return None` am Ende. Das war deine Frage „muss das hin?“
+
 Check vor dem Abschicken: Endet **jeder** Pfad mit einem `return` des richtigen Typs?

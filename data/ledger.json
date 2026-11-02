@@ -142,7 +142,9 @@
     {"ref": "max-water-container#6", "snippet": "if heights[l] < heights[r]:", "note": "Pointer heißen noch `i`/`p_l`, der Vergleich benutzt schon `l`/`r` → UnboundLocalError für `r`"},
     {"ref": "max-water-container#7", "snippet": "l = r - l", "note": "die Breite überschreibt den linken Pointer `l`; #8 nennt sie `w`"},
     {"ref": "reverse-a-linked-list#3", "snippet": "while p > 0:", "note": "Variable heißt `p_next`, die Bedingung benutzt `p` → NameError"},
-    {"ref": "reverse-a-linked-list#13", "snippet": "while curr != None:", "note": "Variable heißt `current`, die Bedingung benutzt `curr` → NameError; #14 korrigiert"}
+    {"ref": "reverse-a-linked-list#13", "snippet": "while curr != None:", "note": "Variable heißt `current`, die Bedingung benutzt `curr` → NameError; #14 korrigiert"},
+    {"ref": "daily-temperatures#1", "snippet": "if v2 > v:", "note": "`v2` wird nie definiert → NameError; #2 schreibt `temperatures[j]`"},
+    {"ref": "minimum-stack#4", "snippet": "return min(stack)", "note": "`stack` statt `self.stack` → NameError; #5 korrigiert"}
    ]
   },
   {
@@ -186,7 +188,8 @@
     {"ref": "binary-search#2-5", "snippet": "if len(nums)< 2: return 0", "note": "Ein-Element-Liste gibt immer 0 zurück, ohne `nums[0] == target` zu prüfen → `[5], -5` liefert 0 statt -1"},
     {"ref": "search-2d-matrix#13-15", "note": "Schleife endet ohne `return` → `None`; #16 ergänzt `return False`"},
     {"ref": "validate-parentheses#0-2", "snippet": "if open_plain[-1] == \"(\":", "note": "`open_plain[-1]` auf leerem Stack → IndexError bei `)`; #3 prüft `open_plain and ...`"},
-    {"ref": "validate-parentheses#5", "snippet": "return False return True", "note": "am Ende nicht geprüft, ob der Stack leer ist → `(` liefert True; #6: `return len(stack) == 0`"}
+    {"ref": "validate-parentheses#5", "snippet": "return False return True", "note": "am Ende nicht geprüft, ob der Stack leer ist → `(` liefert True; #6: `return len(stack) == 0`"},
+    {"ref": "minimum-stack#6", "snippet": "self.min_stack.append(min(val,self.min_stack[-1]))", "note": "beim ersten `push` ist `min_stack` leer → `[-1]` gibt IndexError; #7 prüft `if self.min_stack:`"}
    ]
   },
   {
@@ -267,7 +270,8 @@
     {"ref": "buy-and-sell-crypto#0-2", "snippet": "p_r = len(prices) - 1", "note": "Two Pointers von außen nach innen; der Kauf muss aber vor dem Verkauf liegen. #3: rechter Pointer läuft vorwärts, der linke springt auf jedes neue Tief"},
     {"ref": "longest-repeating-substring-with-replacement#2-5", "snippet": "if s[j+1] == s[j]:", "note": "vergleicht mit dem Vorgänger statt mit dem Zielzeichen des Fensters; #6 vergleicht mit `s[i]`"},
     {"ref": "longest-repeating-substring-with-replacement#6", "snippet": "if s[j+1] == s[i]:", "note": "latent: Zielzeichen ist immer `s[i]`; bei `ABBB`, k = 1 wird das `A` nie ersetzt (3 statt 4). Richtig: Länge − häufigstes Zeichen ≤ k"},
-    {"ref": "validate-parentheses#3-4", "snippet": "open_fancy.append(\"[\")", "note": "ein Stack pro Klammertyp verliert die Reihenfolge zwischen den Typen → `[(])` liefert True"}
+    {"ref": "validate-parentheses#3-4", "snippet": "open_fancy.append(\"[\")", "note": "ein Stack pro Klammertyp verliert die Reihenfolge zwischen den Typen → `[(])` liefert True"},
+    {"ref": "minimum-stack#1-3", "snippet": "return min(self.seen)", "note": "ein Set kennt keine Reihenfolge und keine Duplikate, und `pop` nimmt nichts heraus → nach `pop` der 0 liefert `getMin` weiter 0 statt 1"}
    ]
   },
   {
@@ -326,7 +330,29 @@
    "rule": "Die Signatur sagt, was zurückkommt: `-> Optional[ListNode]` heißt Knoten oder `None`. Keine Python-Liste, kein Iterator wie `reversed(...)`.",
    "occurrences": [
     {"ref": "reverse-a-linked-list#2", "snippet": "return reversed(initial)", "note": "`reversed()` liefert einen Iterator über die Werte, keine Linked List"},
-    {"ref": "reverse-a-linked-list#0-11", "snippet": "if head == None: return []", "note": "leere Liste ist `None`, nicht `[]`; scheitert in #11, #12 korrigiert"}
+    {"ref": "reverse-a-linked-list#0-11", "snippet": "if head == None: return []", "note": "leere Liste ist `None`, nicht `[]`; scheitert in #11, #12 korrigiert"},
+    {"ref": "evaluate-reverse-polish-notation#1-6", "snippet": "return result", "note": "gibt den ganzen Stack zurück statt der Zahl (#2: `['1', '2', 3, '3', 9, '4', -5]`)"},
+    {"ref": "evaluate-reverse-polish-notation#9", "snippet": "return result", "note": "wieder der ganze Stack: `[5]` statt 5; #10 `return int(result[-1])`"}
+   ]
+  },
+  {
+   "id": "stack-ops",
+   "title": "Stack: lesen, entfernen, Reihenfolge",
+   "rule": "`b = stack.pop()`, dann `a = stack.pop()`: `pop()` liest und entfernt in einem Schritt, das zuerst geholte Element ist der rechte Operand. Nach `del xs[-1]` zeigt `xs[-2]` auf ein anderes Element als vorher.",
+   "occurrences": [
+    {"ref": "evaluate-reverse-polish-notation#2", "snippet": "b= int(result[-2]) if i == \"+\":", "note": "liest die Operanden, entfernt sie aber nicht vom Stack"},
+    {"ref": "evaluate-reverse-polish-notation#3", "snippet": "del result[-1] b= int(result[-2])", "note": "`result[-2]` erst nach `del result[-1]` gelesen: bei zwei Elementen ist nur noch eins da → IndexError"},
+    {"ref": "evaluate-reverse-polish-notation#4-7", "snippet": "del result[-1] del result[-2]", "note": "nach `del result[-1]` ist `result[-2]` schon das übernächste Element → IndexError; #8 löscht zweimal `[-1]`"},
+    {"ref": "evaluate-reverse-polish-notation#2-4", "snippet": "a= int(result[-1])", "note": "latent: der obere Wert landet in `a`, also links; `-` rechnet `b - a` falsch herum. #5 tauscht"}
+   ]
+  },
+  {
+   "id": "str-int",
+   "title": "Zahlen als Strings",
+   "rule": "Eingabe-Tokens sind Strings: `'2' + '1'` ist `'21'`, `'2' * '1'` ein TypeError. Beim Lesen einmal `int(t)` und nur Zahlen weiterverarbeiten.",
+   "occurrences": [
+    {"ref": "evaluate-reverse-polish-notation#1", "snippet": "a= result[-1] b= result[-2]", "note": "Tokens nie in Zahlen umgewandelt: `'2' + '1'` wird `'21'`, beim `*` dann TypeError"},
+    {"ref": "evaluate-reverse-polish-notation#8", "snippet": "else: result.append(i)", "note": "ein einzelnes Token wird nie umgewandelt → `['7']` liefert `'7'` statt 7"}
    ]
   }
  ],
@@ -348,7 +374,9 @@
   {"ref": "eating-bananas#3", "text": "der ganzzahl trick", "topic": "Aufrunden mit `(a + k - 1) // k`"},
   {"ref": "eating-bananas#4", "text": "das gibt nicht den minimalen zurück", "topic": "Binary Search auf das kleinste gültige k"},
   {"ref": "reverse-a-linked-list#3-9", "text": "ist glaube ich falsch", "topic": "`head.val` überschreiben statt Knoten umhängen"},
-  {"ref": "validate-parentheses#9", "text": "trick lernen!", "topic": "Klammerpaare per `replace` entfernen"}
+  {"ref": "validate-parentheses#9", "text": "trick lernen!", "topic": "Klammerpaare per `replace` entfernen"},
+  {"ref": "minimum-stack#1", "text": "muss das hin?", "topic": "`return None` am Ende einer Methode"},
+  {"ref": "daily-temperatures#4", "text": "anlegen von arrays einer bestimmten länge vergesse ich immer", "topic": "Liste fester Länge"}
  ],
  "patterns": [
   {"problem": "two-integer-sum", "pattern": "Hashmap: Komplement nachschlagen", "solved": "two-integer-sum#35", "note": "29 von 33 Versuchen mit `in nums`/`index()`, also O(n²); die Hashmap stand schon in #0"},
@@ -370,6 +398,9 @@
   {"problem": "eating-bananas", "pattern": "Binary Search auf die Antwort: kleinstes k mit Stunden ≤ h", "solved": "eating-bananas#10"},
   {"problem": "reverse-a-linked-list", "pattern": "prev/curr umhängen, in place", "solved": "reverse-a-linked-list#14", "note": "#12 mit Hilfsliste, also O(n) Speicher"},
   {"problem": "search-2d-matrix", "pattern": "Binary Search erst über Zeilen, dann in der Zeile", "solved": "search-2d-matrix#17"},
-  {"problem": "validate-parentheses", "pattern": "Stack: öffnende Klammern pushen, beim Schließen das oberste vergleichen", "solved": "validate-parentheses#6", "note": "#9 mit `replace`-Trick, O(n²)"}
+  {"problem": "validate-parentheses", "pattern": "Stack: öffnende Klammern pushen, beim Schließen das oberste vergleichen", "solved": "validate-parentheses#6", "note": "#9 mit `replace`-Trick, O(n²)"},
+  {"problem": "minimum-stack", "pattern": "Zweiter Stack mit dem Minimum je Ebene", "solved": "minimum-stack#7", "note": "#5 bestand mit `min(self.stack)`, also O(n) pro `getMin`"},
+  {"problem": "evaluate-reverse-polish-notation", "pattern": "Stack: Operanden holen, Ergebnis zurücklegen", "solved": "evaluate-reverse-polish-notation#10"},
+  {"problem": "daily-temperatures", "pattern": "Monotoner Stack mit wartenden Indizes", "solved": "daily-temperatures#3", "note": "#2 bestand mit O(n²) über alle Paare"}
  ]
 }

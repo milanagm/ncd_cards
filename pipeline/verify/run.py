@@ -24,7 +24,8 @@ def build_cases(slug, spec):
     rng = random.Random(slug)  # seeded: the same cases on every run
     inputs = list(spec.CASES) + [spec.random_case(rng) for _ in range(RANDOM_CASES)]
     cases = [{"args": list(args), "expected": spec.reference(*args)} for args in inputs]
-    return {"method": spec.METHOD, "compare": spec.COMPARE, "cases": cases}
+    return {"method": spec.METHOD, "class": getattr(spec, "CLASS", "Solution"), "compare": spec.COMPARE,
+            "cases": cases}
 
 
 def judge(path, payload):

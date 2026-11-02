@@ -2,7 +2,9 @@
 
 COMPARE is one of: exact | unordered (list order irrelevant) | groups (order of groups and inside
 groups irrelevant) | codec (decode(encode(x)) must equal x) | linked_list (the first argument is passed as
-a ListNode chain, the returned chain is compared as a list; write inputs and reference with plain lists).
+a ListNode chain, the returned chain is compared as a list; write inputs and reference with plain lists) |
+design (CLASS names the class; args are (ops, params) as on LeetCode, the first op constructs the object,
+reference returns one output per op with None where nothing is compared).
 Fixed CASES and random cases must stay within the problem's constraints, otherwise correct
 submissions get flagged.
 """

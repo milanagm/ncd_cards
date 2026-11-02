@@ -2,7 +2,7 @@
 id: bug-renamed-variable
 type: bug
 mistakes: [wrong-variable]
-evidence: [binary-search#0-1, reverse-a-linked-list#3, reverse-a-linked-list#13, reverse-a-linked-list#14]
+evidence: [binary-search#0-1, reverse-a-linked-list#3, reverse-a-linked-list#13, reverse-a-linked-list#14, minimum-stack#4, daily-temperatures#1]
 tags: [python, naming]
 ---
 ## Front
@@ -25,4 +25,4 @@ Gleich in der Bedingung: `NameError: name 'curr' is not defined`. Die Variable h
 
 Regel: Nach dem Umbenennen oder Abtippen einer Lösung jeden Namen einmal gegen seine Definition lesen.
 
-Der gleiche Crash bei dir: `return i`, während der Index noch `mitte` hieß (Binary Search #0–1), und `while p > 0` statt `p_next` (Reverse Linked List #3).
+Der gleiche Crash bei dir: `return i`, während der Index noch `mitte` hieß (Binary Search #0–1), und `while p > 0` statt `p_next` (Reverse Linked List #3). Am 1.11. noch zweimal: `min(stack)` statt `self.stack` (Min Stack #4) und `v2`, das es nie gab (Daily Temperatures #1).

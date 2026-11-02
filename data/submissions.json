@@ -1,8 +1,8 @@
 {
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "57c3f5413aa89fd8633813aef9c29e69a072ddbf",
-  "head_date": "2026-10-31T23:21:43+00:00"
+  "head": "8bdedf6c6267bd3738a7274553cf2f74a8f27ff9",
+  "head_date": "2026-11-01T22:17:48+00:00"
  },
  "problems": {
   "anagram-groups": {
@@ -586,6 +586,75 @@
     }
    ]
   },
+  "daily-temperatures": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/daily-temperatures/submission-1.py",
+     "sha1": "41c91c15e416f916fc73859a4cdc1777219f031a",
+     "commit": "1704fae3fd50ddf2e0e24e914ebd3cf49e16788c",
+     "date": "2026-11-01T22:10:29+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 47,
+      "input": "[[30, 38, 30, 36, 35, 40, 28]]",
+      "error": "NameError: name 'v2' is not defined",
+      "line": 7,
+      "code": "if v2 > v:",
+      "spec": "aa86dc7487a4"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/daily-temperatures/submission-2.py",
+     "sha1": "ce5badd1a76953b8275f1df03c32201a4eaa441a",
+     "commit": "641b964fcba026bd69aebb1166d8d1c801a65459",
+     "date": "2026-11-01T22:10:47+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "aa86dc7487a4"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/daily-temperatures/submission-3.py",
+     "sha1": "9bf4d7d7296957455a3c76fd947f34101204686a",
+     "commit": "e713d1b3ddad8c611b0f720ea411c4615b02944a",
+     "date": "2026-11-01T22:17:31+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "aa86dc7487a4"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/daily-temperatures/submission-4.py",
+     "sha1": "8a7537cda4166f38ed0fbf1a4ac7b0008d03aea4",
+     "commit": "8bdedf6c6267bd3738a7274553cf2f74a8f27ff9",
+     "date": "2026-11-01T22:17:48+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "aa86dc7487a4"
+     }
+    }
+   ]
+  },
   "duplicate-integer": {
    "topic": "Data Structures & Algorithms",
    "submissions": [
@@ -1045,6 +1114,195 @@
       "passed": 50,
       "total": 50,
       "spec": "744148653168"
+     }
+    }
+   ]
+  },
+  "evaluate-reverse-polish-notation": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/evaluate-reverse-polish-notation/submission-1.py",
+     "sha1": "a807c040169e4eb4672e254e7e051290136ca6ad",
+     "commit": "8c7b5d6aa0b29d20ab68a9704de13ea4f0e843ca",
+     "date": "2026-11-01T10:59:50+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 50,
+      "input": "[['1', '2', '+', '3', '*', '4', '-']]",
+      "error": "TypeError: can't multiply sequence by non-int of type 'str'",
+      "line": 14,
+      "code": "result.append(a*b)",
+      "spec": "25e77f2b4084"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/evaluate-reverse-polish-notation/submission-2.py",
+     "sha1": "1f465cd2cf408dea75c4c798588a2ae9a39c307c",
+     "commit": "108c19f4b817e09a793c799ce0c599ec6fe47c0f",
+     "date": "2026-11-01T11:00:15+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 50,
+      "input": "[['1', '2', '+', '3', '*', '4', '-']]",
+      "expected": "5",
+      "got": "['1', '2', 3, '3', 9, '4', -5]",
+      "spec": "25e77f2b4084"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/evaluate-reverse-polish-notation/submission-3.py",
+     "sha1": "90a1bda4b8ced13f2fdd11c5abfaa76b818fd583",
+     "commit": "9d7c5b79fbaf84e35e7fe5bbd48692cccb93b251",
+     "date": "2026-11-01T11:02:31+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 50,
+      "input": "[['1', '2', '+', '3', '*', '4', '-']]",
+      "error": "IndexError: list index out of range",
+      "line": 9,
+      "code": "b= int(result[-2])",
+      "spec": "25e77f2b4084"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/evaluate-reverse-polish-notation/submission-4.py",
+     "sha1": "71d0f616916f0832231541830a8ffd6b4a8062b5",
+     "commit": "a13c300d11301f3f26360b9a59c5f661df4704c2",
+     "date": "2026-11-01T11:02:57+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 50,
+      "input": "[['1', '2', '+', '3', '*', '4', '-']]",
+      "error": "IndexError: list assignment index out of range",
+      "line": 10,
+      "code": "del result[-2]",
+      "spec": "25e77f2b4084"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/evaluate-reverse-polish-notation/submission-5.py",
+     "sha1": "6e5c602d11734859596b993e6ae2a4d13e217d41",
+     "commit": "3c210d6cc4084bdeb145495e3993b11d8ee5e52a",
+     "date": "2026-11-01T11:03:22+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 50,
+      "input": "[['1', '2', '+', '3', '*', '4', '-']]",
+      "error": "IndexError: list assignment index out of range",
+      "line": 10,
+      "code": "del result[-2]",
+      "spec": "25e77f2b4084"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/evaluate-reverse-polish-notation/submission-6.py",
+     "sha1": "62c887b2e720945bb96c92db56f6779b50d02303",
+     "commit": "91ef78caeb6493578f244b381b26efdfc3b32705",
+     "date": "2026-11-01T11:03:44+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 50,
+      "input": "[['1', '2', '+', '3', '*', '4', '-']]",
+      "error": "IndexError: list assignment index out of range",
+      "line": 10,
+      "code": "del result[-2]",
+      "spec": "25e77f2b4084"
+     }
+    },
+    {
+     "n": 7,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/evaluate-reverse-polish-notation/submission-7.py",
+     "sha1": "42f8ca7466210eb17264ed744b44c2f410810e92",
+     "commit": "37f7ab6e0cd958f807d46460473ba39a8ef22a78",
+     "date": "2026-11-01T11:04:03+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 50,
+      "input": "[['1', '2', '+', '3', '*', '4', '-']]",
+      "error": "IndexError: list assignment index out of range",
+      "line": 10,
+      "code": "del result[-2]",
+      "spec": "25e77f2b4084"
+     }
+    },
+    {
+     "n": 8,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/evaluate-reverse-polish-notation/submission-8.py",
+     "sha1": "88ef258e3416253b97d8b5bc114d0d23279b04a7",
+     "commit": "c001ed4d19ffa753c5d5f8b6b5dfabf6c86f8714",
+     "date": "2026-11-01T11:07:10+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 3,
+      "total": 50,
+      "input": "[['7']]",
+      "expected": "7",
+      "got": "'7'",
+      "note": "returns str instead of int",
+      "spec": "25e77f2b4084"
+     }
+    },
+    {
+     "n": 9,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/evaluate-reverse-polish-notation/submission-9.py",
+     "sha1": "bd5c2e98bc6c640458b940c560d5dd7bf342aecb",
+     "commit": "b13e25798509517e91b68c7d2c6559fcbb576723",
+     "date": "2026-11-01T11:07:20+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 50,
+      "input": "[['1', '2', '+', '3', '*', '4', '-']]",
+      "expected": "5",
+      "got": "[5]",
+      "spec": "25e77f2b4084"
+     }
+    },
+    {
+     "n": 10,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/evaluate-reverse-polish-notation/submission-10.py",
+     "sha1": "1941acd96cb1ffd72944633abd4bc58241a7b59f",
+     "commit": "40bd40df84a77c4b7221a3eb9b16a523eca115ba",
+     "date": "2026-11-01T11:07:49+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 50,
+      "total": 50,
+      "spec": "25e77f2b4084"
      }
     }
    ]
@@ -2338,6 +2596,133 @@
       "passed": 48,
       "total": 48,
       "spec": "8e5b4eabc3ee"
+     }
+    }
+   ]
+  },
+  "minimum-stack": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/minimum-stack/submission-1.py",
+     "sha1": "cbbf55bee2ea51c9a097c66754f8774733b0c045",
+     "commit": "76670f7c24f91c4aac3fb74c925e9da30bed5def",
+     "date": "2026-11-01T10:23:05+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 45,
+      "input": "[['MinStack', 'push', 'push', 'push', 'getMin', 'pop', 'top', 'getMin'], [[], [1], [2], [0], [], [], [], []]]",
+      "expected": "[None, None, None, None, 0, None, 2, 1]",
+      "got": "[None, None, None, None, 0, None, 2, 0]",
+      "spec": "aec978ed579d"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/minimum-stack/submission-2.py",
+     "sha1": "2ef08f70b01e09e47a10ba3c12a0b2f834fb7a8c",
+     "commit": "917f92bae5ca45ded0c65422e0e77f823f60a979",
+     "date": "2026-11-01T10:23:43+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 45,
+      "input": "[['MinStack', 'push', 'push', 'push', 'getMin', 'pop', 'top', 'getMin'], [[], [1], [2], [0], [], [], [], []]]",
+      "expected": "[None, None, None, None, 0, None, 2, 1]",
+      "got": "[None, None, None, None, 0, None, 2, 0]",
+      "spec": "aec978ed579d"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/minimum-stack/submission-3.py",
+     "sha1": "2ef08f70b01e09e47a10ba3c12a0b2f834fb7a8c",
+     "commit": "28eeadcda2587c02cd345552efd03ff761d90959",
+     "date": "2026-11-01T10:23:48+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 45,
+      "input": "[['MinStack', 'push', 'push', 'push', 'getMin', 'pop', 'top', 'getMin'], [[], [1], [2], [0], [], [], [], []]]",
+      "expected": "[None, None, None, None, 0, None, 2, 1]",
+      "got": "[None, None, None, None, 0, None, 2, 0]",
+      "spec": "aec978ed579d"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/minimum-stack/submission-4.py",
+     "sha1": "4325c557a302189dce6621146f500f7d22422b03",
+     "commit": "8fe34e4e589ff2b32f266ab5aa120edd7b11d5fc",
+     "date": "2026-11-01T10:26:30+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 45,
+      "input": "[['MinStack', 'push', 'push', 'push', 'getMin', 'pop', 'top', 'getMin'], [[], [1], [2], [0], [], [], [], []]]",
+      "error": "NameError: name 'stack' is not defined",
+      "line": 17,
+      "code": "return min(stack)",
+      "spec": "aec978ed579d"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/minimum-stack/submission-5.py",
+     "sha1": "df77c4987a58dab061c05db6863eec059f72a2e4",
+     "commit": "465f14009a6cb23a6fb65945d8f1183db075a2d7",
+     "date": "2026-11-01T10:26:41+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 45,
+      "total": 45,
+      "spec": "aec978ed579d"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/minimum-stack/submission-6.py",
+     "sha1": "e6521d88d24d6366ae37f435a901ba1dfd92359e",
+     "commit": "37dabec63024c0a4376771cec7683a436f9f166f",
+     "date": "2026-11-01T10:32:51+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 45,
+      "input": "[['MinStack', 'push', 'push', 'push', 'getMin', 'pop', 'top', 'getMin'], [[], [1], [2], [0], [], [], [], []]]",
+      "error": "IndexError: list index out of range",
+      "line": 9,
+      "code": "self.min_stack.append(min(val,self.min_stack[-1]))",
+      "spec": "aec978ed579d"
+     }
+    },
+    {
+     "n": 7,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/minimum-stack/submission-7.py",
+     "sha1": "41c945c6b4058147270451cd87caea9eb8fdba31",
+     "commit": "284fabede5df0ba73f6424a6863710ededdd5cda",
+     "date": "2026-11-01T10:36:54+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 45,
+      "total": 45,
+      "spec": "aec978ed579d"
      }
     }
    ]

@@ -64,6 +64,17 @@ def from_nodes(head):
     return values
 
 
+def run_ops(cls, ops, params, expected):
+    """Design problems: ops[0] constructs the object, every later op is a method call. Results of calls
+    whose expected output is None (push, pop, ...) are not compared."""
+    obj = cls(*params[0])
+    results = [None]
+    for op, p, e in zip(ops[1:], params[1:], expected[1:]):
+        result = getattr(obj, op)(*p)
+        results.append(None if e is None else result)
+    return results
+
+
 def normalize(compare, value):
     if compare == "groups":
         return sorted(sorted(group) for group in value)
@@ -77,7 +88,7 @@ def run(path, spec):
     try:
         exec(PREAMBLE, namespace)
         exec(compile(open(path, encoding="utf-8").read(), path, "exec"), namespace)
-        solution = namespace["Solution"]
+        solution = namespace[spec.get("class", "Solution")]
     except BaseException as e:
         return {"status": "LOAD_ERROR", "error": f"{type(e).__name__}: {e}", **location(e, path)}
 
@@ -89,10 +100,13 @@ def run(path, spec):
             args[0] = to_nodes(namespace["ListNode"], args[0])
         signal.setitimer(signal.ITIMER_REAL, TIME_LIMIT_S)
         try:
-            instance = solution()
-            if compare == "codec":
+            if compare == "design":
+                got = run_ops(solution, *args, case["expected"])
+            elif compare == "codec":
+                instance = solution()
                 got = instance.decode(instance.encode(args[0]))
             else:
+                instance = solution()
                 got = getattr(instance, spec["method"])(*args)
         except Timeout:
             return {"status": "TIMEOUT", **failed}
