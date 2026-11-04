@@ -97,7 +97,8 @@ def run(path, spec):
         failed = {"passed": i, "total": len(cases), "input": short(case["args"])}
         args = copy.deepcopy(case["args"])
         if compare == "linked_list":
-            args[0] = to_nodes(namespace["ListNode"], args[0])
+            for k in spec.get("list_args", [0]):
+                args[k] = to_nodes(namespace["ListNode"], args[k])
         signal.setitimer(signal.ITIMER_REAL, TIME_LIMIT_S)
         try:
             if compare == "design":

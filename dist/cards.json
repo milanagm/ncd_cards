@@ -32,15 +32,15 @@
  },
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "b1787e718461e7ba299a615876ab787353fceee1",
-  "head_date": "2026-11-02T18:25:10+00:00"
+  "head": "0d6f92338154b578701e95b5256d17b8b667ab6c",
+  "head_date": "2026-11-03T22:47:20+00:00"
  },
  "stats": {
-  "submissions": 285,
+  "submissions": 287,
   "statuses": {
    "WRONG_ANSWER": 103,
-   "PASS": 94,
-   "RUNTIME_ERROR": 74,
+   "PASS": 95,
+   "RUNTIME_ERROR": 75,
    "TIMEOUT": 10,
    "LOAD_ERROR": 4
   }
@@ -341,11 +341,12 @@
    "id": "linked-list-nodes",
    "title": "Linked List: Knoten, Wert und `None`",
    "rule": "`node.val` ist der Wert, `node.next` der nächste Knoten oder `None`. Einen neuen Knoten gibt es nur mit `ListNode(v)`; das Ende ist `None`, nicht `[]`.",
-   "submissions": 7,
+   "submissions": 8,
    "problems": [
+    "merge-two-sorted-linked-lists",
     "reverse-a-linked-list"
    ],
-   "last_seen": "2026-10-31"
+   "last_seen": "2026-11-03"
   },
   {
    "id": "return-type",
@@ -1487,6 +1488,35 @@
    "back_html": "<table>\n<thead>\n<tr>\n<th>Container</th>\n<th><code>x in ...</code></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Liste</td>\n<td>O(n), linear durchsuchen</td>\n</tr>\n<tr>\n<td>Set</td>\n<td>O(1) im Mittel (Hash)</td>\n</tr>\n<tr>\n<td>Dict (Keys)</td>\n<td>O(1) im Mittel (Hash)</td>\n</tr>\n</tbody>\n</table>\n<p>In einer Schleife: Liste → <strong>O(n²)</strong>, Set oder Dict → <strong>O(n)</strong>. Für „habe ich das schon gesehen?“ also immer <code>seen = set()</code> und <code>seen.add(x)</code>.</p>\n<p>Bei Contains Duplicate hast du sechsmal eine Liste als Gedächtnis benutzt, bei Two Sum 29-mal <code>in nums</code>.</p>",
    "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/duplicate-integer/submission-1.py\">duplicate-integer #1–3</a><span class=\"badge crash\">2× Crash</span><span class=\"badge pass\">ok</span> · Liste als „gesehen“-Speicher</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/duplicate-integer/submission-4.py\">duplicate-integer #4</a><span class=\"badge pass\">ok</span> · Liste als „gesehen“-Speicher</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/duplicate-integer/submission-8.py\">duplicate-integer #8</a><span class=\"badge pass\">ok</span> · Liste als „gesehen“-Speicher</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/duplicate-integer/submission-11.py\">duplicate-integer #11</a><span class=\"badge pass\">ok</span> 14.10. · Liste als „gesehen“-Speicher</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/two-integer-sum/submission-1.py\">two-integer-sum #1–8</a><span class=\"badge fail\">8× falsch</span> · O(n)-Suche pro Element</li></ul>",
    "last_evidence": "2026-10-16T12:04:26+00:00"
+  },
+  {
+   "id": "min-on-nodes",
+   "guid": "ro64&TkSnp",
+   "type": "gotcha",
+   "type_label": "Python-Gotcha",
+   "mistakes": [
+    "linked-list-nodes"
+   ],
+   "problems": [
+    "merge-two-sorted-linked-lists"
+   ],
+   "evidence": [
+    "merge-two-sorted-linked-lists#2",
+    "merge-two-sorted-linked-lists#3"
+   ],
+   "tags": [
+    "linked-list",
+    "ncd::fehler::linked-list-nodes",
+    "ncd::problem::merge-two-sorted-linked-lists",
+    "ncd::typ::gotcha",
+    "python"
+   ],
+   "front_md": "`list1` und `list2` sind `ListNode`s. Was liefert `min(list1, list2)`: den Knoten mit dem kleineren `val`?",
+   "back_md": "Nein, einen `TypeError: '<' not supported between instances of 'ListNode' and 'ListNode'`. `min` vergleicht die Objekte selbst mit `<`, und `ListNode` definiert keinen Vergleich. Auf `.val` greift es nicht von allein zu.\n\nDen Wert explizit vergleichen:\n\n```python\nif list1.val <= list2.val:\n    current.next = list1\n    list1 = list1.next\n```\n\nOder `min(list1, list2, key=lambda n: n.val)`, wenn es unbedingt `min` sein soll.\n\nDeine Frage im Code (Merge Two Sorted Lists #2): „greift er dann auf list.val zu?“ #3 vergleicht `.val` und besteht.",
+   "front_html": "<p><code>list1</code> und <code>list2</code> sind <code>ListNode</code>s. Was liefert <code>min(list1, list2)</code>: den Knoten mit dem kleineren <code>val</code>?</p>",
+   "back_html": "<p>Nein, einen <code>TypeError: '&lt;' not supported between instances of 'ListNode' and 'ListNode'</code>. <code>min</code> vergleicht die Objekte selbst mit <code>&lt;</code>, und <code>ListNode</code> definiert keinen Vergleich. Auf <code>.val</code> greift es nicht von allein zu.</p>\n<p>Den Wert explizit vergleichen:</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">if</span> <span class=\"n\">list1</span><span class=\"o\">.</span><span class=\"n\">val</span> <span class=\"o\">&lt;=</span> <span class=\"n\">list2</span><span class=\"o\">.</span><span class=\"n\">val</span><span class=\"p\">:</span>\n    <span class=\"n\">current</span><span class=\"o\">.</span><span class=\"n\">next</span> <span class=\"o\">=</span> <span class=\"n\">list1</span>\n    <span class=\"n\">list1</span> <span class=\"o\">=</span> <span class=\"n\">list1</span><span class=\"o\">.</span><span class=\"n\">next</span>\n</code></pre></div>\n\n<p>Oder <code>min(list1, list2, key=lambda n: n.val)</code>, wenn es unbedingt <code>min</code> sein soll.</p>\n<p>Deine Frage im Code (Merge Two Sorted Lists #2): „greift er dann auf list.val zu?“ #3 vergleicht <code>.val</code> und besteht.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/merge-two-sorted-linked-lists/submission-2.py\">merge-two-sorted-linked-lists #2</a><span class=\"badge crash\">Crash</span> 03.11. · latent: <code>current_head</code> rückt nie weiter, jede Runde überschreibt dasselbe <code>next</code>; #3 ergänzt <code>current_head = current_head.next</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/merge-two-sorted-linked-lists/submission-3.py\">merge-two-sorted-linked-lists #3</a><span class=\"badge pass\">ok</span> 03.11.</li></ul>",
+   "last_evidence": "2026-11-03T22:40:07+00:00"
   },
   {
    "id": "min-stack-pattern",

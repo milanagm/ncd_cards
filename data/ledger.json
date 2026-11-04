@@ -321,7 +321,9 @@
     {"ref": "reverse-a-linked-list#0", "snippet": "while head.next != []:", "note": "das Ende der Liste ist `None`, nicht `[]`"},
     {"ref": "reverse-a-linked-list#4-5", "snippet": "head.next = p_next", "note": "Index `p_next` als nächster Knoten → int statt ListNode"},
     {"ref": "reverse-a-linked-list#6-9", "snippet": "head.next = initial[p_next]", "note": "Wert statt Knoten; #10 baut `ListNode(initial[p_next])`"},
-    {"ref": "reverse-a-linked-list#8-9", "snippet": "while head.val != None:", "note": "prüft den Wert statt den Knoten: am Ende ist `head` selbst `None` → AttributeError"}
+    {"ref": "reverse-a-linked-list#8-9", "snippet": "while head.val != None:", "note": "prüft den Wert statt den Knoten: am Ende ist `head` selbst `None` → AttributeError"},
+    {"ref": "merge-two-sorted-linked-lists#2", "snippet": "current_head = min(list1, list2)", "note": "`min` vergleicht die Knoten selbst; `ListNode` kennt kein `<` → TypeError. #3 vergleicht `list1.val <= list2.val`"},
+    {"ref": "merge-two-sorted-linked-lists#2", "snippet": "next_min = min(list1.next, list2.next) current_head.next = next_min", "note": "latent: `current_head` rückt nie weiter, jede Runde überschreibt dasselbe `next`; #3 ergänzt `current_head = current_head.next`"}
    ]
   },
   {
@@ -376,7 +378,8 @@
   {"ref": "reverse-a-linked-list#3-9", "text": "ist glaube ich falsch", "topic": "`head.val` überschreiben statt Knoten umhängen"},
   {"ref": "validate-parentheses#9", "text": "trick lernen!", "topic": "Klammerpaare per `replace` entfernen"},
   {"ref": "minimum-stack#1", "text": "muss das hin?", "topic": "`return None` am Ende einer Methode"},
-  {"ref": "daily-temperatures#4", "text": "anlegen von arrays einer bestimmten länge vergesse ich immer", "topic": "Liste fester Länge"}
+  {"ref": "daily-temperatures#4", "text": "anlegen von arrays einer bestimmten länge vergesse ich immer", "topic": "Liste fester Länge"},
+  {"ref": "merge-two-sorted-linked-lists#2", "text": "greift er dann auf list.val zu?", "topic": "`min()` auf Knoten"}
  ],
  "patterns": [
   {"problem": "two-integer-sum", "pattern": "Hashmap: Komplement nachschlagen", "solved": "two-integer-sum#35", "note": "29 von 33 Versuchen mit `in nums`/`index()`, also O(n²); die Hashmap stand schon in #0"},
@@ -401,6 +404,7 @@
   {"problem": "validate-parentheses", "pattern": "Stack: öffnende Klammern pushen, beim Schließen das oberste vergleichen", "solved": "validate-parentheses#6", "note": "#9 mit `replace`-Trick, O(n²)"},
   {"problem": "minimum-stack", "pattern": "Zweiter Stack mit dem Minimum je Ebene", "solved": "minimum-stack#7", "note": "#5 bestand mit `min(self.stack)`, also O(n) pro `getMin`"},
   {"problem": "evaluate-reverse-polish-notation", "pattern": "Stack: Operanden holen, Ergebnis zurücklegen", "solved": "evaluate-reverse-polish-notation#10"},
-  {"problem": "daily-temperatures", "pattern": "Monotoner Stack mit wartenden Indizes", "solved": "daily-temperatures#3", "note": "#2 bestand mit O(n²) über alle Paare"}
+  {"problem": "daily-temperatures", "pattern": "Monotoner Stack mit wartenden Indizes", "solved": "daily-temperatures#3", "note": "#2 bestand mit O(n²) über alle Paare"},
+  {"problem": "merge-two-sorted-linked-lists", "pattern": "Kleineren Knoten anhängen, Rest der anderen Liste dranhängen", "solved": "merge-two-sorted-linked-lists#3"}
  ]
 }
