@@ -19,7 +19,8 @@
     {"ref": "longest-substring-without-duplicates#8", "snippet": "p = e + 1", "note": "`for e in s` liefert Zeichen, `e + 1` → TypeError. Eigener Kommentar: „iterieren über elements oder index?“"},
     {"ref": "longest-substring-without-duplicates#12-13", "snippet": "if i not in seen:", "note": "prüft den Index statt des Zeichens; #14 korrigiert die Prüfung, aber nicht das `add`"},
     {"ref": "longest-substring-without-duplicates#12-16", "snippet": "seen.add(i)", "note": "Index statt Zeichen ins Set → kein Duplikat wird erkannt (got 7 bei `zxyzxyz`)"},
-    {"ref": "eating-bananas#0", "snippet": "for i in piles: needed_t = 0 needed_t += piles[i] // k", "note": "`for i in piles` liefert Stapelgrößen, `piles[i]` benutzt sie als Index → IndexError"}
+    {"ref": "eating-bananas#0", "snippet": "for i in piles: needed_t = 0 needed_t += piles[i] // k", "note": "`for i in piles` liefert Stapelgrößen, `piles[i]` benutzt sie als Index → IndexError"},
+    {"ref": "two-integer-sum#36", "snippet": "for i, v in nums:", "note": "Index und Wert ohne `enumerate` → TypeError: cannot unpack non-iterable int; #37 mit `enumerate`"}
    ]
   },
   {

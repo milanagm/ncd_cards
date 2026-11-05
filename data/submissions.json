@@ -1,8 +1,8 @@
 {
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "0d6f92338154b578701e95b5256d17b8b667ab6c",
-  "head_date": "2026-11-03T22:47:20+00:00"
+  "head": "558fc6db599423fc4cce18e026cb3e53a5667282",
+  "head_date": "2026-11-04T23:17:26+00:00"
  },
  "problems": {
   "anagram-groups": {
@@ -4670,6 +4670,40 @@
      "sha1": "bada2c0d8fd411d48cfae5512e9e9a68d41de0d2",
      "commit": "2259fdf1dc033a1b4cf11090da9203ffd06ab62a",
      "date": "2026-10-16T08:01:49+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 36,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-36.py",
+     "sha1": "d4dc93137ef13920f9f210573846d6d314dca61c",
+     "commit": "d2692abadf142b759a98f309104df88c234247ce",
+     "date": "2026-11-04T23:17:17+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[[3, 4, 5, 6], 7]",
+      "error": "TypeError: cannot unpack non-iterable int object",
+      "line": 3,
+      "code": "for i, v in nums:",
+      "spec": "58253ee4a544"
+     }
+    },
+    {
+     "n": 37,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/two-integer-sum/submission-37.py",
+     "sha1": "45651def5e172fb0c4bde3ee977adbb38fead376",
+     "commit": "558fc6db599423fc4cce18e026cb3e53a5667282",
+     "date": "2026-11-04T23:17:26+00:00",
      "bulk_sync": false,
      "verdict": {
       "status": "PASS",

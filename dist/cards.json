@@ -32,15 +32,15 @@
  },
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "0d6f92338154b578701e95b5256d17b8b667ab6c",
-  "head_date": "2026-11-03T22:47:20+00:00"
+  "head": "558fc6db599423fc4cce18e026cb3e53a5667282",
+  "head_date": "2026-11-04T23:17:26+00:00"
  },
  "stats": {
-  "submissions": 287,
+  "submissions": 289,
   "statuses": {
    "WRONG_ANSWER": 103,
-   "PASS": 95,
-   "RUNTIME_ERROR": 75,
+   "PASS": 96,
+   "RUNTIME_ERROR": 76,
    "TIMEOUT": 10,
    "LOAD_ERROR": 4
   }
@@ -50,7 +50,7 @@
    "id": "index-vs-value",
    "title": "Index und Wert verwechselt",
    "rule": "Vor jeder Verwendung klären: Position oder Element? `for i, v in enumerate(xs)` hält beides auseinander.",
-   "submissions": 35,
+   "submissions": 36,
    "problems": [
     "buy-and-sell-crypto",
     "eating-bananas",
@@ -62,7 +62,7 @@
     "two-integer-sum",
     "valid-sudoku"
    ],
-   "last_seen": "2026-10-31"
+   "last_seen": "2026-11-04"
   },
   {
    "id": "pointer-movement",
@@ -1213,6 +1213,7 @@
     "longest-substring-without-duplicates",
     "products-of-array-discluding-self",
     "three-integer-sum",
+    "two-integer-sum",
     "valid-sudoku"
    ],
    "evidence": [
@@ -1221,7 +1222,8 @@
     "products-of-array-discluding-self#2-4",
     "valid-sudoku#2-5",
     "longest-substring-without-duplicates#8",
-    "eating-bananas#0"
+    "eating-bananas#0",
+    "two-integer-sum#36"
    ],
    "tags": [
     "loops",
@@ -1230,16 +1232,17 @@
     "ncd::problem::longest-substring-without-duplicates",
     "ncd::problem::products-of-array-discluding-self",
     "ncd::problem::three-integer-sum",
+    "ncd::problem::two-integer-sum",
     "ncd::problem::valid-sudoku",
     "ncd::typ::concept",
     "python"
    ],
    "front_md": "Du brauchst in der Schleife Index **und** Wert. Was liefern die ersten drei Schleifen, und warum crasht die vierte?\n\n```python\nfor x in nums: ...\nfor i in range(len(nums)): ...\nfor i, x in enumerate(nums): ...\nfor i, x in nums: ...\n```",
-   "back_md": "1. nur Werte\n2. nur Indizes\n3. Paare aus Index und Wert ✔\n4. Python versucht jeden **Wert** in zwei Teile zu entpacken → `TypeError: cannot unpack non-iterable int object`\n\nEiner deiner häufigsten Fehler (9 von 21 Problemen): `for i in nums_s:` und danach `nums_s[i]`. Am 27.10. andersherum: `for e in s:` und dann `p = e + 1`, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: `for x in s` liefert Elemente. Am 31.10. bei Koko wieder: `for i in piles:` und dann `piles[i] // k` → IndexError. Dort ist `i` ein Wert, kein Index. Konvention gegen die Verwechslung: `i`, `j` nur für Indizes, Werte heißen `v`, `x` oder `num`.",
+   "back_md": "1. nur Werte\n2. nur Indizes\n3. Paare aus Index und Wert ✔\n4. Python versucht jeden **Wert** in zwei Teile zu entpacken → `TypeError: cannot unpack non-iterable int object`. Genau das bei 3Sum #7 und am 4.11. bei Two Sum #36; eine Minute später lief #37 mit `enumerate`.\n\nEiner deiner häufigsten Fehler (9 von 25 Problemen): `for i in nums_s:` und danach `nums_s[i]`. Am 27.10. andersherum: `for e in s:` und dann `p = e + 1`, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: `for x in s` liefert Elemente. Am 31.10. bei Koko wieder: `for i in piles:` und dann `piles[i] // k` → IndexError. Dort ist `i` ein Wert, kein Index. Konvention gegen die Verwechslung: `i`, `j` nur für Indizes, Werte heißen `v`, `x` oder `num`.",
    "front_html": "<p>Du brauchst in der Schleife Index <strong>und</strong> Wert. Was liefern die ersten drei Schleifen, und warum crasht die vierte?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">for</span> <span class=\"n\">x</span> <span class=\"ow\">in</span> <span class=\"n\">nums</span><span class=\"p\">:</span> <span class=\"o\">...</span>\n<span class=\"k\">for</span> <span class=\"n\">i</span> <span class=\"ow\">in</span> <span class=\"nb\">range</span><span class=\"p\">(</span><span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">nums</span><span class=\"p\">)):</span> <span class=\"o\">...</span>\n<span class=\"k\">for</span> <span class=\"n\">i</span><span class=\"p\">,</span> <span class=\"n\">x</span> <span class=\"ow\">in</span> <span class=\"nb\">enumerate</span><span class=\"p\">(</span><span class=\"n\">nums</span><span class=\"p\">):</span> <span class=\"o\">...</span>\n<span class=\"k\">for</span> <span class=\"n\">i</span><span class=\"p\">,</span> <span class=\"n\">x</span> <span class=\"ow\">in</span> <span class=\"n\">nums</span><span class=\"p\">:</span> <span class=\"o\">...</span>\n</code></pre></div>",
-   "back_html": "<ol>\n<li>nur Werte</li>\n<li>nur Indizes</li>\n<li>Paare aus Index und Wert ✔</li>\n<li>Python versucht jeden <strong>Wert</strong> in zwei Teile zu entpacken → <code>TypeError: cannot unpack non-iterable int object</code></li>\n</ol>\n<p>Einer deiner häufigsten Fehler (9 von 21 Problemen): <code>for i in nums_s:</code> und danach <code>nums_s[i]</code>. Am 27.10. andersherum: <code>for e in s:</code> und dann <code>p = e + 1</code>, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: <code>for x in s</code> liefert Elemente. Am 31.10. bei Koko wieder: <code>for i in piles:</code> und dann <code>piles[i] // k</code> → IndexError. Dort ist <code>i</code> ein Wert, kein Index. Konvention gegen die Verwechslung: <code>i</code>, <code>j</code> nur für Indizes, Werte heißen <code>v</code>, <code>x</code> oder <code>num</code>.</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-1.py\">three-integer-sum #1–6</a><span class=\"badge crash\">6× Crash</span> 22.10. · durchläuft Werte und benutzt sie danach als Index (<code>nums_s[i]</code>)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-7.py\">three-integer-sum #7</a><span class=\"badge crash\">Crash</span> 22.10. · Index und Wert ohne <code>enumerate</code> → TypeError: cannot unpack non-iterable int</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/products-of-array-discluding-self/submission-2.py\">products-of-array-discluding-self #2–4</a><span class=\"badge fail\">3× falsch</span> 17.10. · durchläuft Werte (alle 1) und benutzt sie als Index</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/valid-sudoku/submission-2.py\">valid-sudoku #2–5</a><span class=\"badge crash\">2× Crash</span><span class=\"badge fail\">2× falsch</span> 18.10. · Spaltenindex <code>i</code> statt Zellwert <code>row[i]</code> ins Set</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-8.py\">longest-substring-without-duplicates #8</a><span class=\"badge crash\">Crash</span> 27.10. · <code>for e in s</code> liefert Zeichen, <code>e + 1</code> → TypeError. Eigener Kommentar: „iterieren über elements oder index?“</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-0.py\">eating-bananas #0</a><span class=\"badge crash\">Crash</span> 31.10. · <code>for i in piles</code> liefert Stapelgrößen, <code>piles[i]</code> benutzt sie als Index → IndexError</li></ul>",
-   "last_evidence": "2026-10-31T17:00:27+00:00"
+   "back_html": "<ol>\n<li>nur Werte</li>\n<li>nur Indizes</li>\n<li>Paare aus Index und Wert ✔</li>\n<li>Python versucht jeden <strong>Wert</strong> in zwei Teile zu entpacken → <code>TypeError: cannot unpack non-iterable int object</code>. Genau das bei 3Sum #7 und am 4.11. bei Two Sum #36; eine Minute später lief #37 mit <code>enumerate</code>.</li>\n</ol>\n<p>Einer deiner häufigsten Fehler (9 von 25 Problemen): <code>for i in nums_s:</code> und danach <code>nums_s[i]</code>. Am 27.10. andersherum: <code>for e in s:</code> und dann <code>p = e + 1</code>, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: <code>for x in s</code> liefert Elemente. Am 31.10. bei Koko wieder: <code>for i in piles:</code> und dann <code>piles[i] // k</code> → IndexError. Dort ist <code>i</code> ein Wert, kein Index. Konvention gegen die Verwechslung: <code>i</code>, <code>j</code> nur für Indizes, Werte heißen <code>v</code>, <code>x</code> oder <code>num</code>.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-1.py\">three-integer-sum #1–6</a><span class=\"badge crash\">6× Crash</span> 22.10. · durchläuft Werte und benutzt sie danach als Index (<code>nums_s[i]</code>)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-7.py\">three-integer-sum #7</a><span class=\"badge crash\">Crash</span> 22.10. · Index und Wert ohne <code>enumerate</code> → TypeError: cannot unpack non-iterable int</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/products-of-array-discluding-self/submission-2.py\">products-of-array-discluding-self #2–4</a><span class=\"badge fail\">3× falsch</span> 17.10. · durchläuft Werte (alle 1) und benutzt sie als Index</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/valid-sudoku/submission-2.py\">valid-sudoku #2–5</a><span class=\"badge crash\">2× Crash</span><span class=\"badge fail\">2× falsch</span> 18.10. · Spaltenindex <code>i</code> statt Zellwert <code>row[i]</code> ins Set</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-8.py\">longest-substring-without-duplicates #8</a><span class=\"badge crash\">Crash</span> 27.10. · <code>for e in s</code> liefert Zeichen, <code>e + 1</code> → TypeError. Eigener Kommentar: „iterieren über elements oder index?“</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-0.py\">eating-bananas #0</a><span class=\"badge crash\">Crash</span> 31.10. · <code>for i in piles</code> liefert Stapelgrößen, <code>piles[i]</code> benutzt sie als Index → IndexError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/two-integer-sum/submission-36.py\">two-integer-sum #36</a><span class=\"badge crash\">Crash</span> 04.11. · Index und Wert ohne <code>enumerate</code> → TypeError: cannot unpack non-iterable int; #37 mit <code>enumerate</code></li></ul>",
+   "last_evidence": "2026-11-04T23:17:17+00:00"
   },
   {
    "id": "last-window-max",
