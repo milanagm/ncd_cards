@@ -346,7 +346,9 @@
     {"ref": "evaluate-reverse-polish-notation#2", "snippet": "b= int(result[-2]) if i == \"+\":", "note": "liest die Operanden, entfernt sie aber nicht vom Stack"},
     {"ref": "evaluate-reverse-polish-notation#3", "snippet": "del result[-1] b= int(result[-2])", "note": "`result[-2]` erst nach `del result[-1]` gelesen: bei zwei Elementen ist nur noch eins da → IndexError"},
     {"ref": "evaluate-reverse-polish-notation#4-7", "snippet": "del result[-1] del result[-2]", "note": "nach `del result[-1]` ist `result[-2]` schon das übernächste Element → IndexError; #8 löscht zweimal `[-1]`"},
-    {"ref": "evaluate-reverse-polish-notation#2-4", "snippet": "a= int(result[-1])", "note": "latent: der obere Wert landet in `a`, also links; `-` rechnet `b - a` falsch herum. #5 tauscht"}
+    {"ref": "evaluate-reverse-polish-notation#2-4", "snippet": "a= int(result[-1])", "note": "latent: der obere Wert landet in `a`, also links; `-` rechnet `b - a` falsch herum. #5 tauscht"},
+    {"ref": "evaluate-reverse-polish-notation#11", "snippet": "del stack[-1] b = stack[-2]", "note": "wieder: nach `del stack[-1]` gibt es `stack[-2]` nicht mehr → IndexError (wie #3–7 am 1.11.)"},
+    {"ref": "evaluate-reverse-polish-notation#13-14", "snippet": "a = int(stack[-1]) del stack[-1] b = int(stack[-1])", "note": "das obere Element landet in `a`, also links: `4 - 9` statt `9 - 4` → -5 statt 5. #15 holt zuerst `b`"}
    ]
   },
   {
@@ -355,7 +357,8 @@
    "rule": "Eingabe-Tokens sind Strings: `'2' + '1'` ist `'21'`, `'2' * '1'` ein TypeError. Beim Lesen einmal `int(t)` und nur Zahlen weiterverarbeiten.",
    "occurrences": [
     {"ref": "evaluate-reverse-polish-notation#1", "snippet": "a= result[-1] b= result[-2]", "note": "Tokens nie in Zahlen umgewandelt: `'2' + '1'` wird `'21'`, beim `*` dann TypeError"},
-    {"ref": "evaluate-reverse-polish-notation#8", "snippet": "else: result.append(i)", "note": "ein einzelnes Token wird nie umgewandelt → `['7']` liefert `'7'` statt 7"}
+    {"ref": "evaluate-reverse-polish-notation#8", "snippet": "else: result.append(i)", "note": "ein einzelnes Token wird nie umgewandelt → `['7']` liefert `'7'` statt 7"},
+    {"ref": "evaluate-reverse-polish-notation#12", "snippet": "a = stack[-1] del stack[-1] b = stack[-1]", "note": "wieder ohne `int()`: `'2' + '1'` wird `'21'`, beim `*` dann TypeError; #13 wandelt um"}
    ]
   }
  ],

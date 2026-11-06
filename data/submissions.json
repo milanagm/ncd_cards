@@ -1,8 +1,8 @@
 {
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "558fc6db599423fc4cce18e026cb3e53a5667282",
-  "head_date": "2026-11-04T23:17:26+00:00"
+  "head": "163b9320901a929b148d938c618e216f9c7b8440",
+  "head_date": "2026-11-05T16:36:26+00:00"
  },
  "problems": {
   "anagram-groups": {
@@ -1297,6 +1297,95 @@
      "sha1": "1941acd96cb1ffd72944633abd4bc58241a7b59f",
      "commit": "40bd40df84a77c4b7221a3eb9b16a523eca115ba",
      "date": "2026-11-01T11:07:49+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 50,
+      "total": 50,
+      "spec": "25e77f2b4084"
+     }
+    },
+    {
+     "n": 11,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/evaluate-reverse-polish-notation/submission-11.py",
+     "sha1": "8af1b274d7916d8ea144324b6d21fab8182ce6b5",
+     "commit": "629cba7d53bd1494ce430d2e5c08172ff195d84d",
+     "date": "2026-11-05T16:28:56+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 50,
+      "input": "[['1', '2', '+', '3', '*', '4', '-']]",
+      "error": "IndexError: list index out of range",
+      "line": 8,
+      "code": "b = stack[-2]",
+      "spec": "25e77f2b4084"
+     }
+    },
+    {
+     "n": 12,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/evaluate-reverse-polish-notation/submission-12.py",
+     "sha1": "5929a94fb2831e58de159f9ab3dae119f4c01dec",
+     "commit": "a02e050b4f2d1fed6f6880988cbd27279a315751",
+     "date": "2026-11-05T16:30:01+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 50,
+      "input": "[['1', '2', '+', '3', '*', '4', '-']]",
+      "error": "TypeError: can't multiply sequence by non-int of type 'str'",
+      "line": 15,
+      "code": "stack.append(a*b)",
+      "spec": "25e77f2b4084"
+     }
+    },
+    {
+     "n": 13,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/evaluate-reverse-polish-notation/submission-13.py",
+     "sha1": "737e51d8ce5d5bb9898e08a19490c39698d54bc6",
+     "commit": "87d6b13b56cf527b3514ab8374a8c18b0166ce44",
+     "date": "2026-11-05T16:30:34+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 50,
+      "input": "[['1', '2', '+', '3', '*', '4', '-']]",
+      "expected": "5",
+      "got": "-5",
+      "spec": "25e77f2b4084"
+     }
+    },
+    {
+     "n": 14,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/evaluate-reverse-polish-notation/submission-14.py",
+     "sha1": "6873c254a9790be4ce6c4651167e8f0571196bb5",
+     "commit": "ade6bcc72f321595a98ce808572558276576363c",
+     "date": "2026-11-05T16:30:48+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 50,
+      "input": "[['1', '2', '+', '3', '*', '4', '-']]",
+      "expected": "5",
+      "got": "-5",
+      "spec": "25e77f2b4084"
+     }
+    },
+    {
+     "n": 15,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/evaluate-reverse-polish-notation/submission-15.py",
+     "sha1": "cba864e50a43d1f5986cf2d83f53537a4ec3cf29",
+     "commit": "163b9320901a929b148d938c618e216f9c7b8440",
+     "date": "2026-11-05T16:36:26+00:00",
      "bulk_sync": false,
      "verdict": {
       "status": "PASS",

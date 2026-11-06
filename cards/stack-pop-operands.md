@@ -2,7 +2,7 @@
 id: stack-pop-operands
 type: bug
 mistakes: [stack-ops]
-evidence: [evaluate-reverse-polish-notation#3, evaluate-reverse-polish-notation#4-7, evaluate-reverse-polish-notation#8]
+evidence: [evaluate-reverse-polish-notation#3, evaluate-reverse-polish-notation#4-7, evaluate-reverse-polish-notation#8, evaluate-reverse-polish-notation#11, evaluate-reverse-polish-notation#13-14, evaluate-reverse-polish-notation#15]
 tags: [stack]
 ---
 ## Front
@@ -27,3 +27,5 @@ stack.append(a - b)
 ```
 
 Das zuerst geholte Element ist der **rechte** Operand. Bei dir kostete das am 1.11. fünf Versuche (#3–7); #8 löscht zweimal `[-1]`.
+
+Beim zweiten Anlauf am 5.11. beides noch einmal: `stack[-2]` nach dem `del` → IndexError (#11), dann landete das obere Element in `a`, also links: `4 - 9` ergab -5 statt 5 (#13–14). #15 holt zuerst `b` ✔

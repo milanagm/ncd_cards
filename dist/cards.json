@@ -32,15 +32,15 @@
  },
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "558fc6db599423fc4cce18e026cb3e53a5667282",
-  "head_date": "2026-11-04T23:17:26+00:00"
+  "head": "163b9320901a929b148d938c618e216f9c7b8440",
+  "head_date": "2026-11-05T16:36:26+00:00"
  },
  "stats": {
-  "submissions": 289,
+  "submissions": 294,
   "statuses": {
-   "WRONG_ANSWER": 103,
-   "PASS": 96,
-   "RUNTIME_ERROR": 76,
+   "WRONG_ANSWER": 105,
+   "PASS": 97,
+   "RUNTIME_ERROR": 78,
    "TIMEOUT": 10,
    "LOAD_ERROR": 4
   }
@@ -363,21 +363,21 @@
    "id": "stack-ops",
    "title": "Stack: lesen, entfernen, Reihenfolge",
    "rule": "`b = stack.pop()`, dann `a = stack.pop()`: `pop()` liest und entfernt in einem Schritt, das zuerst geholte Element ist der rechte Operand. Nach `del xs[-1]` zeigt `xs[-2]` auf ein anderes Element als vorher.",
-   "submissions": 6,
+   "submissions": 9,
    "problems": [
     "evaluate-reverse-polish-notation"
    ],
-   "last_seen": "2026-11-01"
+   "last_seen": "2026-11-05"
   },
   {
    "id": "str-int",
    "title": "Zahlen als Strings",
    "rule": "Eingabe-Tokens sind Strings: `'2' + '1'` ist `'21'`, `'2' * '1'` ein TypeError. Beim Lesen einmal `int(t)` und nur Zahlen weiterverarbeiten.",
-   "submissions": 2,
+   "submissions": 3,
    "problems": [
     "evaluate-reverse-polish-notation"
    ],
-   "last_seen": "2026-11-01"
+   "last_seen": "2026-11-05"
   }
  ],
  "cards": [
@@ -1899,7 +1899,10 @@
    "evidence": [
     "evaluate-reverse-polish-notation#3",
     "evaluate-reverse-polish-notation#4-7",
-    "evaluate-reverse-polish-notation#8"
+    "evaluate-reverse-polish-notation#8",
+    "evaluate-reverse-polish-notation#11",
+    "evaluate-reverse-polish-notation#13-14",
+    "evaluate-reverse-polish-notation#15"
    ],
    "tags": [
     "ncd::fehler::stack-ops",
@@ -1908,11 +1911,11 @@
     "stack"
    ],
    "front_md": "Evaluate RPN, `tokens = [\"1\", \"2\", \"+\", ...]`: Beim `+` steht `result = [\"1\", \"2\"]`. Wo crasht das?\n\n```python\na= int(result[-1])\nb= int(result[-2])\ndel result[-1]\ndel result[-2]\n```",
-   "back_md": "In der letzten Zeile. Nach `del result[-1]` ist nur noch `[\"1\"]` übrig, `result[-2]` gibt es nicht mehr → IndexError. Negative Indizes zählen vom **aktuellen** Ende; jedes Löschen verschiebt sie.\n\nEinfacher mit `pop()`, das liest und entfernt in einem Schritt:\n\n```python\nb = stack.pop()\na = stack.pop()\nstack.append(a - b)\n```\n\nDas zuerst geholte Element ist der **rechte** Operand. Bei dir kostete das am 1.11. fünf Versuche (#3–7); #8 löscht zweimal `[-1]`.",
+   "back_md": "In der letzten Zeile. Nach `del result[-1]` ist nur noch `[\"1\"]` übrig, `result[-2]` gibt es nicht mehr → IndexError. Negative Indizes zählen vom **aktuellen** Ende; jedes Löschen verschiebt sie.\n\nEinfacher mit `pop()`, das liest und entfernt in einem Schritt:\n\n```python\nb = stack.pop()\na = stack.pop()\nstack.append(a - b)\n```\n\nDas zuerst geholte Element ist der **rechte** Operand. Bei dir kostete das am 1.11. fünf Versuche (#3–7); #8 löscht zweimal `[-1]`.\n\nBeim zweiten Anlauf am 5.11. beides noch einmal: `stack[-2]` nach dem `del` → IndexError (#11), dann landete das obere Element in `a`, also links: `4 - 9` ergab -5 statt 5 (#13–14). #15 holt zuerst `b` ✔",
    "front_html": "<p>Evaluate RPN, <code>tokens = [\"1\", \"2\", \"+\", ...]</code>: Beim <code>+</code> steht <code>result = [\"1\", \"2\"]</code>. Wo crasht das?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">a</span><span class=\"o\">=</span> <span class=\"nb\">int</span><span class=\"p\">(</span><span class=\"n\">result</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">])</span>\n<span class=\"n\">b</span><span class=\"o\">=</span> <span class=\"nb\">int</span><span class=\"p\">(</span><span class=\"n\">result</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">2</span><span class=\"p\">])</span>\n<span class=\"k\">del</span> <span class=\"n\">result</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">]</span>\n<span class=\"k\">del</span> <span class=\"n\">result</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">2</span><span class=\"p\">]</span>\n</code></pre></div>",
-   "back_html": "<p>In der letzten Zeile. Nach <code>del result[-1]</code> ist nur noch <code>[\"1\"]</code> übrig, <code>result[-2]</code> gibt es nicht mehr → IndexError. Negative Indizes zählen vom <strong>aktuellen</strong> Ende; jedes Löschen verschiebt sie.</p>\n<p>Einfacher mit <code>pop()</code>, das liest und entfernt in einem Schritt:</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">b</span> <span class=\"o\">=</span> <span class=\"n\">stack</span><span class=\"o\">.</span><span class=\"n\">pop</span><span class=\"p\">()</span>\n<span class=\"n\">a</span> <span class=\"o\">=</span> <span class=\"n\">stack</span><span class=\"o\">.</span><span class=\"n\">pop</span><span class=\"p\">()</span>\n<span class=\"n\">stack</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span class=\"n\">a</span> <span class=\"o\">-</span> <span class=\"n\">b</span><span class=\"p\">)</span>\n</code></pre></div>\n\n<p>Das zuerst geholte Element ist der <strong>rechte</strong> Operand. Bei dir kostete das am 1.11. fünf Versuche (#3–7); #8 löscht zweimal <code>[-1]</code>.</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-3.py\">evaluate-reverse-polish-notation #3</a><span class=\"badge crash\">Crash</span> 01.11. · <code>result[-2]</code> erst nach <code>del result[-1]</code> gelesen: bei zwei Elementen ist nur noch eins da → IndexError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-4.py\">evaluate-reverse-polish-notation #4–7</a><span class=\"badge crash\">4× Crash</span> 01.11. · nach <code>del result[-1]</code> ist <code>result[-2]</code> schon das übernächste Element → IndexError; #8 löscht zweimal <code>[-1]</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-8.py\">evaluate-reverse-polish-notation #8</a><span class=\"badge fail\">falsch</span> 01.11. · ein einzelnes Token wird nie umgewandelt → <code>['7']</code> liefert <code>'7'</code> statt 7</li></ul>",
-   "last_evidence": "2026-11-01T11:07:10+00:00"
+   "back_html": "<p>In der letzten Zeile. Nach <code>del result[-1]</code> ist nur noch <code>[\"1\"]</code> übrig, <code>result[-2]</code> gibt es nicht mehr → IndexError. Negative Indizes zählen vom <strong>aktuellen</strong> Ende; jedes Löschen verschiebt sie.</p>\n<p>Einfacher mit <code>pop()</code>, das liest und entfernt in einem Schritt:</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">b</span> <span class=\"o\">=</span> <span class=\"n\">stack</span><span class=\"o\">.</span><span class=\"n\">pop</span><span class=\"p\">()</span>\n<span class=\"n\">a</span> <span class=\"o\">=</span> <span class=\"n\">stack</span><span class=\"o\">.</span><span class=\"n\">pop</span><span class=\"p\">()</span>\n<span class=\"n\">stack</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span class=\"n\">a</span> <span class=\"o\">-</span> <span class=\"n\">b</span><span class=\"p\">)</span>\n</code></pre></div>\n\n<p>Das zuerst geholte Element ist der <strong>rechte</strong> Operand. Bei dir kostete das am 1.11. fünf Versuche (#3–7); #8 löscht zweimal <code>[-1]</code>.</p>\n<p>Beim zweiten Anlauf am 5.11. beides noch einmal: <code>stack[-2]</code> nach dem <code>del</code> → IndexError (#11), dann landete das obere Element in <code>a</code>, also links: <code>4 - 9</code> ergab -5 statt 5 (#13–14). #15 holt zuerst <code>b</code> ✔</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-3.py\">evaluate-reverse-polish-notation #3</a><span class=\"badge crash\">Crash</span> 01.11. · <code>result[-2]</code> erst nach <code>del result[-1]</code> gelesen: bei zwei Elementen ist nur noch eins da → IndexError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-4.py\">evaluate-reverse-polish-notation #4–7</a><span class=\"badge crash\">4× Crash</span> 01.11. · nach <code>del result[-1]</code> ist <code>result[-2]</code> schon das übernächste Element → IndexError; #8 löscht zweimal <code>[-1]</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-8.py\">evaluate-reverse-polish-notation #8</a><span class=\"badge fail\">falsch</span> 01.11. · ein einzelnes Token wird nie umgewandelt → <code>['7']</code> liefert <code>'7'</code> statt 7</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-11.py\">evaluate-reverse-polish-notation #11</a><span class=\"badge crash\">Crash</span> 05.11. · wieder: nach <code>del stack[-1]</code> gibt es <code>stack[-2]</code> nicht mehr → IndexError (wie #3–7 am 1.11.)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-13.py\">evaluate-reverse-polish-notation #13–14</a><span class=\"badge fail\">2× falsch</span> 05.11. · das obere Element landet in <code>a</code>, also links: <code>4 - 9</code> statt <code>9 - 4</code> → -5 statt 5. #15 holt zuerst <code>b</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-15.py\">evaluate-reverse-polish-notation #15</a><span class=\"badge pass\">ok</span> 05.11.</li></ul>",
+   "last_evidence": "2026-11-05T16:30:48+00:00"
   },
   {
    "id": "str-lower-method",
@@ -2035,7 +2038,8 @@
    ],
    "evidence": [
     "evaluate-reverse-polish-notation#1",
-    "evaluate-reverse-polish-notation#8"
+    "evaluate-reverse-polish-notation#8",
+    "evaluate-reverse-polish-notation#12"
    ],
    "tags": [
     "ncd::fehler::str-int",
@@ -2045,11 +2049,11 @@
     "strings"
    ],
    "front_md": "`tokens = [\"1\", \"2\", \"+\", \"3\", \"*\"]`. Was ergibt `tokens[1] + tokens[0]`, und was danach `\"3\" * \"21\"`?",
-   "back_md": "`\"21\"`: `+` hängt Strings aneinander. Und `\"3\" * \"21\"` ist ein `TypeError: can't multiply sequence by non-int of type 'str'`. `str * int` wiederholt, `str * str` gibt es nicht.\n\nTokens sind Strings. Beim Lesen einmal `int(t)` und nur Zahlen auf den Stack legen.\n\nGenau so in Evaluate RPN #1. In #8 wurde nur beim Rechnen umgewandelt, deshalb lieferte `[\"7\"]` den String `\"7\"` statt 7.",
+   "back_md": "`\"21\"`: `+` hängt Strings aneinander. Und `\"3\" * \"21\"` ist ein `TypeError: can't multiply sequence by non-int of type 'str'`. `str * int` wiederholt, `str * str` gibt es nicht.\n\nTokens sind Strings. Beim Lesen einmal `int(t)` und nur Zahlen auf den Stack legen.\n\nGenau so in Evaluate RPN #1 und am 5.11. noch einmal in #12. In #8 wurde nur beim Rechnen umgewandelt, deshalb lieferte `[\"7\"]` den String `\"7\"` statt 7.",
    "front_html": "<p><code>tokens = [\"1\", \"2\", \"+\", \"3\", \"*\"]</code>. Was ergibt <code>tokens[1] + tokens[0]</code>, und was danach <code>\"3\" * \"21\"</code>?</p>",
-   "back_html": "<p><code>\"21\"</code>: <code>+</code> hängt Strings aneinander. Und <code>\"3\" * \"21\"</code> ist ein <code>TypeError: can't multiply sequence by non-int of type 'str'</code>. <code>str * int</code> wiederholt, <code>str * str</code> gibt es nicht.</p>\n<p>Tokens sind Strings. Beim Lesen einmal <code>int(t)</code> und nur Zahlen auf den Stack legen.</p>\n<p>Genau so in Evaluate RPN #1. In #8 wurde nur beim Rechnen umgewandelt, deshalb lieferte <code>[\"7\"]</code> den String <code>\"7\"</code> statt 7.</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-1.py\">evaluate-reverse-polish-notation #1</a><span class=\"badge crash\">Crash</span> 01.11. · Tokens nie in Zahlen umgewandelt: <code>'2' + '1'</code> wird <code>'21'</code>, beim <code>*</code> dann TypeError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-8.py\">evaluate-reverse-polish-notation #8</a><span class=\"badge fail\">falsch</span> 01.11. · ein einzelnes Token wird nie umgewandelt → <code>['7']</code> liefert <code>'7'</code> statt 7</li></ul>",
-   "last_evidence": "2026-11-01T11:07:10+00:00"
+   "back_html": "<p><code>\"21\"</code>: <code>+</code> hängt Strings aneinander. Und <code>\"3\" * \"21\"</code> ist ein <code>TypeError: can't multiply sequence by non-int of type 'str'</code>. <code>str * int</code> wiederholt, <code>str * str</code> gibt es nicht.</p>\n<p>Tokens sind Strings. Beim Lesen einmal <code>int(t)</code> und nur Zahlen auf den Stack legen.</p>\n<p>Genau so in Evaluate RPN #1 und am 5.11. noch einmal in #12. In #8 wurde nur beim Rechnen umgewandelt, deshalb lieferte <code>[\"7\"]</code> den String <code>\"7\"</code> statt 7.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-1.py\">evaluate-reverse-polish-notation #1</a><span class=\"badge crash\">Crash</span> 01.11. · Tokens nie in Zahlen umgewandelt: <code>'2' + '1'</code> wird <code>'21'</code>, beim <code>*</code> dann TypeError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-8.py\">evaluate-reverse-polish-notation #8</a><span class=\"badge fail\">falsch</span> 01.11. · ein einzelnes Token wird nie umgewandelt → <code>['7']</code> liefert <code>'7'</code> statt 7</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/submission-12.py\">evaluate-reverse-polish-notation #12</a><span class=\"badge crash\">Crash</span> 05.11. · wieder ohne <code>int()</code>: <code>'2' + '1'</code> wird <code>'21'</code>, beim <code>*</code> dann TypeError; #13 wandelt um</li></ul>",
+   "last_evidence": "2026-11-05T16:30:01+00:00"
   },
   {
    "id": "top-k-bucket-sort",
