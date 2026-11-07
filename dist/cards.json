@@ -32,15 +32,15 @@
  },
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "163b9320901a929b148d938c618e216f9c7b8440",
-  "head_date": "2026-11-05T16:36:26+00:00"
+  "head": "a35c9fea2ef177873aad0a599c1b2458c9b0ffff",
+  "head_date": "2026-11-06T23:27:09+00:00"
  },
  "stats": {
-  "submissions": 294,
+  "submissions": 297,
   "statuses": {
-   "WRONG_ANSWER": 105,
-   "PASS": 97,
-   "RUNTIME_ERROR": 78,
+   "WRONG_ANSWER": 106,
+   "PASS": 98,
+   "RUNTIME_ERROR": 79,
    "TIMEOUT": 10,
    "LOAD_ERROR": 4
   }
@@ -50,7 +50,7 @@
    "id": "index-vs-value",
    "title": "Index und Wert verwechselt",
    "rule": "Vor jeder Verwendung klären: Position oder Element? `for i, v in enumerate(xs)` hält beides auseinander.",
-   "submissions": 36,
+   "submissions": 37,
    "problems": [
     "buy-and-sell-crypto",
     "eating-bananas",
@@ -62,7 +62,7 @@
     "two-integer-sum",
     "valid-sudoku"
    ],
-   "last_seen": "2026-11-04"
+   "last_seen": "2026-11-06"
   },
   {
    "id": "pointer-movement",
@@ -107,8 +107,9 @@
    "id": "method-api",
    "title": "Methoden & Builtins geraten",
    "rule": "Bei Unsicherheit `dir(x)` oder `help(x)`. Strings: `s.lower()`; Listen: `xs.append(v)` mit genau einem Argument, `xs.index(v)`; Wiederholung: `range(k)`.",
-   "submissions": 14,
+   "submissions": 15,
    "problems": [
+    "buy-and-sell-crypto",
     "duplicate-integer",
     "is-palindrome",
     "max-water-container",
@@ -117,7 +118,7 @@
     "top-k-elements-in-list",
     "two-integer-sum-ii"
    ],
-   "last_seen": "2026-10-31"
+   "last_seen": "2026-11-06"
   },
   {
    "id": "container-choice",
@@ -1209,6 +1210,7 @@
     "index-vs-value"
    ],
    "problems": [
+    "buy-and-sell-crypto",
     "eating-bananas",
     "longest-substring-without-duplicates",
     "products-of-array-discluding-self",
@@ -1223,11 +1225,13 @@
     "valid-sudoku#2-5",
     "longest-substring-without-duplicates#8",
     "eating-bananas#0",
-    "two-integer-sum#36"
+    "two-integer-sum#36",
+    "buy-and-sell-crypto#4"
    ],
    "tags": [
     "loops",
     "ncd::fehler::index-vs-value",
+    "ncd::problem::buy-and-sell-crypto",
     "ncd::problem::eating-bananas",
     "ncd::problem::longest-substring-without-duplicates",
     "ncd::problem::products-of-array-discluding-self",
@@ -1238,11 +1242,11 @@
     "python"
    ],
    "front_md": "Du brauchst in der Schleife Index **und** Wert. Was liefern die ersten drei Schleifen, und warum crasht die vierte?\n\n```python\nfor x in nums: ...\nfor i in range(len(nums)): ...\nfor i, x in enumerate(nums): ...\nfor i, x in nums: ...\n```",
-   "back_md": "1. nur Werte\n2. nur Indizes\n3. Paare aus Index und Wert ✔\n4. Python versucht jeden **Wert** in zwei Teile zu entpacken → `TypeError: cannot unpack non-iterable int object`. Genau das bei 3Sum #7 und am 4.11. bei Two Sum #36; eine Minute später lief #37 mit `enumerate`.\n\nEiner deiner häufigsten Fehler (9 von 25 Problemen): `for i in nums_s:` und danach `nums_s[i]`. Am 27.10. andersherum: `for e in s:` und dann `p = e + 1`, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: `for x in s` liefert Elemente. Am 31.10. bei Koko wieder: `for i in piles:` und dann `piles[i] // k` → IndexError. Dort ist `i` ein Wert, kein Index. Konvention gegen die Verwechslung: `i`, `j` nur für Indizes, Werte heißen `v`, `x` oder `num`.",
+   "back_md": "1. nur Werte\n2. nur Indizes\n3. Paare aus Index und Wert ✔\n4. Python versucht jeden **Wert** in zwei Teile zu entpacken → `TypeError: cannot unpack non-iterable int object`. Genau das bei 3Sum #7 und am 4.11. bei Two Sum #36; eine Minute später lief #37 mit `enumerate`.\n\nEiner deiner häufigsten Fehler (9 von 25 Problemen): `for i in nums_s:` und danach `nums_s[i]`. Am 27.10. andersherum: `for e in s:` und dann `p = e + 1`, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: `for x in s` liefert Elemente. Am 31.10. bei Koko wieder: `for i in piles:` und dann `piles[i] // k` → IndexError. Am 6.11. bei Buy and Sell: `for i in prices:` und dann `range(i+1, ...)`, also ein Preis als Startindex → 3 statt 0 bei `[10, 8, 7, 5, 2]`. Dort ist `i` ein Wert, kein Index. Konvention gegen die Verwechslung: `i`, `j` nur für Indizes, Werte heißen `v`, `x` oder `num`.",
    "front_html": "<p>Du brauchst in der Schleife Index <strong>und</strong> Wert. Was liefern die ersten drei Schleifen, und warum crasht die vierte?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">for</span> <span class=\"n\">x</span> <span class=\"ow\">in</span> <span class=\"n\">nums</span><span class=\"p\">:</span> <span class=\"o\">...</span>\n<span class=\"k\">for</span> <span class=\"n\">i</span> <span class=\"ow\">in</span> <span class=\"nb\">range</span><span class=\"p\">(</span><span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">nums</span><span class=\"p\">)):</span> <span class=\"o\">...</span>\n<span class=\"k\">for</span> <span class=\"n\">i</span><span class=\"p\">,</span> <span class=\"n\">x</span> <span class=\"ow\">in</span> <span class=\"nb\">enumerate</span><span class=\"p\">(</span><span class=\"n\">nums</span><span class=\"p\">):</span> <span class=\"o\">...</span>\n<span class=\"k\">for</span> <span class=\"n\">i</span><span class=\"p\">,</span> <span class=\"n\">x</span> <span class=\"ow\">in</span> <span class=\"n\">nums</span><span class=\"p\">:</span> <span class=\"o\">...</span>\n</code></pre></div>",
-   "back_html": "<ol>\n<li>nur Werte</li>\n<li>nur Indizes</li>\n<li>Paare aus Index und Wert ✔</li>\n<li>Python versucht jeden <strong>Wert</strong> in zwei Teile zu entpacken → <code>TypeError: cannot unpack non-iterable int object</code>. Genau das bei 3Sum #7 und am 4.11. bei Two Sum #36; eine Minute später lief #37 mit <code>enumerate</code>.</li>\n</ol>\n<p>Einer deiner häufigsten Fehler (9 von 25 Problemen): <code>for i in nums_s:</code> und danach <code>nums_s[i]</code>. Am 27.10. andersherum: <code>for e in s:</code> und dann <code>p = e + 1</code>, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: <code>for x in s</code> liefert Elemente. Am 31.10. bei Koko wieder: <code>for i in piles:</code> und dann <code>piles[i] // k</code> → IndexError. Dort ist <code>i</code> ein Wert, kein Index. Konvention gegen die Verwechslung: <code>i</code>, <code>j</code> nur für Indizes, Werte heißen <code>v</code>, <code>x</code> oder <code>num</code>.</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-1.py\">three-integer-sum #1–6</a><span class=\"badge crash\">6× Crash</span> 22.10. · durchläuft Werte und benutzt sie danach als Index (<code>nums_s[i]</code>)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-7.py\">three-integer-sum #7</a><span class=\"badge crash\">Crash</span> 22.10. · Index und Wert ohne <code>enumerate</code> → TypeError: cannot unpack non-iterable int</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/products-of-array-discluding-self/submission-2.py\">products-of-array-discluding-self #2–4</a><span class=\"badge fail\">3× falsch</span> 17.10. · durchläuft Werte (alle 1) und benutzt sie als Index</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/valid-sudoku/submission-2.py\">valid-sudoku #2–5</a><span class=\"badge crash\">2× Crash</span><span class=\"badge fail\">2× falsch</span> 18.10. · Spaltenindex <code>i</code> statt Zellwert <code>row[i]</code> ins Set</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-8.py\">longest-substring-without-duplicates #8</a><span class=\"badge crash\">Crash</span> 27.10. · <code>for e in s</code> liefert Zeichen, <code>e + 1</code> → TypeError. Eigener Kommentar: „iterieren über elements oder index?“</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-0.py\">eating-bananas #0</a><span class=\"badge crash\">Crash</span> 31.10. · <code>for i in piles</code> liefert Stapelgrößen, <code>piles[i]</code> benutzt sie als Index → IndexError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/two-integer-sum/submission-36.py\">two-integer-sum #36</a><span class=\"badge crash\">Crash</span> 04.11. · Index und Wert ohne <code>enumerate</code> → TypeError: cannot unpack non-iterable int; #37 mit <code>enumerate</code></li></ul>",
-   "last_evidence": "2026-11-04T23:17:17+00:00"
+   "back_html": "<ol>\n<li>nur Werte</li>\n<li>nur Indizes</li>\n<li>Paare aus Index und Wert ✔</li>\n<li>Python versucht jeden <strong>Wert</strong> in zwei Teile zu entpacken → <code>TypeError: cannot unpack non-iterable int object</code>. Genau das bei 3Sum #7 und am 4.11. bei Two Sum #36; eine Minute später lief #37 mit <code>enumerate</code>.</li>\n</ol>\n<p>Einer deiner häufigsten Fehler (9 von 25 Problemen): <code>for i in nums_s:</code> und danach <code>nums_s[i]</code>. Am 27.10. andersherum: <code>for e in s:</code> und dann <code>p = e + 1</code>, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: <code>for x in s</code> liefert Elemente. Am 31.10. bei Koko wieder: <code>for i in piles:</code> und dann <code>piles[i] // k</code> → IndexError. Am 6.11. bei Buy and Sell: <code>for i in prices:</code> und dann <code>range(i+1, ...)</code>, also ein Preis als Startindex → 3 statt 0 bei <code>[10, 8, 7, 5, 2]</code>. Dort ist <code>i</code> ein Wert, kein Index. Konvention gegen die Verwechslung: <code>i</code>, <code>j</code> nur für Indizes, Werte heißen <code>v</code>, <code>x</code> oder <code>num</code>.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-1.py\">three-integer-sum #1–6</a><span class=\"badge crash\">6× Crash</span> 22.10. · durchläuft Werte und benutzt sie danach als Index (<code>nums_s[i]</code>)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-7.py\">three-integer-sum #7</a><span class=\"badge crash\">Crash</span> 22.10. · Index und Wert ohne <code>enumerate</code> → TypeError: cannot unpack non-iterable int</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/products-of-array-discluding-self/submission-2.py\">products-of-array-discluding-self #2–4</a><span class=\"badge fail\">3× falsch</span> 17.10. · durchläuft Werte (alle 1) und benutzt sie als Index</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/valid-sudoku/submission-2.py\">valid-sudoku #2–5</a><span class=\"badge crash\">2× Crash</span><span class=\"badge fail\">2× falsch</span> 18.10. · Spaltenindex <code>i</code> statt Zellwert <code>row[i]</code> ins Set</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-8.py\">longest-substring-without-duplicates #8</a><span class=\"badge crash\">Crash</span> 27.10. · <code>for e in s</code> liefert Zeichen, <code>e + 1</code> → TypeError. Eigener Kommentar: „iterieren über elements oder index?“</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-0.py\">eating-bananas #0</a><span class=\"badge crash\">Crash</span> 31.10. · <code>for i in piles</code> liefert Stapelgrößen, <code>piles[i]</code> benutzt sie als Index → IndexError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/two-integer-sum/submission-36.py\">two-integer-sum #36</a><span class=\"badge crash\">Crash</span> 04.11. · Index und Wert ohne <code>enumerate</code> → TypeError: cannot unpack non-iterable int; #37 mit <code>enumerate</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-4.py\">buy-and-sell-crypto #4</a><span class=\"badge fail\">falsch</span> 06.11. · <code>i</code> ist ein Preis, wird aber als Startindex (<code>range(i+1, ...)</code>) benutzt → <code>[10, 8, 7, 5, 2]</code> liefert 3 statt 0; #6 mit <code>range(len(prices))</code> und <code>prices[i]</code></li></ul>",
+   "last_evidence": "2026-11-06T23:24:14+00:00"
   },
   {
    "id": "last-window-max",
@@ -1695,6 +1699,39 @@
    "back_html": "<p><strong>n − 1</strong> Mal (c = 0 … n − 2), also ein Zeichen zu wenig. <code>&lt;</code> schließt die Grenze schon aus, das <code>- 1</code> zieht ein zweites Mal ab.</p>\n<p>Genau n Mal: <code>while c &lt; n</code> oder <code>for _ in range(n)</code>. Noch einfacher per Slice: <code>word = s[i:i + n]</code>, dann <code>i += n</code>.</p>\n<p>Dein Kommentar dazu: „&lt; sorgt schon für kleiner, typisches leichtsinnsfehler“.</p>",
    "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/string-encode-and-decode/submission-10.py\">string-encode-and-decode #10–11</a><span class=\"badge crash\">2× Crash</span> 16.10. · liest ein Zeichen zu wenig</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/string-encode-and-decode/submission-12.py\">string-encode-and-decode #12</a><span class=\"badge pass\">ok</span> 16.10.</li></ul>",
    "last_evidence": "2026-10-16T20:52:26+00:00"
+  },
+  {
+   "id": "range-needs-int",
+   "guid": "zQ;L|+llL$",
+   "type": "gotcha",
+   "type_label": "Python-Gotcha",
+   "mistakes": [
+    "method-api"
+   ],
+   "problems": [
+    "buy-and-sell-crypto",
+    "max-water-container"
+   ],
+   "evidence": [
+    "max-water-container#1",
+    "max-water-container#2",
+    "buy-and-sell-crypto#5",
+    "buy-and-sell-crypto#6"
+   ],
+   "tags": [
+    "loops",
+    "ncd::fehler::method-api",
+    "ncd::problem::buy-and-sell-crypto",
+    "ncd::problem::max-water-container",
+    "ncd::typ::gotcha",
+    "python"
+   ],
+   "front_md": "Was passiert bei `for i in range(prices):`, wenn `prices` eine Liste ist? Was war gemeint?",
+   "back_md": "`TypeError: 'list' object cannot be interpreted as an integer`. `range` braucht eine **Zahl**, keine Liste.\n\nGemeint waren die Indizes: `range(len(prices))`. Brauchst du Index und Wert, dann `for i, p in enumerate(prices):`.\n\nZweimal bei dir: `range(heights)` bei Container With Most Water (#1, 24.10.) und `range(prices)` bei Buy and Sell (#5, 6.11.). Beide Male lief der nächste Versuch mit `range(len(...))`.",
+   "front_html": "<p>Was passiert bei <code>for i in range(prices):</code>, wenn <code>prices</code> eine Liste ist? Was war gemeint?</p>",
+   "back_html": "<p><code>TypeError: 'list' object cannot be interpreted as an integer</code>. <code>range</code> braucht eine <strong>Zahl</strong>, keine Liste.</p>\n<p>Gemeint waren die Indizes: <code>range(len(prices))</code>. Brauchst du Index und Wert, dann <code>for i, p in enumerate(prices):</code>.</p>\n<p>Zweimal bei dir: <code>range(heights)</code> bei Container With Most Water (#1, 24.10.) und <code>range(prices)</code> bei Buy and Sell (#5, 6.11.). Beide Male lief der nächste Versuch mit <code>range(len(...))</code>.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-1.py\">max-water-container #1</a><span class=\"badge crash\">Crash</span> 24.10. · <code>range</code> braucht eine Zahl: <code>range(len(heights))</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-2.py\">max-water-container #2</a><span class=\"badge fail\">falsch</span> 24.10. · <code>erwartet 36, bekommen 1</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-5.py\">buy-and-sell-crypto #5</a><span class=\"badge crash\">Crash</span> 06.11. · <code>range</code> braucht eine Zahl, wie bei Container With Most Water #1 am 24.10.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-6.py\">buy-and-sell-crypto #6</a><span class=\"badge pass\">ok</span> 06.11.</li></ul>",
+   "last_evidence": "2026-11-06T23:26:36+00:00"
   },
   {
    "id": "return-type-signature",

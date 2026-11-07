@@ -1,8 +1,8 @@
 {
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "163b9320901a929b148d938c618e216f9c7b8440",
-  "head_date": "2026-11-05T16:36:26+00:00"
+  "head": "a35c9fea2ef177873aad0a599c1b2458c9b0ffff",
+  "head_date": "2026-11-06T23:27:09+00:00"
  },
  "problems": {
   "anagram-groups": {
@@ -576,6 +576,58 @@
      "sha1": "f7741dcecce232c9340ce73a7f8f9a645bc0c0dd",
      "commit": "5d21f004977d8e62c5167ad0b7b161e613763531",
      "date": "2026-10-25T16:27:13+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "1d35d1104a7a"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/buy-and-sell-crypto/submission-4.py",
+     "sha1": "962de4210aa5c531a11466a0da3cc67093601444",
+     "commit": "95351752a84543ac77a3cbe91cf46e89ec0d44ab",
+     "date": "2026-11-06T23:24:14+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 1,
+      "total": 48,
+      "input": "[[10, 8, 7, 5, 2]]",
+      "expected": "0",
+      "got": "3",
+      "spec": "1d35d1104a7a"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/buy-and-sell-crypto/submission-5.py",
+     "sha1": "948c496bf51ad3ba9f104dfa76b891fca80400f1",
+     "commit": "7680c98577247264800d52a5d83cc3451bb1e902",
+     "date": "2026-11-06T23:26:36+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[[10, 1, 5, 6, 7, 1]]",
+      "error": "TypeError: 'list' object cannot be interpreted as an integer",
+      "line": 4,
+      "code": "for i in range(prices):",
+      "spec": "1d35d1104a7a"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/buy-and-sell-crypto/submission-6.py",
+     "sha1": "03a2d54772ec5bad31d820b0a34bf8149cf100b4",
+     "commit": "a35c9fea2ef177873aad0a599c1b2458c9b0ffff",
+     "date": "2026-11-06T23:27:09+00:00",
      "bulk_sync": false,
      "verdict": {
       "status": "PASS",

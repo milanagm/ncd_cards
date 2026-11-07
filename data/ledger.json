@@ -20,7 +20,8 @@
     {"ref": "longest-substring-without-duplicates#12-13", "snippet": "if i not in seen:", "note": "prüft den Index statt des Zeichens; #14 korrigiert die Prüfung, aber nicht das `add`"},
     {"ref": "longest-substring-without-duplicates#12-16", "snippet": "seen.add(i)", "note": "Index statt Zeichen ins Set → kein Duplikat wird erkannt (got 7 bei `zxyzxyz`)"},
     {"ref": "eating-bananas#0", "snippet": "for i in piles: needed_t = 0 needed_t += piles[i] // k", "note": "`for i in piles` liefert Stapelgrößen, `piles[i]` benutzt sie als Index → IndexError"},
-    {"ref": "two-integer-sum#36", "snippet": "for i, v in nums:", "note": "Index und Wert ohne `enumerate` → TypeError: cannot unpack non-iterable int; #37 mit `enumerate`"}
+    {"ref": "two-integer-sum#36", "snippet": "for i, v in nums:", "note": "Index und Wert ohne `enumerate` → TypeError: cannot unpack non-iterable int; #37 mit `enumerate`"},
+    {"ref": "buy-and-sell-crypto#4", "snippet": "for i in prices:", "note": "`i` ist ein Preis, wird aber als Startindex (`range(i+1, ...)`) benutzt → `[10, 8, 7, 5, 2]` liefert 3 statt 0; #6 mit `range(len(prices))` und `prices[i]`"}
    ]
   },
   {
@@ -77,7 +78,8 @@
     {"ref": "duplicate-integer#1-2", "snippet": "return true", "note": "`True`/`False` werden großgeschrieben → NameError"},
     {"ref": "max-water-container#1", "snippet": "for i in range(heights):", "note": "`range` braucht eine Zahl: `range(len(heights))`"},
     {"ref": "reverse-a-linked-list#0-1", "snippet": "initial.append(head.value)", "note": "das Attribut heißt `val`"},
-    {"ref": "reverse-a-linked-list#7", "snippet": "while head.value != None:", "note": "wieder `value` statt `val`"}
+    {"ref": "reverse-a-linked-list#7", "snippet": "while head.value != None:", "note": "wieder `value` statt `val`"},
+    {"ref": "buy-and-sell-crypto#5", "snippet": "for i in range(prices):", "note": "`range` braucht eine Zahl, wie bei Container With Most Water #1 am 24.10."}
    ]
   },
   {
