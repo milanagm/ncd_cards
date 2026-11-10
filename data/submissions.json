@@ -1,8 +1,8 @@
 {
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "20b11015f2f74feee00d88ca2bf243240afdc517",
-  "head_date": "2026-11-08T22:25:17+00:00"
+  "head": "87f476c12eeb62570f6a1dfce63736fb3a6495c2",
+  "head_date": "2026-11-09T21:05:19+00:00"
  },
  "problems": {
   "anagram-groups": {
@@ -4263,6 +4263,91 @@
      "sha1": "ab26825907fae810a19d4dfa49c7f851e9a74e38",
      "commit": "20b11015f2f74feee00d88ca2bf243240afdc517",
      "date": "2026-11-08T22:25:17+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 17,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-17.py",
+     "sha1": "579e0b6bea3f2c73b3e8bbea1a29df95c7efb24e",
+     "commit": "74f3d1ca46d2e5981816c30547352cd42a83837b",
+     "date": "2026-11-09T20:56:12+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 2, 3, 3, 3], 2]",
+      "expected": "[3, 2]",
+      "got": "[]",
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 18,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-18.py",
+     "sha1": "7d0056778d0d7e65c2c830fd94385ddfdd5914e2",
+     "commit": "fd4986e00663ff687ae7f921d66bb9a8a7f8f3c1",
+     "date": "2026-11-09T20:57:25+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 2, 3, 3, 3], 2]",
+      "expected": "[3, 2]",
+      "got": "[]",
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 19,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-19.py",
+     "sha1": "a5b6884bd0f043e13d4c9dae1c3a40407f119a93",
+     "commit": "4e7aedf59c7e4bd73219b6c93757b2f51cbb7368",
+     "date": "2026-11-09T21:01:00+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 21,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-21.py",
+     "sha1": "d58762cf0721ee504080e6faece6a0b232dfa646",
+     "commit": "77083cb0d552202ed62dd4cadd858fba61c7105e",
+     "date": "2026-11-09T21:05:07+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 2, 3, 3, 3], 2]",
+      "error": "NameError: name 'count' is not defined",
+      "line": 18,
+      "code": "return sorted(count, key=count.get, reverse=True)[:k]",
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 22,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-22.py",
+     "sha1": "bc5358ee64a357f443490b2f13452506192da74f",
+     "commit": "87f476c12eeb62570f6a1dfce63736fb3a6495c2",
+     "date": "2026-11-09T21:05:19+00:00",
      "bulk_sync": false,
      "verdict": {
       "status": "PASS",

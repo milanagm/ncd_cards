@@ -32,15 +32,15 @@
  },
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "20b11015f2f74feee00d88ca2bf243240afdc517",
-  "head_date": "2026-11-08T22:25:17+00:00"
+  "head": "87f476c12eeb62570f6a1dfce63736fb3a6495c2",
+  "head_date": "2026-11-09T21:05:19+00:00"
  },
  "stats": {
-  "submissions": 298,
+  "submissions": 303,
   "statuses": {
-   "WRONG_ANSWER": 106,
-   "PASS": 99,
-   "RUNTIME_ERROR": 79,
+   "WRONG_ANSWER": 108,
+   "PASS": 101,
+   "RUNTIME_ERROR": 80,
    "TIMEOUT": 10,
    "LOAD_ERROR": 4
   }
@@ -159,7 +159,7 @@
    "id": "wrong-variable",
    "title": "Falsche Variable: Copy-Paste, Shadowing, Tippfehler",
    "rule": "Nach Copy-Paste jede Variable prüfen. Input-Parameter nie überschreiben. Nach dem Sortieren nur noch die sortierte Liste benutzen, am einfachsten `nums.sort()` in place.",
-   "submissions": 29,
+   "submissions": 30,
    "problems": [
     "anagram-groups",
     "binary-search",
@@ -176,7 +176,7 @@
     "top-k-elements-in-list",
     "two-integer-sum"
    ],
-   "last_seen": "2026-11-01"
+   "last_seen": "2026-11-09"
   },
   {
    "id": "duplicates-order",
@@ -262,14 +262,15 @@
    "id": "init-scope",
    "title": "Initialisierung fehlt oder steht am falschen Ort",
    "rule": "Was über alle Runden gilt (Ergebnis, Set, Pointer), steht vor der Schleife; was pro Runde neu beginnt, in ihr. Eine `while`-Schleife braucht ihren Laufindex vorher gesetzt.",
-   "submissions": 7,
+   "submissions": 9,
    "problems": [
     "eating-bananas",
     "longest-repeating-substring-with-replacement",
     "longest-substring-without-duplicates",
-    "max-water-container"
+    "max-water-container",
+    "top-k-elements-in-list"
    ],
-   "last_seen": "2026-10-31"
+   "last_seen": "2026-11-09"
   },
   {
    "id": "last-window",
@@ -725,7 +726,8 @@
     "binary-search",
     "daily-temperatures",
     "minimum-stack",
-    "reverse-a-linked-list"
+    "reverse-a-linked-list",
+    "top-k-elements-in-list"
    ],
    "evidence": [
     "binary-search#0-1",
@@ -733,7 +735,8 @@
     "reverse-a-linked-list#13",
     "reverse-a-linked-list#14",
     "minimum-stack#4",
-    "daily-temperatures#1"
+    "daily-temperatures#1",
+    "top-k-elements-in-list#21"
    ],
    "tags": [
     "naming",
@@ -742,15 +745,16 @@
     "ncd::problem::daily-temperatures",
     "ncd::problem::minimum-stack",
     "ncd::problem::reverse-a-linked-list",
+    "ncd::problem::top-k-elements-in-list",
     "ncd::typ::bug",
     "python"
    ],
    "front_md": "Wo crasht das, und mit welchem Fehler?\n\n```python\nprev, current = None, head\n\nwhile curr != None:\n    temp = current.next\n    current.next = prev\n    prev = current\n    current = temp\n\nreturn prev\n```",
-   "back_md": "Gleich in der Bedingung: `NameError: name 'curr' is not defined`. Die Variable heißt `current`.\n\nRegel: Nach dem Umbenennen oder Abtippen einer Lösung jeden Namen einmal gegen seine Definition lesen.\n\nDer gleiche Crash bei dir: `return i`, während der Index noch `mitte` hieß (Binary Search #0–1), und `while p > 0` statt `p_next` (Reverse Linked List #3). Am 1.11. noch zweimal: `min(stack)` statt `self.stack` (Min Stack #4) und `v2`, das es nie gab (Daily Temperatures #1).",
+   "back_md": "Gleich in der Bedingung: `NameError: name 'curr' is not defined`. Die Variable heißt `current`.\n\nRegel: Nach dem Umbenennen oder Abtippen einer Lösung jeden Namen einmal gegen seine Definition lesen.\n\nDer gleiche Crash bei dir: `return i`, während der Index noch `mitte` hieß (Binary Search #0–1), und `while p > 0` statt `p_next` (Reverse Linked List #3). Am 1.11. noch zweimal: `min(stack)` statt `self.stack` (Min Stack #4) und `v2`, das es nie gab (Daily Temperatures #1). Am 9.11. `count` statt `counts` in einer Zeile, die du aus einer älteren Lösung übernommen hast (Top K #21).",
    "front_html": "<p>Wo crasht das, und mit welchem Fehler?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">prev</span><span class=\"p\">,</span> <span class=\"n\">current</span> <span class=\"o\">=</span> <span class=\"kc\">None</span><span class=\"p\">,</span> <span class=\"n\">head</span>\n\n<span class=\"k\">while</span> <span class=\"n\">curr</span> <span class=\"o\">!=</span> <span class=\"kc\">None</span><span class=\"p\">:</span>\n    <span class=\"n\">temp</span> <span class=\"o\">=</span> <span class=\"n\">current</span><span class=\"o\">.</span><span class=\"n\">next</span>\n    <span class=\"n\">current</span><span class=\"o\">.</span><span class=\"n\">next</span> <span class=\"o\">=</span> <span class=\"n\">prev</span>\n    <span class=\"n\">prev</span> <span class=\"o\">=</span> <span class=\"n\">current</span>\n    <span class=\"n\">current</span> <span class=\"o\">=</span> <span class=\"n\">temp</span>\n\n<span class=\"k\">return</span> <span class=\"n\">prev</span>\n</code></pre></div>",
-   "back_html": "<p>Gleich in der Bedingung: <code>NameError: name 'curr' is not defined</code>. Die Variable heißt <code>current</code>.</p>\n<p>Regel: Nach dem Umbenennen oder Abtippen einer Lösung jeden Namen einmal gegen seine Definition lesen.</p>\n<p>Der gleiche Crash bei dir: <code>return i</code>, während der Index noch <code>mitte</code> hieß (Binary Search #0–1), und <code>while p &gt; 0</code> statt <code>p_next</code> (Reverse Linked List #3). Am 1.11. noch zweimal: <code>min(stack)</code> statt <code>self.stack</code> (Min Stack #4) und <code>v2</code>, das es nie gab (Daily Temperatures #1).</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/binary-search/submission-0.py\">binary-search #0–1</a><span class=\"badge crash\">2× Crash</span> 28.10. · Index heißt <code>mitte</code>, zurückgegeben wird <code>i</code> → NameError; #2 benennt <code>mitte</code> in <code>i</code> um</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-3.py\">reverse-a-linked-list #3</a><span class=\"badge crash\">Crash</span> 31.10. · Variable heißt <code>p_next</code>, die Bedingung benutzt <code>p</code> → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-13.py\">reverse-a-linked-list #13</a><span class=\"badge crash\">Crash</span> 31.10. · Variable heißt <code>current</code>, die Bedingung benutzt <code>curr</code> → NameError; #14 korrigiert</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-14.py\">reverse-a-linked-list #14</a><span class=\"badge pass\">ok</span> 31.10.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/minimum-stack/submission-4.py\">minimum-stack #4</a><span class=\"badge crash\">Crash</span> 01.11. · <code>stack</code> statt <code>self.stack</code> → NameError; #5 korrigiert</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/daily-temperatures/submission-1.py\">daily-temperatures #1</a><span class=\"badge crash\">Crash</span> 01.11. · <code>v2</code> wird nie definiert → NameError; #2 schreibt <code>temperatures[j]</code></li></ul>",
-   "last_evidence": "2026-11-01T22:10:29+00:00"
+   "back_html": "<p>Gleich in der Bedingung: <code>NameError: name 'curr' is not defined</code>. Die Variable heißt <code>current</code>.</p>\n<p>Regel: Nach dem Umbenennen oder Abtippen einer Lösung jeden Namen einmal gegen seine Definition lesen.</p>\n<p>Der gleiche Crash bei dir: <code>return i</code>, während der Index noch <code>mitte</code> hieß (Binary Search #0–1), und <code>while p &gt; 0</code> statt <code>p_next</code> (Reverse Linked List #3). Am 1.11. noch zweimal: <code>min(stack)</code> statt <code>self.stack</code> (Min Stack #4) und <code>v2</code>, das es nie gab (Daily Temperatures #1). Am 9.11. <code>count</code> statt <code>counts</code> in einer Zeile, die du aus einer älteren Lösung übernommen hast (Top K #21).</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/binary-search/submission-0.py\">binary-search #0–1</a><span class=\"badge crash\">2× Crash</span> 28.10. · Index heißt <code>mitte</code>, zurückgegeben wird <code>i</code> → NameError; #2 benennt <code>mitte</code> in <code>i</code> um</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-3.py\">reverse-a-linked-list #3</a><span class=\"badge crash\">Crash</span> 31.10. · Variable heißt <code>p_next</code>, die Bedingung benutzt <code>p</code> → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-13.py\">reverse-a-linked-list #13</a><span class=\"badge crash\">Crash</span> 31.10. · Variable heißt <code>current</code>, die Bedingung benutzt <code>curr</code> → NameError; #14 korrigiert</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-14.py\">reverse-a-linked-list #14</a><span class=\"badge pass\">ok</span> 31.10.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/minimum-stack/submission-4.py\">minimum-stack #4</a><span class=\"badge crash\">Crash</span> 01.11. · <code>stack</code> statt <code>self.stack</code> → NameError; #5 korrigiert</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/daily-temperatures/submission-1.py\">daily-temperatures #1</a><span class=\"badge crash\">Crash</span> 01.11. · <code>v2</code> wird nie definiert → NameError; #2 schreibt <code>temperatures[j]</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/top-k-elements-in-list/submission-21.py\">top-k-elements-in-list #21</a><span class=\"badge crash\">Crash</span> 09.11. · das Dict heißt <code>counts</code>, die aus #15 übernommene Zeile benutzt <code>count</code> → NameError; #22 korrigiert</li></ul>",
+   "last_evidence": "2026-11-09T21:05:07+00:00"
   },
   {
    "id": "bug-shadowing-input",
@@ -1176,14 +1180,16 @@
     "eating-bananas",
     "longest-repeating-substring-with-replacement",
     "longest-substring-without-duplicates",
-    "max-water-container"
+    "max-water-container",
+    "top-k-elements-in-list"
    ],
    "evidence": [
     "longest-repeating-substring-with-replacement#0",
     "max-water-container#5",
     "max-water-container#1-2",
     "longest-substring-without-duplicates#12",
-    "eating-bananas#0-1"
+    "eating-bananas#0-1",
+    "top-k-elements-in-list#17-18"
    ],
    "tags": [
     "loops",
@@ -1192,14 +1198,15 @@
     "ncd::problem::longest-repeating-substring-with-replacement",
     "ncd::problem::longest-substring-without-duplicates",
     "ncd::problem::max-water-container",
+    "ncd::problem::top-k-elements-in-list",
     "ncd::typ::concept"
    ],
    "front_md": "Woran entscheidest du, ob eine Initialisierung **vor** oder **in** die Schleife gehört? Und was braucht eine `while`-Schleife, das eine `for`-Schleife nicht braucht?",
-   "back_md": "- Gilt der Wert über alle Runden (Ergebnis, `seen`-Set eines Sliding Window)? → **vor** die Schleife\n- Beginnt er in jeder Runde neu (innerer Pointer bei Brute Force)? → **in** die Schleife\n- `while` setzt nichts selbst: der Laufindex muss vorher stehen. `for` setzt seine Variable in jeder Runde neu.\n\nDeine Fälle:\n\n- `while i < len(s):` ohne `i = 0` (Longest Repeating #0) und beim Umbau von `for` auf `while` bei Container With Most Water (#5) → NameError\n- `p_l = len(heights) - 1` vor der `for`-Schleife: ab dem zweiten `i` läuft die innere Schleife nie wieder (#1–2)\n- `seen = set()` und `sub_len = 0` **in** der Schleife: das Fenster ist nie länger als 1 (Longest Substring #12)\n- `needed_t = 0` **in** der Schleife über die Stapel: gezählt wird nur der letzte (Koko #0–1)\n\nDeine Frage dazu: „wird bei for i dann zurückgesetzt bei i + 1 ?“ Nur die Schleifenvariable selbst. Alles andere behält seinen Wert, bis du es neu setzt.",
+   "back_md": "- Gilt der Wert über alle Runden (Ergebnis, `seen`-Set eines Sliding Window)? → **vor** die Schleife\n- Beginnt er in jeder Runde neu (innerer Pointer bei Brute Force)? → **in** die Schleife\n- `while` setzt nichts selbst: der Laufindex muss vorher stehen. `for` setzt seine Variable in jeder Runde neu.\n\nDeine Fälle:\n\n- `while i < len(s):` ohne `i = 0` (Longest Repeating #0) und beim Umbau von `for` auf `while` bei Container With Most Water (#5) → NameError\n- Heimtückischer: `while i < k:` ohne `i = 0`, aber vorher lief `for i in nums` (Top K #17–18, 9.11.). `i` hat noch den letzten Wert aus `nums`, also kein NameError. Bei `[1, 2, 2, 3, 3, 3]` ist `i = 3`, `3 < 2` ist falsch, das Ergebnis ist leer\n- `p_l = len(heights) - 1` vor der `for`-Schleife: ab dem zweiten `i` läuft die innere Schleife nie wieder (#1–2)\n- `seen = set()` und `sub_len = 0` **in** der Schleife: das Fenster ist nie länger als 1 (Longest Substring #12)\n- `needed_t = 0` **in** der Schleife über die Stapel: gezählt wird nur der letzte (Koko #0–1)\n\nDeine Frage dazu: „wird bei for i dann zurückgesetzt bei i + 1 ?“ Nur die Schleifenvariable selbst. Alles andere behält seinen Wert, bis du es neu setzt.",
    "front_html": "<p>Woran entscheidest du, ob eine Initialisierung <strong>vor</strong> oder <strong>in</strong> die Schleife gehört? Und was braucht eine <code>while</code>-Schleife, das eine <code>for</code>-Schleife nicht braucht?</p>",
-   "back_html": "<ul>\n<li>Gilt der Wert über alle Runden (Ergebnis, <code>seen</code>-Set eines Sliding Window)? → <strong>vor</strong> die Schleife</li>\n<li>Beginnt er in jeder Runde neu (innerer Pointer bei Brute Force)? → <strong>in</strong> die Schleife</li>\n<li><code>while</code> setzt nichts selbst: der Laufindex muss vorher stehen. <code>for</code> setzt seine Variable in jeder Runde neu.</li>\n</ul>\n<p>Deine Fälle:</p>\n<ul>\n<li><code>while i &lt; len(s):</code> ohne <code>i = 0</code> (Longest Repeating #0) und beim Umbau von <code>for</code> auf <code>while</code> bei Container With Most Water (#5) → NameError</li>\n<li><code>p_l = len(heights) - 1</code> vor der <code>for</code>-Schleife: ab dem zweiten <code>i</code> läuft die innere Schleife nie wieder (#1–2)</li>\n<li><code>seen = set()</code> und <code>sub_len = 0</code> <strong>in</strong> der Schleife: das Fenster ist nie länger als 1 (Longest Substring #12)</li>\n<li><code>needed_t = 0</code> <strong>in</strong> der Schleife über die Stapel: gezählt wird nur der letzte (Koko #0–1)</li>\n</ul>\n<p>Deine Frage dazu: „wird bei for i dann zurückgesetzt bei i + 1 ?“ Nur die Schleifenvariable selbst. Alles andere behält seinen Wert, bis du es neu setzt.</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-repeating-substring-with-replacement/submission-0.py\">longest-repeating-substring-with-replacement #0</a><span class=\"badge crash\">Crash</span> 26.10. · <code>i</code> nie gesetzt → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-5.py\">max-water-container #5</a><span class=\"badge crash\">Crash</span> 24.10. · Umbau von <code>for i in range(...)</code> zu <code>while</code>, <code>i = 0</code> fehlt → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-1.py\">max-water-container #1–2</a><span class=\"badge crash\">Crash</span><span class=\"badge fail\">falsch</span> 24.10. · <code>p_l</code> wird nur einmal gesetzt; ab dem zweiten <code>i</code> läuft die innere Schleife nie wieder. #3 setzt ihn pro <code>i</code> neu</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-12.py\">longest-substring-without-duplicates #12</a><span class=\"badge fail\">falsch</span> 27.10. · Set und Länge werden in jeder Runde neu angelegt → nie mehr als 1; #13 zieht sie vor die Schleife</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-0.py\">eating-bananas #0–1</a><span class=\"badge crash\">Crash</span><span class=\"badge fail\">falsch</span> 31.10. · <code>needed_t = 0</code> in der Schleife: am Ende zählt nur der letzte Stapel; #2 zieht es vor die Schleife</li></ul>",
-   "last_evidence": "2026-10-31T17:05:46+00:00"
+   "back_html": "<ul>\n<li>Gilt der Wert über alle Runden (Ergebnis, <code>seen</code>-Set eines Sliding Window)? → <strong>vor</strong> die Schleife</li>\n<li>Beginnt er in jeder Runde neu (innerer Pointer bei Brute Force)? → <strong>in</strong> die Schleife</li>\n<li><code>while</code> setzt nichts selbst: der Laufindex muss vorher stehen. <code>for</code> setzt seine Variable in jeder Runde neu.</li>\n</ul>\n<p>Deine Fälle:</p>\n<ul>\n<li><code>while i &lt; len(s):</code> ohne <code>i = 0</code> (Longest Repeating #0) und beim Umbau von <code>for</code> auf <code>while</code> bei Container With Most Water (#5) → NameError</li>\n<li>Heimtückischer: <code>while i &lt; k:</code> ohne <code>i = 0</code>, aber vorher lief <code>for i in nums</code> (Top K #17–18, 9.11.). <code>i</code> hat noch den letzten Wert aus <code>nums</code>, also kein NameError. Bei <code>[1, 2, 2, 3, 3, 3]</code> ist <code>i = 3</code>, <code>3 &lt; 2</code> ist falsch, das Ergebnis ist leer</li>\n<li><code>p_l = len(heights) - 1</code> vor der <code>for</code>-Schleife: ab dem zweiten <code>i</code> läuft die innere Schleife nie wieder (#1–2)</li>\n<li><code>seen = set()</code> und <code>sub_len = 0</code> <strong>in</strong> der Schleife: das Fenster ist nie länger als 1 (Longest Substring #12)</li>\n<li><code>needed_t = 0</code> <strong>in</strong> der Schleife über die Stapel: gezählt wird nur der letzte (Koko #0–1)</li>\n</ul>\n<p>Deine Frage dazu: „wird bei for i dann zurückgesetzt bei i + 1 ?“ Nur die Schleifenvariable selbst. Alles andere behält seinen Wert, bis du es neu setzt.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-repeating-substring-with-replacement/submission-0.py\">longest-repeating-substring-with-replacement #0</a><span class=\"badge crash\">Crash</span> 26.10. · <code>i</code> nie gesetzt → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-5.py\">max-water-container #5</a><span class=\"badge crash\">Crash</span> 24.10. · Umbau von <code>for i in range(...)</code> zu <code>while</code>, <code>i = 0</code> fehlt → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-1.py\">max-water-container #1–2</a><span class=\"badge crash\">Crash</span><span class=\"badge fail\">falsch</span> 24.10. · <code>p_l</code> wird nur einmal gesetzt; ab dem zweiten <code>i</code> läuft die innere Schleife nie wieder. #3 setzt ihn pro <code>i</code> neu</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-12.py\">longest-substring-without-duplicates #12</a><span class=\"badge fail\">falsch</span> 27.10. · Set und Länge werden in jeder Runde neu angelegt → nie mehr als 1; #13 zieht sie vor die Schleife</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-0.py\">eating-bananas #0–1</a><span class=\"badge crash\">Crash</span><span class=\"badge fail\">falsch</span> 31.10. · <code>needed_t = 0</code> in der Schleife: am Ende zählt nur der letzte Stapel; #2 zieht es vor die Schleife</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/top-k-elements-in-list/submission-17.py\">top-k-elements-in-list #17–18</a><span class=\"badge fail\">2× falsch</span> 09.11. · kein <code>i = 0</code>: <code>i</code> hat noch den letzten Wert aus <code>for i in nums</code> (bei <code>[1, 2, 2, 3, 3, 3]</code> die 3), <code>3 &lt; 2</code> ist falsch → <code>[]</code>. #19 setzt <code>i = 0</code></li></ul>",
+   "last_evidence": "2026-11-09T20:57:25+00:00"
   },
   {
    "id": "iterate-index-value",

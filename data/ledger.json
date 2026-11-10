@@ -147,7 +147,8 @@
     {"ref": "reverse-a-linked-list#3", "snippet": "while p > 0:", "note": "Variable heißt `p_next`, die Bedingung benutzt `p` → NameError"},
     {"ref": "reverse-a-linked-list#13", "snippet": "while curr != None:", "note": "Variable heißt `current`, die Bedingung benutzt `curr` → NameError; #14 korrigiert"},
     {"ref": "daily-temperatures#1", "snippet": "if v2 > v:", "note": "`v2` wird nie definiert → NameError; #2 schreibt `temperatures[j]`"},
-    {"ref": "minimum-stack#4", "snippet": "return min(stack)", "note": "`stack` statt `self.stack` → NameError; #5 korrigiert"}
+    {"ref": "minimum-stack#4", "snippet": "return min(stack)", "note": "`stack` statt `self.stack` → NameError; #5 korrigiert"},
+    {"ref": "top-k-elements-in-list#21", "snippet": "return sorted(count, key=count.get, reverse=True)[:k]", "note": "das Dict heißt `counts`, die aus #15 übernommene Zeile benutzt `count` → NameError; #22 korrigiert"}
    ]
   },
   {
@@ -240,7 +241,8 @@
     {"ref": "max-water-container#5", "snippet": "while i < p_l:", "note": "Umbau von `for i in range(...)` zu `while`, `i = 0` fehlt → NameError"},
     {"ref": "max-water-container#1-2", "snippet": "p_l = len(heights) - 1 for i in range(", "note": "`p_l` wird nur einmal gesetzt; ab dem zweiten `i` läuft die innere Schleife nie wieder. #3 setzt ihn pro `i` neu"},
     {"ref": "longest-substring-without-duplicates#12", "snippet": "for i, v in enumerate(s): seen = set() sub_len = 0", "note": "Set und Länge werden in jeder Runde neu angelegt → nie mehr als 1; #13 zieht sie vor die Schleife"},
-    {"ref": "eating-bananas#0-1", "snippet": "for i in piles: needed_t = 0", "note": "`needed_t = 0` in der Schleife: am Ende zählt nur der letzte Stapel; #2 zieht es vor die Schleife"}
+    {"ref": "eating-bananas#0-1", "snippet": "for i in piles: needed_t = 0", "note": "`needed_t = 0` in der Schleife: am Ende zählt nur der letzte Stapel; #2 zieht es vor die Schleife"},
+    {"ref": "top-k-elements-in-list#17-18", "snippet": "while i < k:", "note": "kein `i = 0`: `i` hat noch den letzten Wert aus `for i in nums` (bei `[1, 2, 2, 3, 3, 3]` die 3), `3 < 2` ist falsch → `[]`. #19 setzt `i = 0`"}
    ]
   },
   {
