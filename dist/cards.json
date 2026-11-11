@@ -32,15 +32,15 @@
  },
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "87f476c12eeb62570f6a1dfce63736fb3a6495c2",
-  "head_date": "2026-11-09T21:05:19+00:00"
+  "head": "bd2c77703a993ce20a14f058180d599f1dd979fc",
+  "head_date": "2026-11-10T23:03:30+00:00"
  },
  "stats": {
-  "submissions": 303,
+  "submissions": 307,
   "statuses": {
    "WRONG_ANSWER": 108,
-   "PASS": 101,
-   "RUNTIME_ERROR": 80,
+   "PASS": 102,
+   "RUNTIME_ERROR": 83,
    "TIMEOUT": 10,
    "LOAD_ERROR": 4
   }
@@ -107,7 +107,7 @@
    "id": "method-api",
    "title": "Methoden & Builtins geraten",
    "rule": "Bei Unsicherheit `dir(x)` oder `help(x)`. Strings: `s.lower()`; Listen: `xs.append(v)` mit genau einem Argument, `xs.index(v)`; Wiederholung: `range(k)`.",
-   "submissions": 15,
+   "submissions": 17,
    "problems": [
     "buy-and-sell-crypto",
     "duplicate-integer",
@@ -118,7 +118,7 @@
     "top-k-elements-in-list",
     "two-integer-sum-ii"
    ],
-   "last_seen": "2026-11-06"
+   "last_seen": "2026-11-10"
   },
   {
    "id": "container-choice",
@@ -159,7 +159,7 @@
    "id": "wrong-variable",
    "title": "Falsche Variable: Copy-Paste, Shadowing, Tippfehler",
    "rule": "Nach Copy-Paste jede Variable prüfen. Input-Parameter nie überschreiben. Nach dem Sortieren nur noch die sortierte Liste benutzen, am einfachsten `nums.sort()` in place.",
-   "submissions": 30,
+   "submissions": 32,
    "problems": [
     "anagram-groups",
     "binary-search",
@@ -176,7 +176,7 @@
     "top-k-elements-in-list",
     "two-integer-sum"
    ],
-   "last_seen": "2026-11-09"
+   "last_seen": "2026-11-10"
   },
   {
    "id": "duplicates-order",
@@ -736,7 +736,8 @@
     "reverse-a-linked-list#14",
     "minimum-stack#4",
     "daily-temperatures#1",
-    "top-k-elements-in-list#21"
+    "top-k-elements-in-list#21",
+    "top-k-elements-in-list#25-26"
    ],
    "tags": [
     "naming",
@@ -750,11 +751,11 @@
     "python"
    ],
    "front_md": "Wo crasht das, und mit welchem Fehler?\n\n```python\nprev, current = None, head\n\nwhile curr != None:\n    temp = current.next\n    current.next = prev\n    prev = current\n    current = temp\n\nreturn prev\n```",
-   "back_md": "Gleich in der Bedingung: `NameError: name 'curr' is not defined`. Die Variable heißt `current`.\n\nRegel: Nach dem Umbenennen oder Abtippen einer Lösung jeden Namen einmal gegen seine Definition lesen.\n\nDer gleiche Crash bei dir: `return i`, während der Index noch `mitte` hieß (Binary Search #0–1), und `while p > 0` statt `p_next` (Reverse Linked List #3). Am 1.11. noch zweimal: `min(stack)` statt `self.stack` (Min Stack #4) und `v2`, das es nie gab (Daily Temperatures #1). Am 9.11. `count` statt `counts` in einer Zeile, die du aus einer älteren Lösung übernommen hast (Top K #21).",
+   "back_md": "Gleich in der Bedingung: `NameError: name 'curr' is not defined`. Die Variable heißt `current`.\n\nRegel: Nach dem Umbenennen oder Abtippen einer Lösung jeden Namen einmal gegen seine Definition lesen.\n\nDer gleiche Crash bei dir: `return i`, während der Index noch `mitte` hieß (Binary Search #0–1), und `while p > 0` statt `p_next` (Reverse Linked List #3). Am 1.11. noch zweimal: `min(stack)` statt `self.stack` (Min Stack #4) und `v2`, das es nie gab (Daily Temperatures #1). Am 9.11. `count` statt `counts` in einer Zeile, die du aus einer älteren Lösung übernommen hast (Top K #21). Einen Tag später zweimal `counts.get(n, ...)`, obwohl die Schleifenvariable inzwischen `i` hieß (Top K #25–26).",
    "front_html": "<p>Wo crasht das, und mit welchem Fehler?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">prev</span><span class=\"p\">,</span> <span class=\"n\">current</span> <span class=\"o\">=</span> <span class=\"kc\">None</span><span class=\"p\">,</span> <span class=\"n\">head</span>\n\n<span class=\"k\">while</span> <span class=\"n\">curr</span> <span class=\"o\">!=</span> <span class=\"kc\">None</span><span class=\"p\">:</span>\n    <span class=\"n\">temp</span> <span class=\"o\">=</span> <span class=\"n\">current</span><span class=\"o\">.</span><span class=\"n\">next</span>\n    <span class=\"n\">current</span><span class=\"o\">.</span><span class=\"n\">next</span> <span class=\"o\">=</span> <span class=\"n\">prev</span>\n    <span class=\"n\">prev</span> <span class=\"o\">=</span> <span class=\"n\">current</span>\n    <span class=\"n\">current</span> <span class=\"o\">=</span> <span class=\"n\">temp</span>\n\n<span class=\"k\">return</span> <span class=\"n\">prev</span>\n</code></pre></div>",
-   "back_html": "<p>Gleich in der Bedingung: <code>NameError: name 'curr' is not defined</code>. Die Variable heißt <code>current</code>.</p>\n<p>Regel: Nach dem Umbenennen oder Abtippen einer Lösung jeden Namen einmal gegen seine Definition lesen.</p>\n<p>Der gleiche Crash bei dir: <code>return i</code>, während der Index noch <code>mitte</code> hieß (Binary Search #0–1), und <code>while p &gt; 0</code> statt <code>p_next</code> (Reverse Linked List #3). Am 1.11. noch zweimal: <code>min(stack)</code> statt <code>self.stack</code> (Min Stack #4) und <code>v2</code>, das es nie gab (Daily Temperatures #1). Am 9.11. <code>count</code> statt <code>counts</code> in einer Zeile, die du aus einer älteren Lösung übernommen hast (Top K #21).</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/binary-search/submission-0.py\">binary-search #0–1</a><span class=\"badge crash\">2× Crash</span> 28.10. · Index heißt <code>mitte</code>, zurückgegeben wird <code>i</code> → NameError; #2 benennt <code>mitte</code> in <code>i</code> um</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-3.py\">reverse-a-linked-list #3</a><span class=\"badge crash\">Crash</span> 31.10. · Variable heißt <code>p_next</code>, die Bedingung benutzt <code>p</code> → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-13.py\">reverse-a-linked-list #13</a><span class=\"badge crash\">Crash</span> 31.10. · Variable heißt <code>current</code>, die Bedingung benutzt <code>curr</code> → NameError; #14 korrigiert</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-14.py\">reverse-a-linked-list #14</a><span class=\"badge pass\">ok</span> 31.10.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/minimum-stack/submission-4.py\">minimum-stack #4</a><span class=\"badge crash\">Crash</span> 01.11. · <code>stack</code> statt <code>self.stack</code> → NameError; #5 korrigiert</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/daily-temperatures/submission-1.py\">daily-temperatures #1</a><span class=\"badge crash\">Crash</span> 01.11. · <code>v2</code> wird nie definiert → NameError; #2 schreibt <code>temperatures[j]</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/top-k-elements-in-list/submission-21.py\">top-k-elements-in-list #21</a><span class=\"badge crash\">Crash</span> 09.11. · das Dict heißt <code>counts</code>, die aus #15 übernommene Zeile benutzt <code>count</code> → NameError; #22 korrigiert</li></ul>",
-   "last_evidence": "2026-11-09T21:05:07+00:00"
+   "back_html": "<p>Gleich in der Bedingung: <code>NameError: name 'curr' is not defined</code>. Die Variable heißt <code>current</code>.</p>\n<p>Regel: Nach dem Umbenennen oder Abtippen einer Lösung jeden Namen einmal gegen seine Definition lesen.</p>\n<p>Der gleiche Crash bei dir: <code>return i</code>, während der Index noch <code>mitte</code> hieß (Binary Search #0–1), und <code>while p &gt; 0</code> statt <code>p_next</code> (Reverse Linked List #3). Am 1.11. noch zweimal: <code>min(stack)</code> statt <code>self.stack</code> (Min Stack #4) und <code>v2</code>, das es nie gab (Daily Temperatures #1). Am 9.11. <code>count</code> statt <code>counts</code> in einer Zeile, die du aus einer älteren Lösung übernommen hast (Top K #21). Einen Tag später zweimal <code>counts.get(n, ...)</code>, obwohl die Schleifenvariable inzwischen <code>i</code> hieß (Top K #25–26).</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/binary-search/submission-0.py\">binary-search #0–1</a><span class=\"badge crash\">2× Crash</span> 28.10. · Index heißt <code>mitte</code>, zurückgegeben wird <code>i</code> → NameError; #2 benennt <code>mitte</code> in <code>i</code> um</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-3.py\">reverse-a-linked-list #3</a><span class=\"badge crash\">Crash</span> 31.10. · Variable heißt <code>p_next</code>, die Bedingung benutzt <code>p</code> → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-13.py\">reverse-a-linked-list #13</a><span class=\"badge crash\">Crash</span> 31.10. · Variable heißt <code>current</code>, die Bedingung benutzt <code>curr</code> → NameError; #14 korrigiert</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/reverse-a-linked-list/submission-14.py\">reverse-a-linked-list #14</a><span class=\"badge pass\">ok</span> 31.10.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/minimum-stack/submission-4.py\">minimum-stack #4</a><span class=\"badge crash\">Crash</span> 01.11. · <code>stack</code> statt <code>self.stack</code> → NameError; #5 korrigiert</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/daily-temperatures/submission-1.py\">daily-temperatures #1</a><span class=\"badge crash\">Crash</span> 01.11. · <code>v2</code> wird nie definiert → NameError; #2 schreibt <code>temperatures[j]</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/top-k-elements-in-list/submission-21.py\">top-k-elements-in-list #21</a><span class=\"badge crash\">Crash</span> 09.11. · das Dict heißt <code>counts</code>, die aus #15 übernommene Zeile benutzt <code>count</code> → NameError; #22 korrigiert</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/top-k-elements-in-list/submission-25.py\">top-k-elements-in-list #25–26</a><span class=\"badge crash\">2× Crash</span> 10.11. · Schleifenvariable heißt jetzt <code>i</code>, <code>get</code> benutzt noch <code>n</code> aus #15 → NameError; #27 korrigiert</li></ul>",
+   "last_evidence": "2026-11-10T23:03:06+00:00"
   },
   {
    "id": "bug-shadowing-input",
@@ -1014,6 +1015,36 @@
    "back_html": "<p>Nur <code>defaultdict(list)</code>.</p>\n<p><code>defaultdict</code> bekommt eine <strong>Fabrik</strong>: etwas Aufrufbares, das bei jedem fehlenden Key einen neuen Startwert erzeugt. <code>list</code> ist diese Fabrik. <code>list()</code> ist dagegen schon eine fertige Liste → <code>TypeError: first argument must be callable or None</code>. <code>List(str)</code> versucht <code>typing.List</code> aufzurufen → <code>TypeError: Type List cannot be instantiated</code>.</p>\n<p>Gleiches Prinzip: <code>defaultdict(int)</code> zählt ab 0, <code>defaultdict(set)</code> sammelt ohne Duplikate.</p>",
    "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/anagram-groups/submission-14.py\">anagram-groups #14–16</a><span class=\"badge crash\">3× Crash</span> 16.10. · <code>typing.List</code> aufgerufen → TypeError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/anagram-groups/submission-17.py\">anagram-groups #17–18</a><span class=\"badge crash\">2× Crash</span> 16.10. · fertige Liste statt Fabrik übergeben → first argument must be callable</li></ul>",
    "last_evidence": "2026-10-16T12:48:10+00:00"
+  },
+  {
+   "id": "dict-get-calls",
+   "guid": "trG[oY?vIs",
+   "type": "gotcha",
+   "type_label": "Python-Gotcha",
+   "mistakes": [
+    "method-api"
+   ],
+   "problems": [
+    "top-k-elements-in-list"
+   ],
+   "evidence": [
+    "top-k-elements-in-list#23",
+    "top-k-elements-in-list#25",
+    "top-k-elements-in-list#27"
+   ],
+   "tags": [
+    "dict",
+    "ncd::fehler::method-api",
+    "ncd::problem::top-k-elements-in-list",
+    "ncd::typ::gotcha",
+    "python"
+   ],
+   "front_md": "Zwei Zeilen mit `dict.get`. Was gehört an die Stellen mit `?`\n\n```python-nocheck\ncounts[x] = counts.get(?) + 1          # zählen, fehlender Key zählt als 0\nbest = max(counts, key=?)              # Key mit dem größten Wert\n```",
+   "back_md": "```python\ncounts[x] = counts.get(x, 0) + 1\nbest = max(counts, key=counts.get)\n```\n\n1. Der Default ist das **zweite Positionsargument**. `counts.get(x, default=0)` ist ein `TypeError`, `dict.get` nimmt keine Keyword-Argumente.\n2. `max` läuft über die **Keys** und vergleicht sie nach `counts.get(key)`. Übergeben wird die Methode selbst, ohne Klammern.\n\nAm 10.11. bei Top K: erst `counts.append(...)` und `nums.get_values` (#23, beides gibt es nicht), dann `get(n, default = 0)` (#25). Deine Notiz dazu: „merken wie der aufruf gehT!“ #27 ✔",
+   "front_html": "<p>Zwei Zeilen mit <code>dict.get</code>. Was gehört an die Stellen mit <code>?</code></p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">counts</span><span class=\"p\">[</span><span class=\"n\">x</span><span class=\"p\">]</span> <span class=\"o\">=</span> <span class=\"n\">counts</span><span class=\"o\">.</span><span class=\"n\">get</span><span class=\"p\">(</span><span class=\"err\">?</span><span class=\"p\">)</span> <span class=\"o\">+</span> <span class=\"mi\">1</span>          <span class=\"c1\"># zählen, fehlender Key zählt als 0</span>\n<span class=\"n\">best</span> <span class=\"o\">=</span> <span class=\"nb\">max</span><span class=\"p\">(</span><span class=\"n\">counts</span><span class=\"p\">,</span> <span class=\"n\">key</span><span class=\"o\">=</span><span class=\"err\">?</span><span class=\"p\">)</span>              <span class=\"c1\"># Key mit dem größten Wert</span>\n</code></pre></div>",
+   "back_html": "<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">counts</span><span class=\"p\">[</span><span class=\"n\">x</span><span class=\"p\">]</span> <span class=\"o\">=</span> <span class=\"n\">counts</span><span class=\"o\">.</span><span class=\"n\">get</span><span class=\"p\">(</span><span class=\"n\">x</span><span class=\"p\">,</span> <span class=\"mi\">0</span><span class=\"p\">)</span> <span class=\"o\">+</span> <span class=\"mi\">1</span>\n<span class=\"n\">best</span> <span class=\"o\">=</span> <span class=\"nb\">max</span><span class=\"p\">(</span><span class=\"n\">counts</span><span class=\"p\">,</span> <span class=\"n\">key</span><span class=\"o\">=</span><span class=\"n\">counts</span><span class=\"o\">.</span><span class=\"n\">get</span><span class=\"p\">)</span>\n</code></pre></div>\n\n<ol>\n<li>Der Default ist das <strong>zweite Positionsargument</strong>. <code>counts.get(x, default=0)</code> ist ein <code>TypeError</code>, <code>dict.get</code> nimmt keine Keyword-Argumente.</li>\n<li><code>max</code> läuft über die <strong>Keys</strong> und vergleicht sie nach <code>counts.get(key)</code>. Übergeben wird die Methode selbst, ohne Klammern.</li>\n</ol>\n<p>Am 10.11. bei Top K: erst <code>counts.append(...)</code> und <code>nums.get_values</code> (#23, beides gibt es nicht), dann <code>get(n, default = 0)</code> (#25). Deine Notiz dazu: „merken wie der aufruf gehT!“ #27 ✔</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/top-k-elements-in-list/submission-23.py\">top-k-elements-in-list #23</a><span class=\"badge crash\">Crash</span> 10.11. · Dicts haben kein <code>append</code>, Listen kein <code>get_values</code> → AttributeError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/top-k-elements-in-list/submission-25.py\">top-k-elements-in-list #25</a><span class=\"badge crash\">Crash</span> 10.11. · latent: <code>dict.get</code> nimmt keine Keyword-Argumente, richtig ist <code>get(key, 0)</code>; #26 korrigiert</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/top-k-elements-in-list/submission-27.py\">top-k-elements-in-list #27</a><span class=\"badge pass\">ok</span> 10.11.</li></ul>",
+   "last_evidence": "2026-11-10T23:02:52+00:00"
   },
   {
    "id": "empty-set-literal",

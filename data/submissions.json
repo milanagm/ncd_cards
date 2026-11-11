@@ -1,8 +1,8 @@
 {
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "87f476c12eeb62570f6a1dfce63736fb3a6495c2",
-  "head_date": "2026-11-09T21:05:19+00:00"
+  "head": "bd2c77703a993ce20a14f058180d599f1dd979fc",
+  "head_date": "2026-11-10T23:03:30+00:00"
  },
  "problems": {
   "anagram-groups": {
@@ -4348,6 +4348,78 @@
      "sha1": "bc5358ee64a357f443490b2f13452506192da74f",
      "commit": "87f476c12eeb62570f6a1dfce63736fb3a6495c2",
      "date": "2026-11-09T21:05:19+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 23,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-23.py",
+     "sha1": "633469d2ac547447ca47c2b6addd110b52e110d1",
+     "commit": "4ee23f1af4a1d722f53f30771d84f29d5b6df041",
+     "date": "2026-11-10T22:58:49+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 2, 3, 3, 3], 2]",
+      "error": "AttributeError: 'dict' object has no attribute 'append'",
+      "line": 5,
+      "code": "counts.append(max(nums.get_values))",
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 25,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-25.py",
+     "sha1": "22f91f694a4390ffb17e64281fba1488f34c2cca",
+     "commit": "57c21765410c0fe0e442829cf7322d385a86fe48",
+     "date": "2026-11-10T23:02:52+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 2, 3, 3, 3], 2]",
+      "error": "NameError: name 'n' is not defined",
+      "line": 5,
+      "code": "counts[i] = counts.get(n, default = 0) + 1",
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 26,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-26.py",
+     "sha1": "ace5a3054f24576d24ee9806a2c75900b9d32b7a",
+     "commit": "395882dd7c1bf7dd7f3ce78e98dce715ae3a570c",
+     "date": "2026-11-10T23:03:06+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 2, 3, 3, 3], 2]",
+      "error": "NameError: name 'n' is not defined",
+      "line": 5,
+      "code": "counts[i] = counts.get(n, 0) + 1",
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 27,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-27.py",
+     "sha1": "bc9b03c807fd3f1a987139d1db9355e3ddcf0647",
+     "commit": "bd2c77703a993ce20a14f058180d599f1dd979fc",
+     "date": "2026-11-10T23:03:30+00:00",
      "bulk_sync": false,
      "verdict": {
       "status": "PASS",

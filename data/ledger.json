@@ -79,7 +79,9 @@
     {"ref": "max-water-container#1", "snippet": "for i in range(heights):", "note": "`range` braucht eine Zahl: `range(len(heights))`"},
     {"ref": "reverse-a-linked-list#0-1", "snippet": "initial.append(head.value)", "note": "das Attribut heißt `val`"},
     {"ref": "reverse-a-linked-list#7", "snippet": "while head.value != None:", "note": "wieder `value` statt `val`"},
-    {"ref": "buy-and-sell-crypto#5", "snippet": "for i in range(prices):", "note": "`range` braucht eine Zahl, wie bei Container With Most Water #1 am 24.10."}
+    {"ref": "buy-and-sell-crypto#5", "snippet": "for i in range(prices):", "note": "`range` braucht eine Zahl, wie bei Container With Most Water #1 am 24.10."},
+    {"ref": "top-k-elements-in-list#23", "snippet": "counts.append(max(nums.get_values))", "note": "Dicts haben kein `append`, Listen kein `get_values` → AttributeError"},
+    {"ref": "top-k-elements-in-list#25", "snippet": "counts.get(n, default = 0)", "note": "latent: `dict.get` nimmt keine Keyword-Argumente, richtig ist `get(key, 0)`; #26 korrigiert"}
    ]
   },
   {
@@ -148,7 +150,8 @@
     {"ref": "reverse-a-linked-list#13", "snippet": "while curr != None:", "note": "Variable heißt `current`, die Bedingung benutzt `curr` → NameError; #14 korrigiert"},
     {"ref": "daily-temperatures#1", "snippet": "if v2 > v:", "note": "`v2` wird nie definiert → NameError; #2 schreibt `temperatures[j]`"},
     {"ref": "minimum-stack#4", "snippet": "return min(stack)", "note": "`stack` statt `self.stack` → NameError; #5 korrigiert"},
-    {"ref": "top-k-elements-in-list#21", "snippet": "return sorted(count, key=count.get, reverse=True)[:k]", "note": "das Dict heißt `counts`, die aus #15 übernommene Zeile benutzt `count` → NameError; #22 korrigiert"}
+    {"ref": "top-k-elements-in-list#21", "snippet": "return sorted(count, key=count.get, reverse=True)[:k]", "note": "das Dict heißt `counts`, die aus #15 übernommene Zeile benutzt `count` → NameError; #22 korrigiert"},
+    {"ref": "top-k-elements-in-list#25-26", "snippet": "for i in nums: counts[i] = counts.get(n,", "note": "Schleifenvariable heißt jetzt `i`, `get` benutzt noch `n` aus #15 → NameError; #27 korrigiert"}
    ]
   },
   {
@@ -387,7 +390,8 @@
   {"ref": "validate-parentheses#9", "text": "trick lernen!", "topic": "Klammerpaare per `replace` entfernen"},
   {"ref": "minimum-stack#1", "text": "muss das hin?", "topic": "`return None` am Ende einer Methode"},
   {"ref": "daily-temperatures#4", "text": "anlegen von arrays einer bestimmten länge vergesse ich immer", "topic": "Liste fester Länge"},
-  {"ref": "merge-two-sorted-linked-lists#2", "text": "greift er dann auf list.val zu?", "topic": "`min()` auf Knoten"}
+  {"ref": "merge-two-sorted-linked-lists#2", "text": "greift er dann auf list.val zu?", "topic": "`min()` auf Knoten"},
+  {"ref": "top-k-elements-in-list#25", "text": "merken wie der aufruf gehT!", "topic": "`max(d, key=d.get)`: Key mit dem größten Wert"}
  ],
  "patterns": [
   {"problem": "two-integer-sum", "pattern": "Hashmap: Komplement nachschlagen", "solved": "two-integer-sum#35", "note": "29 von 33 Versuchen mit `in nums`/`index()`, also O(n²); die Hashmap stand schon in #0"},
