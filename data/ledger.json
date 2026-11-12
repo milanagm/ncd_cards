@@ -391,7 +391,8 @@
   {"ref": "minimum-stack#1", "text": "muss das hin?", "topic": "`return None` am Ende einer Methode"},
   {"ref": "daily-temperatures#4", "text": "anlegen von arrays einer bestimmten länge vergesse ich immer", "topic": "Liste fester Länge"},
   {"ref": "merge-two-sorted-linked-lists#2", "text": "greift er dann auf list.val zu?", "topic": "`min()` auf Knoten"},
-  {"ref": "top-k-elements-in-list#25", "text": "merken wie der aufruf gehT!", "topic": "`max(d, key=d.get)`: Key mit dem größten Wert"}
+  {"ref": "top-k-elements-in-list#25", "text": "merken wie der aufruf gehT!", "topic": "`max(d, key=d.get)`: Key mit dem größten Wert"},
+  {"ref": "top-k-elements-in-list#32", "text": "#richtig?", "topic": "Zählen mit `count.get(i, 0) + 1`"}
  ],
  "patterns": [
   {"problem": "two-integer-sum", "pattern": "Hashmap: Komplement nachschlagen", "solved": "two-integer-sum#35", "note": "29 von 33 Versuchen mit `in nums`/`index()`, also O(n²); die Hashmap stand schon in #0"},

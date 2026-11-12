@@ -32,14 +32,14 @@
  },
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "bd2c77703a993ce20a14f058180d599f1dd979fc",
-  "head_date": "2026-11-10T23:03:30+00:00"
+  "head": "61bccfd908ac699702cda76a1dfa4581a15de381",
+  "head_date": "2026-11-11T23:34:43+00:00"
  },
  "stats": {
-  "submissions": 307,
+  "submissions": 308,
   "statuses": {
    "WRONG_ANSWER": 108,
-   "PASS": 102,
+   "PASS": 103,
    "RUNTIME_ERROR": 83,
    "TIMEOUT": 10,
    "LOAD_ERROR": 4
