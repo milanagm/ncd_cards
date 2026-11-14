@@ -32,15 +32,15 @@
  },
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "61bccfd908ac699702cda76a1dfa4581a15de381",
-  "head_date": "2026-11-11T23:34:43+00:00"
+  "head": "7beb08bacd24b6f47f0aab6059e6c58d48cbb80c",
+  "head_date": "2026-11-13T18:13:19+00:00"
  },
  "stats": {
-  "submissions": 308,
+  "submissions": 316,
   "statuses": {
-   "WRONG_ANSWER": 108,
-   "PASS": 103,
-   "RUNTIME_ERROR": 83,
+   "WRONG_ANSWER": 109,
+   "PASS": 106,
+   "RUNTIME_ERROR": 87,
    "TIMEOUT": 10,
    "LOAD_ERROR": 4
   }
@@ -50,10 +50,11 @@
    "id": "index-vs-value",
    "title": "Index und Wert verwechselt",
    "rule": "Vor jeder Verwendung klären: Position oder Element? `for i, v in enumerate(xs)` hält beides auseinander.",
-   "submissions": 37,
+   "submissions": 38,
    "problems": [
     "buy-and-sell-crypto",
     "eating-bananas",
+    "is-palindrome",
     "longest-consecutive-sequence",
     "longest-substring-without-duplicates",
     "products-of-array-discluding-self",
@@ -62,7 +63,7 @@
     "two-integer-sum",
     "valid-sudoku"
    ],
-   "last_seen": "2026-11-06"
+   "last_seen": "2026-11-13"
   },
   {
    "id": "pointer-movement",
@@ -82,15 +83,16 @@
    "id": "loop-progress",
    "title": "Endlosschleife: kein Fortschritt",
    "rule": "Jeder Pfad durch den Schleifenkörper muss die Abbruchbedingung näher bringen. Vorsicht bei `continue` und bei Zweigen ohne Update.",
-   "submissions": 8,
+   "submissions": 9,
    "problems": [
     "buy-and-sell-crypto",
+    "is-palindrome",
     "longest-consecutive-sequence",
     "longest-repeating-substring-with-replacement",
     "longest-substring-without-duplicates",
     "three-integer-sum"
    ],
-   "last_seen": "2026-10-27"
+   "last_seen": "2026-11-13"
   },
   {
    "id": "call-vs-subscript",
@@ -107,8 +109,9 @@
    "id": "method-api",
    "title": "Methoden & Builtins geraten",
    "rule": "Bei Unsicherheit `dir(x)` oder `help(x)`. Strings: `s.lower()`; Listen: `xs.append(v)` mit genau einem Argument, `xs.index(v)`; Wiederholung: `range(k)`.",
-   "submissions": 17,
+   "submissions": 21,
    "problems": [
+    "anagram-groups",
     "buy-and-sell-crypto",
     "duplicate-integer",
     "is-palindrome",
@@ -118,7 +121,7 @@
     "top-k-elements-in-list",
     "two-integer-sum-ii"
    ],
-   "last_seen": "2026-11-10"
+   "last_seen": "2026-11-13"
   },
   {
    "id": "container-choice",
@@ -242,11 +245,12 @@
    "id": "for-loop-variable",
    "title": "Schleifenvariable einer for-Schleife ändern",
    "rule": "`for j in range(n)` setzt `j` in jeder Runde neu. `j += 1` im Körper ist wirkungslos; wer selbst zählen will, nimmt `while`.",
-   "submissions": 2,
+   "submissions": 3,
    "problems": [
+    "buy-and-sell-crypto",
     "string-encode-and-decode"
    ],
-   "last_seen": null
+   "last_seen": "2026-11-13"
   },
   {
    "id": "constraint-ignored",
@@ -875,6 +879,40 @@
    "last_evidence": "2026-10-24T21:37:57+00:00"
   },
   {
+   "id": "builtin-vs-method",
+   "guid": "bY(]4^ej{7",
+   "type": "gotcha",
+   "type_label": "Python-Gotcha",
+   "mistakes": [
+    "method-api"
+   ],
+   "problems": [
+    "anagram-groups",
+    "is-palindrome"
+   ],
+   "evidence": [
+    "is-palindrome#4",
+    "is-palindrome#5",
+    "anagram-groups#25-26",
+    "anagram-groups#27",
+    "is-palindrome#24"
+   ],
+   "tags": [
+    "ncd::fehler::method-api",
+    "ncd::problem::anagram-groups",
+    "ncd::problem::is-palindrome",
+    "ncd::typ::gotcha",
+    "python",
+    "strings"
+   ],
+   "front_md": "`s` ist ein String. Welche dieser Aufrufe gibt es, und was liefern sie?\n\n```python-nocheck\nsorted(s)\ns.sorted()\ns.sort()\ns.lower()\nlower(s)\n```",
+   "back_md": "- `sorted(s)` ✔ Builtin, nimmt jedes Iterable und liefert eine **Liste** der Zeichen. Zurück zum String mit `\"\".join(sorted(s))`.\n- `s.sorted()` und `s.sort()` ✘ Strings haben keine Sortier-Methode → AttributeError. `.sort()` gibt es nur für Listen, sortiert in place und liefert `None`.\n- `s.lower()` ✔ Methode des Strings.\n- `lower(s)` ✘ Es gibt kein Builtin `lower` → NameError.\n\nFaustregel: Builtins wie `len`, `sorted`, `max`, `sum` bekommen das Objekt als **Argument**. Methoden hängen am Objekt und gehören zu seinem Typ.\n\nBei dir: `lower(s)` und `s.lower(s)` (Palindrome #4–5), `i.sorted()` (Anagram Groups #25–26, 13.11.) und am selben Tag `l_p.allnum` und `.small()` (Palindrome #24). Die Methoden heißen `isalnum()` und `lower()`, und sie gehören an das Zeichen `s[l_p]`, nicht an den Index.",
+   "front_html": "<p><code>s</code> ist ein String. Welche dieser Aufrufe gibt es, und was liefern sie?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"nb\">sorted</span><span class=\"p\">(</span><span class=\"n\">s</span><span class=\"p\">)</span>\n<span class=\"n\">s</span><span class=\"o\">.</span><span class=\"n\">sorted</span><span class=\"p\">()</span>\n<span class=\"n\">s</span><span class=\"o\">.</span><span class=\"n\">sort</span><span class=\"p\">()</span>\n<span class=\"n\">s</span><span class=\"o\">.</span><span class=\"n\">lower</span><span class=\"p\">()</span>\n<span class=\"n\">lower</span><span class=\"p\">(</span><span class=\"n\">s</span><span class=\"p\">)</span>\n</code></pre></div>",
+   "back_html": "<ul>\n<li><code>sorted(s)</code> ✔ Builtin, nimmt jedes Iterable und liefert eine <strong>Liste</strong> der Zeichen. Zurück zum String mit <code>\"\".join(sorted(s))</code>.</li>\n<li><code>s.sorted()</code> und <code>s.sort()</code> ✘ Strings haben keine Sortier-Methode → AttributeError. <code>.sort()</code> gibt es nur für Listen, sortiert in place und liefert <code>None</code>.</li>\n<li><code>s.lower()</code> ✔ Methode des Strings.</li>\n<li><code>lower(s)</code> ✘ Es gibt kein Builtin <code>lower</code> → NameError.</li>\n</ul>\n<p>Faustregel: Builtins wie <code>len</code>, <code>sorted</code>, <code>max</code>, <code>sum</code> bekommen das Objekt als <strong>Argument</strong>. Methoden hängen am Objekt und gehören zu seinem Typ.</p>\n<p>Bei dir: <code>lower(s)</code> und <code>s.lower(s)</code> (Palindrome #4–5), <code>i.sorted()</code> (Anagram Groups #25–26, 13.11.) und am selben Tag <code>l_p.allnum</code> und <code>.small()</code> (Palindrome #24). Die Methoden heißen <code>isalnum()</code> und <code>lower()</code>, und sie gehören an das Zeichen <code>s[l_p]</code>, nicht an den Index.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/is-palindrome/submission-4.py\">is-palindrome #4</a><span class=\"badge crash\">Crash</span> 20.10. · <code>lower</code> ist eine Methode, kein Builtin → NameError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/is-palindrome/submission-5.py\">is-palindrome #5</a><span class=\"badge crash\">Crash</span> 20.10. · Methode bekommt <code>s</code> schon als <code>self</code> → TypeError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/anagram-groups/submission-25.py\">anagram-groups #25–26</a><span class=\"badge crash\">2× Crash</span> 13.11. · latent: die Methode heißt <code>values()</code>, wie schon bei Top K #23</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/anagram-groups/submission-27.py\">anagram-groups #27</a><span class=\"badge pass\">ok</span> 13.11.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/is-palindrome/submission-24.py\">is-palindrome #24</a><span class=\"badge crash\">Crash</span> 13.11. · latent: <code>small()</code> gibt es nicht, gemeint ist <code>lower()</code></li></ul>",
+   "last_evidence": "2026-11-13T17:08:00+00:00"
+  },
+  {
    "id": "buy-sell-running-min",
    "guid": "G3p#S;*9ox",
    "type": "pattern",
@@ -1000,7 +1038,9 @@
    ],
    "evidence": [
     "anagram-groups#14-16",
-    "anagram-groups#17-18"
+    "anagram-groups#17-18",
+    "anagram-groups#25-26",
+    "anagram-groups#27"
    ],
    "tags": [
     "defaultdict",
@@ -1010,11 +1050,11 @@
     "python"
    ],
    "front_md": "Welche Zeile funktioniert, und warum crashen die anderen beiden?\n\n```python\ngroups = defaultdict(list())\ngroups = defaultdict(List(str))\ngroups = defaultdict(list)\n```",
-   "back_md": "Nur `defaultdict(list)`.\n\n`defaultdict` bekommt eine **Fabrik**: etwas Aufrufbares, das bei jedem fehlenden Key einen neuen Startwert erzeugt. `list` ist diese Fabrik. `list()` ist dagegen schon eine fertige Liste → `TypeError: first argument must be callable or None`. `List(str)` versucht `typing.List` aufzurufen → `TypeError: Type List cannot be instantiated`.\n\nGleiches Prinzip: `defaultdict(int)` zählt ab 0, `defaultdict(set)` sammelt ohne Duplikate.",
+   "back_md": "Nur `defaultdict(list)`.\n\n`defaultdict` bekommt eine **Fabrik**: etwas Aufrufbares, das bei jedem fehlenden Key einen neuen Startwert erzeugt. `list` ist diese Fabrik. `list()` ist dagegen schon eine fertige Liste → `TypeError: first argument must be callable or None`. `List(str)` versucht `typing.List` aufzurufen → `TypeError: Type List cannot be instantiated`.\n\nGleiches Prinzip: `defaultdict(int)` zählt ab 0, `defaultdict(set)` sammelt ohne Duplikate.\n\nMit einem normalen Dict geht es mit `setdefault`: `groups.setdefault(key, []).append(w)` legt beim ersten Mal die leere Liste an. Das war die Antwort auf deine Frage „wie war hier die richtige syntax?“ (Anagram Groups #25, gelöst in #27). `groups[groups.get(key, 0)]` benutzt dagegen das Ergebnis von `get` als Key.",
    "front_html": "<p>Welche Zeile funktioniert, und warum crashen die anderen beiden?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">groups</span> <span class=\"o\">=</span> <span class=\"n\">defaultdict</span><span class=\"p\">(</span><span class=\"nb\">list</span><span class=\"p\">())</span>\n<span class=\"n\">groups</span> <span class=\"o\">=</span> <span class=\"n\">defaultdict</span><span class=\"p\">(</span><span class=\"n\">List</span><span class=\"p\">(</span><span class=\"nb\">str</span><span class=\"p\">))</span>\n<span class=\"n\">groups</span> <span class=\"o\">=</span> <span class=\"n\">defaultdict</span><span class=\"p\">(</span><span class=\"nb\">list</span><span class=\"p\">)</span>\n</code></pre></div>",
-   "back_html": "<p>Nur <code>defaultdict(list)</code>.</p>\n<p><code>defaultdict</code> bekommt eine <strong>Fabrik</strong>: etwas Aufrufbares, das bei jedem fehlenden Key einen neuen Startwert erzeugt. <code>list</code> ist diese Fabrik. <code>list()</code> ist dagegen schon eine fertige Liste → <code>TypeError: first argument must be callable or None</code>. <code>List(str)</code> versucht <code>typing.List</code> aufzurufen → <code>TypeError: Type List cannot be instantiated</code>.</p>\n<p>Gleiches Prinzip: <code>defaultdict(int)</code> zählt ab 0, <code>defaultdict(set)</code> sammelt ohne Duplikate.</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/anagram-groups/submission-14.py\">anagram-groups #14–16</a><span class=\"badge crash\">3× Crash</span> 16.10. · <code>typing.List</code> aufgerufen → TypeError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/anagram-groups/submission-17.py\">anagram-groups #17–18</a><span class=\"badge crash\">2× Crash</span> 16.10. · fertige Liste statt Fabrik übergeben → first argument must be callable</li></ul>",
-   "last_evidence": "2026-10-16T12:48:10+00:00"
+   "back_html": "<p>Nur <code>defaultdict(list)</code>.</p>\n<p><code>defaultdict</code> bekommt eine <strong>Fabrik</strong>: etwas Aufrufbares, das bei jedem fehlenden Key einen neuen Startwert erzeugt. <code>list</code> ist diese Fabrik. <code>list()</code> ist dagegen schon eine fertige Liste → <code>TypeError: first argument must be callable or None</code>. <code>List(str)</code> versucht <code>typing.List</code> aufzurufen → <code>TypeError: Type List cannot be instantiated</code>.</p>\n<p>Gleiches Prinzip: <code>defaultdict(int)</code> zählt ab 0, <code>defaultdict(set)</code> sammelt ohne Duplikate.</p>\n<p>Mit einem normalen Dict geht es mit <code>setdefault</code>: <code>groups.setdefault(key, []).append(w)</code> legt beim ersten Mal die leere Liste an. Das war die Antwort auf deine Frage „wie war hier die richtige syntax?“ (Anagram Groups #25, gelöst in #27). <code>groups[groups.get(key, 0)]</code> benutzt dagegen das Ergebnis von <code>get</code> als Key.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/anagram-groups/submission-14.py\">anagram-groups #14–16</a><span class=\"badge crash\">3× Crash</span> 16.10. · <code>typing.List</code> aufgerufen → TypeError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/anagram-groups/submission-17.py\">anagram-groups #17–18</a><span class=\"badge crash\">2× Crash</span> 16.10. · fertige Liste statt Fabrik übergeben → first argument must be callable</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/anagram-groups/submission-25.py\">anagram-groups #25–26</a><span class=\"badge crash\">2× Crash</span> 13.11. · latent: die Methode heißt <code>values()</code>, wie schon bei Top K #23</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/anagram-groups/submission-27.py\">anagram-groups #27</a><span class=\"badge pass\">ok</span> 13.11.</li></ul>",
+   "last_evidence": "2026-11-13T15:34:02+00:00"
   },
   {
    "id": "dict-get-calls",
@@ -1180,24 +1220,28 @@
     "for-loop-variable"
    ],
    "problems": [
+    "buy-and-sell-crypto",
     "string-encode-and-decode"
    ],
    "evidence": [
-    "string-encode-and-decode#3-4"
+    "string-encode-and-decode#3-4",
+    "buy-and-sell-crypto#8",
+    "buy-and-sell-crypto#9"
    ],
    "tags": [
     "loops",
     "ncd::fehler::for-loop-variable",
+    "ncd::problem::buy-and-sell-crypto",
     "ncd::problem::string-encode-and-decode",
     "ncd::typ::gotcha",
     "python"
    ],
    "front_md": "Was bewirkt `j += 1` in dieser Schleife?\n\n```python\nfor j in range(l_w):\n    word += s[i]\n    i += 1\n    j += 1\n```",
-   "back_md": "Nichts. `for` holt sich in jeder Runde den **nächsten Wert aus `range`** und überschreibt `j`. Änderungen an `j` im Körper sind wirkungslos, anders als in C oder Java.\n\nWer den Index selbst steuern will, zum Beispiel bei Pointern mit unterschiedlichen Sprüngen, nimmt `while`. `i += 1` ist hier dagegen nötig, denn `i` ist keine Schleifenvariable.",
+   "back_md": "Nichts. `for` holt sich in jeder Runde den **nächsten Wert aus `range`** und überschreibt `j`. Änderungen an `j` im Körper sind wirkungslos, anders als in C oder Java.\n\nWer den Index selbst steuern will, zum Beispiel bei Pointern mit unterschiedlichen Sprüngen, nimmt `while`. `i += 1` ist hier dagegen nötig, denn `i` ist keine Schleifenvariable.\n\nDasselbe gilt **vor** der Schleife: Bei Buy and Sell #8 (13.11.) stand `p_l = i + 1` direkt vor `for p_l in range(len(prices)):`. Die Zuweisung ist wirkungslos, `p_l` läuft wieder ab 0, und frühere Tage zählen als Verkaufstag (9 statt 6). #9: `for p_l in range(i + 1, len(prices)):`",
    "front_html": "<p>Was bewirkt <code>j += 1</code> in dieser Schleife?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">for</span> <span class=\"n\">j</span> <span class=\"ow\">in</span> <span class=\"nb\">range</span><span class=\"p\">(</span><span class=\"n\">l_w</span><span class=\"p\">):</span>\n    <span class=\"n\">word</span> <span class=\"o\">+=</span> <span class=\"n\">s</span><span class=\"p\">[</span><span class=\"n\">i</span><span class=\"p\">]</span>\n    <span class=\"n\">i</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n    <span class=\"n\">j</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n</code></pre></div>",
-   "back_html": "<p>Nichts. <code>for</code> holt sich in jeder Runde den <strong>nächsten Wert aus <code>range</code></strong> und überschreibt <code>j</code>. Änderungen an <code>j</code> im Körper sind wirkungslos, anders als in C oder Java.</p>\n<p>Wer den Index selbst steuern will, zum Beispiel bei Pointern mit unterschiedlichen Sprüngen, nimmt <code>while</code>. <code>i += 1</code> ist hier dagegen nötig, denn <code>i</code> ist keine Schleifenvariable.</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/string-encode-and-decode/submission-3.py\">string-encode-and-decode #3–4</a><span class=\"badge crash\">2× Crash</span> · <code>j += 1</code> hat keine Wirkung</li></ul>",
-   "last_evidence": "2026-10-16T12:04:26+00:00"
+   "back_html": "<p>Nichts. <code>for</code> holt sich in jeder Runde den <strong>nächsten Wert aus <code>range</code></strong> und überschreibt <code>j</code>. Änderungen an <code>j</code> im Körper sind wirkungslos, anders als in C oder Java.</p>\n<p>Wer den Index selbst steuern will, zum Beispiel bei Pointern mit unterschiedlichen Sprüngen, nimmt <code>while</code>. <code>i += 1</code> ist hier dagegen nötig, denn <code>i</code> ist keine Schleifenvariable.</p>\n<p>Dasselbe gilt <strong>vor</strong> der Schleife: Bei Buy and Sell #8 (13.11.) stand <code>p_l = i + 1</code> direkt vor <code>for p_l in range(len(prices)):</code>. Die Zuweisung ist wirkungslos, <code>p_l</code> läuft wieder ab 0, und frühere Tage zählen als Verkaufstag (9 statt 6). #9: <code>for p_l in range(i + 1, len(prices)):</code></p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/string-encode-and-decode/submission-3.py\">string-encode-and-decode #3–4</a><span class=\"badge crash\">2× Crash</span> · <code>j += 1</code> hat keine Wirkung</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-8.py\">buy-and-sell-crypto #8</a><span class=\"badge fail\">falsch</span> 13.11. · <code>p_l = i + 1</code> ist wirkungslos, <code>for</code> setzt <code>p_l</code> wieder ab 0 → frühere Tage zählen als Verkauf (9 statt 6); #9: <code>range(i+ 1, len(prices))</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-9.py\">buy-and-sell-crypto #9</a><span class=\"badge pass\">ok</span> 13.11.</li></ul>",
+   "last_evidence": "2026-11-13T17:59:19+00:00"
   },
   {
    "id": "init-scope",
@@ -1754,7 +1798,9 @@
     "max-water-container#1",
     "max-water-container#2",
     "buy-and-sell-crypto#5",
-    "buy-and-sell-crypto#6"
+    "buy-and-sell-crypto#6",
+    "buy-and-sell-crypto#7",
+    "buy-and-sell-crypto#8"
    ],
    "tags": [
     "loops",
@@ -1765,11 +1811,11 @@
     "python"
    ],
    "front_md": "Was passiert bei `for i in range(prices):`, wenn `prices` eine Liste ist? Was war gemeint?",
-   "back_md": "`TypeError: 'list' object cannot be interpreted as an integer`. `range` braucht eine **Zahl**, keine Liste.\n\nGemeint waren die Indizes: `range(len(prices))`. Brauchst du Index und Wert, dann `for i, p in enumerate(prices):`.\n\nZweimal bei dir: `range(heights)` bei Container With Most Water (#1, 24.10.) und `range(prices)` bei Buy and Sell (#5, 6.11.). Beide Male lief der nächste Versuch mit `range(len(...))`.",
+   "back_md": "`TypeError: 'list' object cannot be interpreted as an integer`. `range` braucht eine **Zahl**, keine Liste.\n\nGemeint waren die Indizes: `range(len(prices))`. Brauchst du Index und Wert, dann `for i, p in enumerate(prices):`.\n\nDreimal bei dir: `range(heights)` bei Container With Most Water (#1, 24.10.) und `range(prices)` bei Buy and Sell (#5 am 6.11., #7 am 13.11.). Jedes Mal lief der nächste Versuch mit `range(len(...))`.",
    "front_html": "<p>Was passiert bei <code>for i in range(prices):</code>, wenn <code>prices</code> eine Liste ist? Was war gemeint?</p>",
-   "back_html": "<p><code>TypeError: 'list' object cannot be interpreted as an integer</code>. <code>range</code> braucht eine <strong>Zahl</strong>, keine Liste.</p>\n<p>Gemeint waren die Indizes: <code>range(len(prices))</code>. Brauchst du Index und Wert, dann <code>for i, p in enumerate(prices):</code>.</p>\n<p>Zweimal bei dir: <code>range(heights)</code> bei Container With Most Water (#1, 24.10.) und <code>range(prices)</code> bei Buy and Sell (#5, 6.11.). Beide Male lief der nächste Versuch mit <code>range(len(...))</code>.</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-1.py\">max-water-container #1</a><span class=\"badge crash\">Crash</span> 24.10. · <code>range</code> braucht eine Zahl: <code>range(len(heights))</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-2.py\">max-water-container #2</a><span class=\"badge fail\">falsch</span> 24.10. · <code>erwartet 36, bekommen 1</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-5.py\">buy-and-sell-crypto #5</a><span class=\"badge crash\">Crash</span> 06.11. · <code>range</code> braucht eine Zahl, wie bei Container With Most Water #1 am 24.10.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-6.py\">buy-and-sell-crypto #6</a><span class=\"badge pass\">ok</span> 06.11.</li></ul>",
-   "last_evidence": "2026-11-06T23:26:36+00:00"
+   "back_html": "<p><code>TypeError: 'list' object cannot be interpreted as an integer</code>. <code>range</code> braucht eine <strong>Zahl</strong>, keine Liste.</p>\n<p>Gemeint waren die Indizes: <code>range(len(prices))</code>. Brauchst du Index und Wert, dann <code>for i, p in enumerate(prices):</code>.</p>\n<p>Dreimal bei dir: <code>range(heights)</code> bei Container With Most Water (#1, 24.10.) und <code>range(prices)</code> bei Buy and Sell (#5 am 6.11., #7 am 13.11.). Jedes Mal lief der nächste Versuch mit <code>range(len(...))</code>.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-1.py\">max-water-container #1</a><span class=\"badge crash\">Crash</span> 24.10. · <code>range</code> braucht eine Zahl: <code>range(len(heights))</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-2.py\">max-water-container #2</a><span class=\"badge fail\">falsch</span> 24.10. · <code>erwartet 36, bekommen 1</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-5.py\">buy-and-sell-crypto #5</a><span class=\"badge crash\">Crash</span> 06.11. · <code>range</code> braucht eine Zahl, wie bei Container With Most Water #1 am 24.10.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-6.py\">buy-and-sell-crypto #6</a><span class=\"badge pass\">ok</span> 06.11.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-7.py\">buy-and-sell-crypto #7</a><span class=\"badge crash\">Crash</span> 13.11. · zum dritten Mal <code>range</code> mit einer Liste</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-8.py\">buy-and-sell-crypto #8</a><span class=\"badge fail\">falsch</span> 13.11. · <code>p_l = i + 1</code> ist wirkungslos, <code>for</code> setzt <code>p_l</code> wieder ab 0 → frühere Tage zählen als Verkauf (9 statt 6); #9: <code>range(i+ 1, len(prices))</code></li></ul>",
+   "last_evidence": "2026-11-13T17:59:19+00:00"
   },
   {
    "id": "return-type-signature",

@@ -21,7 +21,8 @@
     {"ref": "longest-substring-without-duplicates#12-16", "snippet": "seen.add(i)", "note": "Index statt Zeichen ins Set → kein Duplikat wird erkannt (got 7 bei `zxyzxyz`)"},
     {"ref": "eating-bananas#0", "snippet": "for i in piles: needed_t = 0 needed_t += piles[i] // k", "note": "`for i in piles` liefert Stapelgrößen, `piles[i]` benutzt sie als Index → IndexError"},
     {"ref": "two-integer-sum#36", "snippet": "for i, v in nums:", "note": "Index und Wert ohne `enumerate` → TypeError: cannot unpack non-iterable int; #37 mit `enumerate`"},
-    {"ref": "buy-and-sell-crypto#4", "snippet": "for i in prices:", "note": "`i` ist ein Preis, wird aber als Startindex (`range(i+1, ...)`) benutzt → `[10, 8, 7, 5, 2]` liefert 3 statt 0; #6 mit `range(len(prices))` und `prices[i]`"}
+    {"ref": "buy-and-sell-crypto#4", "snippet": "for i in prices:", "note": "`i` ist ein Preis, wird aber als Startindex (`range(i+1, ...)`) benutzt → `[10, 8, 7, 5, 2]` liefert 3 statt 0; #6 mit `range(len(prices))` und `prices[i]`"},
+    {"ref": "is-palindrome#24", "snippet": "if not l_p.allnum:", "note": "Methode auf dem Index statt auf dem Zeichen `s[l_p]`, außerdem heißt sie `isalnum()` und braucht Klammern → AttributeError"}
    ]
   },
   {
@@ -50,7 +51,8 @@
     {"ref": "longest-consecutive-sequence#0", "snippet": "while (i+1) - i == 1:", "note": "Bedingung ist immer wahr → TIMEOUT"},
     {"ref": "buy-and-sell-crypto#0-1", "snippet": "while p_l < p_r:", "note": "Körper ändert nur Werte in `prices`, nie `p_l`/`p_r` → TIMEOUT"},
     {"ref": "longest-repeating-substring-with-replacement#2", "snippet": "max_len = max(max_len, sub_len) return max_len", "note": "Zweig `k_sub == 0` ändert weder `j` noch `i` → TIMEOUT; #3 ergänzt `i += 1`"},
-    {"ref": "longest-substring-without-duplicates#10-11", "snippet": "while p < len(s):", "note": "`p` wächst nur in der inneren Schleife; läuft die nicht, hängt die äußere → TIMEOUT"}
+    {"ref": "longest-substring-without-duplicates#10-11", "snippet": "while p < len(s):", "note": "`p` wächst nur in der inneren Schleife; läuft die nicht, hängt die äußere → TIMEOUT"},
+    {"ref": "is-palindrome#24", "snippet": "if l_p.small() != r_p.small(): return False return True", "note": "latent: nach dem Vergleich bewegt sich kein Pointer → Endlosschleife, sobald die Zeichen gleich sind"}
    ]
   },
   {
@@ -81,7 +83,12 @@
     {"ref": "reverse-a-linked-list#7", "snippet": "while head.value != None:", "note": "wieder `value` statt `val`"},
     {"ref": "buy-and-sell-crypto#5", "snippet": "for i in range(prices):", "note": "`range` braucht eine Zahl, wie bei Container With Most Water #1 am 24.10."},
     {"ref": "top-k-elements-in-list#23", "snippet": "counts.append(max(nums.get_values))", "note": "Dicts haben kein `append`, Listen kein `get_values` → AttributeError"},
-    {"ref": "top-k-elements-in-list#25", "snippet": "counts.get(n, default = 0)", "note": "latent: `dict.get` nimmt keine Keyword-Argumente, richtig ist `get(key, 0)`; #26 korrigiert"}
+    {"ref": "top-k-elements-in-list#25", "snippet": "counts.get(n, default = 0)", "note": "latent: `dict.get` nimmt keine Keyword-Argumente, richtig ist `get(key, 0)`; #26 korrigiert"},
+    {"ref": "anagram-groups#25-26", "snippet": "i.sorted()", "note": "`sorted` ist ein Builtin, keine String-Methode → AttributeError; #27: `sorted(i)`"},
+    {"ref": "anagram-groups#25-26", "snippet": "grouper[grouper.get(i_s, 0)].append(i)", "note": "latent: benutzt das Ergebnis von `get` als Key; gemeint war `grouper.setdefault(i_s, []).append(i)` (#27)"},
+    {"ref": "anagram-groups#25-26", "snippet": "return grouper.get_values()", "note": "latent: die Methode heißt `values()`, wie schon bei Top K #23"},
+    {"ref": "buy-and-sell-crypto#7", "snippet": "for i in range(prices):", "note": "zum dritten Mal `range` mit einer Liste"},
+    {"ref": "is-palindrome#24", "snippet": "if l_p.small() != r_p.small():", "note": "latent: `small()` gibt es nicht, gemeint ist `lower()`"}
    ]
   },
   {
@@ -224,7 +231,8 @@
    "title": "Schleifenvariable einer for-Schleife ändern",
    "rule": "`for j in range(n)` setzt `j` in jeder Runde neu. `j += 1` im Körper ist wirkungslos; wer selbst zählen will, nimmt `while`.",
    "occurrences": [
-    {"ref": "string-encode-and-decode#3-4", "snippet": "word += s[i] i += 1 j += 1", "note": "`j += 1` hat keine Wirkung"}
+    {"ref": "string-encode-and-decode#3-4", "snippet": "word += s[i] i += 1 j += 1", "note": "`j += 1` hat keine Wirkung"},
+    {"ref": "buy-and-sell-crypto#8", "snippet": "p_l = i + 1 for p_l in range(len(prices)):", "note": "`p_l = i + 1` ist wirkungslos, `for` setzt `p_l` wieder ab 0 → frühere Tage zählen als Verkauf (9 statt 6); #9: `range(i+ 1, len(prices))`"}
    ]
   },
   {
@@ -392,7 +400,8 @@
   {"ref": "daily-temperatures#4", "text": "anlegen von arrays einer bestimmten länge vergesse ich immer", "topic": "Liste fester Länge"},
   {"ref": "merge-two-sorted-linked-lists#2", "text": "greift er dann auf list.val zu?", "topic": "`min()` auf Knoten"},
   {"ref": "top-k-elements-in-list#25", "text": "merken wie der aufruf gehT!", "topic": "`max(d, key=d.get)`: Key mit dem größten Wert"},
-  {"ref": "top-k-elements-in-list#32", "text": "#richtig?", "topic": "Zählen mit `count.get(i, 0) + 1`"}
+  {"ref": "top-k-elements-in-list#32", "text": "#richtig?", "topic": "Zählen mit `count.get(i, 0) + 1`"},
+  {"ref": "anagram-groups#25-26", "text": "wie war hier die richtige syntax?", "topic": "Gruppieren mit `setdefault(key, [])`"}
  ],
  "patterns": [
   {"problem": "two-integer-sum", "pattern": "Hashmap: Komplement nachschlagen", "solved": "two-integer-sum#35", "note": "29 von 33 Versuchen mit `in nums`/`index()`, also O(n²); die Hashmap stand schon in #0"},

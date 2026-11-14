@@ -1,8 +1,8 @@
 {
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "61bccfd908ac699702cda76a1dfa4581a15de381",
-  "head_date": "2026-11-11T23:34:43+00:00"
+  "head": "7beb08bacd24b6f47f0aab6059e6c58d48cbb80c",
+  "head_date": "2026-11-13T18:13:19+00:00"
  },
  "problems": {
   "anagram-groups": {
@@ -382,6 +382,59 @@
       "total": 47,
       "spec": "cb2aeedb47a3"
      }
+    },
+    {
+     "n": 25,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-25.py",
+     "sha1": "c46e85da4a2f57e693e3f1fac8cb158aba227ad8",
+     "commit": "1b0ad6be56b8c06b11744c53a84dbc0c436bc878",
+     "date": "2026-11-13T15:33:41+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 47,
+      "input": "[['act', 'pots', 'tops', 'cat', 'stop', 'hat']]",
+      "error": "AttributeError: 'str' object has no attribute 'sorted'",
+      "line": 5,
+      "code": "i_s = i.sorted()",
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 26,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-26.py",
+     "sha1": "6cc2cb7d0a8ba29bbb244e06f298aa0c4da556de",
+     "commit": "5eae131d29bb54a1d8561dc7f4274941a1c112c2",
+     "date": "2026-11-13T15:34:02+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 47,
+      "input": "[['act', 'pots', 'tops', 'cat', 'stop', 'hat']]",
+      "error": "AttributeError: 'str' object has no attribute 'sorted'",
+      "line": 5,
+      "code": "i_s = \"\".join(i.sorted())",
+      "spec": "cb2aeedb47a3"
+     }
+    },
+    {
+     "n": 27,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/anagram-groups/submission-27.py",
+     "sha1": "a161ae84f85065eabbdf14f99fc9471cf3d5f55f",
+     "commit": "541e0dc3a35f038475a58c4ed4553695f2ceb54b",
+     "date": "2026-11-13T16:00:22+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 47,
+      "total": 47,
+      "spec": "cb2aeedb47a3"
+     }
     }
    ]
   },
@@ -628,6 +681,58 @@
      "sha1": "03a2d54772ec5bad31d820b0a34bf8149cf100b4",
      "commit": "a35c9fea2ef177873aad0a599c1b2458c9b0ffff",
      "date": "2026-11-06T23:27:09+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "1d35d1104a7a"
+     }
+    },
+    {
+     "n": 7,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/buy-and-sell-crypto/submission-7.py",
+     "sha1": "e95712c886021a3ed70b0d3a96a7fa7c57f7c721",
+     "commit": "5aa3d158da114a6a451d798f084a72963a377117",
+     "date": "2026-11-13T17:59:04+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[[10, 1, 5, 6, 7, 1]]",
+      "error": "TypeError: 'list' object cannot be interpreted as an integer",
+      "line": 6,
+      "code": "for i in range(prices):",
+      "spec": "1d35d1104a7a"
+     }
+    },
+    {
+     "n": 8,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/buy-and-sell-crypto/submission-8.py",
+     "sha1": "9c7118405c28444ea919738c53945ea6b6637f7d",
+     "commit": "52c925847fe25a546357f2eabb07edddb3f6a60f",
+     "date": "2026-11-13T17:59:19+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 48,
+      "input": "[[10, 1, 5, 6, 7, 1]]",
+      "expected": "6",
+      "got": "9",
+      "spec": "1d35d1104a7a"
+     }
+    },
+    {
+     "n": 9,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/buy-and-sell-crypto/submission-9.py",
+     "sha1": "8fbe90ef0eed4e03fdaaa94df674ebaa16d53589",
+     "commit": "7beb08bacd24b6f47f0aab6059e6c58d48cbb80c",
+     "date": "2026-11-13T18:13:19+00:00",
      "bulk_sync": false,
      "verdict": {
       "status": "PASS",
@@ -1922,6 +2027,25 @@
       "status": "PASS",
       "passed": 53,
       "total": 53,
+      "spec": "eb5c7a42a8d7"
+     }
+    },
+    {
+     "n": 24,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/is-palindrome/submission-24.py",
+     "sha1": "2b368e341a4fbb1c639c13369acbeb6304b40d3e",
+     "commit": "ac7c715b82fc5323510f85a11d18fa4fd0592892",
+     "date": "2026-11-13T17:08:00+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 53,
+      "input": "['Was it a car or a cat I saw?']",
+      "error": "AttributeError: 'int' object has no attribute 'allnum'",
+      "line": 7,
+      "code": "if not l_p.allnum:",
       "spec": "eb5c7a42a8d7"
      }
     }
@@ -4435,6 +4559,21 @@
      "sha1": "d9e027c158f096780b000e0233f3ed3ccb906466",
      "commit": "61bccfd908ac699702cda76a1dfa4581a15de381",
      "date": "2026-11-11T23:34:43+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 33,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-33.py",
+     "sha1": "a022e5abea397fe5a77d1ed665a35d8690365fcb",
+     "commit": "3349fa558c58e91857a102da98dcea08e6dc7fa4",
+     "date": "2026-11-13T16:05:54+00:00",
      "bulk_sync": false,
      "verdict": {
       "status": "PASS",
