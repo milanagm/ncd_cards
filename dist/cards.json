@@ -32,14 +32,14 @@
  },
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "7beb08bacd24b6f47f0aab6059e6c58d48cbb80c",
-  "head_date": "2026-11-13T18:13:19+00:00"
+  "head": "f25e160be45fd15ce5bda27ebfc2e6824c044e1b",
+  "head_date": "2026-11-14T15:28:39+00:00"
  },
  "stats": {
-  "submissions": 316,
+  "submissions": 323,
   "statuses": {
-   "WRONG_ANSWER": 109,
-   "PASS": 106,
+   "WRONG_ANSWER": 115,
+   "PASS": 107,
    "RUNTIME_ERROR": 87,
    "TIMEOUT": 10,
    "LOAD_ERROR": 4
@@ -50,7 +50,7 @@
    "id": "index-vs-value",
    "title": "Index und Wert verwechselt",
    "rule": "Vor jeder Verwendung klären: Position oder Element? `for i, v in enumerate(xs)` hält beides auseinander.",
-   "submissions": 38,
+   "submissions": 44,
    "problems": [
     "buy-and-sell-crypto",
     "eating-bananas",
@@ -63,7 +63,7 @@
     "two-integer-sum",
     "valid-sudoku"
    ],
-   "last_seen": "2026-11-13"
+   "last_seen": "2026-11-14"
   },
   {
    "id": "pointer-movement",
@@ -301,15 +301,16 @@
    "id": "problem-model",
    "title": "Aufgabe falsch modelliert",
    "rule": "Vor dem Code die Zielgröße als Formel aufschreiben und am Beispiel nachrechnen: Wasser = Breite × kleinere Höhe, Gewinn = späterer minus früherer Preis, Fenster gültig, wenn Länge − häufigstes Zeichen ≤ k.",
-   "submissions": 13,
+   "submissions": 19,
    "problems": [
     "buy-and-sell-crypto",
+    "longest-consecutive-sequence",
     "longest-repeating-substring-with-replacement",
     "max-water-container",
     "minimum-stack",
     "validate-parentheses"
    ],
-   "last_seen": "2026-11-01"
+   "last_seen": "2026-11-14"
   },
   {
    "id": "binary-search-mid",
@@ -1294,6 +1295,7 @@
    "problems": [
     "buy-and-sell-crypto",
     "eating-bananas",
+    "longest-consecutive-sequence",
     "longest-substring-without-duplicates",
     "products-of-array-discluding-self",
     "three-integer-sum",
@@ -1308,13 +1310,16 @@
     "longest-substring-without-duplicates#8",
     "eating-bananas#0",
     "two-integer-sum#36",
-    "buy-and-sell-crypto#4"
+    "buy-and-sell-crypto#4",
+    "longest-consecutive-sequence#13-17",
+    "longest-consecutive-sequence#18"
    ],
    "tags": [
     "loops",
     "ncd::fehler::index-vs-value",
     "ncd::problem::buy-and-sell-crypto",
     "ncd::problem::eating-bananas",
+    "ncd::problem::longest-consecutive-sequence",
     "ncd::problem::longest-substring-without-duplicates",
     "ncd::problem::products-of-array-discluding-self",
     "ncd::problem::three-integer-sum",
@@ -1324,11 +1329,11 @@
     "python"
    ],
    "front_md": "Du brauchst in der Schleife Index **und** Wert. Was liefern die ersten drei Schleifen, und warum crasht die vierte?\n\n```python\nfor x in nums: ...\nfor i in range(len(nums)): ...\nfor i, x in enumerate(nums): ...\nfor i, x in nums: ...\n```",
-   "back_md": "1. nur Werte\n2. nur Indizes\n3. Paare aus Index und Wert ✔\n4. Python versucht jeden **Wert** in zwei Teile zu entpacken → `TypeError: cannot unpack non-iterable int object`. Genau das bei 3Sum #7 und am 4.11. bei Two Sum #36; eine Minute später lief #37 mit `enumerate`.\n\nEiner deiner häufigsten Fehler (9 von 25 Problemen): `for i in nums_s:` und danach `nums_s[i]`. Am 27.10. andersherum: `for e in s:` und dann `p = e + 1`, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: `for x in s` liefert Elemente. Am 31.10. bei Koko wieder: `for i in piles:` und dann `piles[i] // k` → IndexError. Am 6.11. bei Buy and Sell: `for i in prices:` und dann `range(i+1, ...)`, also ein Preis als Startindex → 3 statt 0 bei `[10, 8, 7, 5, 2]`. Dort ist `i` ein Wert, kein Index. Konvention gegen die Verwechslung: `i`, `j` nur für Indizes, Werte heißen `v`, `x` oder `num`.",
+   "back_md": "1. nur Werte\n2. nur Indizes\n3. Paare aus Index und Wert ✔\n4. Python versucht jeden **Wert** in zwei Teile zu entpacken → `TypeError: cannot unpack non-iterable int object`. Genau das bei 3Sum #7 und am 4.11. bei Two Sum #36; eine Minute später lief #37 mit `enumerate`.\n\nEiner deiner häufigsten Fehler (9 von 25 Problemen): `for i in nums_s:` und danach `nums_s[i]`. Am 27.10. andersherum: `for e in s:` und dann `p = e + 1`, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: `for x in s` liefert Elemente. Am 31.10. bei Koko wieder: `for i in piles:` und dann `piles[i] // k` → IndexError. Am 6.11. bei Buy and Sell: `for i in prices:` und dann `range(i+1, ...)`, also ein Preis als Startindex → 3 statt 0 bei `[10, 8, 7, 5, 2]`. Am 14.11. bei Longest Consecutive: `for i in range(len(nums))` und dann `i not in seen` (#13–17), danach `nums[i+length]` statt `nums[i] + length` (#18). Dort ist `i` ein Wert, kein Index. Konvention gegen die Verwechslung: `i`, `j` nur für Indizes, Werte heißen `v`, `x` oder `num`.",
    "front_html": "<p>Du brauchst in der Schleife Index <strong>und</strong> Wert. Was liefern die ersten drei Schleifen, und warum crasht die vierte?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">for</span> <span class=\"n\">x</span> <span class=\"ow\">in</span> <span class=\"n\">nums</span><span class=\"p\">:</span> <span class=\"o\">...</span>\n<span class=\"k\">for</span> <span class=\"n\">i</span> <span class=\"ow\">in</span> <span class=\"nb\">range</span><span class=\"p\">(</span><span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">nums</span><span class=\"p\">)):</span> <span class=\"o\">...</span>\n<span class=\"k\">for</span> <span class=\"n\">i</span><span class=\"p\">,</span> <span class=\"n\">x</span> <span class=\"ow\">in</span> <span class=\"nb\">enumerate</span><span class=\"p\">(</span><span class=\"n\">nums</span><span class=\"p\">):</span> <span class=\"o\">...</span>\n<span class=\"k\">for</span> <span class=\"n\">i</span><span class=\"p\">,</span> <span class=\"n\">x</span> <span class=\"ow\">in</span> <span class=\"n\">nums</span><span class=\"p\">:</span> <span class=\"o\">...</span>\n</code></pre></div>",
-   "back_html": "<ol>\n<li>nur Werte</li>\n<li>nur Indizes</li>\n<li>Paare aus Index und Wert ✔</li>\n<li>Python versucht jeden <strong>Wert</strong> in zwei Teile zu entpacken → <code>TypeError: cannot unpack non-iterable int object</code>. Genau das bei 3Sum #7 und am 4.11. bei Two Sum #36; eine Minute später lief #37 mit <code>enumerate</code>.</li>\n</ol>\n<p>Einer deiner häufigsten Fehler (9 von 25 Problemen): <code>for i in nums_s:</code> und danach <code>nums_s[i]</code>. Am 27.10. andersherum: <code>for e in s:</code> und dann <code>p = e + 1</code>, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: <code>for x in s</code> liefert Elemente. Am 31.10. bei Koko wieder: <code>for i in piles:</code> und dann <code>piles[i] // k</code> → IndexError. Am 6.11. bei Buy and Sell: <code>for i in prices:</code> und dann <code>range(i+1, ...)</code>, also ein Preis als Startindex → 3 statt 0 bei <code>[10, 8, 7, 5, 2]</code>. Dort ist <code>i</code> ein Wert, kein Index. Konvention gegen die Verwechslung: <code>i</code>, <code>j</code> nur für Indizes, Werte heißen <code>v</code>, <code>x</code> oder <code>num</code>.</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-1.py\">three-integer-sum #1–6</a><span class=\"badge crash\">6× Crash</span> 22.10. · durchläuft Werte und benutzt sie danach als Index (<code>nums_s[i]</code>)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-7.py\">three-integer-sum #7</a><span class=\"badge crash\">Crash</span> 22.10. · Index und Wert ohne <code>enumerate</code> → TypeError: cannot unpack non-iterable int</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/products-of-array-discluding-self/submission-2.py\">products-of-array-discluding-self #2–4</a><span class=\"badge fail\">3× falsch</span> 17.10. · durchläuft Werte (alle 1) und benutzt sie als Index</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/valid-sudoku/submission-2.py\">valid-sudoku #2–5</a><span class=\"badge crash\">2× Crash</span><span class=\"badge fail\">2× falsch</span> 18.10. · Spaltenindex <code>i</code> statt Zellwert <code>row[i]</code> ins Set</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-8.py\">longest-substring-without-duplicates #8</a><span class=\"badge crash\">Crash</span> 27.10. · <code>for e in s</code> liefert Zeichen, <code>e + 1</code> → TypeError. Eigener Kommentar: „iterieren über elements oder index?“</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-0.py\">eating-bananas #0</a><span class=\"badge crash\">Crash</span> 31.10. · <code>for i in piles</code> liefert Stapelgrößen, <code>piles[i]</code> benutzt sie als Index → IndexError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/two-integer-sum/submission-36.py\">two-integer-sum #36</a><span class=\"badge crash\">Crash</span> 04.11. · Index und Wert ohne <code>enumerate</code> → TypeError: cannot unpack non-iterable int; #37 mit <code>enumerate</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-4.py\">buy-and-sell-crypto #4</a><span class=\"badge fail\">falsch</span> 06.11. · <code>i</code> ist ein Preis, wird aber als Startindex (<code>range(i+1, ...)</code>) benutzt → <code>[10, 8, 7, 5, 2]</code> liefert 3 statt 0; #6 mit <code>range(len(prices))</code> und <code>prices[i]</code></li></ul>",
-   "last_evidence": "2026-11-06T23:24:14+00:00"
+   "back_html": "<ol>\n<li>nur Werte</li>\n<li>nur Indizes</li>\n<li>Paare aus Index und Wert ✔</li>\n<li>Python versucht jeden <strong>Wert</strong> in zwei Teile zu entpacken → <code>TypeError: cannot unpack non-iterable int object</code>. Genau das bei 3Sum #7 und am 4.11. bei Two Sum #36; eine Minute später lief #37 mit <code>enumerate</code>.</li>\n</ol>\n<p>Einer deiner häufigsten Fehler (9 von 25 Problemen): <code>for i in nums_s:</code> und danach <code>nums_s[i]</code>. Am 27.10. andersherum: <code>for e in s:</code> und dann <code>p = e + 1</code>, mit deiner Frage im Code „iterieren über elements oder index?“ Antwort: <code>for x in s</code> liefert Elemente. Am 31.10. bei Koko wieder: <code>for i in piles:</code> und dann <code>piles[i] // k</code> → IndexError. Am 6.11. bei Buy and Sell: <code>for i in prices:</code> und dann <code>range(i+1, ...)</code>, also ein Preis als Startindex → 3 statt 0 bei <code>[10, 8, 7, 5, 2]</code>. Am 14.11. bei Longest Consecutive: <code>for i in range(len(nums))</code> und dann <code>i not in seen</code> (#13–17), danach <code>nums[i+length]</code> statt <code>nums[i] + length</code> (#18). Dort ist <code>i</code> ein Wert, kein Index. Konvention gegen die Verwechslung: <code>i</code>, <code>j</code> nur für Indizes, Werte heißen <code>v</code>, <code>x</code> oder <code>num</code>.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-1.py\">three-integer-sum #1–6</a><span class=\"badge crash\">6× Crash</span> 22.10. · durchläuft Werte und benutzt sie danach als Index (<code>nums_s[i]</code>)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/three-integer-sum/submission-7.py\">three-integer-sum #7</a><span class=\"badge crash\">Crash</span> 22.10. · Index und Wert ohne <code>enumerate</code> → TypeError: cannot unpack non-iterable int</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/products-of-array-discluding-self/submission-2.py\">products-of-array-discluding-self #2–4</a><span class=\"badge fail\">3× falsch</span> 17.10. · durchläuft Werte (alle 1) und benutzt sie als Index</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/valid-sudoku/submission-2.py\">valid-sudoku #2–5</a><span class=\"badge crash\">2× Crash</span><span class=\"badge fail\">2× falsch</span> 18.10. · Spaltenindex <code>i</code> statt Zellwert <code>row[i]</code> ins Set</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-8.py\">longest-substring-without-duplicates #8</a><span class=\"badge crash\">Crash</span> 27.10. · <code>for e in s</code> liefert Zeichen, <code>e + 1</code> → TypeError. Eigener Kommentar: „iterieren über elements oder index?“</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/eating-bananas/submission-0.py\">eating-bananas #0</a><span class=\"badge crash\">Crash</span> 31.10. · <code>for i in piles</code> liefert Stapelgrößen, <code>piles[i]</code> benutzt sie als Index → IndexError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/two-integer-sum/submission-36.py\">two-integer-sum #36</a><span class=\"badge crash\">Crash</span> 04.11. · Index und Wert ohne <code>enumerate</code> → TypeError: cannot unpack non-iterable int; #37 mit <code>enumerate</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-4.py\">buy-and-sell-crypto #4</a><span class=\"badge fail\">falsch</span> 06.11. · <code>i</code> ist ein Preis, wird aber als Startindex (<code>range(i+1, ...)</code>) benutzt → <code>[10, 8, 7, 5, 2]</code> liefert 3 statt 0; #6 mit <code>range(len(prices))</code> und <code>prices[i]</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-consecutive-sequence/submission-13.py\">longest-consecutive-sequence #13–17</a><span class=\"badge fail\">5× falsch</span> 14.11. · <code>i</code> aus <code>range(len(nums))</code> ist ein Index, geprüft wird er wie eine Zahl aus <code>nums</code>; #18 nimmt <code>nums[i]</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-consecutive-sequence/submission-18.py\">longest-consecutive-sequence #18</a><span class=\"badge fail\">falsch</span> 14.11. · latent: Index <code>i+length</code> statt Wert <code>nums[i]+length</code>; #19 korrigiert</li></ul>",
+   "last_evidence": "2026-11-14T15:27:45+00:00"
   },
   {
    "id": "last-window-max",
@@ -1424,24 +1429,29 @@
    "guid": "g:2n.:$$pm",
    "type": "pattern",
    "type_label": "Pattern",
-   "mistakes": [],
+   "mistakes": [
+    "problem-model"
+   ],
    "problems": [
     "longest-consecutive-sequence"
    ],
    "evidence": [
-    "longest-consecutive-sequence#11"
+    "longest-consecutive-sequence#11",
+    "longest-consecutive-sequence#15-18",
+    "longest-consecutive-sequence#19"
    ],
    "tags": [
     "hashset",
+    "ncd::fehler::problem-model",
     "ncd::problem::longest-consecutive-sequence",
     "ncd::typ::pattern"
    ],
    "front_md": "Longest Consecutive Sequence in O(n): Welcher Kniff verhindert, dass du jede Sequenz mehrfach abläufst?",
-   "back_md": "Nur an **Sequenzanfängen** zählen. Eine Zahl `n` startet eine Sequenz genau dann, wenn `n - 1` **nicht** im Set ist. Von dort zählst du hoch, solange der Nachfolger im Set ist.\n\nJede Zahl wird höchstens zweimal angefasst, einmal in der äußeren Schleife und einmal beim Hochzählen → O(n). Ohne den Check wäre es O(n²).\n\nSortieren ist nicht nötig. Dass ein Set keine Reihenfolge hat (dein Kommentar: „set erzeugt beliebige Reihenfolge!“), spielt hier keine Rolle.",
+   "back_md": "Nur an **Sequenzanfängen** zählen. Eine Zahl `n` startet eine Sequenz genau dann, wenn `n - 1` **nicht** im Set ist. Von dort zählst du hoch, solange der Nachfolger im Set ist.\n\nJede Zahl wird höchstens zweimal angefasst, einmal in der äußeren Schleife und einmal beim Hochzählen → O(n). Ohne den Check wäre es O(n²).\n\nBeim zweiten Anlauf am 14.11. stand im Check `... not in seen` statt `... - 1 not in seen` (#15–18). Nach `seen = set(nums)` ist jede Zahl drin, der Check ist also immer falsch, und es wird nie gezählt (#18 lieferte 0). #19 prüft den Vorgänger ✔\n\nSortieren ist nicht nötig. Dass ein Set keine Reihenfolge hat (dein Kommentar: „set erzeugt beliebige Reihenfolge!“), spielt hier keine Rolle.",
    "front_html": "<p>Longest Consecutive Sequence in O(n): Welcher Kniff verhindert, dass du jede Sequenz mehrfach abläufst?</p>",
-   "back_html": "<p>Nur an <strong>Sequenzanfängen</strong> zählen. Eine Zahl <code>n</code> startet eine Sequenz genau dann, wenn <code>n - 1</code> <strong>nicht</strong> im Set ist. Von dort zählst du hoch, solange der Nachfolger im Set ist.</p>\n<p>Jede Zahl wird höchstens zweimal angefasst, einmal in der äußeren Schleife und einmal beim Hochzählen → O(n). Ohne den Check wäre es O(n²).</p>\n<p>Sortieren ist nicht nötig. Dass ein Set keine Reihenfolge hat (dein Kommentar: „set erzeugt beliebige Reihenfolge!“), spielt hier keine Rolle.</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-consecutive-sequence/submission-11.py\">longest-consecutive-sequence #11</a><span class=\"badge pass\">ok</span> 19.10.</li></ul>",
-   "last_evidence": null
+   "back_html": "<p>Nur an <strong>Sequenzanfängen</strong> zählen. Eine Zahl <code>n</code> startet eine Sequenz genau dann, wenn <code>n - 1</code> <strong>nicht</strong> im Set ist. Von dort zählst du hoch, solange der Nachfolger im Set ist.</p>\n<p>Jede Zahl wird höchstens zweimal angefasst, einmal in der äußeren Schleife und einmal beim Hochzählen → O(n). Ohne den Check wäre es O(n²).</p>\n<p>Beim zweiten Anlauf am 14.11. stand im Check <code>... not in seen</code> statt <code>... - 1 not in seen</code> (#15–18). Nach <code>seen = set(nums)</code> ist jede Zahl drin, der Check ist also immer falsch, und es wird nie gezählt (#18 lieferte 0). #19 prüft den Vorgänger ✔</p>\n<p>Sortieren ist nicht nötig. Dass ein Set keine Reihenfolge hat (dein Kommentar: „set erzeugt beliebige Reihenfolge!“), spielt hier keine Rolle.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-consecutive-sequence/submission-11.py\">longest-consecutive-sequence #11</a><span class=\"badge pass\">ok</span> 19.10.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-consecutive-sequence/submission-15.py\">longest-consecutive-sequence #15–18</a><span class=\"badge fail\">4× falsch</span> 14.11. · Sequenzanfang falsch geprüft: es zählt, ob der Vorgänger fehlt (<code>x - 1 not in seen</code>, #19). Nach <code>seen = set(nums)</code> ist <code>nums[i] not in seen</code> immer falsch (#18: 0)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-consecutive-sequence/submission-19.py\">longest-consecutive-sequence #19</a><span class=\"badge pass\">ok</span> 14.11.</li></ul>",
+   "last_evidence": "2026-11-14T15:27:45+00:00"
   },
   {
    "id": "loop-progress-rule",

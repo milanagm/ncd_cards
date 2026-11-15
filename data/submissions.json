@@ -1,8 +1,8 @@
 {
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "7beb08bacd24b6f47f0aab6059e6c58d48cbb80c",
-  "head_date": "2026-11-13T18:13:19+00:00"
+  "head": "f25e160be45fd15ce5bda27ebfc2e6824c044e1b",
+  "head_date": "2026-11-14T15:28:39+00:00"
  },
  "problems": {
   "anagram-groups": {
@@ -2253,6 +2253,129 @@
      "sha1": "3ce6226527f79c2c9265031e3bbb61222ac82bb6",
      "commit": "d5254431dd87797635537b916c2e1fa0dc58bba9",
      "date": "2026-10-19T10:19:26+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 49,
+      "total": 49,
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 13,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-13.py",
+     "sha1": "a57d8c19d5f6159643c1bddbd6a5022b48108625",
+     "commit": "ac5b37176b3fc7a7d499d0b72e9b4a8d16e03756",
+     "date": "2026-11-14T15:23:34+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 49,
+      "input": "[[2, 20, 4, 10, 3, 4, 5]]",
+      "expected": "4",
+      "got": "0",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 14,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-14.py",
+     "sha1": "8fa5c20c732d9753fac6b91a2cf3e8cdd074682e",
+     "commit": "f07b429c68a736f57e84e7b8bb4d346494b7389a",
+     "date": "2026-11-14T15:25:02+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 49,
+      "input": "[[2, 20, 4, 10, 3, 4, 5]]",
+      "expected": "4",
+      "got": "1",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 15,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-15.py",
+     "sha1": "b9a44fa3a25a728c9e7a3bd9ac42bac53cef29ba",
+     "commit": "59d8dd4c40b7735e0acb1565c3e6390ecc0fec36",
+     "date": "2026-11-14T15:25:15+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 49,
+      "input": "[[2, 20, 4, 10, 3, 4, 5]]",
+      "expected": "4",
+      "got": "6",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 16,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-16.py",
+     "sha1": "84f9739191846109ff284cd758d9bb8ca0630bcd",
+     "commit": "4153bf4044fd96b2b97b1e16ee1ca0a670491479",
+     "date": "2026-11-14T15:25:53+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 49,
+      "input": "[[2, 20, 4, 10, 3, 4, 5]]",
+      "expected": "4",
+      "got": "5",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 17,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-17.py",
+     "sha1": "53b24586eceb67c0b24b67fe78f4d6f91c4800ec",
+     "commit": "391ed7cf5804cbbc04894b3088031cfedb062504",
+     "date": "2026-11-14T15:26:02+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 49,
+      "input": "[[2, 20, 4, 10, 3, 4, 5]]",
+      "expected": "4",
+      "got": "5",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 18,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-18.py",
+     "sha1": "3baea04bd61b0e90502631654f577329b613a0bb",
+     "commit": "2fde6f2cedb68d18663ba5d2e5f8d1154b3b5e8d",
+     "date": "2026-11-14T15:27:45+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 49,
+      "input": "[[2, 20, 4, 10, 3, 4, 5]]",
+      "expected": "4",
+      "got": "0",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 19,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-19.py",
+     "sha1": "5a830f2a72f1efa63f281d23b74b008a3a2660e1",
+     "commit": "f25e160be45fd15ce5bda27ebfc2e6824c044e1b",
+     "date": "2026-11-14T15:28:39+00:00",
      "bulk_sync": false,
      "verdict": {
       "status": "PASS",
