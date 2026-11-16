@@ -1,8 +1,8 @@
 {
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "f25e160be45fd15ce5bda27ebfc2e6824c044e1b",
-  "head_date": "2026-11-14T15:28:39+00:00"
+  "head": "2e9c25268a85276e06e6b7e8497cadcdd4381fb5",
+  "head_date": "2026-11-15T23:31:12+00:00"
  },
  "problems": {
   "anagram-groups": {
@@ -1064,6 +1064,39 @@
      "sha1": "23aec64bb5d8a378c980b8af79b3df5bbf69ef15",
      "commit": "1955d7776b2206e0930c34a6f3e4c578352aaffd",
      "date": "2026-10-21T23:51:21+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "04f0c8ddd912"
+     }
+    },
+    {
+     "n": 16,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-16.py",
+     "sha1": "1ecdafe3d5850602b4ed0a688b3d0998752155de",
+     "commit": "87525b6812e21025b2a382886b4611b41e147062",
+     "date": "2026-11-15T23:30:41+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 3, 3]]",
+      "expected": "True",
+      "got": "False",
+      "spec": "04f0c8ddd912"
+     }
+    },
+    {
+     "n": 18,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/duplicate-integer/submission-18.py",
+     "sha1": "96641f3010478fd6d37a151d8527ca5454d6103c",
+     "commit": "2e9c25268a85276e06e6b7e8497cadcdd4381fb5",
+     "date": "2026-11-15T23:31:12+00:00",
      "bulk_sync": false,
      "verdict": {
       "status": "PASS",

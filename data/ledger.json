@@ -291,7 +291,8 @@
     {"ref": "validate-parentheses#3-4", "snippet": "open_fancy.append(\"[\")", "note": "ein Stack pro Klammertyp verliert die Reihenfolge zwischen den Typen → `[(])` liefert True"},
     {"ref": "minimum-stack#1-3", "snippet": "return min(self.seen)", "note": "ein Set kennt keine Reihenfolge und keine Duplikate, und `pop` nimmt nichts heraus → nach `pop` der 0 liefert `getMin` weiter 0 statt 1"},
     {"ref": "longest-consecutive-sequence#13-14", "snippet": "seen = set() max_len = 0", "note": "das Set bleibt leer (in #13 wird außerdem `max_len` nie aktualisiert); #15 füllt es mit `set(nums)`"},
-    {"ref": "longest-consecutive-sequence#15-18", "snippet": "not in seen: length = 1", "note": "Sequenzanfang falsch geprüft: es zählt, ob der Vorgänger fehlt (`x - 1 not in seen`, #19). Nach `seen = set(nums)` ist `nums[i] not in seen` immer falsch (#18: 0)"}
+    {"ref": "longest-consecutive-sequence#15-18", "snippet": "not in seen: length = 1", "note": "Sequenzanfang falsch geprüft: es zählt, ob der Vorgänger fehlt (`x - 1 not in seen`, #19). Nach `seen = set(nums)` ist `nums[i] not in seen` immer falsch (#18: 0)"},
+    {"ref": "duplicate-integer#16", "snippet": "return len(seen) == len(nums)", "note": "Vergleich invertiert: gleiche Länge heißt keine Duplikate, gefragt ist das Gegenteil → `[1, 2, 3, 3]` liefert False; #18 mit `!=`"}
    ]
   },
   {

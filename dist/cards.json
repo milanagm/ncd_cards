@@ -32,14 +32,14 @@
  },
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "f25e160be45fd15ce5bda27ebfc2e6824c044e1b",
-  "head_date": "2026-11-14T15:28:39+00:00"
+  "head": "2e9c25268a85276e06e6b7e8497cadcdd4381fb5",
+  "head_date": "2026-11-15T23:31:12+00:00"
  },
  "stats": {
-  "submissions": 323,
+  "submissions": 325,
   "statuses": {
-   "WRONG_ANSWER": 115,
-   "PASS": 107,
+   "WRONG_ANSWER": 116,
+   "PASS": 108,
    "RUNTIME_ERROR": 87,
    "TIMEOUT": 10,
    "LOAD_ERROR": 4
@@ -301,16 +301,17 @@
    "id": "problem-model",
    "title": "Aufgabe falsch modelliert",
    "rule": "Vor dem Code die Zielgröße als Formel aufschreiben und am Beispiel nachrechnen: Wasser = Breite × kleinere Höhe, Gewinn = späterer minus früherer Preis, Fenster gültig, wenn Länge − häufigstes Zeichen ≤ k.",
-   "submissions": 19,
+   "submissions": 20,
    "problems": [
     "buy-and-sell-crypto",
+    "duplicate-integer",
     "longest-consecutive-sequence",
     "longest-repeating-substring-with-replacement",
     "max-water-container",
     "minimum-stack",
     "validate-parentheses"
    ],
-   "last_seen": "2026-11-14"
+   "last_seen": "2026-11-15"
   },
   {
    "id": "binary-search-mid",
