@@ -24,7 +24,9 @@
     {"ref": "buy-and-sell-crypto#4", "snippet": "for i in prices:", "note": "`i` ist ein Preis, wird aber als Startindex (`range(i+1, ...)`) benutzt → `[10, 8, 7, 5, 2]` liefert 3 statt 0; #6 mit `range(len(prices))` und `prices[i]`"},
     {"ref": "is-palindrome#24", "snippet": "if not l_p.allnum:", "note": "Methode auf dem Index statt auf dem Zeichen `s[l_p]`, außerdem heißt sie `isalnum()` und braucht Klammern → AttributeError"},
     {"ref": "longest-consecutive-sequence#13-17", "snippet": "if i not in seen:", "note": "`i` aus `range(len(nums))` ist ein Index, geprüft wird er wie eine Zahl aus `nums`; #18 nimmt `nums[i]`"},
-    {"ref": "longest-consecutive-sequence#18", "snippet": "while nums[i+length] in seen:", "note": "latent: Index `i+length` statt Wert `nums[i]+length`; #19 korrigiert"}
+    {"ref": "longest-consecutive-sequence#18", "snippet": "while nums[i+length] in seen:", "note": "latent: Index `i+length` statt Wert `nums[i]+length`; #19 korrigiert"},
+    {"ref": "buy-and-sell-crypto#10", "snippet": "for i in prices:", "note": "wieder wie #4: ein Preis als Startindex und als Kaufpreis → 3 statt 0 bei `[10, 8, 7, 5, 2]`"},
+    {"ref": "top-k-elements-in-list#34-36", "snippet": "result.append(counter[m])", "note": "hängt die Anzahl statt des Elements an → `[2]` statt `[7]`; #37 `append(m)`"}
    ]
   },
   {
@@ -65,7 +67,8 @@
     {"ref": "two-integer-sum#10-14", "snippet": "nums:List(int)", "note": "Type-Hint mit `()` → LOAD_ERROR: Type List cannot be instantiated"},
     {"ref": "two-integer-sum#21", "snippet": "sorted[i, cmplmentIndx]", "note": "Funktion mit `[]` aufgerufen → not subscriptable"},
     {"ref": "anagram-groups#14-16", "snippet": "defaultdict(List(", "note": "`typing.List` aufgerufen → TypeError"},
-    {"ref": "anagram-groups#17-18", "snippet": "defaultdict(list(", "note": "fertige Liste statt Fabrik übergeben → first argument must be callable"}
+    {"ref": "anagram-groups#17-18", "snippet": "defaultdict(list(", "note": "fertige Liste statt Fabrik übergeben → first argument must be callable"},
+    {"ref": "top-k-elements-in-list#35", "snippet": "key = counter.get()", "note": "Methode aufgerufen statt übergeben → TypeError: get expected at least 1 argument"}
    ]
   },
   {
@@ -90,7 +93,10 @@
     {"ref": "anagram-groups#25-26", "snippet": "grouper[grouper.get(i_s, 0)].append(i)", "note": "latent: benutzt das Ergebnis von `get` als Key; gemeint war `grouper.setdefault(i_s, []).append(i)` (#27)"},
     {"ref": "anagram-groups#25-26", "snippet": "return grouper.get_values()", "note": "latent: die Methode heißt `values()`, wie schon bei Top K #23"},
     {"ref": "buy-and-sell-crypto#7", "snippet": "for i in range(prices):", "note": "zum dritten Mal `range` mit einer Liste"},
-    {"ref": "is-palindrome#24", "snippet": "if l_p.small() != r_p.small():", "note": "latent: `small()` gibt es nicht, gemeint ist `lower()`"}
+    {"ref": "is-palindrome#24", "snippet": "if l_p.small() != r_p.small():", "note": "latent: `small()` gibt es nicht, gemeint ist `lower()`"},
+    {"ref": "buy-and-sell-crypto#11", "snippet": "for i in range(prices):", "note": "zum vierten Mal `range` mit einer Liste"},
+    {"ref": "buy-and-sell-crypto#12", "snippet": "for i in range(enumerate(prices)):", "note": "`enumerate` liefert Paare, keine Zahl → TypeError"},
+    {"ref": "buy-and-sell-crypto#13", "snippet": "for i in range(prices):", "note": "zurück zu `range(prices)`; #14 mit `range(len(prices))`"}
    ]
   },
   {
@@ -130,7 +136,8 @@
     {"ref": "duplicate-integer#1-3", "snippet": "if i not in appearance:", "note": "Liste als „gesehen“-Speicher"},
     {"ref": "duplicate-integer#4", "snippet": "if i in numbers:", "note": "Liste als „gesehen“-Speicher"},
     {"ref": "duplicate-integer#8", "snippet": "contains = []", "note": "Liste als „gesehen“-Speicher"},
-    {"ref": "duplicate-integer#11", "snippet": "seen = []", "note": "Liste als „gesehen“-Speicher"}
+    {"ref": "duplicate-integer#11", "snippet": "seen = []", "note": "Liste als „gesehen“-Speicher"},
+    {"ref": "longest-consecutive-sequence#21-23", "snippet": "seen = []", "note": "Liste als Gedächtnis: `in` ist O(n)"}
    ]
   },
   {
@@ -264,7 +271,8 @@
    "rule": "Das Maximum nach jeder Erweiterung aktualisieren, nicht nur wenn das Fenster bricht. Sonst geht das Fenster verloren, das bis zum Ende reicht.",
    "occurrences": [
     {"ref": "longest-substring-without-duplicates#0-2", "snippet": "else: max_len = max(max_len, len(sub))", "note": "Maximum nur im `else`-Zweig; ohne Duplikat am Ende zählt das letzte Fenster nie. #3 ergänzt die Zeile nach der Schleife"},
-    {"ref": "longest-repeating-substring-with-replacement#3-6", "snippet": "if k_sub == 0: max_len = max(max_len, sub_len)", "note": "gewertet wird nur, wenn die Ersetzungen ausgehen; reicht das Fenster bis zum Stringende (`XYYX`, k = 2: Länge 4), geht es verloren"}
+    {"ref": "longest-repeating-substring-with-replacement#3-6", "snippet": "if k_sub == 0: max_len = max(max_len, sub_len)", "note": "gewertet wird nur, wenn die Ersetzungen ausgehen; reicht das Fenster bis zum Stringende (`XYYX`, k = 2: Länge 4), geht es verloren"},
+    {"ref": "longest-consecutive-sequence#22", "snippet": "sub_len += 1 length = max(length, sub_len)", "note": "Maximum nur in der while-Schleife: Sequenzen der Länge 1 werden nie gezählt"}
    ]
   },
   {
@@ -292,7 +300,8 @@
     {"ref": "minimum-stack#1-3", "snippet": "return min(self.seen)", "note": "ein Set kennt keine Reihenfolge und keine Duplikate, und `pop` nimmt nichts heraus → nach `pop` der 0 liefert `getMin` weiter 0 statt 1"},
     {"ref": "longest-consecutive-sequence#13-14", "snippet": "seen = set() max_len = 0", "note": "das Set bleibt leer (in #13 wird außerdem `max_len` nie aktualisiert); #15 füllt es mit `set(nums)`"},
     {"ref": "longest-consecutive-sequence#15-18", "snippet": "not in seen: length = 1", "note": "Sequenzanfang falsch geprüft: es zählt, ob der Vorgänger fehlt (`x - 1 not in seen`, #19). Nach `seen = set(nums)` ist `nums[i] not in seen` immer falsch (#18: 0)"},
-    {"ref": "duplicate-integer#16", "snippet": "return len(seen) == len(nums)", "note": "Vergleich invertiert: gleiche Länge heißt keine Duplikate, gefragt ist das Gegenteil → `[1, 2, 3, 3]` liefert False; #18 mit `!=`"}
+    {"ref": "duplicate-integer#16", "snippet": "return len(seen) == len(nums)", "note": "Vergleich invertiert: gleiche Länge heißt keine Duplikate, gefragt ist das Gegenteil → `[1, 2, 3, 3]` liefert False; #18 mit `!=`"},
+    {"ref": "longest-consecutive-sequence#21-23", "snippet": "seen = []", "note": "das Gedächtnis bleibt wieder leer (wie #13–14), jede Zahl gilt als Sequenzanfang; #24: `set(nums)`"}
    ]
   },
   {

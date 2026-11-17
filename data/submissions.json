@@ -1,8 +1,8 @@
 {
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "2e9c25268a85276e06e6b7e8497cadcdd4381fb5",
-  "head_date": "2026-11-15T23:31:12+00:00"
+  "head": "c3046678cab151694bf10be4b5a2e71709ed6ce8",
+  "head_date": "2026-11-16T23:38:04+00:00"
  },
  "problems": {
   "anagram-groups": {
@@ -733,6 +733,96 @@
      "sha1": "8fbe90ef0eed4e03fdaaa94df674ebaa16d53589",
      "commit": "7beb08bacd24b6f47f0aab6059e6c58d48cbb80c",
      "date": "2026-11-13T18:13:19+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "1d35d1104a7a"
+     }
+    },
+    {
+     "n": 10,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/buy-and-sell-crypto/submission-10.py",
+     "sha1": "b91d167de862fe74c0e29490b7f05d1b1abac622",
+     "commit": "46c17f8914fee81c86183c242d541ae1deb70288",
+     "date": "2026-11-16T23:20:04+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 1,
+      "total": 48,
+      "input": "[[10, 8, 7, 5, 2]]",
+      "expected": "0",
+      "got": "3",
+      "spec": "1d35d1104a7a"
+     }
+    },
+    {
+     "n": 11,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/buy-and-sell-crypto/submission-11.py",
+     "sha1": "1a17df62878d4eccc9f3dbd471f2aab4215c5266",
+     "commit": "e84b0ab460f3462b3fbea917a8215fbe73c1e19a",
+     "date": "2026-11-16T23:22:16+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[[10, 1, 5, 6, 7, 1]]",
+      "error": "TypeError: 'list' object cannot be interpreted as an integer",
+      "line": 4,
+      "code": "for i in range(prices):",
+      "spec": "1d35d1104a7a"
+     }
+    },
+    {
+     "n": 12,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/buy-and-sell-crypto/submission-12.py",
+     "sha1": "f19f8bf692eaa93611af4a78f435ae1141a0c5a6",
+     "commit": "65f8f9a0529e1f8b14e44f465c8881fe3809ab26",
+     "date": "2026-11-16T23:22:28+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[[10, 1, 5, 6, 7, 1]]",
+      "error": "TypeError: 'enumerate' object cannot be interpreted as an integer",
+      "line": 4,
+      "code": "for i in range(enumerate(prices)):",
+      "spec": "1d35d1104a7a"
+     }
+    },
+    {
+     "n": 13,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/buy-and-sell-crypto/submission-13.py",
+     "sha1": "1a17df62878d4eccc9f3dbd471f2aab4215c5266",
+     "commit": "59987a086678ea79b35e1e41855c5511cfe3f844",
+     "date": "2026-11-16T23:22:40+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[[10, 1, 5, 6, 7, 1]]",
+      "error": "TypeError: 'list' object cannot be interpreted as an integer",
+      "line": 4,
+      "code": "for i in range(prices):",
+      "spec": "1d35d1104a7a"
+     }
+    },
+    {
+     "n": 14,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/buy-and-sell-crypto/submission-14.py",
+     "sha1": "8dcaf3f7b49bb9ce5b09c454bfc8314ffd0beee4",
+     "commit": "3d8b80bcee77ef06ff46a7529135f5eac9941a62",
+     "date": "2026-11-16T23:23:06+00:00",
      "bulk_sync": false,
      "verdict": {
       "status": "PASS",
@@ -2416,6 +2506,75 @@
       "total": 49,
       "spec": "2cb70e38aadf"
      }
+    },
+    {
+     "n": 21,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-21.py",
+     "sha1": "a7dfff3075361d4726d8d15b1473630429e75586",
+     "commit": "fb334d6c9ee6adabbf56aec2bbe2f26dce466f97",
+     "date": "2026-11-16T23:16:03+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 49,
+      "input": "[[2, 20, 4, 10, 3, 4, 5]]",
+      "expected": "4",
+      "got": "1",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 22,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-22.py",
+     "sha1": "6065fb97c0d873b8695f988b0402784a96c69ca9",
+     "commit": "7515761db99cd20bdca1baafe03a7b83401f6e71",
+     "date": "2026-11-16T23:16:20+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 49,
+      "input": "[[2, 20, 4, 10, 3, 4, 5]]",
+      "expected": "4",
+      "got": "0",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 23,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-23.py",
+     "sha1": "d2463bd0dae4dac7c72dc29256c79f27ee272afa",
+     "commit": "176184873194b010c024b16aa87eec39765e5049",
+     "date": "2026-11-16T23:16:26+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 49,
+      "input": "[[2, 20, 4, 10, 3, 4, 5]]",
+      "expected": "4",
+      "got": "1",
+      "spec": "2cb70e38aadf"
+     }
+    },
+    {
+     "n": 24,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-consecutive-sequence/submission-24.py",
+     "sha1": "392a9782ac006dffe01d9f8afdb7b68c5036a21d",
+     "commit": "6eba8591cfb922bd0f468c644898a5200521524a",
+     "date": "2026-11-16T23:17:12+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 49,
+      "total": 49,
+      "spec": "2cb70e38aadf"
+     }
     }
    ]
   },
@@ -2862,6 +3021,51 @@
      "sha1": "773152e22e4b8716c6c1b5ebf97cc327fab9461e",
      "commit": "136e0668bb0bf3eb4cadd6725d18c2df40c75ce4",
      "date": "2026-10-27T11:50:42+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 51,
+      "total": 51,
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 22,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-22.py",
+     "sha1": "5b2f49318e4f29fa3404aac2b1ef689d7bdfe739",
+     "commit": "8bb17cdb3fe7c190894db57fa0fa7d731ed92c07",
+     "date": "2026-11-16T23:33:16+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 51,
+      "total": 51,
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 23,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-23.py",
+     "sha1": "dcfe05d875364d60c774729ec65fb094260a8667",
+     "commit": "baf576ee2a95b1281b0787e8538e0c600c741c6f",
+     "date": "2026-11-16T23:36:24+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 51,
+      "total": 51,
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 24,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-24.py",
+     "sha1": "186fb6cf71cd30aaf895cf290c886c01759bf430",
+     "commit": "c3046678cab151694bf10be4b5a2e71709ed6ce8",
+     "date": "2026-11-16T23:38:04+00:00",
      "bulk_sync": false,
      "verdict": {
       "status": "PASS",
@@ -4730,6 +4934,76 @@
      "sha1": "a022e5abea397fe5a77d1ed665a35d8690365fcb",
      "commit": "3349fa558c58e91857a102da98dcea08e6dc7fa4",
      "date": "2026-11-13T16:05:54+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 46,
+      "total": 46,
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 34,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-34.py",
+     "sha1": "e366067a22e41215aceae1a411de1da5c34013a6",
+     "commit": "ca74d31b9ab993d4cb87623f6358d1dae9517037",
+     "date": "2026-11-16T23:05:38+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 1,
+      "total": 46,
+      "input": "[[7, 7], 1]",
+      "expected": "[7]",
+      "got": "[2]",
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 35,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-35.py",
+     "sha1": "d6299bf3c342c8cf4157b0eb2b3d85cad3ac86c1",
+     "commit": "690a14b920d6e504bb8b7914fb43b379f282b68d",
+     "date": "2026-11-16T23:06:06+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 46,
+      "input": "[[1, 2, 2, 3, 3, 3], 2]",
+      "error": "TypeError: get expected at least 1 argument, got 0",
+      "line": 9,
+      "code": "m = max(counter, key = counter.get())",
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 36,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-36.py",
+     "sha1": "e366067a22e41215aceae1a411de1da5c34013a6",
+     "commit": "bc7b95732d21f73256df4237bdd71a5038e024a8",
+     "date": "2026-11-16T23:06:15+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 1,
+      "total": 46,
+      "input": "[[7, 7], 1]",
+      "expected": "[7]",
+      "got": "[2]",
+      "spec": "17f3700d8f24"
+     }
+    },
+    {
+     "n": 37,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/top-k-elements-in-list/submission-37.py",
+     "sha1": "a4e7dea8a60b4692a0b5f5a27ac42846b87d9f29",
+     "commit": "15226c7ececf43e1f1b16afca27d8a70ce24f806",
+     "date": "2026-11-16T23:07:03+00:00",
      "bulk_sync": false,
      "verdict": {
       "status": "PASS",

@@ -2,7 +2,7 @@
 id: dict-get-calls
 type: gotcha
 mistakes: [method-api]
-evidence: [top-k-elements-in-list#23, top-k-elements-in-list#25, top-k-elements-in-list#27]
+evidence: [top-k-elements-in-list#23, top-k-elements-in-list#25, top-k-elements-in-list#27, top-k-elements-in-list#34-36, top-k-elements-in-list#37]
 tags: [python, dict]
 ---
 ## Front
@@ -23,3 +23,5 @@ best = max(counts, key=counts.get)
 2. `max` läuft über die **Keys** und vergleicht sie nach `counts.get(key)`. Übergeben wird die Methode selbst, ohne Klammern.
 
 Am 10.11. bei Top K: erst `counts.append(...)` und `nums.get_values` (#23, beides gibt es nicht), dann `get(n, default = 0)` (#25). Deine Notiz dazu: „merken wie der aufruf gehT!“ #27 ✔
+
+Am 16.11. noch zwei Stolpersteine: `key = counter.get()` ruft die Methode auf, statt sie zu übergeben → TypeError (#35). Und `result.append(counter[m])` hängt die **Anzahl** an statt des Elements `m` → `[2]` statt `[7]` (#34, #36). #37 ✔
