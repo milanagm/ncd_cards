@@ -32,15 +32,15 @@
  },
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "c3046678cab151694bf10be4b5a2e71709ed6ce8",
-  "head_date": "2026-11-16T23:38:04+00:00"
+  "head": "b898dcc616fa80e8cf336c6f2a18a2bc6820a76a",
+  "head_date": "2026-11-17T09:49:27+00:00"
  },
  "stats": {
-  "submissions": 341,
+  "submissions": 353,
   "statuses": {
-   "WRONG_ANSWER": 122,
-   "PASS": 114,
-   "RUNTIME_ERROR": 91,
+   "WRONG_ANSWER": 126,
+   "PASS": 117,
+   "RUNTIME_ERROR": 96,
    "TIMEOUT": 10,
    "LOAD_ERROR": 4
   }
@@ -50,7 +50,7 @@
    "id": "index-vs-value",
    "title": "Index und Wert verwechselt",
    "rule": "Vor jeder Verwendung klären: Position oder Element? `for i, v in enumerate(xs)` hält beides auseinander.",
-   "submissions": 48,
+   "submissions": 50,
    "problems": [
     "buy-and-sell-crypto",
     "eating-bananas",
@@ -58,12 +58,13 @@
     "longest-consecutive-sequence",
     "longest-substring-without-duplicates",
     "products-of-array-discluding-self",
+    "string-encode-and-decode",
     "three-integer-sum",
     "top-k-elements-in-list",
     "two-integer-sum",
     "valid-sudoku"
    ],
-   "last_seen": "2026-11-16"
+   "last_seen": "2026-11-17"
   },
   {
    "id": "pointer-movement",
@@ -110,19 +111,20 @@
    "id": "method-api",
    "title": "Methoden & Builtins geraten",
    "rule": "Bei Unsicherheit `dir(x)` oder `help(x)`. Strings: `s.lower()`; Listen: `xs.append(v)` mit genau einem Argument, `xs.index(v)`; Wiederholung: `range(k)`.",
-   "submissions": 24,
+   "submissions": 25,
    "problems": [
     "anagram-groups",
     "buy-and-sell-crypto",
     "duplicate-integer",
     "is-palindrome",
+    "longest-substring-without-duplicates",
     "max-water-container",
     "reverse-a-linked-list",
     "three-integer-sum",
     "top-k-elements-in-list",
     "two-integer-sum-ii"
    ],
-   "last_seen": "2026-11-16"
+   "last_seen": "2026-11-17"
   },
   {
    "id": "container-choice",
@@ -197,7 +199,7 @@
    "id": "off-by-one",
    "title": "Off-by-one & Zähler-Initialisierung",
    "rule": "`while c < n` bzw. `range(n)` läuft genau n-mal. Eine Sequenz hat ab ihrem Startelement die Länge 1, nicht 0.",
-   "submissions": 12,
+   "submissions": 13,
    "problems": [
     "longest-consecutive-sequence",
     "longest-repeating-substring-with-replacement",
@@ -205,7 +207,7 @@
     "search-2d-matrix",
     "string-encode-and-decode"
    ],
-   "last_seen": "2026-10-31"
+   "last_seen": "2026-11-17"
   },
   {
    "id": "edge-cases",
@@ -294,27 +296,28 @@
    "id": "window-shrink",
    "title": "Sliding Window: links schrumpfen und Zustand nachziehen",
    "rule": "Bei einem Duplikat nicht alles verwerfen: `l` nur bis hinter das alte Vorkommen schieben, dann das neue Zeichen aufnehmen und die Länge aus den Pointern berechnen (`r - l + 1`).",
-   "submissions": 8,
+   "submissions": 12,
    "problems": [
     "longest-substring-without-duplicates"
    ],
-   "last_seen": "2026-10-27"
+   "last_seen": "2026-11-17"
   },
   {
    "id": "problem-model",
    "title": "Aufgabe falsch modelliert",
    "rule": "Vor dem Code die Zielgröße als Formel aufschreiben und am Beispiel nachrechnen: Wasser = Breite × kleinere Höhe, Gewinn = späterer minus früherer Preis, Fenster gültig, wenn Länge − häufigstes Zeichen ≤ k.",
-   "submissions": 23,
+   "submissions": 25,
    "problems": [
     "buy-and-sell-crypto",
     "duplicate-integer",
     "longest-consecutive-sequence",
     "longest-repeating-substring-with-replacement",
+    "longest-substring-without-duplicates",
     "max-water-container",
     "minimum-stack",
     "validate-parentheses"
    ],
-   "last_seen": "2026-11-16"
+   "last_seen": "2026-11-17"
   },
   {
    "id": "binary-search-mid",
@@ -665,6 +668,36 @@
    "back_html": "<p><code>counter.items()</code> liefert <strong>(Wert, Anzahl)-Tupel</strong>, nach dem Sortieren ist jedes Element so ein Tupel. Gebraucht wird nur der Wert: <code>answer.append(s_counter[i][0])</code>, kürzer <code>[v for v, _ in s_counter[:k]]</code>.</p>\n<p>Davor bei dir: <code>s_counter.index(i)</code> sucht die <em>Position</em> eines Elements <code>i</code>, statt das Element an Position <code>i</code> zu lesen → <code>ValueError: 0 is not in list</code>.</p>",
    "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/top-k-elements-in-list/submission-9.py\">top-k-elements-in-list #9–11</a><span class=\"badge crash\">3× Crash</span> 16.10. · sucht die Position eines Zählers statt <code>s_counter[i]</code> zu lesen</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/top-k-elements-in-list/submission-12.py\">top-k-elements-in-list #12</a><span class=\"badge fail\">falsch</span> 16.10. · Elemente von <code>items()</code> sind (Wert, Anzahl)-Tupel → <code>s_counter[i][0]</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/top-k-elements-in-list/submission-13.py\">top-k-elements-in-list #13</a><span class=\"badge pass\">ok</span> 16.10.</li></ul>",
    "last_evidence": "2026-10-16T16:12:03+00:00"
+  },
+  {
+   "id": "bug-length-as-end",
+   "guid": "CGS~u[GPoS",
+   "type": "bug",
+   "type_label": "Finde den Bug",
+   "mistakes": [
+    "off-by-one"
+   ],
+   "problems": [
+    "string-encode-and-decode"
+   ],
+   "evidence": [
+    "string-encode-and-decode#13",
+    "string-encode-and-decode#17",
+    "string-encode-and-decode#18"
+   ],
+   "tags": [
+    "encoding",
+    "ncd::fehler::off-by-one",
+    "ncd::problem::string-encode-and-decode",
+    "ncd::typ::bug",
+    "strings"
+   ],
+   "front_md": "Decode, `s = \"4#neet4#code...\"`. Das Wort beginnt bei Index `i = 2` und hat die Länge `l = 4`. Was liest diese Schleife?\n\n```python\nword = \"\"\nfor p in range(i, l):\n    word += s[p]\n    i += 1\n```",
+   "back_md": "Nur `\"ne\"`, also die Positionen 2 und 3. `range(i, l)` endet an **Position** `l`, aber `l` ist eine **Länge**. Danach steht `i` mitten im Wort, und das nächste Längenfeld wird `\"et4\"` → `ValueError: invalid literal for int()`.\n\nFix: Das Ende ist Start plus Länge, `range(i, i + l)`. Noch einfacher per Slice: `word = s[i:i + l]`, dann `i += l`.\n\nGenau dieser Crash, `int('et4')`, kam bei dir zweimal, auf den Tag einen Monat auseinander: am 17.10. mit `while j < int(l)` (#13) und am 17.11. mit `range(i, l)` (#17). #18 ✔",
+   "front_html": "<p>Decode, <code>s = \"4#neet4#code...\"</code>. Das Wort beginnt bei Index <code>i = 2</code> und hat die Länge <code>l = 4</code>. Was liest diese Schleife?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">word</span> <span class=\"o\">=</span> <span class=\"s2\">\"\"</span>\n<span class=\"k\">for</span> <span class=\"n\">p</span> <span class=\"ow\">in</span> <span class=\"nb\">range</span><span class=\"p\">(</span><span class=\"n\">i</span><span class=\"p\">,</span> <span class=\"n\">l</span><span class=\"p\">):</span>\n    <span class=\"n\">word</span> <span class=\"o\">+=</span> <span class=\"n\">s</span><span class=\"p\">[</span><span class=\"n\">p</span><span class=\"p\">]</span>\n    <span class=\"n\">i</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n</code></pre></div>",
+   "back_html": "<p>Nur <code>\"ne\"</code>, also die Positionen 2 und 3. <code>range(i, l)</code> endet an <strong>Position</strong> <code>l</code>, aber <code>l</code> ist eine <strong>Länge</strong>. Danach steht <code>i</code> mitten im Wort, und das nächste Längenfeld wird <code>\"et4\"</code> → <code>ValueError: invalid literal for int()</code>.</p>\n<p>Fix: Das Ende ist Start plus Länge, <code>range(i, i + l)</code>. Noch einfacher per Slice: <code>word = s[i:i + l]</code>, dann <code>i += l</code>.</p>\n<p>Genau dieser Crash, <code>int('et4')</code>, kam bei dir zweimal, auf den Tag einen Monat auseinander: am 17.10. mit <code>while j &lt; int(l)</code> (#13) und am 17.11. mit <code>range(i, l)</code> (#17). #18 ✔</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/string-encode-and-decode/submission-13.py\">string-encode-and-decode #13</a><span class=\"badge crash\">Crash</span> 17.10. · absoluter Index <code>j</code> gegen eine Länge verglichen</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/string-encode-and-decode/submission-17.py\">string-encode-and-decode #17</a><span class=\"badge crash\">Crash</span> 17.11. · Länge <code>l</code> als Endposition benutzt: liest nur <code>ne</code> statt <code>neet</code>, danach <code>int('et4')</code> → ValueError, wie #13 am 17.10.; #18: <code>range(i, i+l)</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/string-encode-and-decode/submission-18.py\">string-encode-and-decode #18</a><span class=\"badge pass\">ok</span> 17.11.</li></ul>",
+   "last_evidence": "2026-11-17T09:28:41+00:00"
   },
   {
    "id": "bug-max-as-index",
@@ -1244,9 +1277,9 @@
     "python"
    ],
    "front_md": "Was bewirkt `j += 1` in dieser Schleife?\n\n```python\nfor j in range(l_w):\n    word += s[i]\n    i += 1\n    j += 1\n```",
-   "back_md": "Nichts. `for` holt sich in jeder Runde den **nächsten Wert aus `range`** und überschreibt `j`. Änderungen an `j` im Körper sind wirkungslos, anders als in C oder Java.\n\nWer den Index selbst steuern will, zum Beispiel bei Pointern mit unterschiedlichen Sprüngen, nimmt `while`. `i += 1` ist hier dagegen nötig, denn `i` ist keine Schleifenvariable.\n\nDasselbe gilt **vor** der Schleife: Bei Buy and Sell #8 (13.11.) stand `p_l = i + 1` direkt vor `for p_l in range(len(prices)):`. Die Zuweisung ist wirkungslos, `p_l` läuft wieder ab 0, und frühere Tage zählen als Verkaufstag (9 statt 6). #9: `for p_l in range(i + 1, len(prices)):`",
+   "back_md": "Nichts. `for` holt sich in jeder Runde den **nächsten Wert aus `range`** und überschreibt `j`. Änderungen an `j` im Körper sind wirkungslos, anders als in C oder Java.\n\nWer den Index selbst steuern will, zum Beispiel bei Pointern mit unterschiedlichen Sprüngen, nimmt `while`. `i += 1` ist hier dagegen nötig, denn `i` ist keine Schleifenvariable.\n\nDasselbe gilt **vor** der Schleife: Bei Buy and Sell #8 (13.11.) stand `p_l = i + 1` direkt vor `for p_l in range(len(prices)):`. Die Zuweisung ist wirkungslos, `p_l` läuft wieder ab 0, und frühere Tage zählen als Verkaufstag (9 statt 6). #9: `for p_l in range(i + 1, len(prices)):`\n\nUmgekehrt bei `while`, deine Frage am 17.11.: „ändert es i nur innerhalb der schleife?“ Nein. Python hat keinen Block-Scope: `i += 1` in der Schleife ändert dasselbe `i`, das danach weiterbenutzt wird. Nur `for` setzt seine Schleifenvariable bei jeder Runde neu.",
    "front_html": "<p>Was bewirkt <code>j += 1</code> in dieser Schleife?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">for</span> <span class=\"n\">j</span> <span class=\"ow\">in</span> <span class=\"nb\">range</span><span class=\"p\">(</span><span class=\"n\">l_w</span><span class=\"p\">):</span>\n    <span class=\"n\">word</span> <span class=\"o\">+=</span> <span class=\"n\">s</span><span class=\"p\">[</span><span class=\"n\">i</span><span class=\"p\">]</span>\n    <span class=\"n\">i</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n    <span class=\"n\">j</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n</code></pre></div>",
-   "back_html": "<p>Nichts. <code>for</code> holt sich in jeder Runde den <strong>nächsten Wert aus <code>range</code></strong> und überschreibt <code>j</code>. Änderungen an <code>j</code> im Körper sind wirkungslos, anders als in C oder Java.</p>\n<p>Wer den Index selbst steuern will, zum Beispiel bei Pointern mit unterschiedlichen Sprüngen, nimmt <code>while</code>. <code>i += 1</code> ist hier dagegen nötig, denn <code>i</code> ist keine Schleifenvariable.</p>\n<p>Dasselbe gilt <strong>vor</strong> der Schleife: Bei Buy and Sell #8 (13.11.) stand <code>p_l = i + 1</code> direkt vor <code>for p_l in range(len(prices)):</code>. Die Zuweisung ist wirkungslos, <code>p_l</code> läuft wieder ab 0, und frühere Tage zählen als Verkaufstag (9 statt 6). #9: <code>for p_l in range(i + 1, len(prices)):</code></p>",
+   "back_html": "<p>Nichts. <code>for</code> holt sich in jeder Runde den <strong>nächsten Wert aus <code>range</code></strong> und überschreibt <code>j</code>. Änderungen an <code>j</code> im Körper sind wirkungslos, anders als in C oder Java.</p>\n<p>Wer den Index selbst steuern will, zum Beispiel bei Pointern mit unterschiedlichen Sprüngen, nimmt <code>while</code>. <code>i += 1</code> ist hier dagegen nötig, denn <code>i</code> ist keine Schleifenvariable.</p>\n<p>Dasselbe gilt <strong>vor</strong> der Schleife: Bei Buy and Sell #8 (13.11.) stand <code>p_l = i + 1</code> direkt vor <code>for p_l in range(len(prices)):</code>. Die Zuweisung ist wirkungslos, <code>p_l</code> läuft wieder ab 0, und frühere Tage zählen als Verkaufstag (9 statt 6). #9: <code>for p_l in range(i + 1, len(prices)):</code></p>\n<p>Umgekehrt bei <code>while</code>, deine Frage am 17.11.: „ändert es i nur innerhalb der schleife?“ Nein. Python hat keinen Block-Scope: <code>i += 1</code> in der Schleife ändert dasselbe <code>i</code>, das danach weiterbenutzt wird. Nur <code>for</code> setzt seine Schleifenvariable bei jeder Runde neu.</p>",
    "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/string-encode-and-decode/submission-3.py\">string-encode-and-decode #3–4</a><span class=\"badge crash\">2× Crash</span> · <code>j += 1</code> hat keine Wirkung</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-8.py\">buy-and-sell-crypto #8</a><span class=\"badge fail\">falsch</span> 13.11. · <code>p_l = i + 1</code> ist wirkungslos, <code>for</code> setzt <code>p_l</code> wieder ab 0 → frühere Tage zählen als Verkauf (9 statt 6); #9: <code>range(i+ 1, len(prices))</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-9.py\">buy-and-sell-crypto #9</a><span class=\"badge pass\">ok</span> 13.11.</li></ul>",
    "last_evidence": "2026-11-13T17:59:19+00:00"
   },
@@ -1814,6 +1847,7 @@
    ],
    "problems": [
     "buy-and-sell-crypto",
+    "longest-substring-without-duplicates",
     "max-water-container"
    ],
    "evidence": [
@@ -1826,22 +1860,25 @@
     "buy-and-sell-crypto#11",
     "buy-and-sell-crypto#12",
     "buy-and-sell-crypto#13",
-    "buy-and-sell-crypto#14"
+    "buy-and-sell-crypto#14",
+    "longest-substring-without-duplicates#25",
+    "longest-substring-without-duplicates#26"
    ],
    "tags": [
     "loops",
     "ncd::fehler::method-api",
     "ncd::problem::buy-and-sell-crypto",
+    "ncd::problem::longest-substring-without-duplicates",
     "ncd::problem::max-water-container",
     "ncd::typ::gotcha",
     "python"
    ],
    "front_md": "Was passiert bei `for i in range(prices):`, wenn `prices` eine Liste ist? Was war gemeint?",
-   "back_md": "`TypeError: 'list' object cannot be interpreted as an integer`. `range` braucht eine **Zahl**, keine Liste.\n\nGemeint waren die Indizes: `range(len(prices))`. Brauchst du Index und Wert, dann `for i, p in enumerate(prices):`.\n\nBei dir: `range(heights)` bei Container With Most Water (#1, 24.10.) und `range(prices)` bei Buy and Sell (#5 am 6.11., #7 am 13.11., #11 und #13 am 16.11.). Dazwischen `range(enumerate(prices))` (#12): `enumerate` liefert Paare, auch das ist keine Zahl. #14 mit `range(len(prices))` ✔",
+   "back_md": "`TypeError: 'list' object cannot be interpreted as an integer`. `range` braucht eine **Zahl**, keine Liste.\n\nGemeint waren die Indizes: `range(len(prices))`. Brauchst du Index und Wert, dann `for i, p in enumerate(prices):`.\n\nBei dir: `range(heights)` bei Container With Most Water (#1, 24.10.) und `range(prices)` bei Buy and Sell (#5 am 6.11., #7 am 13.11., #11 und #13 am 16.11.). Dazwischen `range(enumerate(prices))` (#12): `enumerate` liefert Paare, auch das ist keine Zahl. #14 mit `range(len(prices))` ✔ Am 17.11. dann `range(s)` mit einem String (Longest Substring #25).",
    "front_html": "<p>Was passiert bei <code>for i in range(prices):</code>, wenn <code>prices</code> eine Liste ist? Was war gemeint?</p>",
-   "back_html": "<p><code>TypeError: 'list' object cannot be interpreted as an integer</code>. <code>range</code> braucht eine <strong>Zahl</strong>, keine Liste.</p>\n<p>Gemeint waren die Indizes: <code>range(len(prices))</code>. Brauchst du Index und Wert, dann <code>for i, p in enumerate(prices):</code>.</p>\n<p>Bei dir: <code>range(heights)</code> bei Container With Most Water (#1, 24.10.) und <code>range(prices)</code> bei Buy and Sell (#5 am 6.11., #7 am 13.11., #11 und #13 am 16.11.). Dazwischen <code>range(enumerate(prices))</code> (#12): <code>enumerate</code> liefert Paare, auch das ist keine Zahl. #14 mit <code>range(len(prices))</code> ✔</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-1.py\">max-water-container #1</a><span class=\"badge crash\">Crash</span> 24.10. · <code>range</code> braucht eine Zahl: <code>range(len(heights))</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-2.py\">max-water-container #2</a><span class=\"badge fail\">falsch</span> 24.10. · <code>erwartet 36, bekommen 1</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-5.py\">buy-and-sell-crypto #5</a><span class=\"badge crash\">Crash</span> 06.11. · <code>range</code> braucht eine Zahl, wie bei Container With Most Water #1 am 24.10.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-6.py\">buy-and-sell-crypto #6</a><span class=\"badge pass\">ok</span> 06.11.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-7.py\">buy-and-sell-crypto #7</a><span class=\"badge crash\">Crash</span> 13.11. · zum dritten Mal <code>range</code> mit einer Liste</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-8.py\">buy-and-sell-crypto #8</a><span class=\"badge fail\">falsch</span> 13.11. · <code>p_l = i + 1</code> ist wirkungslos, <code>for</code> setzt <code>p_l</code> wieder ab 0 → frühere Tage zählen als Verkauf (9 statt 6); #9: <code>range(i+ 1, len(prices))</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-11.py\">buy-and-sell-crypto #11</a><span class=\"badge crash\">Crash</span> 16.11. · zum vierten Mal <code>range</code> mit einer Liste</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-12.py\">buy-and-sell-crypto #12</a><span class=\"badge crash\">Crash</span> 16.11. · <code>enumerate</code> liefert Paare, keine Zahl → TypeError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-13.py\">buy-and-sell-crypto #13</a><span class=\"badge crash\">Crash</span> 16.11. · zurück zu <code>range(prices)</code>; #14 mit <code>range(len(prices))</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-14.py\">buy-and-sell-crypto #14</a><span class=\"badge pass\">ok</span> 16.11.</li></ul>",
-   "last_evidence": "2026-11-16T23:22:40+00:00"
+   "back_html": "<p><code>TypeError: 'list' object cannot be interpreted as an integer</code>. <code>range</code> braucht eine <strong>Zahl</strong>, keine Liste.</p>\n<p>Gemeint waren die Indizes: <code>range(len(prices))</code>. Brauchst du Index und Wert, dann <code>for i, p in enumerate(prices):</code>.</p>\n<p>Bei dir: <code>range(heights)</code> bei Container With Most Water (#1, 24.10.) und <code>range(prices)</code> bei Buy and Sell (#5 am 6.11., #7 am 13.11., #11 und #13 am 16.11.). Dazwischen <code>range(enumerate(prices))</code> (#12): <code>enumerate</code> liefert Paare, auch das ist keine Zahl. #14 mit <code>range(len(prices))</code> ✔ Am 17.11. dann <code>range(s)</code> mit einem String (Longest Substring #25).</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-1.py\">max-water-container #1</a><span class=\"badge crash\">Crash</span> 24.10. · <code>range</code> braucht eine Zahl: <code>range(len(heights))</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-2.py\">max-water-container #2</a><span class=\"badge fail\">falsch</span> 24.10. · <code>erwartet 36, bekommen 1</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-5.py\">buy-and-sell-crypto #5</a><span class=\"badge crash\">Crash</span> 06.11. · <code>range</code> braucht eine Zahl, wie bei Container With Most Water #1 am 24.10.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-6.py\">buy-and-sell-crypto #6</a><span class=\"badge pass\">ok</span> 06.11.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-7.py\">buy-and-sell-crypto #7</a><span class=\"badge crash\">Crash</span> 13.11. · zum dritten Mal <code>range</code> mit einer Liste</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-8.py\">buy-and-sell-crypto #8</a><span class=\"badge fail\">falsch</span> 13.11. · <code>p_l = i + 1</code> ist wirkungslos, <code>for</code> setzt <code>p_l</code> wieder ab 0 → frühere Tage zählen als Verkauf (9 statt 6); #9: <code>range(i+ 1, len(prices))</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-11.py\">buy-and-sell-crypto #11</a><span class=\"badge crash\">Crash</span> 16.11. · zum vierten Mal <code>range</code> mit einer Liste</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-12.py\">buy-and-sell-crypto #12</a><span class=\"badge crash\">Crash</span> 16.11. · <code>enumerate</code> liefert Paare, keine Zahl → TypeError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-13.py\">buy-and-sell-crypto #13</a><span class=\"badge crash\">Crash</span> 16.11. · zurück zu <code>range(prices)</code>; #14 mit <code>range(len(prices))</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-14.py\">buy-and-sell-crypto #14</a><span class=\"badge pass\">ok</span> 16.11.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-25.py\">longest-substring-without-duplicates #25</a><span class=\"badge crash\">Crash</span> 17.11. · <code>range</code> mit einem String</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-26.py\">longest-substring-without-duplicates #26</a><span class=\"badge crash\">Crash</span> 17.11. · <code>TypeError: can only concatenate str (not &quot;int&quot;) to str</code></li></ul>",
+   "last_evidence": "2026-11-17T09:37:47+00:00"
   },
   {
    "id": "return-type-signature",
@@ -1984,7 +2021,11 @@
     "longest-substring-without-duplicates#18",
     "longest-substring-without-duplicates#19",
     "longest-substring-without-duplicates#20",
-    "longest-substring-without-duplicates#21"
+    "longest-substring-without-duplicates#21",
+    "longest-substring-without-duplicates#27",
+    "longest-substring-without-duplicates#28",
+    "longest-substring-without-duplicates#29-30",
+    "longest-substring-without-duplicates#31"
    ],
    "tags": [
     "ncd::fehler::window-shrink",
@@ -1994,11 +2035,11 @@
     "strings"
    ],
    "front_md": "Longest Substring Without Repeating Characters, `s = \"dvdf\"`. Das Fenster ist `\"dv\"`, jetzt kommt bei `r = 2` das zweite `d`. Wohin springt `l`, und was passiert mit Set und Länge?\n\n```viz\nkind: array\nvalues: [d, v, d, f]\npointers: {l: 0, r: 2}\nhighlight: [0, 1]\ncaption: \"Fenster \\\"dv\\\", s[2] = d ist schon drin\"\n```",
-   "back_md": "`l` rückt nur so weit, bis das alte `d` draußen ist, also auf 1. Das `v` bleibt im Fenster.\n\n```viz\nkind: array\nvalues: [d, v, d, f]\npointers: {l: 1, r: 2}\nhighlight: [1, 2]\ncaption: \"Fenster \\\"vd\\\", danach \\\"vdf\\\" mit Länge 3\"\n```\n\n```python\nwhile s[r] in seen:\n    seen.remove(s[l])\n    l += 1\nseen.add(s[r])\nbest = max(best, r - l + 1)\n```\n\nDrei Schritte, in dieser Reihenfolge: schrumpfen, **dann** das neue Zeichen aufnehmen, Länge aus den Pointern berechnen. Deine Zwischenstände am 27.10.: neues Zeichen nicht ins Set (#18), `seen.add(v)` in der while-Schleife → KeyError (#19), Länge nicht neu berechnet (#20). Am Vortag hattest du beim Duplikat nur das neue Zeichen behalten (`sub = [i]`, #2–4). Damit geht bei `\"dvdf\"` das `v` verloren, #4 lieferte 2 statt 3.",
+   "back_md": "`l` rückt nur so weit, bis das alte `d` draußen ist, also auf 1. Das `v` bleibt im Fenster.\n\n```viz\nkind: array\nvalues: [d, v, d, f]\npointers: {l: 1, r: 2}\nhighlight: [1, 2]\ncaption: \"Fenster \\\"vd\\\", danach \\\"vdf\\\" mit Länge 3\"\n```\n\n```python\nwhile s[r] in seen:\n    seen.remove(s[l])\n    l += 1\nseen.add(s[r])\nbest = max(best, r - l + 1)\n```\n\nDrei Schritte, in dieser Reihenfolge: schrumpfen, **dann** das neue Zeichen aufnehmen, Länge aus den Pointern berechnen. Deine Zwischenstände am 27.10.: neues Zeichen nicht ins Set (#18), `seen.add(v)` in der while-Schleife → KeyError (#19), Länge nicht neu berechnet (#20). Am Vortag hattest du beim Duplikat nur das neue Zeichen behalten (`sub = [i]`, #2–4). Damit geht bei `\"dvdf\"` das `v` verloren, #4 lieferte 2 statt 3.\n\nAm 17.11. dieselben Zwischenschritte noch einmal: erst weder Set noch Länge nachgezogen (#27: 4 statt 3), dann das Zeichen ins Set, aber die Länge nicht verkleinert (#28), dann verkleinert, aber das neue Zeichen nicht mitgezählt (#29–30: 2 statt 3). #31 ✔",
    "front_html": "<p>Longest Substring Without Repeating Characters, <code>s = \"dvdf\"</code>. Das Fenster ist <code>\"dv\"</code>, jetzt kommt bei <code>r = 2</code> das zweite <code>d</code>. Wohin springt <code>l</code>, und was passiert mit Set und Länge?</p>\n<div class=\"viz\"><svg width=\"208\" height=\"96\" viewBox=\"0 0 208 96\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Fenster &quot;dv&quot;, s[2] = d ist schon drin\"><rect x=\"12\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"35.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">d</text><text x=\"35.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><rect x=\"58\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"81.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">v</text><text x=\"81.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">1</text><rect x=\"104\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"127.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">d</text><text x=\"127.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><rect x=\"150\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"173.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">f</text><text x=\"173.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">3</text><text x=\"35.0\" y=\"84\" class=\"ptr p0\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ l</text><text x=\"127.0\" y=\"84\" class=\"ptr p1\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ r</text></svg><div class=\"cap\">Fenster &quot;dv&quot;, s[2] = d ist schon drin</div></div>",
-   "back_html": "<p><code>l</code> rückt nur so weit, bis das alte <code>d</code> draußen ist, also auf 1. Das <code>v</code> bleibt im Fenster.</p>\n<div class=\"viz\"><svg width=\"208\" height=\"96\" viewBox=\"0 0 208 96\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Fenster &quot;vd&quot;, danach &quot;vdf&quot; mit Länge 3\"><rect x=\"12\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"35.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">d</text><text x=\"35.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><rect x=\"58\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"81.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">v</text><text x=\"81.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">1</text><rect x=\"104\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"127.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">d</text><text x=\"127.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><rect x=\"150\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"173.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">f</text><text x=\"173.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">3</text><text x=\"81.0\" y=\"84\" class=\"ptr p0\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ l</text><text x=\"127.0\" y=\"84\" class=\"ptr p1\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ r</text></svg><div class=\"cap\">Fenster &quot;vd&quot;, danach &quot;vdf&quot; mit Länge 3</div></div>\n\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">while</span> <span class=\"n\">s</span><span class=\"p\">[</span><span class=\"n\">r</span><span class=\"p\">]</span> <span class=\"ow\">in</span> <span class=\"n\">seen</span><span class=\"p\">:</span>\n    <span class=\"n\">seen</span><span class=\"o\">.</span><span class=\"n\">remove</span><span class=\"p\">(</span><span class=\"n\">s</span><span class=\"p\">[</span><span class=\"n\">l</span><span class=\"p\">])</span>\n    <span class=\"n\">l</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n<span class=\"n\">seen</span><span class=\"o\">.</span><span class=\"n\">add</span><span class=\"p\">(</span><span class=\"n\">s</span><span class=\"p\">[</span><span class=\"n\">r</span><span class=\"p\">])</span>\n<span class=\"n\">best</span> <span class=\"o\">=</span> <span class=\"nb\">max</span><span class=\"p\">(</span><span class=\"n\">best</span><span class=\"p\">,</span> <span class=\"n\">r</span> <span class=\"o\">-</span> <span class=\"n\">l</span> <span class=\"o\">+</span> <span class=\"mi\">1</span><span class=\"p\">)</span>\n</code></pre></div>\n\n<p>Drei Schritte, in dieser Reihenfolge: schrumpfen, <strong>dann</strong> das neue Zeichen aufnehmen, Länge aus den Pointern berechnen. Deine Zwischenstände am 27.10.: neues Zeichen nicht ins Set (#18), <code>seen.add(v)</code> in der while-Schleife → KeyError (#19), Länge nicht neu berechnet (#20). Am Vortag hattest du beim Duplikat nur das neue Zeichen behalten (<code>sub = [i]</code>, #2–4). Damit geht bei <code>\"dvdf\"</code> das <code>v</code> verloren, #4 lieferte 2 statt 3.</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-0.py\">longest-substring-without-duplicates #0–1</a><span class=\"badge fail\">2× falsch</span> 26.10. · verwirft das ganze Fenster</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-2.py\">longest-substring-without-duplicates #2–4</a><span class=\"badge fail\">3× falsch</span> 26.10. · behält nur das neue Zeichen; bei <code>dvdf</code> geht das <code>v</code> verloren (#4: 2 statt 3, #2 und #3 scheitern zusätzlich an anderem). #7 schneidet mit <code>sub[sub.index(i) + 1:]</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-18.py\">longest-substring-without-duplicates #18</a><span class=\"badge fail\">falsch</span> 27.10. · nach dem Schrumpfen kommt das neue Zeichen nicht ins Set, <code>sub_len</code> bleibt alt</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-19.py\">longest-substring-without-duplicates #19</a><span class=\"badge crash\">Crash</span> 27.10. · <code>seen.add(v)</code> in der while-Schleife: <code>v</code> ist sofort wieder drin, das nächste <code>remove</code> → KeyError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-20.py\">longest-substring-without-duplicates #20</a><span class=\"badge fail\">falsch</span> 27.10. · <code>sub_len</code> nach dem Schrumpfen nicht neu berechnet; #21: <code>sub_len = i - remove_pointer +1</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-21.py\">longest-substring-without-duplicates #21</a><span class=\"badge pass\">ok</span> 27.10.</li></ul>",
-   "last_evidence": "2026-10-27T11:49:38+00:00"
+   "back_html": "<p><code>l</code> rückt nur so weit, bis das alte <code>d</code> draußen ist, also auf 1. Das <code>v</code> bleibt im Fenster.</p>\n<div class=\"viz\"><svg width=\"208\" height=\"96\" viewBox=\"0 0 208 96\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Fenster &quot;vd&quot;, danach &quot;vdf&quot; mit Länge 3\"><rect x=\"12\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"35.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">d</text><text x=\"35.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">0</text><rect x=\"58\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"81.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">v</text><text x=\"81.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">1</text><rect x=\"104\" y=\"22\" width=\"46\" height=\"46\" class=\"cell hl\"/><text x=\"127.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">d</text><text x=\"127.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">2</text><rect x=\"150\" y=\"22\" width=\"46\" height=\"46\" class=\"cell\"/><text x=\"173.0\" y=\"45.0\" class=\"t\" font-size=\"16\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">f</text><text x=\"173.0\" y=\"12\" class=\"idx\" font-size=\"11\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">3</text><text x=\"81.0\" y=\"84\" class=\"ptr p0\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ l</text><text x=\"127.0\" y=\"84\" class=\"ptr p1\" font-size=\"14\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"ui-monospace, Menlo, Consolas, monospace\">▲ r</text></svg><div class=\"cap\">Fenster &quot;vd&quot;, danach &quot;vdf&quot; mit Länge 3</div></div>\n\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">while</span> <span class=\"n\">s</span><span class=\"p\">[</span><span class=\"n\">r</span><span class=\"p\">]</span> <span class=\"ow\">in</span> <span class=\"n\">seen</span><span class=\"p\">:</span>\n    <span class=\"n\">seen</span><span class=\"o\">.</span><span class=\"n\">remove</span><span class=\"p\">(</span><span class=\"n\">s</span><span class=\"p\">[</span><span class=\"n\">l</span><span class=\"p\">])</span>\n    <span class=\"n\">l</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n<span class=\"n\">seen</span><span class=\"o\">.</span><span class=\"n\">add</span><span class=\"p\">(</span><span class=\"n\">s</span><span class=\"p\">[</span><span class=\"n\">r</span><span class=\"p\">])</span>\n<span class=\"n\">best</span> <span class=\"o\">=</span> <span class=\"nb\">max</span><span class=\"p\">(</span><span class=\"n\">best</span><span class=\"p\">,</span> <span class=\"n\">r</span> <span class=\"o\">-</span> <span class=\"n\">l</span> <span class=\"o\">+</span> <span class=\"mi\">1</span><span class=\"p\">)</span>\n</code></pre></div>\n\n<p>Drei Schritte, in dieser Reihenfolge: schrumpfen, <strong>dann</strong> das neue Zeichen aufnehmen, Länge aus den Pointern berechnen. Deine Zwischenstände am 27.10.: neues Zeichen nicht ins Set (#18), <code>seen.add(v)</code> in der while-Schleife → KeyError (#19), Länge nicht neu berechnet (#20). Am Vortag hattest du beim Duplikat nur das neue Zeichen behalten (<code>sub = [i]</code>, #2–4). Damit geht bei <code>\"dvdf\"</code> das <code>v</code> verloren, #4 lieferte 2 statt 3.</p>\n<p>Am 17.11. dieselben Zwischenschritte noch einmal: erst weder Set noch Länge nachgezogen (#27: 4 statt 3), dann das Zeichen ins Set, aber die Länge nicht verkleinert (#28), dann verkleinert, aber das neue Zeichen nicht mitgezählt (#29–30: 2 statt 3). #31 ✔</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-0.py\">longest-substring-without-duplicates #0–1</a><span class=\"badge fail\">2× falsch</span> 26.10. · verwirft das ganze Fenster</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-2.py\">longest-substring-without-duplicates #2–4</a><span class=\"badge fail\">3× falsch</span> 26.10. · behält nur das neue Zeichen; bei <code>dvdf</code> geht das <code>v</code> verloren (#4: 2 statt 3, #2 und #3 scheitern zusätzlich an anderem). #7 schneidet mit <code>sub[sub.index(i) + 1:]</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-18.py\">longest-substring-without-duplicates #18</a><span class=\"badge fail\">falsch</span> 27.10. · nach dem Schrumpfen kommt das neue Zeichen nicht ins Set, <code>sub_len</code> bleibt alt</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-19.py\">longest-substring-without-duplicates #19</a><span class=\"badge crash\">Crash</span> 27.10. · <code>seen.add(v)</code> in der while-Schleife: <code>v</code> ist sofort wieder drin, das nächste <code>remove</code> → KeyError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-20.py\">longest-substring-without-duplicates #20</a><span class=\"badge fail\">falsch</span> 27.10. · <code>sub_len</code> nach dem Schrumpfen nicht neu berechnet; #21: <code>sub_len = i - remove_pointer +1</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-21.py\">longest-substring-without-duplicates #21</a><span class=\"badge pass\">ok</span> 27.10.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-27.py\">longest-substring-without-duplicates #27</a><span class=\"badge fail\">falsch</span> 17.11. · nach dem Schrumpfen kommt <code>s[i]</code> nicht ins Set, und <code>s_l</code> schrumpft nicht mit → 4 statt 3 (wie #18 am 27.10.)</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-28.py\">longest-substring-without-duplicates #28</a><span class=\"badge fail\">falsch</span> 17.11. · <code>s[i]</code> kommt jetzt ins Set, aber <code>s_l</code> schrumpft nicht mit → <code>pwwkew</code> liefert 4</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-29.py\">longest-substring-without-duplicates #29–30</a><span class=\"badge fail\">2× falsch</span> 17.11. · <code>s_l</code> schrumpft, aber das neue Zeichen wird nicht mitgezählt → 2 statt 3; #31 ergänzt <code>s_l += 1</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-31.py\">longest-substring-without-duplicates #31</a><span class=\"badge pass\">ok</span> 17.11.</li></ul>",
+   "last_evidence": "2026-11-17T09:48:29+00:00"
   },
   {
    "id": "stack-brackets",

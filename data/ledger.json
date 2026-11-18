@@ -26,7 +26,9 @@
     {"ref": "longest-consecutive-sequence#13-17", "snippet": "if i not in seen:", "note": "`i` aus `range(len(nums))` ist ein Index, geprüft wird er wie eine Zahl aus `nums`; #18 nimmt `nums[i]`"},
     {"ref": "longest-consecutive-sequence#18", "snippet": "while nums[i+length] in seen:", "note": "latent: Index `i+length` statt Wert `nums[i]+length`; #19 korrigiert"},
     {"ref": "buy-and-sell-crypto#10", "snippet": "for i in prices:", "note": "wieder wie #4: ein Preis als Startindex und als Kaufpreis → 3 statt 0 bei `[10, 8, 7, 5, 2]`"},
-    {"ref": "top-k-elements-in-list#34-36", "snippet": "result.append(counter[m])", "note": "hängt die Anzahl statt des Elements an → `[2]` statt `[7]`; #37 `append(m)`"}
+    {"ref": "top-k-elements-in-list#34-36", "snippet": "result.append(counter[m])", "note": "hängt die Anzahl statt des Elements an → `[2]` statt `[7]`; #37 `append(m)`"},
+    {"ref": "string-encode-and-decode#15", "snippet": "while i != \"#\": l += i", "note": "Index `i` statt Zeichen `s[i]` verglichen und angehängt → TypeError"},
+    {"ref": "string-encode-and-decode#16", "snippet": "while i != \"#\":", "note": "vergleicht weiter den Index mit `#`, die Schleife läuft übers Ende → IndexError; #17: `s[i] != \"#\"`"}
    ]
   },
   {
@@ -96,7 +98,8 @@
     {"ref": "is-palindrome#24", "snippet": "if l_p.small() != r_p.small():", "note": "latent: `small()` gibt es nicht, gemeint ist `lower()`"},
     {"ref": "buy-and-sell-crypto#11", "snippet": "for i in range(prices):", "note": "zum vierten Mal `range` mit einer Liste"},
     {"ref": "buy-and-sell-crypto#12", "snippet": "for i in range(enumerate(prices)):", "note": "`enumerate` liefert Paare, keine Zahl → TypeError"},
-    {"ref": "buy-and-sell-crypto#13", "snippet": "for i in range(prices):", "note": "zurück zu `range(prices)`; #14 mit `range(len(prices))`"}
+    {"ref": "buy-and-sell-crypto#13", "snippet": "for i in range(prices):", "note": "zurück zu `range(prices)`; #14 mit `range(len(prices))`"},
+    {"ref": "longest-substring-without-duplicates#25", "snippet": "for i in range(s):", "note": "`range` mit einem String"}
    ]
   },
   {
@@ -198,7 +201,8 @@
     {"ref": "string-encode-and-decode#13", "snippet": "j = i while j < int(l):", "note": "absoluter Index `j` gegen eine Länge verglichen"},
     {"ref": "longest-repeating-substring-with-replacement#2-5", "snippet": "sub_len = 0", "note": "Startzeichen nicht mitgezählt; #6 startet mit 1"},
     {"ref": "search-2d-matrix#11", "snippet": "matrix[row][len(matrix[0])]", "note": "letzter Index ist `len - 1` → IndexError"},
-    {"ref": "reverse-a-linked-list#10", "snippet": "p_next = len(initial) - 2", "note": "`initial` endet vor dem letzten Knoten, der als neuer Kopf dient; `len(initial) - 2` überspringt zusätzlich `initial[-1]` → `[3, 1, 0]`"}
+    {"ref": "reverse-a-linked-list#10", "snippet": "p_next = len(initial) - 2", "note": "`initial` endet vor dem letzten Knoten, der als neuer Kopf dient; `len(initial) - 2` überspringt zusätzlich `initial[-1]` → `[3, 1, 0]`"},
+    {"ref": "string-encode-and-decode#17", "snippet": "for p in range(i, l):", "note": "Länge `l` als Endposition benutzt: liest nur `ne` statt `neet`, danach `int('et4')` → ValueError, wie #13 am 17.10.; #18: `range(i, i+l)`"}
    ]
   },
   {
@@ -284,7 +288,10 @@
     {"ref": "longest-substring-without-duplicates#2-4", "snippet": "sub = [i]", "note": "behält nur das neue Zeichen; bei `dvdf` geht das `v` verloren (#4: 2 statt 3, #2 und #3 scheitern zusätzlich an anderem). #7 schneidet mit `sub[sub.index(i) + 1:]`"},
     {"ref": "longest-substring-without-duplicates#18", "snippet": "while v in seen: seen.remove(s[remove_pointer]) remove_pointer += 1", "note": "nach dem Schrumpfen kommt das neue Zeichen nicht ins Set, `sub_len` bleibt alt"},
     {"ref": "longest-substring-without-duplicates#19", "snippet": "remove_pointer += 1 seen.add(v)", "note": "`seen.add(v)` in der while-Schleife: `v` ist sofort wieder drin, das nächste `remove` → KeyError"},
-    {"ref": "longest-substring-without-duplicates#20", "snippet": "seen.add(v) max_len = max(max_len, sub_len)", "note": "`sub_len` nach dem Schrumpfen nicht neu berechnet; #21: `sub_len = i - remove_pointer +1`"}
+    {"ref": "longest-substring-without-duplicates#20", "snippet": "seen.add(v) max_len = max(max_len, sub_len)", "note": "`sub_len` nach dem Schrumpfen nicht neu berechnet; #21: `sub_len = i - remove_pointer +1`"},
+    {"ref": "longest-substring-without-duplicates#27", "snippet": "while s[i] in seen: seen.remove(s[p]) p += 1", "note": "nach dem Schrumpfen kommt `s[i]` nicht ins Set, und `s_l` schrumpft nicht mit → 4 statt 3 (wie #18 am 27.10.)"},
+    {"ref": "longest-substring-without-duplicates#28", "snippet": "p += 1 seen.add(s[i])", "note": "`s[i]` kommt jetzt ins Set, aber `s_l` schrumpft nicht mit → `pwwkew` liefert 4"},
+    {"ref": "longest-substring-without-duplicates#29-30", "snippet": "s_l -= 1 p += 1 seen.add(s[i])", "note": "`s_l` schrumpft, aber das neue Zeichen wird nicht mitgezählt → 2 statt 3; #31 ergänzt `s_l += 1`"}
    ]
   },
   {
@@ -301,7 +308,8 @@
     {"ref": "longest-consecutive-sequence#13-14", "snippet": "seen = set() max_len = 0", "note": "das Set bleibt leer (in #13 wird außerdem `max_len` nie aktualisiert); #15 füllt es mit `set(nums)`"},
     {"ref": "longest-consecutive-sequence#15-18", "snippet": "not in seen: length = 1", "note": "Sequenzanfang falsch geprüft: es zählt, ob der Vorgänger fehlt (`x - 1 not in seen`, #19). Nach `seen = set(nums)` ist `nums[i] not in seen` immer falsch (#18: 0)"},
     {"ref": "duplicate-integer#16", "snippet": "return len(seen) == len(nums)", "note": "Vergleich invertiert: gleiche Länge heißt keine Duplikate, gefragt ist das Gegenteil → `[1, 2, 3, 3]` liefert False; #18 mit `!=`"},
-    {"ref": "longest-consecutive-sequence#21-23", "snippet": "seen = []", "note": "das Gedächtnis bleibt wieder leer (wie #13–14), jede Zahl gilt als Sequenzanfang; #24: `set(nums)`"}
+    {"ref": "longest-consecutive-sequence#21-23", "snippet": "seen = []", "note": "das Gedächtnis bleibt wieder leer (wie #13–14), jede Zahl gilt als Sequenzanfang; #24: `set(nums)`"},
+    {"ref": "longest-substring-without-duplicates#25-26", "snippet": "while s[i] + s_l in seen:", "note": "Ansatz aus Longest Consecutive übernommen: Zeichen plus Zahl → TypeError (#26)"}
    ]
   },
   {
@@ -415,7 +423,8 @@
   {"ref": "merge-two-sorted-linked-lists#2", "text": "greift er dann auf list.val zu?", "topic": "`min()` auf Knoten"},
   {"ref": "top-k-elements-in-list#25", "text": "merken wie der aufruf gehT!", "topic": "`max(d, key=d.get)`: Key mit dem größten Wert"},
   {"ref": "top-k-elements-in-list#32", "text": "#richtig?", "topic": "Zählen mit `count.get(i, 0) + 1`"},
-  {"ref": "anagram-groups#25-26", "text": "wie war hier die richtige syntax?", "topic": "Gruppieren mit `setdefault(key, [])`"}
+  {"ref": "anagram-groups#25-26", "text": "wie war hier die richtige syntax?", "topic": "Gruppieren mit `setdefault(key, [])`"},
+  {"ref": "string-encode-and-decode#15", "text": "ändert es i nur innerhalb der schleife?", "topic": "Kein Block-Scope: `while` ändert dasselbe `i`"}
  ],
  "patterns": [
   {"problem": "two-integer-sum", "pattern": "Hashmap: Komplement nachschlagen", "solved": "two-integer-sum#35", "note": "29 von 33 Versuchen mit `in nums`/`index()`, also O(n²); die Hashmap stand schon in #0"},

@@ -1,8 +1,8 @@
 {
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "c3046678cab151694bf10be4b5a2e71709ed6ce8",
-  "head_date": "2026-11-16T23:38:04+00:00"
+  "head": "b898dcc616fa80e8cf336c6f2a18a2bc6820a76a",
+  "head_date": "2026-11-17T09:49:27+00:00"
  },
  "problems": {
   "anagram-groups": {
@@ -3073,6 +3073,146 @@
       "total": 51,
       "spec": "3965a837da09"
      }
+    },
+    {
+     "n": 25,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-25.py",
+     "sha1": "167009c3cb8b5c1cae4846036d2f350b045b7998",
+     "commit": "c013cae5f8accf3745179ec510be6db4200a44da",
+     "date": "2026-11-17T09:37:11+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "error": "TypeError: 'str' object cannot be interpreted as an integer",
+      "line": 5,
+      "code": "for i in range(s):",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 26,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-26.py",
+     "sha1": "923ce3c59a5b53e0249f4fcd6a82891a2e35c810",
+     "commit": "a2e36dde2ad81a1dd083c0181d7a0760b32d3aa4",
+     "date": "2026-11-17T09:37:47+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "error": "TypeError: can only concatenate str (not \"int\") to str",
+      "line": 8,
+      "code": "while  s[i] + s_l in seen:",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 27,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-27.py",
+     "sha1": "82f9c09dc6393630f967e1480b15ec74a26e56fc",
+     "commit": "e7b10fffd8bb7472367c1e2d0b8adb1e7c14c0ba",
+     "date": "2026-11-17T09:44:16+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 0,
+      "total": 51,
+      "input": "['zxyzxyz']",
+      "expected": "3",
+      "got": "4",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 28,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-28.py",
+     "sha1": "ce12ee74902c88f0afefda5019a4217f5e990e4c",
+     "commit": "c1f965646e028a4ceaf194a27f7ed092208f6995",
+     "date": "2026-11-17T09:45:15+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 5,
+      "total": 51,
+      "input": "['pwwkew']",
+      "expected": "3",
+      "got": "4",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 29,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-29.py",
+     "sha1": "eb764f7f07e4f8de81dbeb59deda75c50880a37a",
+     "commit": "2c08e0f29abfb7cf2998ad76580e14fa10b31cc9",
+     "date": "2026-11-17T09:45:34+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 5,
+      "total": 51,
+      "input": "['pwwkew']",
+      "expected": "3",
+      "got": "2",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 30,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-30.py",
+     "sha1": "eb764f7f07e4f8de81dbeb59deda75c50880a37a",
+     "commit": "fdfe7c405249ff31b9d452dd4ac2e95a81b1d6b6",
+     "date": "2026-11-17T09:48:29+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "WRONG_ANSWER",
+      "passed": 5,
+      "total": 51,
+      "input": "['pwwkew']",
+      "expected": "3",
+      "got": "2",
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 31,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-31.py",
+     "sha1": "53fe2242505813d19c23c62b058df9d536d310a1",
+     "commit": "e8d436c896ff6b59547c312cf299768615de3f58",
+     "date": "2026-11-17T09:48:58+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 51,
+      "total": 51,
+      "spec": "3965a837da09"
+     }
+    },
+    {
+     "n": 32,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/longest-substring-without-duplicates/submission-32.py",
+     "sha1": "cf28e7e860b9a333e6bea44cc5338272f718c11d",
+     "commit": "b898dcc616fa80e8cf336c6f2a18a2bc6820a76a",
+     "date": "2026-11-17T09:49:27+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 51,
+      "total": 51,
+      "spec": "3965a837da09"
+     }
     }
    ]
   },
@@ -4165,6 +4305,78 @@
      "sha1": "a2e75cc05c8ae502ab5718ae5e7acae4471e2d6b",
      "commit": "adf3b2645d573a5722897a7ea5e7f6fff48e0384",
      "date": "2026-10-17T09:03:42+01:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 49,
+      "total": 49,
+      "spec": "0b9e1e9ba5b8"
+     }
+    },
+    {
+     "n": 15,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/string-encode-and-decode/submission-15.py",
+     "sha1": "1cac2dcc829574e174f181880c9ef55796d3d8dd",
+     "commit": "d89dddb853d6f0ad3631c391ce87b47e9605d569",
+     "date": "2026-11-17T09:25:09+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 49,
+      "input": "[['neet', 'code', 'love', 'you']]",
+      "error": "TypeError: can only concatenate str (not \"int\") to str",
+      "line": 19,
+      "code": "l += i",
+      "spec": "0b9e1e9ba5b8"
+     }
+    },
+    {
+     "n": 16,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/string-encode-and-decode/submission-16.py",
+     "sha1": "e750f0807704c339f02d09ade73c30b8a26b4217",
+     "commit": "b80d3d054511065e9957d9bd4178714de7d0d303",
+     "date": "2026-11-17T09:26:48+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 49,
+      "input": "[['neet', 'code', 'love', 'you']]",
+      "error": "IndexError: string index out of range",
+      "line": 19,
+      "code": "l += s[i]",
+      "spec": "0b9e1e9ba5b8"
+     }
+    },
+    {
+     "n": 17,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/string-encode-and-decode/submission-17.py",
+     "sha1": "2c3908915527fbd0c9ef9f77c7746e36da703948",
+     "commit": "6112f341a8c4a4ed8011bde4e4c521eaafe470a1",
+     "date": "2026-11-17T09:28:41+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 49,
+      "input": "[['neet', 'code', 'love', 'you']]",
+      "error": "ValueError: invalid literal for int() with base 10: 'et4'",
+      "line": 21,
+      "code": "l = int(l)",
+      "spec": "0b9e1e9ba5b8"
+     }
+    },
+    {
+     "n": 18,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/string-encode-and-decode/submission-18.py",
+     "sha1": "db0a33e6e00de1545ac905cbfde3fd4e4e920d8d",
+     "commit": "073b51bc910e6e9414be15f8c2e1533b88864170",
+     "date": "2026-11-17T09:29:20+00:00",
      "bulk_sync": false,
      "verdict": {
       "status": "PASS",

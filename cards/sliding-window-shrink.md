@@ -2,7 +2,7 @@
 id: sliding-window-shrink
 type: trace
 mistakes: [window-shrink]
-evidence: [longest-substring-without-duplicates#0-1, longest-substring-without-duplicates#2-4, longest-substring-without-duplicates#18, longest-substring-without-duplicates#19, longest-substring-without-duplicates#20, longest-substring-without-duplicates#21]
+evidence: [longest-substring-without-duplicates#0-1, longest-substring-without-duplicates#2-4, longest-substring-without-duplicates#18, longest-substring-without-duplicates#19, longest-substring-without-duplicates#20, longest-substring-without-duplicates#21, longest-substring-without-duplicates#27, longest-substring-without-duplicates#28, longest-substring-without-duplicates#29-30, longest-substring-without-duplicates#31]
 tags: [sliding-window, strings]
 ---
 ## Front
@@ -36,3 +36,5 @@ best = max(best, r - l + 1)
 ```
 
 Drei Schritte, in dieser Reihenfolge: schrumpfen, **dann** das neue Zeichen aufnehmen, Länge aus den Pointern berechnen. Deine Zwischenstände am 27.10.: neues Zeichen nicht ins Set (#18), `seen.add(v)` in der while-Schleife → KeyError (#19), Länge nicht neu berechnet (#20). Am Vortag hattest du beim Duplikat nur das neue Zeichen behalten (`sub = [i]`, #2–4). Damit geht bei `"dvdf"` das `v` verloren, #4 lieferte 2 statt 3.
+
+Am 17.11. dieselben Zwischenschritte noch einmal: erst weder Set noch Länge nachgezogen (#27: 4 statt 3), dann das Zeichen ins Set, aber die Länge nicht verkleinert (#28), dann verkleinert, aber das neue Zeichen nicht mitgezählt (#29–30: 2 statt 3). #31 ✔

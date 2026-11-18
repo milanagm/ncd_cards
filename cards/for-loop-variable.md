@@ -21,3 +21,5 @@ Nichts. `for` holt sich in jeder Runde den **nächsten Wert aus `range`** und ü
 Wer den Index selbst steuern will, zum Beispiel bei Pointern mit unterschiedlichen Sprüngen, nimmt `while`. `i += 1` ist hier dagegen nötig, denn `i` ist keine Schleifenvariable.
 
 Dasselbe gilt **vor** der Schleife: Bei Buy and Sell #8 (13.11.) stand `p_l = i + 1` direkt vor `for p_l in range(len(prices)):`. Die Zuweisung ist wirkungslos, `p_l` läuft wieder ab 0, und frühere Tage zählen als Verkaufstag (9 statt 6). #9: `for p_l in range(i + 1, len(prices)):`
+
+Umgekehrt bei `while`, deine Frage am 17.11.: „ändert es i nur innerhalb der schleife?“ Nein. Python hat keinen Block-Scope: `i += 1` in der Schleife ändert dasselbe `i`, das danach weiterbenutzt wird. Nur `for` setzt seine Schleifenvariable bei jeder Runde neu.
