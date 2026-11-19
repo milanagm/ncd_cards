@@ -99,7 +99,8 @@
     {"ref": "buy-and-sell-crypto#11", "snippet": "for i in range(prices):", "note": "zum vierten Mal `range` mit einer Liste"},
     {"ref": "buy-and-sell-crypto#12", "snippet": "for i in range(enumerate(prices)):", "note": "`enumerate` liefert Paare, keine Zahl → TypeError"},
     {"ref": "buy-and-sell-crypto#13", "snippet": "for i in range(prices):", "note": "zurück zu `range(prices)`; #14 mit `range(len(prices))`"},
-    {"ref": "longest-substring-without-duplicates#25", "snippet": "for i in range(s):", "note": "`range` mit einem String"}
+    {"ref": "longest-substring-without-duplicates#25", "snippet": "for i in range(s):", "note": "`range` mit einem String"},
+    {"ref": "car-fleet#0", "snippet": "for i in range(position):", "note": "`range` mit einer Liste, diesmal `position`"}
    ]
   },
   {
@@ -202,7 +203,8 @@
     {"ref": "longest-repeating-substring-with-replacement#2-5", "snippet": "sub_len = 0", "note": "Startzeichen nicht mitgezählt; #6 startet mit 1"},
     {"ref": "search-2d-matrix#11", "snippet": "matrix[row][len(matrix[0])]", "note": "letzter Index ist `len - 1` → IndexError"},
     {"ref": "reverse-a-linked-list#10", "snippet": "p_next = len(initial) - 2", "note": "`initial` endet vor dem letzten Knoten, der als neuer Kopf dient; `len(initial) - 2` überspringt zusätzlich `initial[-1]` → `[3, 1, 0]`"},
-    {"ref": "string-encode-and-decode#17", "snippet": "for p in range(i, l):", "note": "Länge `l` als Endposition benutzt: liest nur `ne` statt `neet`, danach `int('et4')` → ValueError, wie #13 am 17.10.; #18: `range(i, i+l)`"}
+    {"ref": "string-encode-and-decode#17", "snippet": "for p in range(i, l):", "note": "Länge `l` als Endposition benutzt: liest nur `ne` statt `neet`, danach `int('et4')` → ValueError, wie #13 am 17.10.; #18: `range(i, i+l)`"},
+    {"ref": "car-fleet#2-6", "snippet": "position[i+1] + speed[i+1]", "note": "beim letzten `i` gibt es kein `i+1` → IndexError"}
    ]
   },
   {
@@ -309,7 +311,9 @@
     {"ref": "longest-consecutive-sequence#15-18", "snippet": "not in seen: length = 1", "note": "Sequenzanfang falsch geprüft: es zählt, ob der Vorgänger fehlt (`x - 1 not in seen`, #19). Nach `seen = set(nums)` ist `nums[i] not in seen` immer falsch (#18: 0)"},
     {"ref": "duplicate-integer#16", "snippet": "return len(seen) == len(nums)", "note": "Vergleich invertiert: gleiche Länge heißt keine Duplikate, gefragt ist das Gegenteil → `[1, 2, 3, 3]` liefert False; #18 mit `!=`"},
     {"ref": "longest-consecutive-sequence#21-23", "snippet": "seen = []", "note": "das Gedächtnis bleibt wieder leer (wie #13–14), jede Zahl gilt als Sequenzanfang; #24: `set(nums)`"},
-    {"ref": "longest-substring-without-duplicates#25-26", "snippet": "while s[i] + s_l in seen:", "note": "Ansatz aus Longest Consecutive übernommen: Zeichen plus Zahl → TypeError (#26)"}
+    {"ref": "longest-substring-without-duplicates#25-26", "snippet": "while s[i] + s_l in seen:", "note": "Ansatz aus Longest Consecutive übernommen: Zeichen plus Zahl → TypeError (#26)"},
+    {"ref": "car-fleet#3-5", "snippet": "position = sorted(position) speed = sorted(speed)", "note": "latent: einzeln sortiert, die Paare (Position, Tempo) gehen verloren; #6 sortiert `zip(position, speed)`"},
+    {"ref": "car-fleet#0-6", "snippet": "while len(position) > 0:", "note": "Schritt-für-Schritt-Simulation; #7 vergleicht stattdessen die Ankunftszeiten"}
    ]
   },
   {
@@ -385,7 +389,8 @@
     {"ref": "evaluate-reverse-polish-notation#4-7", "snippet": "del result[-1] del result[-2]", "note": "nach `del result[-1]` ist `result[-2]` schon das übernächste Element → IndexError; #8 löscht zweimal `[-1]`"},
     {"ref": "evaluate-reverse-polish-notation#2-4", "snippet": "a= int(result[-1])", "note": "latent: der obere Wert landet in `a`, also links; `-` rechnet `b - a` falsch herum. #5 tauscht"},
     {"ref": "evaluate-reverse-polish-notation#11", "snippet": "del stack[-1] b = stack[-2]", "note": "wieder: nach `del stack[-1]` gibt es `stack[-2]` nicht mehr → IndexError (wie #3–7 am 1.11.)"},
-    {"ref": "evaluate-reverse-polish-notation#13-14", "snippet": "a = int(stack[-1]) del stack[-1] b = int(stack[-1])", "note": "das obere Element landet in `a`, also links: `4 - 9` statt `9 - 4` → -5 statt 5. #15 holt zuerst `b`"}
+    {"ref": "evaluate-reverse-polish-notation#13-14", "snippet": "a = int(stack[-1]) del stack[-1] b = int(stack[-1])", "note": "das obere Element landet in `a`, also links: `4 - 9` statt `9 - 4` → -5 statt 5. #15 holt zuerst `b`"},
+    {"ref": "car-fleet#1", "snippet": "for i in remove: del position[i]", "note": "aufsteigend gelöscht: nach dem ersten `del` rutschen alle späteren Elemente nach vorn → IndexError; #5 löscht mit `reversed(remove)`"}
    ]
   },
   {
@@ -424,7 +429,8 @@
   {"ref": "top-k-elements-in-list#25", "text": "merken wie der aufruf gehT!", "topic": "`max(d, key=d.get)`: Key mit dem größten Wert"},
   {"ref": "top-k-elements-in-list#32", "text": "#richtig?", "topic": "Zählen mit `count.get(i, 0) + 1`"},
   {"ref": "anagram-groups#25-26", "text": "wie war hier die richtige syntax?", "topic": "Gruppieren mit `setdefault(key, [])`"},
-  {"ref": "string-encode-and-decode#15", "text": "ändert es i nur innerhalb der schleife?", "topic": "Kein Block-Scope: `while` ändert dasselbe `i`"}
+  {"ref": "string-encode-and-decode#15", "text": "ändert es i nur innerhalb der schleife?", "topic": "Kein Block-Scope: `while` ändert dasselbe `i`"},
+  {"ref": "car-fleet#4-5", "text": "how can I delete in reverse order?", "topic": "Beim Löschen rückwärts über die Indizes laufen"}
  ],
  "patterns": [
   {"problem": "two-integer-sum", "pattern": "Hashmap: Komplement nachschlagen", "solved": "two-integer-sum#35", "note": "29 von 33 Versuchen mit `in nums`/`index()`, also O(n²); die Hashmap stand schon in #0"},
@@ -450,6 +456,7 @@
   {"problem": "minimum-stack", "pattern": "Zweiter Stack mit dem Minimum je Ebene", "solved": "minimum-stack#7", "note": "#5 bestand mit `min(self.stack)`, also O(n) pro `getMin`"},
   {"problem": "evaluate-reverse-polish-notation", "pattern": "Stack: Operanden holen, Ergebnis zurücklegen", "solved": "evaluate-reverse-polish-notation#10"},
   {"problem": "daily-temperatures", "pattern": "Monotoner Stack mit wartenden Indizes", "solved": "daily-temperatures#3", "note": "#2 bestand mit O(n²) über alle Paare"},
-  {"problem": "merge-two-sorted-linked-lists", "pattern": "Kleineren Knoten anhängen, Rest der anderen Liste dranhängen", "solved": "merge-two-sorted-linked-lists#3"}
+  {"problem": "merge-two-sorted-linked-lists", "pattern": "Kleineren Knoten anhängen, Rest der anderen Liste dranhängen", "solved": "merge-two-sorted-linked-lists#3"},
+  {"problem": "car-fleet", "pattern": "Nach Position sortieren, Ankunftszeiten vergleichen", "solved": "car-fleet#7", "note": "#0–6 simulierten Schritt für Schritt"}
  ]
 }

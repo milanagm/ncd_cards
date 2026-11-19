@@ -32,15 +32,15 @@
  },
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "b898dcc616fa80e8cf336c6f2a18a2bc6820a76a",
-  "head_date": "2026-11-17T09:49:27+00:00"
+  "head": "c189d3c035089d136103fcc0da7feb001fc77243",
+  "head_date": "2026-11-18T23:31:50+00:00"
  },
  "stats": {
-  "submissions": 353,
+  "submissions": 361,
   "statuses": {
    "WRONG_ANSWER": 126,
-   "PASS": 117,
-   "RUNTIME_ERROR": 96,
+   "PASS": 118,
+   "RUNTIME_ERROR": 103,
    "TIMEOUT": 10,
    "LOAD_ERROR": 4
   }
@@ -111,10 +111,11 @@
    "id": "method-api",
    "title": "Methoden & Builtins geraten",
    "rule": "Bei Unsicherheit `dir(x)` oder `help(x)`. Strings: `s.lower()`; Listen: `xs.append(v)` mit genau einem Argument, `xs.index(v)`; Wiederholung: `range(k)`.",
-   "submissions": 25,
+   "submissions": 26,
    "problems": [
     "anagram-groups",
     "buy-and-sell-crypto",
+    "car-fleet",
     "duplicate-integer",
     "is-palindrome",
     "longest-substring-without-duplicates",
@@ -124,7 +125,7 @@
     "top-k-elements-in-list",
     "two-integer-sum-ii"
    ],
-   "last_seen": "2026-11-17"
+   "last_seen": "2026-11-18"
   },
   {
    "id": "container-choice",
@@ -199,15 +200,16 @@
    "id": "off-by-one",
    "title": "Off-by-one & Zähler-Initialisierung",
    "rule": "`while c < n` bzw. `range(n)` läuft genau n-mal. Eine Sequenz hat ab ihrem Startelement die Länge 1, nicht 0.",
-   "submissions": 13,
+   "submissions": 18,
    "problems": [
+    "car-fleet",
     "longest-consecutive-sequence",
     "longest-repeating-substring-with-replacement",
     "reverse-a-linked-list",
     "search-2d-matrix",
     "string-encode-and-decode"
    ],
-   "last_seen": "2026-11-17"
+   "last_seen": "2026-11-18"
   },
   {
    "id": "edge-cases",
@@ -306,9 +308,10 @@
    "id": "problem-model",
    "title": "Aufgabe falsch modelliert",
    "rule": "Vor dem Code die Zielgröße als Formel aufschreiben und am Beispiel nachrechnen: Wasser = Breite × kleinere Höhe, Gewinn = späterer minus früherer Preis, Fenster gültig, wenn Länge − häufigstes Zeichen ≤ k.",
-   "submissions": 25,
+   "submissions": 32,
    "problems": [
     "buy-and-sell-crypto",
+    "car-fleet",
     "duplicate-integer",
     "longest-consecutive-sequence",
     "longest-repeating-substring-with-replacement",
@@ -317,7 +320,7 @@
     "minimum-stack",
     "validate-parentheses"
    ],
-   "last_seen": "2026-11-17"
+   "last_seen": "2026-11-18"
   },
   {
    "id": "binary-search-mid",
@@ -377,11 +380,12 @@
    "id": "stack-ops",
    "title": "Stack: lesen, entfernen, Reihenfolge",
    "rule": "`b = stack.pop()`, dann `a = stack.pop()`: `pop()` liest und entfernt in einem Schritt, das zuerst geholte Element ist der rechte Operand. Nach `del xs[-1]` zeigt `xs[-2]` auf ein anderes Element als vorher.",
-   "submissions": 9,
+   "submissions": 10,
    "problems": [
+    "car-fleet",
     "evaluate-reverse-polish-notation"
    ],
-   "last_seen": "2026-11-05"
+   "last_seen": "2026-11-18"
   },
   {
    "id": "str-int",
@@ -981,6 +985,35 @@
    "last_evidence": "2026-10-25T16:23:28+00:00"
   },
   {
+   "id": "car-fleet-pattern",
+   "guid": "dc>v]~?z}s",
+   "type": "pattern",
+   "type_label": "Pattern",
+   "mistakes": [
+    "problem-model"
+   ],
+   "problems": [
+    "car-fleet"
+   ],
+   "evidence": [
+    "car-fleet#0-6",
+    "car-fleet#7"
+   ],
+   "tags": [
+    "ncd::fehler::problem-model",
+    "ncd::problem::car-fleet",
+    "ncd::typ::pattern",
+    "sorting",
+    "stack"
+   ],
+   "front_md": "Car Fleet: Statt die Autos Schritt für Schritt fahren zu lassen, was rechnest du für jedes Auto aus? In welcher Reihenfolge gehst du die Autos durch, und wann beginnt eine neue Flotte?",
+   "back_md": "Die **Ankunftszeit** ohne Hindernis: `(target - p) / s`.\n\nDie Autos gehst du **von vorn nach hinten** durch, sortiert nach Position absteigend, als Paare: `sorted(zip(position, speed), reverse=True)`. Ein Auto, das später ankommen würde als die Flotte direkt vor ihm, kann sie nicht einholen und bildet eine **neue Flotte**. Kommt es früher oder gleichzeitig an, holt es sie ein und fährt in ihr mit.\n\n```python\nfleets, slowest = 0, 0\nfor p, s in sorted(zip(position, speed), reverse=True):\n    t = (target - p) / s\n    if t > slowest:\n        fleets += 1\n        slowest = t\nreturn fleets\n```\n\nBeispiel: `target = 12`, Positionen 10, 8, 5, 3, 0 mit Zeiten 1, 1, 7, 3, 12 → neue Flotten bei 10, 5 und 0, also 3.\n\nDeine Versuche #0–6 simulierten Schritt für Schritt und scheiterten an Indizes (`i+1` am Ende, Löschen beim Durchlaufen). In #3–5 wurden außerdem `position` und `speed` **einzeln** sortiert, dabei gehen die Paare verloren. #7 ✔",
+   "front_html": "<p>Car Fleet: Statt die Autos Schritt für Schritt fahren zu lassen, was rechnest du für jedes Auto aus? In welcher Reihenfolge gehst du die Autos durch, und wann beginnt eine neue Flotte?</p>",
+   "back_html": "<p>Die <strong>Ankunftszeit</strong> ohne Hindernis: <code>(target - p) / s</code>.</p>\n<p>Die Autos gehst du <strong>von vorn nach hinten</strong> durch, sortiert nach Position absteigend, als Paare: <code>sorted(zip(position, speed), reverse=True)</code>. Ein Auto, das später ankommen würde als die Flotte direkt vor ihm, kann sie nicht einholen und bildet eine <strong>neue Flotte</strong>. Kommt es früher oder gleichzeitig an, holt es sie ein und fährt in ihr mit.</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"n\">fleets</span><span class=\"p\">,</span> <span class=\"n\">slowest</span> <span class=\"o\">=</span> <span class=\"mi\">0</span><span class=\"p\">,</span> <span class=\"mi\">0</span>\n<span class=\"k\">for</span> <span class=\"n\">p</span><span class=\"p\">,</span> <span class=\"n\">s</span> <span class=\"ow\">in</span> <span class=\"nb\">sorted</span><span class=\"p\">(</span><span class=\"nb\">zip</span><span class=\"p\">(</span><span class=\"n\">position</span><span class=\"p\">,</span> <span class=\"n\">speed</span><span class=\"p\">),</span> <span class=\"n\">reverse</span><span class=\"o\">=</span><span class=\"kc\">True</span><span class=\"p\">):</span>\n    <span class=\"n\">t</span> <span class=\"o\">=</span> <span class=\"p\">(</span><span class=\"n\">target</span> <span class=\"o\">-</span> <span class=\"n\">p</span><span class=\"p\">)</span> <span class=\"o\">/</span> <span class=\"n\">s</span>\n    <span class=\"k\">if</span> <span class=\"n\">t</span> <span class=\"o\">&gt;</span> <span class=\"n\">slowest</span><span class=\"p\">:</span>\n        <span class=\"n\">fleets</span> <span class=\"o\">+=</span> <span class=\"mi\">1</span>\n        <span class=\"n\">slowest</span> <span class=\"o\">=</span> <span class=\"n\">t</span>\n<span class=\"k\">return</span> <span class=\"n\">fleets</span>\n</code></pre></div>\n\n<p>Beispiel: <code>target = 12</code>, Positionen 10, 8, 5, 3, 0 mit Zeiten 1, 1, 7, 3, 12 → neue Flotten bei 10, 5 und 0, also 3.</p>\n<p>Deine Versuche #0–6 simulierten Schritt für Schritt und scheiterten an Indizes (<code>i+1</code> am Ende, Löschen beim Durchlaufen). In #3–5 wurden außerdem <code>position</code> und <code>speed</code> <strong>einzeln</strong> sortiert, dabei gehen die Paare verloren. #7 ✔</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/car-fleet/submission-0.py\">car-fleet #0–6</a><span class=\"badge crash\">7× Crash</span> 18.11. · Schritt-für-Schritt-Simulation; #7 vergleicht stattdessen die Ankunftszeiten</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/car-fleet/submission-7.py\">car-fleet #7</a><span class=\"badge pass\">ok</span> 18.11.</li></ul>",
+   "last_evidence": "2026-11-18T23:29:40+00:00"
+  },
+  {
    "id": "ceil-division",
    "guid": "OQp~BuOxVg",
    "type": "gotcha",
@@ -1093,6 +1126,35 @@
    "back_html": "<p>Nur <code>defaultdict(list)</code>.</p>\n<p><code>defaultdict</code> bekommt eine <strong>Fabrik</strong>: etwas Aufrufbares, das bei jedem fehlenden Key einen neuen Startwert erzeugt. <code>list</code> ist diese Fabrik. <code>list()</code> ist dagegen schon eine fertige Liste → <code>TypeError: first argument must be callable or None</code>. <code>List(str)</code> versucht <code>typing.List</code> aufzurufen → <code>TypeError: Type List cannot be instantiated</code>.</p>\n<p>Gleiches Prinzip: <code>defaultdict(int)</code> zählt ab 0, <code>defaultdict(set)</code> sammelt ohne Duplikate.</p>\n<p>Mit einem normalen Dict geht es mit <code>setdefault</code>: <code>groups.setdefault(key, []).append(w)</code> legt beim ersten Mal die leere Liste an. Das war die Antwort auf deine Frage „wie war hier die richtige syntax?“ (Anagram Groups #25, gelöst in #27). <code>groups[groups.get(key, 0)]</code> benutzt dagegen das Ergebnis von <code>get</code> als Key.</p>",
    "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/anagram-groups/submission-14.py\">anagram-groups #14–16</a><span class=\"badge crash\">3× Crash</span> 16.10. · <code>typing.List</code> aufgerufen → TypeError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/anagram-groups/submission-17.py\">anagram-groups #17–18</a><span class=\"badge crash\">2× Crash</span> 16.10. · fertige Liste statt Fabrik übergeben → first argument must be callable</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/anagram-groups/submission-25.py\">anagram-groups #25–26</a><span class=\"badge crash\">2× Crash</span> 13.11. · latent: die Methode heißt <code>values()</code>, wie schon bei Top K #23</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/anagram-groups/submission-27.py\">anagram-groups #27</a><span class=\"badge pass\">ok</span> 13.11.</li></ul>",
    "last_evidence": "2026-11-13T15:34:02+00:00"
+  },
+  {
+   "id": "delete-reverse-order",
+   "guid": "n7#zKzJFU/",
+   "type": "gotcha",
+   "type_label": "Python-Gotcha",
+   "mistakes": [
+    "stack-ops"
+   ],
+   "problems": [
+    "car-fleet"
+   ],
+   "evidence": [
+    "car-fleet#1",
+    "car-fleet#5"
+   ],
+   "tags": [
+    "list",
+    "ncd::fehler::stack-ops",
+    "ncd::problem::car-fleet",
+    "ncd::typ::gotcha",
+    "python"
+   ],
+   "front_md": "`xs` hat 4 Elemente, `remove = [1, 3]`. Warum crasht das, und wie löschst du richtig?\n\n```python\nfor i in remove:\n    del xs[i]\n```",
+   "back_md": "Nach `del xs[1]` hat `xs` nur noch 3 Elemente, alle dahinter sind **eine Position nach vorn gerutscht**. `xs[3]` gibt es nicht mehr → IndexError. Ginge es gut, würde das falsche Element gelöscht.\n\nFix: von hinten nach vorn löschen, dann verschiebt jedes `del` nur Elemente, die schon erledigt sind.\n\n```python\nfor i in reversed(remove):    # remove aufsteigend sortiert\n    del xs[i]\n```\n\nOft einfacher: eine neue Liste bauen, `xs = [x for j, x in enumerate(xs) if j not in drop]`.\n\nDeine Frage bei Car Fleet (#4): „how can I delete in reverse order?“ Genau so, mit `reversed(remove)` (#5). Dasselbe Verrutschen kennst du von Evaluate RPN: `del result[-1]` und danach `del result[-2]`.",
+   "front_html": "<p><code>xs</code> hat 4 Elemente, <code>remove = [1, 3]</code>. Warum crasht das, und wie löschst du richtig?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">for</span> <span class=\"n\">i</span> <span class=\"ow\">in</span> <span class=\"n\">remove</span><span class=\"p\">:</span>\n    <span class=\"k\">del</span> <span class=\"n\">xs</span><span class=\"p\">[</span><span class=\"n\">i</span><span class=\"p\">]</span>\n</code></pre></div>",
+   "back_html": "<p>Nach <code>del xs[1]</code> hat <code>xs</code> nur noch 3 Elemente, alle dahinter sind <strong>eine Position nach vorn gerutscht</strong>. <code>xs[3]</code> gibt es nicht mehr → IndexError. Ginge es gut, würde das falsche Element gelöscht.</p>\n<p>Fix: von hinten nach vorn löschen, dann verschiebt jedes <code>del</code> nur Elemente, die schon erledigt sind.</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"k\">for</span> <span class=\"n\">i</span> <span class=\"ow\">in</span> <span class=\"nb\">reversed</span><span class=\"p\">(</span><span class=\"n\">remove</span><span class=\"p\">):</span>    <span class=\"c1\"># remove aufsteigend sortiert</span>\n    <span class=\"k\">del</span> <span class=\"n\">xs</span><span class=\"p\">[</span><span class=\"n\">i</span><span class=\"p\">]</span>\n</code></pre></div>\n\n<p>Oft einfacher: eine neue Liste bauen, <code>xs = [x for j, x in enumerate(xs) if j not in drop]</code>.</p>\n<p>Deine Frage bei Car Fleet (#4): „how can I delete in reverse order?“ Genau so, mit <code>reversed(remove)</code> (#5). Dasselbe Verrutschen kennst du von Evaluate RPN: <code>del result[-1]</code> und danach <code>del result[-2]</code>.</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/car-fleet/submission-1.py\">car-fleet #1</a><span class=\"badge crash\">Crash</span> 18.11. · aufsteigend gelöscht: nach dem ersten <code>del</code> rutschen alle späteren Elemente nach vorn → IndexError; #5 löscht mit <code>reversed(remove)</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/car-fleet/submission-5.py\">car-fleet #5</a><span class=\"badge crash\">Crash</span> 18.11. · <code>IndexError: list index out of range</code></li></ul>",
+   "last_evidence": "2026-11-18T23:27:24+00:00"
   },
   {
    "id": "dict-get-calls",
@@ -1847,6 +1909,7 @@
    ],
    "problems": [
     "buy-and-sell-crypto",
+    "car-fleet",
     "longest-substring-without-duplicates",
     "max-water-container"
    ],
@@ -1862,23 +1925,26 @@
     "buy-and-sell-crypto#13",
     "buy-and-sell-crypto#14",
     "longest-substring-without-duplicates#25",
-    "longest-substring-without-duplicates#26"
+    "longest-substring-without-duplicates#26",
+    "car-fleet#0",
+    "car-fleet#1"
    ],
    "tags": [
     "loops",
     "ncd::fehler::method-api",
     "ncd::problem::buy-and-sell-crypto",
+    "ncd::problem::car-fleet",
     "ncd::problem::longest-substring-without-duplicates",
     "ncd::problem::max-water-container",
     "ncd::typ::gotcha",
     "python"
    ],
    "front_md": "Was passiert bei `for i in range(prices):`, wenn `prices` eine Liste ist? Was war gemeint?",
-   "back_md": "`TypeError: 'list' object cannot be interpreted as an integer`. `range` braucht eine **Zahl**, keine Liste.\n\nGemeint waren die Indizes: `range(len(prices))`. Brauchst du Index und Wert, dann `for i, p in enumerate(prices):`.\n\nBei dir: `range(heights)` bei Container With Most Water (#1, 24.10.) und `range(prices)` bei Buy and Sell (#5 am 6.11., #7 am 13.11., #11 und #13 am 16.11.). Dazwischen `range(enumerate(prices))` (#12): `enumerate` liefert Paare, auch das ist keine Zahl. #14 mit `range(len(prices))` ✔ Am 17.11. dann `range(s)` mit einem String (Longest Substring #25).",
+   "back_md": "`TypeError: 'list' object cannot be interpreted as an integer`. `range` braucht eine **Zahl**, keine Liste.\n\nGemeint waren die Indizes: `range(len(prices))`. Brauchst du Index und Wert, dann `for i, p in enumerate(prices):`.\n\nBei dir: `range(heights)` bei Container With Most Water (#1, 24.10.) und `range(prices)` bei Buy and Sell (#5 am 6.11., #7 am 13.11., #11 und #13 am 16.11.). Dazwischen `range(enumerate(prices))` (#12): `enumerate` liefert Paare, auch das ist keine Zahl. #14 mit `range(len(prices))` ✔ Am 17.11. dann `range(s)` mit einem String (Longest Substring #25). Am 18.11. `range(position)` (Car Fleet #0).",
    "front_html": "<p>Was passiert bei <code>for i in range(prices):</code>, wenn <code>prices</code> eine Liste ist? Was war gemeint?</p>",
-   "back_html": "<p><code>TypeError: 'list' object cannot be interpreted as an integer</code>. <code>range</code> braucht eine <strong>Zahl</strong>, keine Liste.</p>\n<p>Gemeint waren die Indizes: <code>range(len(prices))</code>. Brauchst du Index und Wert, dann <code>for i, p in enumerate(prices):</code>.</p>\n<p>Bei dir: <code>range(heights)</code> bei Container With Most Water (#1, 24.10.) und <code>range(prices)</code> bei Buy and Sell (#5 am 6.11., #7 am 13.11., #11 und #13 am 16.11.). Dazwischen <code>range(enumerate(prices))</code> (#12): <code>enumerate</code> liefert Paare, auch das ist keine Zahl. #14 mit <code>range(len(prices))</code> ✔ Am 17.11. dann <code>range(s)</code> mit einem String (Longest Substring #25).</p>",
-   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-1.py\">max-water-container #1</a><span class=\"badge crash\">Crash</span> 24.10. · <code>range</code> braucht eine Zahl: <code>range(len(heights))</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-2.py\">max-water-container #2</a><span class=\"badge fail\">falsch</span> 24.10. · <code>erwartet 36, bekommen 1</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-5.py\">buy-and-sell-crypto #5</a><span class=\"badge crash\">Crash</span> 06.11. · <code>range</code> braucht eine Zahl, wie bei Container With Most Water #1 am 24.10.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-6.py\">buy-and-sell-crypto #6</a><span class=\"badge pass\">ok</span> 06.11.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-7.py\">buy-and-sell-crypto #7</a><span class=\"badge crash\">Crash</span> 13.11. · zum dritten Mal <code>range</code> mit einer Liste</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-8.py\">buy-and-sell-crypto #8</a><span class=\"badge fail\">falsch</span> 13.11. · <code>p_l = i + 1</code> ist wirkungslos, <code>for</code> setzt <code>p_l</code> wieder ab 0 → frühere Tage zählen als Verkauf (9 statt 6); #9: <code>range(i+ 1, len(prices))</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-11.py\">buy-and-sell-crypto #11</a><span class=\"badge crash\">Crash</span> 16.11. · zum vierten Mal <code>range</code> mit einer Liste</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-12.py\">buy-and-sell-crypto #12</a><span class=\"badge crash\">Crash</span> 16.11. · <code>enumerate</code> liefert Paare, keine Zahl → TypeError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-13.py\">buy-and-sell-crypto #13</a><span class=\"badge crash\">Crash</span> 16.11. · zurück zu <code>range(prices)</code>; #14 mit <code>range(len(prices))</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-14.py\">buy-and-sell-crypto #14</a><span class=\"badge pass\">ok</span> 16.11.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-25.py\">longest-substring-without-duplicates #25</a><span class=\"badge crash\">Crash</span> 17.11. · <code>range</code> mit einem String</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-26.py\">longest-substring-without-duplicates #26</a><span class=\"badge crash\">Crash</span> 17.11. · <code>TypeError: can only concatenate str (not &quot;int&quot;) to str</code></li></ul>",
-   "last_evidence": "2026-11-17T09:37:47+00:00"
+   "back_html": "<p><code>TypeError: 'list' object cannot be interpreted as an integer</code>. <code>range</code> braucht eine <strong>Zahl</strong>, keine Liste.</p>\n<p>Gemeint waren die Indizes: <code>range(len(prices))</code>. Brauchst du Index und Wert, dann <code>for i, p in enumerate(prices):</code>.</p>\n<p>Bei dir: <code>range(heights)</code> bei Container With Most Water (#1, 24.10.) und <code>range(prices)</code> bei Buy and Sell (#5 am 6.11., #7 am 13.11., #11 und #13 am 16.11.). Dazwischen <code>range(enumerate(prices))</code> (#12): <code>enumerate</code> liefert Paare, auch das ist keine Zahl. #14 mit <code>range(len(prices))</code> ✔ Am 17.11. dann <code>range(s)</code> mit einem String (Longest Substring #25). Am 18.11. <code>range(position)</code> (Car Fleet #0).</p>",
+   "history_html": "<div class=\"title\">Dein Verlauf</div><ul><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-1.py\">max-water-container #1</a><span class=\"badge crash\">Crash</span> 24.10. · <code>range</code> braucht eine Zahl: <code>range(len(heights))</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/max-water-container/submission-2.py\">max-water-container #2</a><span class=\"badge fail\">falsch</span> 24.10. · <code>erwartet 36, bekommen 1</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-5.py\">buy-and-sell-crypto #5</a><span class=\"badge crash\">Crash</span> 06.11. · <code>range</code> braucht eine Zahl, wie bei Container With Most Water #1 am 24.10.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-6.py\">buy-and-sell-crypto #6</a><span class=\"badge pass\">ok</span> 06.11.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-7.py\">buy-and-sell-crypto #7</a><span class=\"badge crash\">Crash</span> 13.11. · zum dritten Mal <code>range</code> mit einer Liste</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-8.py\">buy-and-sell-crypto #8</a><span class=\"badge fail\">falsch</span> 13.11. · <code>p_l = i + 1</code> ist wirkungslos, <code>for</code> setzt <code>p_l</code> wieder ab 0 → frühere Tage zählen als Verkauf (9 statt 6); #9: <code>range(i+ 1, len(prices))</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-11.py\">buy-and-sell-crypto #11</a><span class=\"badge crash\">Crash</span> 16.11. · zum vierten Mal <code>range</code> mit einer Liste</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-12.py\">buy-and-sell-crypto #12</a><span class=\"badge crash\">Crash</span> 16.11. · <code>enumerate</code> liefert Paare, keine Zahl → TypeError</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-13.py\">buy-and-sell-crypto #13</a><span class=\"badge crash\">Crash</span> 16.11. · zurück zu <code>range(prices)</code>; #14 mit <code>range(len(prices))</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/submission-14.py\">buy-and-sell-crypto #14</a><span class=\"badge pass\">ok</span> 16.11.</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-25.py\">longest-substring-without-duplicates #25</a><span class=\"badge crash\">Crash</span> 17.11. · <code>range</code> mit einem String</li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/submission-26.py\">longest-substring-without-duplicates #26</a><span class=\"badge crash\">Crash</span> 17.11. · <code>TypeError: can only concatenate str (not &quot;int&quot;) to str</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/car-fleet/submission-0.py\">car-fleet #0</a><span class=\"badge crash\">Crash</span> 18.11. · <code>range</code> mit einer Liste, diesmal <code>position</code></li><li><a href=\"https://github.com/milanagm/ncd_subs/blob/main/Data%20Structures%20%26%20Algorithms/car-fleet/submission-1.py\">car-fleet #1</a><span class=\"badge crash\">Crash</span> 18.11. · aufsteigend gelöscht: nach dem ersten <code>del</code> rutschen alle späteren Elemente nach vorn → IndexError; #5 löscht mit <code>reversed(remove)</code></li></ul>",
+   "last_evidence": "2026-11-18T23:21:00+00:00"
   },
   {
    "id": "return-type-signature",

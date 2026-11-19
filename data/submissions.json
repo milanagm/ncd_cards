@@ -1,8 +1,8 @@
 {
  "source": {
   "repo": "milanagm/ncd_subs",
-  "head": "b898dcc616fa80e8cf336c6f2a18a2bc6820a76a",
-  "head_date": "2026-11-17T09:49:27+00:00"
+  "head": "c189d3c035089d136103fcc0da7feb001fc77243",
+  "head_date": "2026-11-18T23:31:50+00:00"
  },
  "problems": {
   "anagram-groups": {
@@ -829,6 +829,159 @@
       "passed": 48,
       "total": 48,
       "spec": "1d35d1104a7a"
+     }
+    }
+   ]
+  },
+  "car-fleet": {
+   "topic": "Data Structures & Algorithms",
+   "submissions": [
+    {
+     "n": 0,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/car-fleet/submission-0.py",
+     "sha1": "5963f96a71e7c350cfb53b7c031fa89b7acad90f",
+     "commit": "0ca7e88498b6ba1dfe37da21a49aa58ba32211f7",
+     "date": "2026-11-18T23:20:25+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[10, [1, 4], [3, 2]]",
+      "error": "TypeError: 'list' object cannot be interpreted as an integer",
+      "line": 10,
+      "code": "for i in range(position):",
+      "spec": "b14b67b20623"
+     }
+    },
+    {
+     "n": 1,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/car-fleet/submission-1.py",
+     "sha1": "8821c890640da821066fc177109f5329e2c2a89b",
+     "commit": "986e0ef969fbaacab8586df4b1fc4bbec15d923d",
+     "date": "2026-11-18T23:21:00+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[10, [1, 4], [3, 2]]",
+      "error": "IndexError: list assignment index out of range",
+      "line": 20,
+      "code": "del position[i]",
+      "spec": "b14b67b20623"
+     }
+    },
+    {
+     "n": 2,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/car-fleet/submission-2.py",
+     "sha1": "2742ec24a5e4b781f32a4705a1ef8d4c25e5c26f",
+     "commit": "58bcbb28b065b6b094305c2ac89ac25ad8d4c15d",
+     "date": "2026-11-18T23:23:07+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[10, [1, 4], [3, 2]]",
+      "error": "IndexError: list index out of range",
+      "line": 10,
+      "code": "new_p = min(position[i] + speed[i], position[i+1] + speed[i+1])",
+      "spec": "b14b67b20623"
+     }
+    },
+    {
+     "n": 3,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/car-fleet/submission-3.py",
+     "sha1": "b071419e73ccb15e54ee61e978ccd27c2067474a",
+     "commit": "a7a9afa84a7f36fbfa471f3ade3f1407d976bc67",
+     "date": "2026-11-18T23:24:02+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[10, [1, 4], [3, 2]]",
+      "error": "IndexError: list index out of range",
+      "line": 12,
+      "code": "new_p = min(position[i] + speed[i], position[i+1] + speed[i+1])",
+      "spec": "b14b67b20623"
+     }
+    },
+    {
+     "n": 4,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/car-fleet/submission-4.py",
+     "sha1": "1333420cb3eea6cf60f21ac7bae45b04b6e65666",
+     "commit": "da1be17da726f0d5ef1c106cd30ecea8bd7ba81f",
+     "date": "2026-11-18T23:25:20+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[10, [1, 4], [3, 2]]",
+      "error": "IndexError: list index out of range",
+      "line": 12,
+      "code": "new_p = min(position[i] + speed[i], position[i+1] + speed[i+1])",
+      "spec": "b14b67b20623"
+     }
+    },
+    {
+     "n": 5,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/car-fleet/submission-5.py",
+     "sha1": "0081bc2f9cfe6cf1821d93927498a3a8648eb8ae",
+     "commit": "a23054d8ed60ddd9c2b183b5bfce83691f32eff0",
+     "date": "2026-11-18T23:27:24+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[10, [1, 4], [3, 2]]",
+      "error": "IndexError: list index out of range",
+      "line": 9,
+      "code": "new_p = min(position[i] + speed[i], position[i+1] + speed[i+1])",
+      "spec": "b14b67b20623"
+     }
+    },
+    {
+     "n": 6,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/car-fleet/submission-6.py",
+     "sha1": "4d0895fda87e2a8eb824abf317c2e398d3ca98c8",
+     "commit": "8ff42eb8fbba2fad9e16539de7fc6f866ab921d9",
+     "date": "2026-11-18T23:29:40+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "RUNTIME_ERROR",
+      "passed": 0,
+      "total": 48,
+      "input": "[10, [1, 4], [3, 2]]",
+      "error": "IndexError: list index out of range",
+      "line": 8,
+      "code": "new_p = min(position[i] + speed[i], position[i+1] + speed[i+1])",
+      "spec": "b14b67b20623"
+     }
+    },
+    {
+     "n": 7,
+     "ext": "py",
+     "path": "Data Structures & Algorithms/car-fleet/submission-7.py",
+     "sha1": "86a8149c338b4d2e68628ec2ee1445700a1c329a",
+     "commit": "c189d3c035089d136103fcc0da7feb001fc77243",
+     "date": "2026-11-18T23:31:50+00:00",
+     "bulk_sync": false,
+     "verdict": {
+      "status": "PASS",
+      "passed": 48,
+      "total": 48,
+      "spec": "b14b67b20623"
      }
     }
    ]
